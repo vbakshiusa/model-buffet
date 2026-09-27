@@ -487,22 +487,28 @@
     padding:10px 24px;
     display:flex;
     align-items:center;
-    gap:8px;
-    overflow-x:auto;
-    scrollbar-width:none;
+    gap:10px;
   }
-  .topbar-inner::-webkit-scrollbar{ display:none; }
   .topbar-brand{
     font-family:'Fraunces', serif;
     font-weight:600;
     font-size:14px;
     color:var(--ink);
     flex:none;
-    margin-right:4px;
     text-decoration:none;
     white-space:nowrap;
   }
-  .topbar-inner a.topbar-link{
+  .topbar-scroll{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex:1 1 auto;
+    min-width:0;
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .topbar-scroll::-webkit-scrollbar{ display:none; }
+  a.topbar-link{
     font-family:'IBM Plex Mono', monospace;
     font-size:11px;
     text-decoration:none;
@@ -513,7 +519,7 @@
     white-space:nowrap;
     flex:none;
   }
-  .topbar-inner a.topbar-link:hover, .topbar-inner a.topbar-link:focus-visible{
+  a.topbar-link:hover, a.topbar-link:focus-visible{
     border-color:var(--accent);
     color:var(--ink);
     outline:none;
@@ -531,14 +537,16 @@
 <div class="topbar">
   <div class="topbar-inner">
     <a class="topbar-brand" href="#top">Model Buffet</a>
-    <a class="topbar-link" href="#tier-matrix">Tier matrix</a>
-    <a class="topbar-link" href="#voice-live">Voice &amp; live</a>
-    <a class="topbar-link" href="#system-one">System One</a>
-    <a class="topbar-link" href="#enterprise-ide">Enterprise &amp; IDE</a>
-    <a class="topbar-link" href="#model-routers">Routers</a>
-    <a class="topbar-link" href="#computer-use">Computer-use</a>
-    <a class="topbar-link" href="#always-on">Always-on agents</a>
-    <a class="topbar-link" href="#consumer">Consumer apps</a>
+    <div class="topbar-scroll">
+      <a class="topbar-link" href="#tier-matrix">Tier matrix</a>
+      <a class="topbar-link" href="#voice-live">Voice &amp; live</a>
+      <a class="topbar-link" href="#system-one">System One</a>
+      <a class="topbar-link" href="#enterprise-ide">Enterprise &amp; IDE</a>
+      <a class="topbar-link" href="#model-routers">Routers</a>
+      <a class="topbar-link" href="#computer-use">Computer-use</a>
+      <a class="topbar-link" href="#always-on">Always-on agents</a>
+      <a class="topbar-link" href="#consumer">Consumer apps</a>
+    </div>
     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light/dark theme"></button>
   </div>
 </div>
