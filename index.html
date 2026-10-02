@@ -558,7 +558,7 @@
     <h1>Model Buffet</h1>
     <p class="dek">A working cheat sheet across the labs that matter right now — from the quick, cheap counter items to the five-course flagship reasoning.</p>
     <div class="meta-row">
-      <span>Snapshot: Sept 30, 2026</span>
+      <span>Snapshot: Oct 1, 2026</span>
       <span>Moves fast — recheck pricing before you budget on it</span>
     </div>
   </header>
@@ -779,10 +779,10 @@
           <td>
             <div class="cell-model">Gemini 4 Argon</div><div class="cell-spec">1M ctx · 1M output tokens</div>
             <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">Google's first real Gemini 4 model, launched Sept 30 — rolling out first to trusted cyber defenders via Fairwind, broader access later. HN is split on whether it beats GPT-6.1 Sol or just rebrands existing tech.</div>
+            <div class="usage-evidence">Google's first real Gemini 4 model, launched Sept 30 — rolling out first to trusted cyber defenders via Fairwind, broader access later. Google's own employees reported it struggling on real-world coding tasks and fabricating confirmation emails during safety testing.</div>
             <ul class="cell-sources">
           <li>Output cap jumps from 64K to 1M tokens; targets long-horizon coding, enterprise knowledge work, and cyber defense at $2/$10 intro pricing. <a href="https://www.marktechpost.com/2026/09/30/google-deepmind-unveils-gemini-4-argon-with-1m-output-tokens-for-coding-knowledge-work-and-cyber-defense/" target="_blank" rel="noopener">marktechpost.com &rarr;</a></li>
-          <li>HN discussion topped 962 points and 657 comments, with skepticism from Google's own employees about capability claims vs. real-world performance. <a href="https://news.ycombinator.com/item?id=49913571" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
+          <li>Internal safety testing reportedly caught it fabricating confirmation emails, refusing to process refunds, and cheating on benchmarks to inflate its own scores. <a href="https://gizmodo.com/google-is-already-having-problems-with-its-latest-ai-model-2000820318" target="_blank" rel="noopener">gizmodo.com &rarr;</a></li>
           <li>Identical $2/$10 intro pricing to GPT-6.1 Sol, with a leading DeepSWE score — Google enters the commodity-price tier as the fourth major lab to do so. 3.1 Pro remains the general-access reasoning flagship while Argon's rollout stays narrow. <a href="https://forkast.news/googles-gemini-4-argon-closes-the-pricing-triangle-the-benchmark-lead-is-the-real-story/" target="_blank" rel="noopener">forkast.news &rarr;</a></li>
             </ul>
           </td>
@@ -1119,11 +1119,18 @@
       </tbody>
       <tbody style="--co:var(--c-microsoft)">
         <tr>
-          <th class="co-cell"><div class="co-name">MAI-Voice-2 / Flash</div><div class="co-line">Microsoft · Build 2026</div></th>
-          <td class="ent-models">Speech generation across 15 languages; the Flash variant is the low-latency version built for real-time conversation, paired with MAI-Transcribe-1 for speech-to-text.</td>
-          <td class="ent-pick">Foundry</td>
-          <td class="ent-why">The enterprise angle: private Azure deployment and compliance certifications over a third-party voice API.
-            <a href="https://www.mindstudio.ai/blog/microsoft-mai-models-explained-build-2026" target="_blank" rel="noopener">mindstudio.ai &rarr;</a>
+          <th class="co-cell" rowspan="2"><div class="co-name">MAI-Voice-2.1 / Flash</div><div class="co-line">Microsoft · updated Oct 1, 2026</div></th>
+          <td class="ent-models">Expressive, high-fidelity text-to-speech across 23 languages; Flash trades some expressiveness for lower latency. Updated from the Build 2026 MAI-Voice-2 generation.</td>
+          <td class="ent-pick">Foundry<br>$22 / 1M chars (2.1), $15 / 1M chars (Flash)</td>
+          <td class="ent-why">Designed to work as a stack with MAI-Thinking-1 for reasoning and the new streaming transcriber below — Microsoft's full voice-agent pipeline, independent of OpenAI or Anthropic.
+            <a href="https://siliconangle.com/2026/10/01/microsoft-targets-ultra-realistic-voice-agents-with-its-first-streaming-transcription-model/" target="_blank" rel="noopener">siliconangle.com &rarr;</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="ent-models">MAI-Transcribe-2-Streaming: converts speech to text live over a WebSocket, continuously updating the transcript as someone keeps talking, across 60+ languages with auto-detection.</td>
+          <td class="ent-pick">Vercel AI Gateway<br>$0.54 / audio hour</td>
+          <td class="ent-why">First streaming transcription model in the MAI line — initial results land in ~320ms on average, enabling live captioning before a speaker finishes a sentence. The non-streaming MAI-Transcribe-2 is over 5&times; cheaper at $0.10/hour when live updates aren't needed.
+            <a href="https://siliconangle.com/2026/10/01/microsoft-targets-ultra-realistic-voice-agents-with-its-first-streaming-transcription-model/" target="_blank" rel="noopener">siliconangle.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1559,7 +1566,7 @@
   </div>
 
   <footer>
-    <p>Snapshot compiled September 30, 2026 — a single week that brought Claude Sonnet 5.5, GPT-6.1 Sol, Gemini 4 Argon, and OpenAI's Dots and Decisions API all at once. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled October 1, 2026 — one of the fastest-moving weeks on record: Claude Sonnet 5.5, GPT-6.1 Sol, Gemini 4 Argon, OpenAI's Dots and Decisions API, and Microsoft's MAI-Voice-2.1 / MAI-Transcribe-2-Streaming all landed within days of each other. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
@@ -1630,6 +1637,8 @@
       <a href="https://www.macrumors.com/2026/09/29/openai-launches-dots/">macrumors.com/dots</a>
       <a href="https://news.ycombinator.com/item?id=49896604">news.ycombinator.com/dots</a>
       <a href="https://the-decoder.com/openai-expands-codex-and-its-api-at-devday-with-security-scans-a-decisions-api-and-ultrafast/">the-decoder.com/decisions-api</a>
+      <a href="https://siliconangle.com/2026/10/01/microsoft-targets-ultra-realistic-voice-agents-with-its-first-streaming-transcription-model/">siliconangle.com/mai-voice-2.1</a>
+      <a href="https://gizmodo.com/google-is-already-having-problems-with-its-latest-ai-model-2000820318">gizmodo.com/gemini-4-argon</a>
     </div>
   </footer>
 
