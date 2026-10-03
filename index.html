@@ -429,92 +429,6 @@
   }
   .prior-links a:hover{ border-bottom-style:solid; }
 
-  /* ---------- Version comparison card ---------- */
-  .vs-card{
-    margin-top:28px;
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:10px;
-    overflow:hidden;
-    scroll-margin-top:68px;
-  }
-  .vs-head{
-    padding:16px 20px 14px;
-    border-bottom:1px solid var(--line);
-    background:var(--surface-soft);
-  }
-  .vs-head h3{
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    font-size:19px;
-    margin:0 0 4px;
-  }
-  .vs-head p{
-    margin:0;
-    font-size:13px;
-    line-height:1.5;
-    color:var(--ink-soft);
-    max-width:76ch;
-  }
-  .vs-scroll{ overflow-x:auto; }
-  table.vs-table{
-    border-collapse:collapse;
-    width:100%;
-    min-width:640px;
-  }
-  table.vs-table th{
-    text-align:left;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:10.5px;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    padding:10px 20px;
-    border-bottom:1px solid var(--line-strong);
-    white-space:nowrap;
-  }
-  table.vs-table th.vs-new{ color:var(--c-anthropic); }
-  table.vs-table td{
-    padding:9px 20px;
-    border-bottom:1px solid var(--line);
-    font-size:12.5px;
-    line-height:1.45;
-    color:var(--ink-soft);
-    vertical-align:top;
-    font-variant-numeric:tabular-nums;
-  }
-  table.vs-table td:first-child{
-    color:var(--ink);
-    font-weight:600;
-    width:24%;
-  }
-  table.vs-table td.vs-new{
-    color:var(--ink);
-    background:color-mix(in srgb, var(--c-anthropic) 6%, var(--surface));
-  }
-  table.vs-table tbody tr:last-child td{ border-bottom:none; }
-  .vs-verdict{
-    padding:14px 20px 16px;
-    border-top:1px solid var(--line-strong);
-    font-size:13px;
-    line-height:1.55;
-    color:var(--ink);
-  }
-  .vs-verdict b{ font-weight:600; }
-  .vs-sources{
-    padding:0 20px 16px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:10.5px;
-    color:var(--ink-faint);
-    display:flex;
-    flex-wrap:wrap;
-    gap:4px 14px;
-  }
-  .vs-sources a{
-    color:var(--c-anthropic);
-    text-decoration:none;
-    border-bottom:1px dotted var(--c-anthropic);
-  }
   .cell-sources li{
     font-size:11px;
     line-height:1.4;
@@ -677,7 +591,6 @@
     <a class="topbar-brand" href="#top">Model Buffet</a>
     <div class="topbar-scroll">
       <a class="topbar-link" href="#tier-matrix">Tier matrix</a>
-      <a class="topbar-link" href="#sonnet-delta">Sonnet 5.5 vs 5</a>
       <a class="topbar-link" href="#voice-live">Voice &amp; live</a>
       <a class="topbar-link" href="#system-one">System One</a>
       <a class="topbar-link" href="#enterprise-ide">Enterprise &amp; IDE</a>
@@ -759,8 +672,8 @@
             </ul>
             <div class="prior-version">
               <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Sonnet 5</span><span class="prior-spec">Jun 2026 · $2 / $10</span></div>
-              <div class="prior-delta">Same sticker price, but 5.5 finishes tasks for up to 30% less, runs 30%+ faster, and jumps from 10.3% to 70.6% on Terminal-Bench 4.0 (vendor figures). Full side-by-side below.</div>
-              <div class="prior-links"><a href="#sonnet-delta">side-by-side below &darr;</a><a href="https://www.labellerr.com/blog/claude-sonnet-5-5-vs-sonnet-5/" target="_blank" rel="noopener">labellerr.com &rarr;</a></div>
+              <div class="prior-delta">Same sticker price, but 5.5 finishes tasks for up to 30% less, runs 30%+ faster, and jumps from 10.3% to 70.6% on Terminal-Bench 4.0 (vendor figures).</div>
+              <div class="prior-links"><a href="https://www.labellerr.com/blog/claude-sonnet-5-5-vs-sonnet-5/" target="_blank" rel="noopener">labellerr.com &rarr;</a></div>
             </div>
           </td>
           <td>
@@ -1264,47 +1177,6 @@
 
     </table>
   </div>
-
-  <div class="vs-card" id="sonnet-delta">
-    <div class="vs-head">
-      <h3>Sonnet 5.5 vs Sonnet 5</h3>
-      <p>Same sticker price, very different model. Anthropic's pitch is a faster, cheaper complement to Opus 5.5 that's strongest at well-scoped everyday work — fixing bugs, and producing documents, slides, and spreadsheets. Most numbers below are Anthropic's own; the cost-per-task and speed rows come from Artificial Analysis testing.</p>
-    </div>
-    <div class="vs-scroll">
-      <table class="vs-table">
-        <thead>
-          <tr><th>What changed</th><th>Sonnet 5 &middot; Jun 2026</th><th class="vs-new">Sonnet 5.5 &middot; Sept 28, 2026</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>API price / 1M tokens</td><td>$2 in &middot; $10 out</td><td class="vs-new">$2 in &middot; $10 out (unchanged)</td></tr>
-          <tr><td>Cost per task</td><td>Baseline</td><td class="vs-new">20&ndash;41% cheaper at Low/Medium/High effort while scoring 12&ndash;15 points higher; ~5% cheaper at Xhigh</td></tr>
-          <tr><td>Max-effort cost</td><td>$5.09 per task</td><td class="vs-new">$7.60 per task &mdash; 49% <i>more</i> expensive; one review found it burning more tokens than Opus here. Use Xhigh instead.</td></tr>
-          <tr><td>Output speed</td><td>~55&ndash;75 tokens/sec</td><td class="vs-new">~85&ndash;139 tokens/sec (Anthropic says 30%+ faster)</td></tr>
-          <tr><td>Terminal-Bench 4.0 (command-line agent work)</td><td>10.3%</td><td class="vs-new">70.6% (64% in Artificial Analysis's own run)</td></tr>
-          <tr><td>CursorBench 4.0 (real multi-file edits)</td><td>34.1%</td><td class="vs-new">55.5% &mdash; within about 2 points of Opus 5.5 at 57.8%</td></tr>
-          <tr><td>OSWorld 2.1 (computer use)</td><td>57.0%</td><td class="vs-new">80.1% &mdash; within about 2 points of Opus 5.5</td></tr>
-          <tr><td>GDPval-AA v2.1 (professional work, Elo)</td><td>1449</td><td class="vs-new">1844 &mdash; gap to Opus 5.5 is now about 2 points</td></tr>
-          <tr><td>FrontierCode 1.1</td><td>42.4%</td><td class="vs-new">46.2% &mdash; the smallest gain of the set</td></tr>
-          <tr><td>Chartography (reading charts)</td><td>15.6%</td><td class="vs-new">61.6%</td></tr>
-          <tr><td>Artificial Analysis Intelligence Index (Max effort)</td><td>38</td><td class="vs-new">56</td></tr>
-          <tr><td>Context / output / cutoff</td><td>1M context; output cap and cutoff not documented</td><td class="vs-new">1M context, 128K output, knowledge through June 2026</td></tr>
-          <tr><td>Prompt caching minimum</td><td>1,024 tokens</td><td class="vs-new">512 tokens</td></tr>
-          <tr><td>Thinking &amp; effort</td><td>Thinking can be switched off</td><td class="vs-new">Adaptive thinking is mandatory, with Low to Max effort levels that don't map one-to-one onto Sonnet 5's &mdash; retest instead of copying settings. Forced tool choice is removed, and longer progress notes land inside thinking blocks, so some apps show nothing between tool calls.</td></tr>
-          <tr><td>Cyber safeguards</td><td>No cyber classifiers (5.5 introduces them)</td><td class="vs-new">First Sonnet with Opus-class cyber safeguards. About 0.1% of tasks fell back to Sonnet 5 in testing, and Reddit users report false positives on routine jobs like Windows password changes.</td></tr>
-          <tr><td>Retirement</td><td>Not before Jun 30, 2027</td><td class="vs-new">Not before Sept 28, 2027</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="vs-verdict"><b>Verdict:</b> upgrade now for anything below Max effort &mdash; identical token pricing, large capability gains, and lower cost per task. Stay on Sonnet 5 only if you depend on thinking-off or forced tool choice, or if the new cyber safeguards trip on your workload. For Max-effort jobs on a fixed budget, test Xhigh first: Sonnet 5.5 at Xhigh beats Sonnet 5 at Max by about 14 points for roughly half the cost.</div>
-    <div class="vs-sources">
-      <span>Sources:</span>
-      <a href="https://www.labellerr.com/blog/claude-sonnet-5-5-vs-sonnet-5/" target="_blank" rel="noopener">labellerr.com</a>
-      <a href="https://emergent.sh/learn/sonnet-5-5-vs-sonnet-5" target="_blank" rel="noopener">emergent.sh</a>
-      <a href="https://www.eesel.ai/blog/claude-sonnet-5-5-review" target="_blank" rel="noopener">eesel.ai</a>
-      <a href="https://x.com/claudeai/status/2104633119412523294" target="_blank" rel="noopener">x.com/claudeai</a>
-    </div>
-  </div>
-
 
   <div class="section-head" id="voice-live">
     <h2>Real-time voice &amp; live models</h2>
