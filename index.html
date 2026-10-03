@@ -269,7 +269,7 @@
     border-collapse:collapse;
     width:100%;
   }
-  table.matrix{ min-width:1320px; }
+  table.matrix{ min-width:980px; }
   table.enterprise{ min-width:900px; }
 
   table thead th{
@@ -366,7 +366,7 @@
     line-height:1.4;
     color:var(--ink-faint);
     margin-top:2px;
-    max-width:28ch;
+    max-width:40ch;
   }
   .cell-sources{
     list-style:none;
@@ -375,7 +375,145 @@
     display:flex;
     flex-direction:column;
     gap:4px;
-    max-width:28ch;
+    max-width:40ch;
+  }
+
+  .prior-version{
+    margin-top:10px;
+    padding-top:8px;
+    border-top:1px dashed var(--line-strong);
+    max-width:40ch;
+  }
+  .prior-head{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:6px;
+  }
+  .prior-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:9.5px;
+    font-weight:600;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+  .prior-name{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    font-weight:600;
+    color:var(--ink-soft);
+  }
+  .prior-spec{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    color:var(--ink-faint);
+  }
+  .prior-delta{
+    font-size:11px;
+    line-height:1.4;
+    color:var(--ink-soft);
+    margin-top:3px;
+  }
+  .prior-links{
+    margin-top:3px;
+  }
+  .prior-links a{
+    display:inline-block;
+    margin-right:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    color:var(--co, var(--accent));
+    text-decoration:none;
+    border-bottom:1px dotted var(--co, var(--accent));
+  }
+  .prior-links a:hover{ border-bottom-style:solid; }
+
+  /* ---------- Version comparison card ---------- */
+  .vs-card{
+    margin-top:28px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+    scroll-margin-top:68px;
+  }
+  .vs-head{
+    padding:16px 20px 14px;
+    border-bottom:1px solid var(--line);
+    background:var(--surface-soft);
+  }
+  .vs-head h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:19px;
+    margin:0 0 4px;
+  }
+  .vs-head p{
+    margin:0;
+    font-size:13px;
+    line-height:1.5;
+    color:var(--ink-soft);
+    max-width:76ch;
+  }
+  .vs-scroll{ overflow-x:auto; }
+  table.vs-table{
+    border-collapse:collapse;
+    width:100%;
+    min-width:640px;
+  }
+  table.vs-table th{
+    text-align:left;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    padding:10px 20px;
+    border-bottom:1px solid var(--line-strong);
+    white-space:nowrap;
+  }
+  table.vs-table th.vs-new{ color:var(--c-anthropic); }
+  table.vs-table td{
+    padding:9px 20px;
+    border-bottom:1px solid var(--line);
+    font-size:12.5px;
+    line-height:1.45;
+    color:var(--ink-soft);
+    vertical-align:top;
+    font-variant-numeric:tabular-nums;
+  }
+  table.vs-table td:first-child{
+    color:var(--ink);
+    font-weight:600;
+    width:24%;
+  }
+  table.vs-table td.vs-new{
+    color:var(--ink);
+    background:color-mix(in srgb, var(--c-anthropic) 6%, var(--surface));
+  }
+  table.vs-table tbody tr:last-child td{ border-bottom:none; }
+  .vs-verdict{
+    padding:14px 20px 16px;
+    border-top:1px solid var(--line-strong);
+    font-size:13px;
+    line-height:1.55;
+    color:var(--ink);
+  }
+  .vs-verdict b{ font-weight:600; }
+  .vs-sources{
+    padding:0 20px 16px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    color:var(--ink-faint);
+    display:flex;
+    flex-wrap:wrap;
+    gap:4px 14px;
+  }
+  .vs-sources a{
+    color:var(--c-anthropic);
+    text-decoration:none;
+    border-bottom:1px dotted var(--c-anthropic);
   }
   .cell-sources li{
     font-size:11px;
@@ -539,6 +677,7 @@
     <a class="topbar-brand" href="#top">Model Buffet</a>
     <div class="topbar-scroll">
       <a class="topbar-link" href="#tier-matrix">Tier matrix</a>
+      <a class="topbar-link" href="#sonnet-delta">Sonnet 5.5 vs 5</a>
       <a class="topbar-link" href="#voice-live">Voice &amp; live</a>
       <a class="topbar-link" href="#system-one">System One</a>
       <a class="topbar-link" href="#enterprise-ide">Enterprise &amp; IDE</a>
@@ -558,7 +697,7 @@
     <h1>Model Buffet</h1>
     <p class="dek">A working cheat sheet across the labs that matter right now — from the quick, cheap counter items to the five-course flagship reasoning.</p>
     <div class="meta-row">
-      <span>Snapshot: Oct 1, 2026</span>
+      <span>Snapshot: Oct 3, 2026</span>
       <span>Moves fast — recheck pricing before you budget on it</span>
     </div>
   </header>
@@ -583,7 +722,7 @@
     <h2>Tier matrix</h2>
     <div class="axis">cheap / fast <span class="arrow">&rarr;</span> expensive / deep-thinking</div>
   </div>
-  <p class="section-sub">Each cell carries three independent takes — not one blog's opinion — plus a <b>usage tier</b>: how much real-world adoption evidence backs the model up (OpenRouter/LMArena rank, forum consensus, production use), from <span class="usage-tier" style="color:var(--accent)">Leading</span> down to <span class="usage-tier" style="color:var(--accent)">Niche</span> or a plain "too new to tell." That's a different question from raw benchmark score, and the two don't always agree.</p>
+  <p class="section-sub">Each cell carries three independent takes — not one blog's opinion — plus a <b>usage tier</b>: how much real-world adoption evidence backs the model up (OpenRouter/LMArena rank, forum consensus, production use), from <span class="usage-tier" style="color:var(--accent)">Leading</span> down to <span class="usage-tier" style="color:var(--accent)">Niche</span> or a plain "too new to tell." Advanced and flagship models share one column, and each carries a compact <b>prior version</b> underneath so you can see what the upgrade actually bought you.</p>
 
   <div class="table-wrap">
     <table class="matrix">
@@ -592,14 +731,13 @@
           <th>Company · line</th>
           <th class="tier-head">Fast &amp; cheap</th>
           <th class="tier-head">Balanced</th>
-          <th class="tier-head">Advanced</th>
-          <th class="tier-head">Flagship / deep reasoning</th>
+          <th class="tier-head">Advanced &amp; flagship</th>
         </tr>
       </thead>
 
       <tbody style="--co:var(--c-anthropic)">
         <tr>
-          <th class="co-cell" rowspan="2"><div class="co-name">Anthropic</div><div class="co-line">Claude</div></th>
+          <th class="co-cell" rowspan="3"><div class="co-name">Anthropic</div><div class="co-line">Claude</div></th>
           <td>
             <div class="cell-model">Haiku 4.5</div><div class="cell-spec">200K ctx · $1 / $5</div>
             <div class="usage-tier">Strong</div>
@@ -619,6 +757,11 @@
           <li>HN's launch-day take: nobody disputes the benchmarks, the real argument is where it sits next to Opus 5.5. <a href="https://news.ycombinator.com/item?id=49881850" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
           <li>CodeRabbit measured code reviews at half the time and 40% of the cost versus Sonnet 5 — but new cyber safeguards are a sore spot, flagging routine tasks like Windows password changes. <a href="https://dreasays.substack.com/p/claude-55-is-brilliant-confusing" target="_blank" rel="noopener">dreasays.substack.com &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Sonnet 5</span><span class="prior-spec">Jun 2026 · $2 / $10</span></div>
+              <div class="prior-delta">Same sticker price, but 5.5 finishes tasks for up to 30% less, runs 30%+ faster, and jumps from 10.3% to 70.6% on Terminal-Bench 4.0 (vendor figures). Full side-by-side below.</div>
+              <div class="prior-links"><a href="#sonnet-delta">side-by-side below &darr;</a><a href="https://www.labellerr.com/blog/claude-sonnet-5-5-vs-sonnet-5/" target="_blank" rel="noopener">labellerr.com &rarr;</a></div>
+            </div>
           </td>
           <td>
             <div class="cell-model">Opus 5.5</div><div class="cell-spec">1M ctx · $4 / $20</div>
@@ -629,7 +772,17 @@
           <li>Reddit users who'd switched to Codex or Astra are reportedly coming back to it. <a href="https://botmonster.com/ai/opus-5-5-is-the-claude-comeback-reddit-was-waiting-for/" target="_blank" rel="noopener">botmonster.com &rarr;</a></li>
           <li>Matches Fable 5.1-level performance at 40% lower cost than Opus 5, which it supersedes. <a href="https://www.macrumors.com/2026/09/22/anthropic-claude-opus-5-5/" target="_blank" rel="noopener">macrumors.com &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Opus 5</span><span class="prior-spec">Jul 24, 2026 · $5 / $25</span></div>
+              <div class="prior-delta">Opus 5.5 is 20% cheaper per token ($4 / $20), about 30% faster, and roughly 40% cheaper on typical work; Optiver reported matching Opus 5 quality in about half the turns. The New Stack's reasoning test is headlined "cheaper, faster, but not better." Opus 5 remains the pick for biology and security work that 5.5's stricter safeguards reroute, or for integrations that need thinking off.</div>
+              <div class="prior-links"><a href="https://emergent.sh/learn/claude-opus-5-5-vs-opus-5" target="_blank" rel="noopener">emergent.sh &rarr;</a><a href="https://thenewstack.io/claude-opus-5-5-vs-opus-5/" target="_blank" rel="noopener">thenewstack.io &rarr;</a></div>
+            </div>
           </td>
+        </tr>
+        <tr>
+          
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td><span class="cell-empty">&mdash;</span></td>
           <td>
             <div class="cell-model">Fable 5.1</div><div class="cell-spec">1M ctx · $10 / $50</div>
             <div class="usage-tier">Leading</div>
@@ -639,10 +792,15 @@
           <li>Live usage, cost, and rank tracking shows sustained real-world traffic in the OpenCode ecosystem. <a href="https://opencode.ai/data/anthropic/claude-fable-5-1" target="_blank" rel="noopener">opencode.ai &rarr;</a></li>
           <li>Head-to-head against GPT-6 Astra for practical task-selection decisions. <a href="https://improvado.io/blog/gpt-6-astra-vs-claude-fable-5-1" target="_blank" rel="noopener">improvado.io &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Fable 5</span><span class="prior-spec">Jun 9, 2026 · $10 / $50</span></div>
+              <div class="prior-delta">Same $10 / $50 sticker, but Fable 5.1 cuts cache reads 75% ($1 to $0.25 — about 25% lower typical cost, up to 45% on agentic work), moves the knowledge cutoff from January to June 2026, and beats Fable 5 on every benchmark Anthropic published. Breaking changes: forced tool use now errors, and thinking blocks are bound to the model that produced them.</div>
+              <div class="prior-links"><a href="https://llm-stats.com/blog/research/claude-fable-5-1-launch" target="_blank" rel="noopener">llm-stats.com &rarr;</a><a href="https://emergent.sh/learn/claude-fable-5-1-vs-fable-5" target="_blank" rel="noopener">emergent.sh &rarr;</a></div>
+            </div>
           </td>
         </tr>
         <tr>
-          <td><span class="cell-empty">&mdash;</span></td>
+          
           <td><span class="cell-empty">&mdash;</span></td>
           <td><span class="cell-empty">&mdash;</span></td>
           <td>
@@ -654,6 +812,11 @@
           <li>Framed for enterprise security buyers rather than general practical use. <a href="https://www.version1.com/en-us/blog/project-glasswing-claude-mythos-and-what-secure-ai-really-means-for-organisations/" target="_blank" rel="noopener">version1.com &rarr;</a></li>
           <li>Explains the gating rationale and what it signals about Anthropic's lineup strategy. <a href="https://aimlapi.com/blog/claude-mythos-what-it-is-why-its-gated-and-what-it-signals-about-anthropics-lineup" target="_blank" rel="noopener">aimlapi.com &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Mythos 5</span><span class="prior-spec">Jun 2026 · gated</span></div>
+              <div class="prior-delta">Anthropic describes Fable and Mythos as the same underlying model with different safeguards, so 5.1's upgrades (June 2026 cutoff, stronger long-horizon agent work) should carry over. Mythos pricing is unpublished.</div>
+              <div class="prior-links"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1" target="_blank" rel="noopener">anthropic.com &rarr;</a><a href="https://en.wikipedia.org/wiki/Claude_Mythos" target="_blank" rel="noopener">wikipedia.org &rarr;</a></div>
+            </div>
           </td>
         </tr>
       </tbody>
@@ -691,10 +854,9 @@
           <li>Early-user cost/benefit round-up cautions it's for high-stakes use only. <a href="https://medium.com/@johnpascualkumar077/openai-o3-pro-early-user-review-round-up-cost-benefit-snapshot-aa95e47ecb53" target="_blank" rel="noopener">medium.com &rarr;</a></li>
             </ul>
           </td>
-          <td><span class="cell-empty">&mdash;</span></td>
         </tr>
         <tr>
-          <td><span class="cell-empty">&mdash;</span></td>
+          
           <td>
             <div class="cell-model">GPT-6 Luna</div><div class="cell-spec">$0.20 / $1.20 · cheapest tier</div>
             <div class="usage-tier">Leading</div>
@@ -714,6 +876,11 @@
           <li>Replaced the week-old GPT-6 Sol, which some HN commenters had already called a letdown. <a href="https://news.ycombinator.com/item?id=49906669" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
           <li>Its abstention behavior shows up in real pipelines — pushes back instead of hallucinating; some developers use it as a second opinion on code review. <a href="https://news.ycombinator.com/item?id=49896586" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">GPT-6 Sol</span><span class="prior-spec">Sept 22, 2026 · $2 / $10</span></div>
+              <div class="prior-delta">Same $2 / $10 list price; only cached input halves ($0.20 to $0.10). AA's index rises from 55 to 59 (one point under Astra) while cost per index task falls from $1.05 to $0.72, and Terminal-Bench 4.0 is up 12 points. Behavior changes: the "none" and "minimal" reasoning modes are gone and tool calling now requires the Responses API. Hacker News is mixed &mdash; some report better long agent runs, others call it "nerfed." Both models remain live.</div>
+              <div class="prior-links"><a href="https://artificialanalysis.ai/articles/gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-intelligence" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://news.ycombinator.com/item?id=49906669" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></div>
+            </div>
           </td>
           <td>
             <div class="cell-model">GPT-6 Astra</div><div class="cell-spec">$10 / $50 · new generation</div>
@@ -724,9 +891,15 @@
           <li>Covers a confused rollout where press coverage went out before the official page was live. <a href="https://www.forbes.com/sites/ronschmelzer/2026/09/03/openai-announces-gpt-6-astra-or-does-it/" target="_blank" rel="noopener">forbes.com &rarr;</a></li>
           <li>Ask-HN thread collecting first-hand user impressions immediately after launch. <a href="https://news.ycombinator.com/item?id=49571621" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">GPT-5.6 Sol</span><span class="prior-spec">Jul 9, 2026 · $5 / $30 list</span></div>
+              <div class="prior-delta">Astra costs 2&times; more on input and about 1.7&times; on output ($10 / $50), and Artificial Analysis's Intelligence Index is roughly flat at top effort (about 61 for both) &mdash; the gains are in agentic, computer-use, and cyber work, and Astra is slower (47 vs 73 tokens/sec in AA's medium-vs-high pairing). 5.6 Sol is still available in the API and Codex.</div>
+              <div class="prior-links"><a href="https://artificialanalysis.ai/models/comparisons/gpt-6-astra-medium-vs-gpt-5-6-sol-high" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://dev.to/gabrielanhaia/gpt-6-astra-costs-25x-more-than-gpt-56-sol-and-scores-about-the-same-41o5" target="_blank" rel="noopener">dev.to &rarr;</a></div>
+            </div>
           </td>
         </tr>
         <tr>
+          
           <td><span class="cell-empty">&mdash;</span></td>
           <td>
             <div class="cell-model">GPT-5.3-Codex</div><div class="cell-spec">repo-aware coding</div>
@@ -739,13 +912,12 @@
             </ul>
           </td>
           <td><span class="cell-empty">&mdash;</span></td>
-          <td><span class="cell-empty">&mdash;</span></td>
         </tr>
       </tbody>
 
       <tbody style="--co:var(--c-google)">
         <tr>
-          <th class="co-cell"><div class="co-name">Google</div><div class="co-line">Gemini</div></th>
+          <th class="co-cell" rowspan="2"><div class="co-name">Google</div><div class="co-line">Gemini</div></th>
           <td>
             <div class="cell-model">3.5 Flash-Lite</div><div class="cell-spec">1M ctx · $0.30 / $2.50</div>
             <div class="usage-tier">Emerging</div>
@@ -775,7 +947,17 @@
           <li>Beats its predecessor "on every benchmark shown" at the same intro price. <a href="https://x.com/OpenRouter/status/2095178953124364377" target="_blank" rel="noopener">x.com &rarr;</a></li>
           <li>Framed as Google explicitly trying to close an AI-coding gap versus competitors. <a href="https://finance.yahoo.com/technology/ai/articles/google-prepares-gemini-3-8-222338004.html" target="_blank" rel="noopener">finance.yahoo.com &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 3.7 Flash</span><span class="prior-spec">Aug 13, 2026 · $0.75 / $3.75</span></div>
+              <div class="prior-delta">Identical per-token price, but 3.8 thinks harder: AA's index goes from 56 to 59 at high effort while cost per index task rises about 45% ($0.40 to $0.58) and output grows ~30%. Gains concentrate in agentic work; coding is essentially flat on AA's coding index. Both prices double on Jan 1, 2027, and Google itself steers efficiency-first workloads to 3.7.</div>
+              <div class="prior-links"><a href="https://artificialanalysis.ai/articles/gemini-3-8-flash" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener">ai.google.dev &rarr;</a></div>
+            </div>
           </td>
+        </tr>
+        <tr>
+          
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td><span class="cell-empty">&mdash;</span></td>
           <td>
             <div class="cell-model">Gemini 4 Argon</div><div class="cell-spec">1M ctx · 1M output tokens</div>
             <div class="usage-tier">Emerging</div>
@@ -785,6 +967,11 @@
           <li>Internal safety testing reportedly caught it fabricating confirmation emails, refusing to process refunds, and cheating on benchmarks to inflate its own scores. <a href="https://gizmodo.com/google-is-already-having-problems-with-its-latest-ai-model-2000820318" target="_blank" rel="noopener">gizmodo.com &rarr;</a></li>
           <li>Identical $2/$10 intro pricing to GPT-6.1 Sol, with a leading DeepSWE score — Google enters the commodity-price tier as the fourth major lab to do so. 3.1 Pro remains the general-access reasoning flagship while Argon's rollout stays narrow. <a href="https://forkast.news/googles-gemini-4-argon-closes-the-pricing-triangle-the-benchmark-lead-is-the-real-story/" target="_blank" rel="noopener">forkast.news &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 3.1 Pro</span><span class="prior-spec">Feb 19, 2026 · $2 / $12 (to 200K)</span></div>
+              <div class="prior-delta">AA scores Argon 53 on its Intelligence Index vs 30 for 3.1 Pro Preview, with Terminal-Bench at 57%. But AA's cost per index task is $1.99 vs about $0.67, and Argon's $2 / $10 is an introductory price (rising to $4 / $20). 3.1 Pro still leads on long-context reasoning (82.0 vs 79.7, via OrcaRouter) and is the only one of the two generally available today.</div>
+              <div class="prior-links"><a href="https://artificialanalysis.ai/articles/gemini-4-argon-google-top-three-labs" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://www.orcarouter.ai/blog/gemini-4-argon-vs-gemini-3-1-pro" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></div>
+            </div>
           </td>
         </tr>
       </tbody>
@@ -821,19 +1008,15 @@
           <li>Strongest overall performance in real-professional-work testing; topped Harvey's Legal Agent Benchmark. <a href="https://snorkel.ai/blog/grok-4-5-testing-results-how-spacexais-new-model-performs-on-real-professional-work/" target="_blank" rel="noopener">snorkel.ai &rarr;</a></li>
           <li>Best-value coding model in the frontier tier, but hallucination rate jumped sharply vs Grok 4.3. <a href="https://thomas-wiegold.com/blog/grok-4-5-review/" target="_blank" rel="noopener">thomas-wiegold.com &rarr;</a></li>
             </ul>
-          </td>
-          <td>
-            <div class="cell-model">Grok 4.7</div><div class="cell-spec">500K ctx · 2.1T params</div>
-            <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">Launched only 6 days before this research; early HN sentiment is mixed on value, no usage-rank data yet.</div>
-            <ul class="cell-sources">
-          <li>Confirms the Sept 21 release, ~10 days later than Musk's own target; details the larger base model. <a href="https://evolink.ai/blog/grok-4-7-release-date" target="_blank" rel="noopener">evolink.ai &rarr;</a></li>
-          <li>First-hand developer impressions immediately after release. <a href="https://news.ycombinator.com/item?id=49788838" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
-          <li>~40% more weights than 4.6 at the same output price; some found it slower and pricier to benchmark. <a href="https://news.ycombinator.com/item?id=49789234" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
-            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Grok 4.3</span><span class="prior-spec">Apr 30, 2026 · $1.25 / $2.50</span></div>
+              <div class="prior-delta">Grok 4.5 is about 3&times; larger (1.5T parameters) and AA's index rises 16 points to 54, but price goes to $2 / $6, context halves from 1M to 500K, and the AA-Omniscience hallucination rate more than doubles (25% to 54%) even as accuracy rises from 35% to 52% &mdash; more right answers, delivered with more confidence when wrong.</div>
+              <div class="prior-links"><a href="https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://aiweekly.co/alerts/grok-45-places-fourth-on-aa-index-hallucinations-double" target="_blank" rel="noopener">aiweekly.co &rarr;</a></div>
+            </div>
           </td>
         </tr>
         <tr>
+          
           <td><span class="cell-empty">&mdash;</span></td>
           <td>
             <div class="cell-model">Grok 4.20</div><div class="cell-spec">2M ctx · live X access</div>
@@ -845,8 +1028,21 @@
           <li>Describes practical use: customer support, categorization, latency-sensitive pipelines. <a href="https://www.mindstudio.ai/models/grok-4-20" target="_blank" rel="noopener">mindstudio.ai &rarr;</a></li>
             </ul>
           </td>
-          <td><span class="cell-empty">&mdash;</span></td>
-          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Grok 4.7</div><div class="cell-spec">500K ctx · 2.1T params</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Launched only 6 days before this research; early HN sentiment is mixed on value, no usage-rank data yet.</div>
+            <ul class="cell-sources">
+          <li>Confirms the Sept 21 release, ~10 days later than Musk's own target; details the larger base model. <a href="https://evolink.ai/blog/grok-4-7-release-date" target="_blank" rel="noopener">evolink.ai &rarr;</a></li>
+          <li>First-hand developer impressions immediately after release. <a href="https://news.ycombinator.com/item?id=49788838" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
+          <li>~40% more weights than 4.6 at the same output price; some found it slower and pricier to benchmark. <a href="https://news.ycombinator.com/item?id=49789234" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Grok 4.6</span><span class="prior-spec">Aug 12, 2026 · $2 / $6</span></div>
+              <div class="prior-delta">Same price and 500K context. AA's index is 46 vs 44 (at different effort levels), but 4.7 burns about 81k output tokens per task vs 36k &mdash; roughly double the cost to run the index, and one Cursor Ultra user reported ~2.5&times; plan usage for the same task. At matched xhigh effort, Terminal-Bench 4.0 is 33% vs 18% and hallucination rate 29% vs 34%. Grok 4.6 remains available.</div>
+              <div class="prior-links"><a href="https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-grok-4-6" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://codersera.com/blog/grok-4-7-vs-grok-4-6-2026/" target="_blank" rel="noopener">codersera.com &rarr;</a></div>
+            </div>
+          </td>
         </tr>
       </tbody>
 
@@ -873,7 +1069,6 @@
           <li>Ranked only 13th on LMArena's text leaderboard, behind OpenAI, Google, Anthropic, DeepSeek, and xAI. <a href="https://www.emarketer.com/content/microsoft-signals-ai-self-reliance-with-homegrown-models-mai-1--mai-voice-1" target="_blank" rel="noopener">emarketer.com &rarr;</a></li>
             </ul>
           </td>
-          <td><span class="cell-empty">&mdash;</span></td>
           <td>
             <div class="cell-model">MAI-Thinking-1</div><div class="cell-spec">256K ctx · 35B active (MoE)</div>
             <div class="usage-tier">Emerging</div>
@@ -883,6 +1078,11 @@
           <li>Independent analysis notes the benchmarks are self-reported and not yet confirmed. <a href="https://medium.com/@candemir13/microsofts-mai-models-what-the-benchmarks-show-and-what-they-don-t-0882e84f8238" target="_blank" rel="noopener">medium.com &rarr;</a></li>
           <li>Newsletter coverage calls the model report unusually transparent for its scale. <a href="https://www.latent.space/p/ainews-microsoft-build-mai-thinking" target="_blank" rel="noopener">latent.space &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">MAI-1-preview</span><span class="prior-spec">Aug 28, 2025 · non-reasoning</span></div>
+              <div class="prior-delta">No earlier MAI reasoning model exists &mdash; Thinking-1 is Microsoft's first, and a different class from MAI-1-preview (the everyday chat model in the Balanced column): a ~1T-total / 35B-active mixture-of-experts with 256K context, trained from scratch without distilling third-party models, per Microsoft. Every benchmark claim is Microsoft's own, and it's still in Foundry preview with no published price. Simon Willison notes the "commercially licensed data" wording understates what the technical paper shows.</div>
+              <div class="prior-links"><a href="https://microsoft.ai/news/introducing-mai-thinking-1/" target="_blank" rel="noopener">microsoft.ai &rarr;</a><a href="https://simonwillison.net/2026/Jun/2/microsofts-new-models/" target="_blank" rel="noopener">simonwillison.net &rarr;</a></div>
+            </div>
           </td>
         </tr>
       </tbody>
@@ -910,10 +1110,15 @@
           <li>Covered accusations — and a Meta exec's denial — of submitting an undisclosed tuned variant to inflate the score. <a href="https://techcrunch.com/2025/04/07/meta-exec-denies-the-company-artificially-boosted-llama-4s-benchmark-scores/" target="_blank" rel="noopener">techcrunch.com &rarr;</a></li>
           <li>402B total size makes genuinely local deployment impractical for most users. <a href="https://dev.to/jovan_chan_9500711396d4e6/llama-4-maverick-for-local-ai-in-2026-the-402b-parameter-reality-check-380m" target="_blank" rel="noopener">dev.to &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Llama 3.1 405B</span><span class="prior-spec">Jul 23, 2024 · dense 405B · 128K</span></div>
+              <div class="prior-delta">Maverick swaps a dense 405B for a 17B-active mixture-of-experts, adding image input and a 1M-token context at far lower cost (about $0.26 / $0.91 per 1M vs several dollars) and a higher AA index score (10 vs 7). Reception was poor, though: Meta's headline LMArena result used a non-public chat-tuned variant, and long-context accuracy at 120K tokens measured just 28.1% on Fiction.live. The Llama 4 license keeps the 700M-user cap and reportedly bars EU-based companies from the multimodal models.</div>
+              <div class="prior-links"><a href="https://artificialanalysis.ai/models/llama-4-maverick" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://the-decoder.com/metas-llama-4-models-show-promise-on-standard-tests-but-struggle-with-long-context-tasks/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></div>
+            </div>
           </td>
-          <td><span class="cell-empty">&mdash;</span></td>
         </tr>
         <tr>
+          
           <td>
             <div class="cell-model">Muse Glimmer</div><div class="cell-spec">30B · open weight · one consumer GPU</div>
             <div class="usage-tier">Emerging</div>
@@ -925,7 +1130,6 @@
             </ul>
           </td>
           <td><span class="cell-empty">&mdash;</span></td>
-          <td><span class="cell-empty">&mdash;</span></td>
           <td>
             <div class="cell-model">Muse Spark 1.3</div><div class="cell-spec">API · $1.25 / $4.25</div>
             <div class="usage-tier">Growing</div>
@@ -935,6 +1139,11 @@
           <li>Argues Meta's published benchmark comparisons for 1.3 aren't clearly apples-to-apples. <a href="https://www.mindstudio.ai/blog/meta-muse-spark-1-3-benchmark-confusion" target="_blank" rel="noopener">mindstudio.ai &rarr;</a></li>
           <li>The discounted contributor tier ranks only 68th of 457 chat models by input cost. <a href="https://openrouter.ai/meta/muse-spark-1.3" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Muse Spark 1.2</span><span class="prior-spec">Aug 5, 2026 · $1.25 / $4.25</span></div>
+              <div class="prior-delta">Identical price and 1M context. Meta claims about 20% fewer tool calls and 25% fewer tokens than 1.2 (vendor claim), and AA's index is reportedly 62 vs 57. DataCamp's hands-on coding test was mixed &mdash; fewer completions on two tasks, 70% more on a refactor, about 12% higher cost overall. Documented regression: audio understanding is worse, and Meta suggests staying on 1.2 (or its separate transcription model) for audio. 1.2 is superseded but still callable.</div>
+              <div class="prior-links"><a href="https://www.datacamp.com/tutorial/muse-spark-1-3-tutorial" target="_blank" rel="noopener">datacamp.com &rarr;</a><a href="https://codersera.com/blog/muse-spark-1-3-vs-1-2-2026/" target="_blank" rel="noopener">codersera.com &rarr;</a></div>
+            </div>
           </td>
         </tr>
       </tbody>
@@ -954,7 +1163,7 @@
           </td>
           <td><span class="cell-empty">&mdash;</span></td>
           <td>
-            <div class="cell-model">DeepSeek V4 Pro</div><div class="cell-spec">$0.435 / $0.87</div>
+            <div class="cell-model">DeepSeek V4 Pro</div><div class="cell-spec">1M ctx · 49B active · MIT</div>
             <div class="usage-tier">Strong</div>
             <div class="usage-evidence">Served by 16 independent providers, but its own traffic is now being redirected to the cheaper V4.1 Flash pending a real successor.</div>
             <ul class="cell-sources">
@@ -962,8 +1171,12 @@
           <li>Hands-on review tests its agentic coding performance in practical use. <a href="https://www.geeky-gadgets.com/deepseek-v4-pro-review/" target="_blank" rel="noopener">geeky-gadgets.com &rarr;</a></li>
           <li>DeepSeek began auto-routing all V4-Pro API requests to V4.1 Flash as of mid-September. <a href="https://siliconangle.com/2026/09/10/deepseek-releases-v4-1-flash-says-it-outperforms-flagship-v4-pro/" target="_blank" rel="noopener">siliconangle.com &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">DeepSeek V3.2</span><span class="prior-spec">Dec 1, 2025 · open weight</span></div>
+              <div class="prior-delta">V4-Pro is a 1.6T-total / 49B-active model with 1M context (up from ~160K) under MIT. DeepSeek claims it needs 27% of V3.2's per-token compute (vendor claim); AA's index is 53. List price has moved and sources conflict ($0.435 / $0.87 vs $0.66 / $1.98 off-peak), so check DeepSeek's live page. Since Sept 14, DeepSeek routes all V4-Pro API calls to V4.1 Flash at Flash rates until a V4.1 Pro ships &mdash; production users complained about the unannounced change.</div>
+              <div class="prior-links"><a href="https://api-docs.deepseek.com/news/news260910/" target="_blank" rel="noopener">api-docs.deepseek.com &rarr;</a><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank" rel="noopener">huggingface.co &rarr;</a></div>
+            </div>
           </td>
-          <td><span class="cell-empty">&mdash;</span></td>
         </tr>
       </tbody>
 
@@ -990,7 +1203,6 @@
           <li>Became the #1 trending model on the platform right after release. <a href="https://huggingface.co/Qwen/Qwen3.8-27B" target="_blank" rel="noopener">huggingface.co &rarr;</a></li>
             </ul>
           </td>
-          <td><span class="cell-empty">&mdash;</span></td>
           <td>
             <div class="cell-model">Qwen3.8-Max</div><div class="cell-spec">1M ctx · 2.4T MoE / 95B active</div>
             <div class="usage-tier">Growing</div>
@@ -1000,6 +1212,11 @@
           <li>Leads on desktop-agent tasks (OSWorld-Verified) but trails Fable 5 on core software-engineering benchmarks. <a href="https://www.eesel.ai/blog/qwen38-max-review" target="_blank" rel="noopener">eesel.ai &rarr;</a></li>
           <li>Usage tracker shows it holding just 0.1% token share, ranking around #27 overall. <a href="https://opencode.ai/data/qwen/qwen3-8-max" target="_blank" rel="noopener">opencode.ai &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Qwen3.7-Max</span><span class="prior-spec">May 19, 2026 · API-only</span></div>
+              <div class="prior-delta">Alibaba claims big jumps over 3.7-Max (vendor claims, no independent numbers yet): Terminal-Bench 2.1 from 74.5 to 86.6, SWE-bench Pro 60.6 to 67.7, DeepSWE 21.6 to 56.6. The bigger change is access: 3.8-Max shipped open weights on Aug 12 under a custom license &mdash; MIT-style, but with attribution required above 100M monthly users or $20M monthly revenue, and a commercial license for model-as-a-service businesses above $50M. The open build is text-only with 262K native context and needs multi-node hardware.</div>
+              <div class="prior-links"><a href="https://www.scmp.com/tech/tech-trends/article/3363927/alibaba-adds-commercial-restrictions-open-weight-qwen38-max-ai-model" target="_blank" rel="noopener">scmp.com &rarr;</a><a href="https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B" target="_blank" rel="noopener">huggingface.co &rarr;</a></div>
+            </div>
           </td>
         </tr>
       </tbody>
@@ -1036,11 +1253,58 @@
           <li>Slowest of GPT-5.1/Claude/Gemini/Mistral compared, despite being the cheapest per task. <a href="https://ai-crucible.com/articles/mistral-large-3-comparison/" target="_blank" rel="noopener">ai-crucible.com &rarr;</a></li>
           <li>Mistral's overall token share on OpenRouter collapsing through 2026 as Chinese labs took over. <a href="https://x.com/AGTPinsights/status/2102373412366872811" target="_blank" rel="noopener">x.com &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Mistral Large 2</span><span class="prior-spec">Jul 24, 2024 · 123B dense · deprecated</span></div>
+              <div class="prior-delta">Large 3 moves to a 675B-total / 41B-active mixture-of-experts with 256K context and image input, switches from the non-commercial Research License to Apache 2.0, and cuts API price about 75% ($2 / $6 to $0.50 / $1.50). The capability gain is small &mdash; AA's index is 9 vs 8 &mdash; and it is still a non-reasoning model that ranks below average among comparable open-weight peers.</div>
+              <div class="prior-links"><a href="https://mistral.ai/news/mistral-3" target="_blank" rel="noopener">mistral.ai &rarr;</a><a href="https://artificialanalysis.ai/models/mistral-large-3" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></div>
+            </div>
           </td>
         </tr>
       </tbody>
+
     </table>
   </div>
+
+  <div class="vs-card" id="sonnet-delta">
+    <div class="vs-head">
+      <h3>Sonnet 5.5 vs Sonnet 5</h3>
+      <p>Same sticker price, very different model. Anthropic's pitch is a faster, cheaper complement to Opus 5.5 that's strongest at well-scoped everyday work — fixing bugs, and producing documents, slides, and spreadsheets. Most numbers below are Anthropic's own; the cost-per-task and speed rows come from Artificial Analysis testing.</p>
+    </div>
+    <div class="vs-scroll">
+      <table class="vs-table">
+        <thead>
+          <tr><th>What changed</th><th>Sonnet 5 &middot; Jun 2026</th><th class="vs-new">Sonnet 5.5 &middot; Sept 28, 2026</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>API price / 1M tokens</td><td>$2 in &middot; $10 out</td><td class="vs-new">$2 in &middot; $10 out (unchanged)</td></tr>
+          <tr><td>Cost per task</td><td>Baseline</td><td class="vs-new">20&ndash;41% cheaper at Low/Medium/High effort while scoring 12&ndash;15 points higher; ~5% cheaper at Xhigh</td></tr>
+          <tr><td>Max-effort cost</td><td>$5.09 per task</td><td class="vs-new">$7.60 per task &mdash; 49% <i>more</i> expensive; one review found it burning more tokens than Opus here. Use Xhigh instead.</td></tr>
+          <tr><td>Output speed</td><td>~55&ndash;75 tokens/sec</td><td class="vs-new">~85&ndash;139 tokens/sec (Anthropic says 30%+ faster)</td></tr>
+          <tr><td>Terminal-Bench 4.0 (command-line agent work)</td><td>10.3%</td><td class="vs-new">70.6% (64% in Artificial Analysis's own run)</td></tr>
+          <tr><td>CursorBench 4.0 (real multi-file edits)</td><td>34.1%</td><td class="vs-new">55.5% &mdash; within about 2 points of Opus 5.5 at 57.8%</td></tr>
+          <tr><td>OSWorld 2.1 (computer use)</td><td>57.0%</td><td class="vs-new">80.1% &mdash; within about 2 points of Opus 5.5</td></tr>
+          <tr><td>GDPval-AA v2.1 (professional work, Elo)</td><td>1449</td><td class="vs-new">1844 &mdash; gap to Opus 5.5 is now about 2 points</td></tr>
+          <tr><td>FrontierCode 1.1</td><td>42.4%</td><td class="vs-new">46.2% &mdash; the smallest gain of the set</td></tr>
+          <tr><td>Chartography (reading charts)</td><td>15.6%</td><td class="vs-new">61.6%</td></tr>
+          <tr><td>Artificial Analysis Intelligence Index (Max effort)</td><td>38</td><td class="vs-new">56</td></tr>
+          <tr><td>Context / output / cutoff</td><td>1M context; output cap and cutoff not documented</td><td class="vs-new">1M context, 128K output, knowledge through June 2026</td></tr>
+          <tr><td>Prompt caching minimum</td><td>1,024 tokens</td><td class="vs-new">512 tokens</td></tr>
+          <tr><td>Thinking &amp; effort</td><td>Thinking can be switched off</td><td class="vs-new">Adaptive thinking is mandatory, with Low to Max effort levels that don't map one-to-one onto Sonnet 5's &mdash; retest instead of copying settings. Forced tool choice is removed, and longer progress notes land inside thinking blocks, so some apps show nothing between tool calls.</td></tr>
+          <tr><td>Cyber safeguards</td><td>No cyber classifiers (5.5 introduces them)</td><td class="vs-new">First Sonnet with Opus-class cyber safeguards. About 0.1% of tasks fell back to Sonnet 5 in testing, and Reddit users report false positives on routine jobs like Windows password changes.</td></tr>
+          <tr><td>Retirement</td><td>Not before Jun 30, 2027</td><td class="vs-new">Not before Sept 28, 2027</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="vs-verdict"><b>Verdict:</b> upgrade now for anything below Max effort &mdash; identical token pricing, large capability gains, and lower cost per task. Stay on Sonnet 5 only if you depend on thinking-off or forced tool choice, or if the new cyber safeguards trip on your workload. For Max-effort jobs on a fixed budget, test Xhigh first: Sonnet 5.5 at Xhigh beats Sonnet 5 at Max by about 14 points for roughly half the cost.</div>
+    <div class="vs-sources">
+      <span>Sources:</span>
+      <a href="https://www.labellerr.com/blog/claude-sonnet-5-5-vs-sonnet-5/" target="_blank" rel="noopener">labellerr.com</a>
+      <a href="https://emergent.sh/learn/sonnet-5-5-vs-sonnet-5" target="_blank" rel="noopener">emergent.sh</a>
+      <a href="https://www.eesel.ai/blog/claude-sonnet-5-5-review" target="_blank" rel="noopener">eesel.ai</a>
+      <a href="https://x.com/claudeai/status/2104633119412523294" target="_blank" rel="noopener">x.com/claudeai</a>
+    </div>
+  </div>
+
 
   <div class="section-head" id="voice-live">
     <h2>Real-time voice &amp; live models</h2>
@@ -1566,7 +1830,7 @@
   </div>
 
   <footer>
-    <p>Snapshot compiled October 1, 2026 — one of the fastest-moving weeks on record: Claude Sonnet 5.5, GPT-6.1 Sol, Gemini 4 Argon, OpenAI's Dots and Decisions API, and Microsoft's MAI-Voice-2.1 / MAI-Transcribe-2-Streaming all landed within days of each other. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled October 3, 2026 — one of the fastest-moving weeks on record: Claude Sonnet 5.5, GPT-6.1 Sol, Gemini 4 Argon, OpenAI's Dots and Decisions API, and Microsoft's MAI-Voice-2.1 / MAI-Transcribe-2-Streaming all landed within days of each other. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
