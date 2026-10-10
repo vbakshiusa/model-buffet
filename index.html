@@ -610,7 +610,7 @@
     <h1>Model Buffet</h1>
     <p class="dek">A working cheat sheet across the labs that matter right now — from the quick, cheap counter items to the five-course flagship reasoning.</p>
     <div class="meta-row">
-      <span>Snapshot: Oct 3, 2026</span>
+      <span>Snapshot: Oct 9, 2026</span>
       <span>Moves fast — recheck pricing before you budget on it</span>
     </div>
   </header>
@@ -620,14 +620,14 @@
     <div class="qp-grid">
       <div class="qp-item"><span class="qp-need">Hardest coding / long agent runs</span><span class="qp-ans">GPT&#8209;6 Astra · Fable 5.1 · Opus 5.5</span></div>
       <div class="qp-item"><span class="qp-need">Daily driver, best speed/IQ balance</span><span class="qp-ans">Sonnet 5.5 · GPT&#8209;6.1 Sol</span></div>
-      <div class="qp-item"><span class="qp-need">Fastest & cheapest, still sharp</span><span class="qp-ans">Haiku 4.5 · GPT&#8209;5.6 Luna</span></div>
+      <div class="qp-item"><span class="qp-need">Fastest & cheapest, still sharp</span><span class="qp-ans">Haiku 5.5 · GPT&#8209;6 Luna</span></div>
       <div class="qp-item"><span class="qp-need">Feeding it a huge document set</span><span class="qp-ans">Llama 4 Scout (10M)</span></div>
       <div class="qp-item"><span class="qp-need">Real-time web / social context</span><span class="qp-ans">Grok 4.20</span></div>
       <div class="qp-item"><span class="qp-need">Deep inside Gmail/Docs/Workspace</span><span class="qp-ans">Gemini 3.1 Pro</span></div>
       <div class="qp-item"><span class="qp-need">Self-hosting on a budget</span><span class="qp-ans">Qwen3.8&#8209;27B · DeepSeek V4.1 Flash</span></div>
       <div class="qp-item"><span class="qp-need">Frontier-grade reasoning, open weights</span><span class="qp-ans">Qwen3.8&#8209;Max</span></div>
       <div class="qp-item"><span class="qp-need">Talk to it live / build a voice agent</span><span class="qp-ans">Gemini 3.8 Live · GPT&#8209;Live</span></div>
-      <div class="qp-item"><span class="qp-need">An agent that keeps working while you're away</span><span class="qp-ans">Dots · Muse · Grok Bot</span></div>
+      <div class="qp-item"><span class="qp-need">An agent that keeps working while you're away</span><span class="qp-ans">Dots · Gemini agent · Muse</span></div>
     </div>
   </div>
 
@@ -652,17 +652,22 @@
         <tr>
           <th class="co-cell" rowspan="3"><div class="co-name">Anthropic</div><div class="co-line">Claude</div></th>
           <td>
-            <div class="cell-model">Haiku 4.5</div><div class="cell-spec">200K ctx · $1 / $5</div>
-            <div class="usage-tier">Strong</div>
-            <div class="usage-evidence">Adopted as the fast "executor" model under Opus/Sonnet orchestration, and built into tools like Warp and GitHub Copilot for its speed/cost profile.</div>
+            <div class="cell-model">Haiku 5.5</div><div class="cell-spec">1M ctx · $0.10 / $0.50</div>
+            <div class="usage-tier">Growing</div>
+            <div class="usage-evidence">Launched Oct 7 on six platforms at once, including GitHub Copilot, but it is days old &mdash; and a new tokenizer plus 2&ndash;3&times; more tokens per task than GPT-6 Luna erodes part of the headline price cut.</div>
             <ul class="cell-sources">
-          <li>Community testers found it more precise than GPT-5 models at avoiding irrelevant code changes. <a href="https://claudeai.dev/blog/haiku-45-community-analysis/" target="_blank" rel="noopener">claudeai.dev &rarr;</a></li>
-          <li>Positioned as near-frontier intelligence at a fraction of Sonnet/Opus cost and latency. <a href="https://www.developersdigest.tech/blog/claude-haiku-4-5" target="_blank" rel="noopener">developersdigest.tech &rarr;</a></li>
-          <li>Sits mid-pack on price — cheaper than only ~35% of listed chat models, not the bargain bin. <a href="https://openrouter.ai/anthropic/claude-haiku-4.5" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
+          <li>Up to a 90% price cut versus Haiku 4.5, but the tokenizer consumes more tokens, so real-world savings are smaller than the sticker price suggests. <a href="https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></li>
+          <li>Beats GPT-6 Luna on computer use (72.4% vs 48.9%) and hallucination rate (40% vs 77%), but loses to Sonnet 5.5 on multi-step coding &mdash; pitched for classification, chat, and subagents. <a href="https://thegenaimagazine.com/claude-haiku-5-5-review-vs-sonnet-5-5-vs-gpt-6-luna" target="_blank" rel="noopener">thegenaimagazine.com &rarr;</a></li>
+          <li>Shell automation is still weak (Terminal-Bench 39.2% vs Sonnet 5.5's 70.6%), and temperature and sampling controls are gone &mdash; requests that set them now fail with an HTTP 400. <a href="https://computingforgeeks.com/claude-haiku-5-5-released-features-benchmarks/" target="_blank" rel="noopener">computingforgeeks.com &rarr;</a></li>
             </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Haiku 4.5</span><span class="prior-spec">Oct 2025 · 200K ctx · $1 / $5</span></div>
+              <div class="prior-delta">Haiku 5.5 costs a tenth as much below 100K tokens (half the old rate above it), but its new tokenizer emits roughly 30% more tokens, so effective savings are closer to 87% below 100K and about 35% above. Context grows from 200K to 1M and adaptive thinking arrives in the Haiku line for the first time. OSWorld jumps from 15.7% to 72.4%, Terminal-Bench 4.0 from 0.0% to 39.2%, and AA's index from 17 to 34 at default effort.</div>
+              <div class="prior-links"><a href="https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/" target="_blank" rel="noopener">the-decoder.com &rarr;</a><a href="https://myclaw.ai/blog/claude-haiku-5-5-vs-4-5" target="_blank" rel="noopener">myclaw.ai &rarr;</a></div>
+            </div>
           </td>
           <td>
-            <div class="cell-model">Sonnet 5.5</div><div class="cell-spec">1M ctx · $2 / $10</div>
+            <div class="cell-model">Sonnet 5.5</div><div class="cell-spec">1M ctx · $2 / $10 · cache reads $0.10</div>
             <div class="usage-tier">Leading</div>
             <div class="usage-evidence">Launched Sept 28 at unchanged Sonnet 5 pricing — Reddit calls it "the first Sonnet I want to use," with some ready to declare OpenAI in trouble over the benchmark jump.</div>
             <ul class="cell-sources">
@@ -771,7 +776,7 @@
         <tr>
           
           <td>
-            <div class="cell-model">GPT-6 Luna</div><div class="cell-spec">$0.20 / $1.20 · cheapest tier</div>
+            <div class="cell-model">GPT-6 Luna</div><div class="cell-spec">$0.10 / $0.50 · cheapest tier</div>
             <div class="usage-tier">Leading</div>
             <div class="usage-evidence">Became an automatic fallback default in at least one major agent platform within a day, and is free-tier accessible in the ChatGPT desktop app.</div>
             <ul class="cell-sources">
@@ -796,7 +801,7 @@
             </div>
           </td>
           <td>
-            <div class="cell-model">GPT-6 Astra</div><div class="cell-spec">$10 / $50 · new generation</div>
+            <div class="cell-model">GPT-6 Astra</div><div class="cell-spec">$10 / $50 · Ultrafast tier $60 / $300</div>
             <div class="usage-tier">Leading</div>
             <div class="usage-evidence">Immediately became "the loudest topic in AI YouTube and Reddit"; Reddit users reportedly burn through 5-hour usage limits in ~15 messages.</div>
             <ul class="cell-sources">
@@ -1136,7 +1141,7 @@
 
       <tbody style="--co:var(--c-mistral)">
         <tr>
-          <th class="co-cell"><div class="co-name">Mistral</div><div class="co-line">open weight · Apache 2.0</div></th>
+          <th class="co-cell"><div class="co-name">Mistral</div><div class="co-line">open weight · Large 4 license pending</div></th>
           <td>
             <div class="cell-model">Small 4</div><div class="cell-spec">efficient enterprise</div>
             <div class="usage-tier">Growing</div>
@@ -1158,18 +1163,18 @@
             </ul>
           </td>
           <td>
-            <div class="cell-model">Large 3</div><div class="cell-spec">flagship · open weight</div>
-            <div class="usage-tier">Niche</div>
-            <div class="usage-evidence">Debuts at #2 among open-weight non-reasoning models on LMArena, but Mistral's overall OpenRouter token share is collapsing as Chinese open-weight labs take over.</div>
+            <div class="cell-model">Large 4</div><div class="cell-spec">1M ctx · ~1T MoE / ~50B active · preview</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Public preview since Oct 6, with open weights promised by end of October but not yet released. AA's index jumped from 9.3 to 38.4, yet it still trails Kimi K3 (43.6) and Qwen3.8-Max (45.4).</div>
             <ul class="cell-sources">
-          <li>Official model card notes it debuted at #2 among open-weight non-reasoning models on LMArena. <a href="https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512" target="_blank" rel="noopener">huggingface.co &rarr;</a></li>
-          <li>Slowest of GPT-5.1/Claude/Gemini/Mistral compared, despite being the cheapest per task. <a href="https://ai-crucible.com/articles/mistral-large-3-comparison/" target="_blank" rel="noopener">ai-crucible.com &rarr;</a></li>
-          <li>Mistral's overall token share on OpenRouter collapsing through 2026 as Chinese labs took over. <a href="https://x.com/AGTPinsights/status/2102373412366872811" target="_blank" rel="noopener">x.com &rarr;</a></li>
+          <li>Cybersecurity is the standout and output is quick (~116 tokens/sec), but a 41.9% hallucination rate and ~18.7s time-to-first-token hurt customer-facing use. <a href="https://www.eesel.ai/blog/mistral-large-4-review" target="_blank" rel="noopener">eesel.ai &rarr;</a></li>
+          <li>The announcement listed $1.36 / $4.18, but the live API charges exactly half ($0.68 / $2.09) and Mistral hasn't said which is real &mdash; likely a launch discount ending around Oct 20. <a href="https://aitoolbriefing.com/industry/mistral-large-4-le-chonk-pricing-confusion-2026/" target="_blank" rel="noopener">aitoolbriefing.com &rarr;</a></li>
+          <li>Scores level with GPT-6 Luna (38) at 8&ndash;14&times; the per-token price; the pitch is European sovereignty, security work, and legal documents, not coding. <a href="https://thegenaimagazine.com/mistral-large-4-le-chonk-review-vs-sonnet-sol-luna-chinese-models" target="_blank" rel="noopener">thegenaimagazine.com &rarr;</a></li>
             </ul>
             <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Mistral Large 2</span><span class="prior-spec">Jul 24, 2024 · 123B dense · deprecated</span></div>
-              <div class="prior-delta">Large 3 moves to a 675B-total / 41B-active mixture-of-experts with 256K context and image input, switches from the non-commercial Research License to Apache 2.0, and cuts API price about 75% ($2 / $6 to $0.50 / $1.50). The capability gain is small &mdash; AA's index is 9 vs 8 &mdash; and it is still a non-reasoning model that ranks below average among comparable open-weight peers.</div>
-              <div class="prior-links"><a href="https://mistral.ai/news/mistral-3" target="_blank" rel="noopener">mistral.ai &rarr;</a><a href="https://artificialanalysis.ai/models/mistral-large-3" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></div>
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Mistral Large 3</span><span class="prior-spec">Dec 2, 2025 · 256K ctx · $0.50 / $1.50</span></div>
+              <div class="prior-delta">Large 4 grows to roughly 1T total / ~50B active parameters with a 1M-token context (up from 256K) and hybrid reasoning, and AA's index jumps from 9.3 to 38.4. It is also dearer: about 39% more per output token even at the launch-sale rate, double that at list. Large 3 stays Apache 2.0 and available; Large 4's license and weights have not been published.</div>
+              <div class="prior-links"><a href="https://www.eesel.ai/blog/mistral-large-4-review" target="_blank" rel="noopener">eesel.ai &rarr;</a><a href="https://aiweekly.co/alerts/mistral-previews-1t-param-open-weight-large-4-le-chonk" target="_blank" rel="noopener">aiweekly.co &rarr;</a></div>
             </div>
           </td>
         </tr>
@@ -1312,7 +1317,7 @@
         <tr>
           <th class="co-cell"><div class="co-name">Decisions API</div><div class="co-line">OpenAI · Sept 29, 2026</div></th>
           <td class="ent-models">A specialized, constrained version of GPT-6 Luna: give it a question, a finite list of allowed answers, and text or image context — it returns one of those answers, nothing else.</td>
-          <td class="ent-pick">Limited preview API<br>broad release expected in the coming days</td>
+          <td class="ent-pick">Public beta API since Oct 6<br>moved out of limited preview within a week</td>
           <td class="ent-why">Answers in roughly 150ms, about 10&times; faster than calling full GPT-6 Luna for the same decision — OpenAI's direct answer to Jev, built on an existing chat model rather than a separate architecture.
             <a href="https://the-decoder.com/openai-expands-codex-and-its-api-at-devday-with-security-scans-a-decisions-api-and-ultrafast/" target="_blank" rel="noopener">the-decoder.com &rarr;</a>
           </td>
@@ -1610,6 +1615,16 @@
           </td>
         </tr>
       </tbody>
+      <tbody style="--co:var(--c-google)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Gemini agent</div><div class="co-line">Google Cloud · Oct 8, 2026</div></th>
+          <td class="ent-models">Google's "universal agent for work": give it an objective and it researches, writes documents and code, spins up sub-agents, and works on tasks lasting hours or days. Persistent coworker agents get their own email address, calendar, and Drive storage.</td>
+          <td class="ent-pick">Enterprise · hosted SaaS, private preview<br>inside Gemini Enterprise and Workspace; runs on Gemini but also supports Claude</td>
+          <td class="ent-why">The workplace counterpart to Dots, with governance built in &mdash; attested agent identities, isolated containers, full activity logs, and an Agent Gateway enforcing company policy. Included at no extra charge where Gemini Enterprise is available, but pricing for long-running coworker agents is unclear.
+            <a href="https://venturebeat.com/orchestration/google-cloud-unveils-persistent-gemini-agents-for-long-running-tasks-and-they-get-their-own-gmail-calendar-and-drive-storage" target="_blank" rel="noopener">venturebeat.com &rarr;</a> <a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work/" target="_blank" rel="noopener">blog.google &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
@@ -1633,8 +1648,8 @@
           <th class="co-cell"><div class="co-name">ChatGPT</div><div class="co-line">OpenAI</div></th>
           <td class="ent-models">Standalone app (iOS/Android/web), routing across GPT-6 Astra, Sol, and Luna depending on plan and query.</td>
           <td class="ent-pick">The default, most mainstream AI app</td>
-          <td class="ent-why">Passed 1 billion weekly active users in August 2026 — by far the widest reach of any single AI product, handling roughly 2.5 billion prompts a day.
-            <a href="https://www.businessofapps.com/data/chatgpt-statistics/" target="_blank" rel="noopener">businessofapps.com &rarr;</a>
+          <td class="ent-why">Over 1.2 billion weekly active users as of DevDay — by far the widest reach of any single AI product. On Oct 7 it added GPT-6 with Intelligent UI, answering with inline calculators, comparison tables, and games instead of plain text (Free and Go users from Oct 8, on GPT-6 Luna).
+            <a href="https://releasebot.io/updates/openai" target="_blank" rel="noopener">releasebot.io &rarr;</a> <a href="https://www.latent.space/p/ainews-openai-devday-2026-dots-61" target="_blank" rel="noopener">latent.space &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1702,7 +1717,7 @@
   </div>
 
   <footer>
-    <p>Snapshot compiled October 3, 2026 — one of the fastest-moving weeks on record: Claude Sonnet 5.5, GPT-6.1 Sol, Gemini 4 Argon, OpenAI's Dots and Decisions API, and Microsoft's MAI-Voice-2.1 / MAI-Transcribe-2-Streaming all landed within days of each other. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled October 9, 2026 — a week of price cuts and a new class of workplace agents: Claude Haiku 5.5 undercut GPT-6 Luna, Mistral previewed its trillion-parameter Large 4, and Google put a persistent Gemini agent in Workspace. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
@@ -1775,6 +1790,11 @@
       <a href="https://the-decoder.com/openai-expands-codex-and-its-api-at-devday-with-security-scans-a-decisions-api-and-ultrafast/">the-decoder.com/decisions-api</a>
       <a href="https://siliconangle.com/2026/10/01/microsoft-targets-ultra-realistic-voice-agents-with-its-first-streaming-transcription-model/">siliconangle.com/mai-voice-2.1</a>
       <a href="https://gizmodo.com/google-is-already-having-problems-with-its-latest-ai-model-2000820318">gizmodo.com/gemini-4-argon</a>
+      <a href="https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/">the-decoder.com/haiku-5.5</a>
+      <a href="https://www.eesel.ai/blog/mistral-large-4-review">eesel.ai/mistral-large-4</a>
+      <a href="https://venturebeat.com/orchestration/google-cloud-unveils-persistent-gemini-agents-for-long-running-tasks-and-they-get-their-own-gmail-calendar-and-drive-storage">venturebeat.com/gemini-agent</a>
+      <a href="https://releasebot.io/updates/openai">releasebot.io/openai</a>
+      <a href="https://releasebot.io/updates/anthropic">releasebot.io/anthropic</a>
     </div>
   </footer>
 
