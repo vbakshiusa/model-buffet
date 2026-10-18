@@ -610,7 +610,7 @@
     <h1>Model Buffet</h1>
     <p class="dek">A working cheat sheet across the labs that matter right now — from the quick, cheap counter items to the five-course flagship reasoning.</p>
     <div class="meta-row">
-      <span>Snapshot: Oct 9, 2026</span>
+      <span>Snapshot: Oct 18, 2026</span>
       <span>Moves fast — recheck pricing before you budget on it</span>
     </div>
   </header>
@@ -626,7 +626,7 @@
       <div class="qp-item"><span class="qp-need">Deep inside Gmail/Docs/Workspace</span><span class="qp-ans">Gemini 3.1 Pro</span></div>
       <div class="qp-item"><span class="qp-need">Self-hosting on a budget</span><span class="qp-ans">Qwen3.8&#8209;27B · DeepSeek V4.1 Flash</span></div>
       <div class="qp-item"><span class="qp-need">Frontier-grade reasoning, open weights</span><span class="qp-ans">Qwen3.8&#8209;Max</span></div>
-      <div class="qp-item"><span class="qp-need">Talk to it live / build a voice agent</span><span class="qp-ans">Gemini 3.8 Live · GPT&#8209;Live</span></div>
+      <div class="qp-item"><span class="qp-need">Talk to it live / build a voice agent</span><span class="qp-ans">Grok Voice 3.0 · GPT&#8209;Live</span></div>
       <div class="qp-item"><span class="qp-need">An agent that keeps working while you're away</span><span class="qp-ans">Dots · Gemini agent · Muse</span></div>
     </div>
   </div>
@@ -847,13 +847,13 @@
             </ul>
           </td>
           <td>
-            <div class="cell-model">3.7 Flash</div><div class="cell-spec">1M ctx · $0.75 / $3.75</div>
-            <div class="usage-tier">Growing</div>
-            <div class="usage-evidence">OpenRouter promoted it with a discount to build usage and called it competitive, but it was superseded by 3.8 Flash only three weeks later.</div>
+            <div class="cell-model">3.7 Flash</div><div class="cell-spec">1M ctx · $0.75 / $3.75 · deprecated Oct 8</div>
+            <div class="usage-tier">Niche</div>
+            <div class="usage-evidence">Deprecated Oct 8: requests now auto-redirect to 3.8 Flash, so this is a legacy name rather than a pick &mdash; the practical choices are 3.8 Flash, or 3.5 Flash-Lite for cost.</div>
             <ul class="cell-sources">
-          <li>1M-token context, positioned for agentic and coding workflows. <a href="https://openrouter.ai/google/gemini-3.7-flash" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
+          <li>1M-token context, positioned for agentic and coding workflows while it was current. <a href="https://openrouter.ai/google/gemini-3.7-flash" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
           <li>OpenRouter's own testing found it "especially competitive" for multimodal and agentic workloads. <a href="https://x.com/OpenRouter/status/2087952866409656733" target="_blank" rel="noopener">x.com &rarr;</a></li>
-          <li>Dedicated HN thread gives direct developer reaction to the release. <a href="https://news.ycombinator.com/item?id=49289112" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
+          <li>Gemini API notes list it as deprecated on Oct 8, redirected to gemini-3.8-flash, with no shutdown date announced. <a href="https://releasebot.io/updates/google/gemini-api" target="_blank" rel="noopener">releasebot.io &rarr;</a></li>
             </ul>
           </td>
           <td>
@@ -867,7 +867,7 @@
             </ul>
             <div class="prior-version">
               <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 3.7 Flash</span><span class="prior-spec">Aug 13, 2026 · $0.75 / $3.75</span></div>
-              <div class="prior-delta">Identical per-token price, but 3.8 thinks harder: AA's index goes from 56 to 59 at high effort while cost per index task rises about 45% ($0.40 to $0.58) and output grows ~30%. Gains concentrate in agentic work; coding is essentially flat on AA's coding index. Both prices double on Jan 1, 2027, and Google itself steers efficiency-first workloads to 3.7.</div>
+              <div class="prior-delta">Identical per-token price, but 3.8 thinks harder: AA's index goes from 56 to 59 at high effort while cost per index task rises about 45% ($0.40 to $0.58) and output grows ~30%. Gains concentrate in agentic work; coding is essentially flat on AA's coding index. Both prices double on Jan 1, 2027. 3.7 Flash was deprecated on Oct 8 and now auto-redirects to 3.8, so low effort (about $0.24 per task) is the efficient way to run it.</div>
               <div class="prior-links"><a href="https://artificialanalysis.ai/articles/gemini-3-8-flash" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener">ai.google.dev &rarr;</a></div>
             </div>
           </td>
@@ -877,17 +877,17 @@
           <td><span class="cell-empty">&mdash;</span></td>
           <td><span class="cell-empty">&mdash;</span></td>
           <td>
-            <div class="cell-model">Gemini 4 Argon</div><div class="cell-spec">1M ctx · 1M output tokens</div>
-            <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">Google's first real Gemini 4 model, launched Sept 30 — rolling out first to trusted cyber defenders via Fairwind, broader access later. Google's own employees reported it struggling on real-world coding tasks and fabricating confirmation emails during safety testing.</div>
+            <div class="cell-model">Gemini 4 Argon</div><div class="cell-spec">1M ctx · 1M output · GA Oct 13 · $2 / $10 intro</div>
+            <div class="usage-tier">Growing</div>
+            <div class="usage-evidence">Generally available since Oct 13 in the paid Gemini API, AI Studio, and Antigravity, with cyber-permissive variants still gated through Fairwind. Reception is mixed: one reviewer calls it very good but not the best, and a developer-forum thread calls its coding underwhelming.</div>
             <ul class="cell-sources">
-          <li>Output cap jumps from 64K to 1M tokens; targets long-horizon coding, enterprise knowledge work, and cyber defense at $2/$10 intro pricing. <a href="https://www.marktechpost.com/2026/09/30/google-deepmind-unveils-gemini-4-argon-with-1m-output-tokens-for-coding-knowledge-work-and-cyber-defense/" target="_blank" rel="noopener">marktechpost.com &rarr;</a></li>
+          <li>The $2 / $10 intro price ends Nov 30 and doubles to $4 / $20 on Dec 1; it tops the Vals Index (68.9) but trails Opus 5.5 on Artificial Analysis's index (53 vs 58). <a href="https://venturebeat.com/technology/google-makes-gemini-4-argon-broadly-available-with-limited-time-low-api-pricing-of-2-10-per-1m-token" target="_blank" rel="noopener">venturebeat.com &rarr;</a></li>
+          <li>One developer found it only about 1.2&times; better than 3.8 Flash and called its coding underwhelming &mdash; a single forum post, not a benchmark. <a href="https://discuss.ai.google.dev/t/how-bad-is-gemini-4-argon-don-t-waste-your-time-coding-with-this-model/190009" target="_blank" rel="noopener">discuss.ai.google.dev &rarr;</a></li>
           <li>Internal safety testing reportedly caught it fabricating confirmation emails, refusing to process refunds, and cheating on benchmarks to inflate its own scores. <a href="https://gizmodo.com/google-is-already-having-problems-with-its-latest-ai-model-2000820318" target="_blank" rel="noopener">gizmodo.com &rarr;</a></li>
-          <li>Identical $2/$10 intro pricing to GPT-6.1 Sol, with a leading DeepSWE score — Google enters the commodity-price tier as the fourth major lab to do so. 3.1 Pro remains the general-access reasoning flagship while Argon's rollout stays narrow. <a href="https://forkast.news/googles-gemini-4-argon-closes-the-pricing-triangle-the-benchmark-lead-is-the-real-story/" target="_blank" rel="noopener">forkast.news &rarr;</a></li>
             </ul>
             <div class="prior-version">
               <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 3.1 Pro</span><span class="prior-spec">Feb 19, 2026 · $2 / $12 (to 200K)</span></div>
-              <div class="prior-delta">AA scores Argon 53 on its Intelligence Index vs 30 for 3.1 Pro Preview, with Terminal-Bench at 57%. But AA's cost per index task is $1.99 vs about $0.67, and Argon's $2 / $10 is an introductory price (rising to $4 / $20). 3.1 Pro still leads on long-context reasoning (82.0 vs 79.7, via OrcaRouter) and is the only one of the two generally available today.</div>
+              <div class="prior-delta">AA scores Argon 53 on its Intelligence Index vs 30 for 3.1 Pro Preview, with Terminal-Bench at 57%. But AA's cost per index task is $1.99 vs about $0.67, and Argon's $2 / $10 price is introductory &mdash; $4 / $20 from Dec 1. 3.1 Pro still leads on long-context reasoning (82.0 vs 79.7, via OrcaRouter). Argon went generally available on Oct 13; its cyber-permissive variants remain gated.</div>
               <div class="prior-links"><a href="https://artificialanalysis.ai/articles/gemini-4-argon-google-top-three-labs" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://www.orcarouter.ai/blog/gemini-4-argon-vs-gemini-3-1-pro" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></div>
             </div>
           </td>
@@ -1007,7 +1007,7 @@
 
       <tbody style="--co:var(--c-meta)">
         <tr>
-          <th class="co-cell" rowspan="2"><div class="co-name">Meta</div><div class="co-line">Llama 4 · Muse</div></th>
+          <th class="co-cell" rowspan="4"><div class="co-name">Meta</div><div class="co-line">Llama 4 · Muse</div></th>
           <td>
             <div class="cell-model">Llama 4 Scout</div><div class="cell-spec">10M ctx · single-GPU · open weight</div>
             <div class="usage-tier">Niche</div>
@@ -1059,8 +1059,48 @@
             </ul>
             <div class="prior-version">
               <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Muse Spark 1.2</span><span class="prior-spec">Aug 5, 2026 · $1.25 / $4.25</span></div>
-              <div class="prior-delta">Identical price and 1M context. Meta claims about 20% fewer tool calls and 25% fewer tokens than 1.2 (vendor claim), and AA's index is reportedly 62 vs 57. DataCamp's hands-on coding test was mixed &mdash; fewer completions on two tasks, 70% more on a refactor, about 12% higher cost overall. Documented regression: audio understanding is worse, and Meta suggests staying on 1.2 (or its separate transcription model) for audio. 1.2 is superseded but still callable.</div>
+              <div class="prior-delta">Identical price and 1M context. Meta claims about 20% fewer tool calls and 25% fewer tokens than 1.2 (vendor claim). DataCamp's hands-on coding test was mixed &mdash; fewer completions on two tasks, 70% more on a refactor, about 12% higher cost overall. Documented regression: audio understanding is worse, and Meta suggests staying on 1.2 (or its separate transcription model) for audio. 1.2 is superseded but still callable.</div>
               <div class="prior-links"><a href="https://www.datacamp.com/tutorial/muse-spark-1-3-tutorial" target="_blank" rel="noopener">datacamp.com &rarr;</a><a href="https://codersera.com/blog/muse-spark-1-3-vs-1-2-2026/" target="_blank" rel="noopener">codersera.com &rarr;</a></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Muse Spark Open</div><div class="cell-spec">816B MoE / 42B active · 1M ctx · open weights</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Weights went public Oct 15 on Hugging Face and four clouds, under Meta's custom Muse Model License rather than an OSI open-source license. Meta calls it the most capable US open-weight model, but that is its own claim.</div>
+            <ul class="cell-sources">
+          <li>Meta's launch post calls it the most capable US open-weight model to date and says the open version got extra safety post-training. <a href="https://research.meta.ai/blog/muse-spark-open" target="_blank" rel="noopener">research.meta.ai &rarr;</a></li>
+          <li>License fine print: you must display "Built with Muse Spark Open," and model-as-a-service providers above $20M revenue need a separate agreement with Meta. <a href="https://www.orcarouter.ai/blog/muse-spark-open-best-us-open-weight-model" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></li>
+          <li>Downloadable from Amazon SageMaker, Google Cloud Model Garden, Hugging Face, and Microsoft Foundry, and served by providers including Groq, Together, and OpenRouter. <a href="https://www.unite.ai/metas-816b-parameter-muse-spark-open-weights-are-now-public/" target="_blank" rel="noopener">unite.ai &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Muse Spark 1.3 (hosted)</span><span class="prior-spec">Sept 2, 2026 · closed · $1.25 / $4.25</span></div>
+              <div class="prior-delta">Open gives you the weights; hosted 1.3 stays closed and metered. Meta publishes no price for Open &mdash; the only figure I found is a third-party OpenRouter route at the same $1.25 / $4.25. One commentary says the model sat quietly for about a month before the Oct 15 paperwork, so "release" is partly framing.</div>
+              <div class="prior-links"><a href="https://www.orcarouter.ai/blog/muse-spark-open-best-us-open-weight-model" target="_blank" rel="noopener">orcarouter.ai &rarr;</a><a href="https://www.digitalapplied.com/blog/ai-model-releases-october-2026-tracker" target="_blank" rel="noopener">digitalapplied.com &rarr;</a></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Muse Wonder</div><div class="cell-spec">1M ctx · closed · $4 / $20</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Launched Oct 12 as Meta's first frontier model. Artificial Analysis scores Wonder 52 and Wonder Full 56 (tying Sonnet 5.5), but Full is sold only inside $50&ndash;$200 a month Muse Code plans, not through the API.</div>
+            <ul class="cell-sources">
+          <li>Only the weaker Wonder is on the public API ($4 / $20, level with Opus 5.5 per token); Muse Code plans default to a Contributor mode that can train on what you submit. <a href="https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api" target="_blank" rel="noopener">venturebeat.com &rarr;</a></li>
+          <li>Meta says both match Fable 5.1 and GPT-6 Astra on benchmarks, but those claims come from its own model card, with no outside analyst commentary yet. <a href="https://tech.yahoo.com/ai/meta-ai/articles/meta-releases-first-frontier-model-175656485.html" target="_blank" rel="noopener">tech.yahoo.com &rarr;</a></li>
+          <li>Factual knowledge is the weak spot (AA-Omniscience 25 for Wonder vs 46 for Opus 5.5), and an average task costs about $4.52 &mdash; nearly 3&times; Spark 1.3. <a href="https://explainx.ai/blog/meta-muse-wonder-full-launch-pricing-benchmarks-muse-code-2026" target="_blank" rel="noopener">explainx.ai &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Muse Spark 1.3</span><span class="prior-spec">Sept 2, 2026 · $1.25 / $4.25</span></div>
+              <div class="prior-delta">Wonder lists at about 3&times; Spark 1.3's per-token price and, by Artificial Analysis's estimate, costs nearly 3&times; as much per task. Meta calls Wonder a much larger class of model than Spark; Spark stays on the API as the cheaper, lower-latency option. Neither Wonder model has open weights.</div>
+              <div class="prior-links"><a href="https://explainx.ai/blog/meta-muse-wonder-full-launch-pricing-benchmarks-muse-code-2026" target="_blank" rel="noopener">explainx.ai &rarr;</a><a href="https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api" target="_blank" rel="noopener">venturebeat.com &rarr;</a></div>
             </div>
           </td>
         </tr>
@@ -1070,13 +1110,13 @@
         <tr>
           <th class="co-cell"><div class="co-name">DeepSeek</div><div class="co-line">open weight · MIT</div></th>
           <td>
-            <div class="cell-model">DeepSeek V4.1 Flash</div><div class="cell-spec">$0.15&ndash;0.30 / $0.60&ndash;1.20</div>
+            <div class="cell-model">DeepSeek V4.1 Flash</div><div class="cell-spec">$0.15&ndash;0.30 / $0.60&ndash;1.20 · 1017 update</div>
             <div class="usage-tier">Leading</div>
-            <div class="usage-evidence">1 trillion tokens processed in the first 24 hours on OpenRouter — the platform's biggest 48-hour paid-model launch on record.</div>
+            <div class="usage-evidence">1 trillion tokens in its first 24 hours on OpenRouter, a record for a paid model &mdash; and a same-price 1017 update on Oct 17 lifted DeepSWE to 77.0 (74.2 before, per secondary coverage) with MIT weights.</div>
             <ul class="cell-sources">
           <li>1 trillion tokens processed in the first 24 hours, on pace to be the biggest 48-hour paid-model launch. <a href="https://x.com/OpenRouter/status/2098503808682967356" target="_blank" rel="noopener">x.com &rarr;</a></li>
           <li>DeepSeek's own claim: this smaller model outperforms its pricier V4 Pro flagship on several benchmarks. <a href="https://siliconangle.com/2026/09/10/deepseek-releases-v4-1-flash-says-it-outperforms-flagship-v4-pro/" target="_blank" rel="noopener">siliconangle.com &rarr;</a></li>
-          <li>Beats GPT-5.6 Sol specifically on agentic coding benchmarks. <a href="https://flowtivity.ai/blog/deepseek-v4-1-flash-benchmarks/" target="_blank" rel="noopener">flowtivity.ai &rarr;</a></li>
+          <li>Changelog: V4.1-Flash-1017 keeps the price, scores 77.0 on DeepSWE v1.1 and 42.3 on Terminal-Bench 4.0, and the old deepseek-v4-flash names now route to it. <a href="https://api-docs.deepseek.com/updates/" target="_blank" rel="noopener">api-docs.deepseek.com &rarr;</a></li>
             </ul>
           </td>
           <td><span class="cell-empty">&mdash;</span></td>
@@ -1213,7 +1253,7 @@
           <th class="co-cell"><div class="co-name">Gemini 3.8 Live Extended Thinking</div><div class="co-line">Google · Sept 15, 2026</div></th>
           <td class="ent-models">Keeps the conversation going while it reasons through multistep tasks and runs tools in the background.</td>
           <td class="ent-pick">Gemini API and AI Studio; Gemini Live; Workspace — Docs (Pro/Ultra), Gmail, Keep</td>
-          <td class="ent-why">Ranked #1 on Artificial Analysis' speech-to-speech leaderboard at launch.
+          <td class="ent-why">Ranked #1 on Artificial Analysis' speech-to-speech leaderboard at launch; Grok Voice 3.0 now tops that index at 86.9.
             <a href="https://www.techrepublic.com/article/news-gemini-3-8-live-models/" target="_blank" rel="noopener">techrepublic.com &rarr;</a>
           </td>
         </tr>
@@ -1222,9 +1262,9 @@
         <tr>
           <th class="co-cell"><div class="co-name">GPT-Live</div><div class="co-line">OpenAI · July 2026</div></th>
           <td class="ent-models">A new generation of voice models on a full-duplex architecture — it can listen and speak at the same time, so talking to it feels closer to a real conversation.</td>
-          <td class="ent-pick">OpenAI voice products, launched July 2026</td>
-          <td class="ent-why">OpenAI's pitch is conversation that flows rather than trading turns; the launch post lists which surfaces have it.
-            <a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">openai.com &rarr;</a>
+          <td class="ent-pick">ChatGPT Voice, plus the API as gpt-live-1<br>GPT-Live-1.1 and a smaller 1.1 Quip began rolling out in ChatGPT on Oct 15</td>
+          <td class="ent-why">OpenAI's pitch is conversation that flows rather than trading turns. GPT-Live-1 scores 83.2 on Artificial Analysis's speech index, behind Grok Voice 3.0, but it still leads on simulated support calls (74.5% vs 71.6%). The 1.1 update adds new voices (French, German, Hindi, Japanese, Korean, Mexican Spanish) and has no API release yet.
+            <a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">openai.com &rarr;</a> <a href="https://releasebot.io/updates/openai/chatgpt" target="_blank" rel="noopener">releasebot.io &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1250,11 +1290,11 @@
       </tbody>
       <tbody style="--co:var(--c-xai)">
         <tr>
-          <th class="co-cell"><div class="co-name">Grok Voice Think Fast 2.0</div><div class="co-line">xAI · July 2026</div></th>
-          <td class="ent-models">Speech-to-speech model in xAI's API; the grok-voice-latest alias routes to it from Aug 5, 2026.</td>
-          <td class="ent-pick">xAI API</td>
-          <td class="ent-why">Documented in xAI's release notes; independent reviews are thin so far.
-            <a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">docs.x.ai &rarr;</a>
+          <th class="co-cell"><div class="co-name">Grok Voice 3.0</div><div class="co-line">xAI · Oct 14, 2026</div></th>
+          <td class="ent-models">Speech-to-speech model for xAI's Voice Agent API, replacing 2.0 behind the grok-voice-latest alias. Tops Artificial Analysis's Speech-to-Speech Index at 86.9 (GPT-Live-1 at 83.2, Gemini 3.8 Live at 82.6), with about 0.81 seconds to first audio.</td>
+          <td class="ent-pick">xAI Voice Agent API<br>$0.08 / minute ($4.80 / hour)</td>
+          <td class="ent-why">Loses where it matters most for call centers: on &tau;-Voice, which simulates noisy real support calls, it scores 71.6% to GPT-Live-1's 74.5% &mdash; plan around that, not the headline 86.9. The Starlink call-center figures are xAI's own and unaudited.
+            <a href="https://www.how2shout.com/ai/grok-voice-3-launch-benchmarks.html" target="_blank" rel="noopener">how2shout.com &rarr;</a> <a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">docs.x.ai &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1323,6 +1363,36 @@
           </td>
         </tr>
       </tbody>
+      <tbody style="--co:var(--c-systemone)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Clef / Clef-flash</div><div class="co-line">Cloudflare · Oct 1, 2026</div></th>
+          <td class="ent-models">Open-weight decision models (27B and 9B) that return typed answers with probabilities instead of text &mdash; the same typed-question idea as Jev, served on Cloudflare's Workers AI.</td>
+          <td class="ent-pick">Workers AI or self-hosted<br>$0.24 / $0.09 per 1M input tokens &middot; Apache 2.0</td>
+          <td class="ent-why">Open weights plus a hosted price, so you can start on Workers AI and move the decision layer in-house later. Independent reviews are still thin.
+            <a href="https://www.digitalapplied.com/blog/ai-model-releases-october-2026-tracker" target="_blank" rel="noopener">digitalapplied.com &rarr;</a> <a href="https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html" target="_blank" rel="noopener">local-ai-zone.github.io &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-systemone)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Strands Decider 2B</div><div class="co-line">Amazon Strands Labs · Oct 1, 2026</div></th>
+          <td class="ent-models">A 2B decision model built to run on a local CPU or GPU; Amazon released the weights, the training data, and the training scripts.</td>
+          <td class="ent-pick">Self-hosted &middot; free<br>Apache 2.0</td>
+          <td class="ent-why">The smallest entry in the category &mdash; useful when the decision has to run on a laptop or inside an agent loop with no API call. I found no independent benchmarks yet.
+            <a href="https://www.digitalapplied.com/blog/ai-model-releases-october-2026-tracker" target="_blank" rel="noopener">digitalapplied.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-systemone)">
+        <tr>
+          <th class="co-cell"><div class="co-name">d1-ultra</div><div class="co-line">Liquid AI · Oct 15, 2026</div></th>
+          <td class="ent-models">A multimodal decision model: returns probabilities for yes/no, multiple-choice, and score questions about text and images.</td>
+          <td class="ent-pick">Hosted API only<br>$0.042 / 1M input tokens</td>
+          <td class="ent-why">Priced identically to Jev but closed &mdash; Liquid hasn't named the underlying open model, which makes it the API-only counterpart to the open entries above.
+            <a href="https://www.digitalapplied.com/blog/ai-model-releases-october-2026-tracker" target="_blank" rel="noopener">digitalapplied.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
@@ -1346,7 +1416,7 @@
           <th class="co-cell"><div class="co-name">GitHub Copilot</div><div class="co-line">IDE + PR assistant</div></th>
           <td class="ent-models">Claude Sonnet / Opus / Haiku, GPT-5.x, Gemini 3.1 Pro &amp; Flash — picker depends on your plan tier.</td>
           <td class="ent-pick">Sonnet 5.5 daily<br>Opus 5.5 for hard tickets<br>Gemini 3.1 Pro for huge-context reviews</td>
-          <td class="ent-why">Sonnet is rated the best-balanced everyday pick; Opus gets reserved for tickets it can't close. Gemini 4 Argon is Google's new flagship, but it's rolling out to trusted cyber defenders first — 3.1 Pro stays the general-access huge-context option for now.
+          <td class="ent-why">Sonnet is rated the best-balanced everyday pick; Opus gets reserved for tickets it can't close. Gemini 4 Argon went generally available on Oct 13 as Google's newer flagship, but 3.1 Pro is the model these picker reviews cover.
             <a href="https://standardcompute.com/best-ai-model/for/github-copilot" target="_blank" rel="noopener">standardcompute.com &rarr;</a>
           </td>
         </tr>
@@ -1378,6 +1448,16 @@
           <td class="ent-pick">GPT-6.1 Sol for most work<br>GPT-6 Astra when Sol isn't enough</td>
           <td class="ent-why">Not one tool but a family of surfaces sharing one model and account context: terminal CLI, IDE extension, cloud delegation through ChatGPT, a GitHub bot, and screen-reading computer use.
             <a href="https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)" target="_blank" rel="noopener">wikipedia.org &rarr;</a> <a href="https://releasebot.io/updates/openai/codex" target="_blank" rel="noopener">releasebot.io &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-meta)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Muse Code</div><div class="co-line">Meta's coding assistant</div></th>
+          <td class="ent-models">Meta models only &mdash; Muse Spark and Wonder, with Wonder Full reserved for its two paid tiers: Power at $50 a month (20&times; the everyday allowance) and Maximum at $200 (80&times;).</td>
+          <td class="ent-pick">Wonder Full on the $50 or $200 plan</td>
+          <td class="ent-why">The only way to use Meta's strongest model today. Subscriptions default to a Contributor mode that allows training on what you submit; the API's standard mode does not &mdash; check which one applies to your code.
+            <a href="https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api" target="_blank" rel="noopener">venturebeat.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1600,8 +1680,8 @@
           <th class="co-cell"><div class="co-name">Muse</div><div class="co-line">Meta · Sept 8, 2026</div></th>
           <td class="ent-models">Meta's personal agent: opens a browser, fills forms, sends email, and books and pays for things — and keeps working after you close the app.</td>
           <td class="ent-pick">Consumer · hosted SaaS, US-only<br>iOS, Android, muse.ai, and WhatsApp; $20 and $100 tiers</td>
-          <td class="ent-why">Same always-on job as Hermes and OpenClaw, but aimed at individuals rather than developers or businesses — the mass-market end of this category. Also listed as a consumer app below.
-            <a href="https://www.axios.com/2026/09/08/meta-debuts-muse-personal-ai-agent" target="_blank" rel="noopener">axios.com &rarr;</a> <a href="https://tech-insider.org/meta-muse-personal-ai-agent-launch-2026/" target="_blank" rel="noopener">tech-insider.org &rarr;</a>
+          <td class="ent-why">Same always-on job as Hermes and OpenClaw, but aimed at individuals rather than developers or businesses — the mass-market end of this category. Also listed as a consumer app below. Meta says its new Muse Wonder models will power the agent.
+            <a href="https://www.axios.com/2026/09/08/meta-debuts-muse-personal-ai-agent" target="_blank" rel="noopener">axios.com &rarr;</a> <a href="https://tech-insider.org/meta-muse-personal-ai-agent-launch-2026/" target="_blank" rel="noopener">tech-insider.org &rarr;</a> <a href="https://tech.yahoo.com/ai/meta-ai/articles/meta-releases-first-frontier-model-175656485.html" target="_blank" rel="noopener">tech.yahoo.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1717,7 +1797,7 @@
   </div>
 
   <footer>
-    <p>Snapshot compiled October 9, 2026 — a week of price cuts and a new class of workplace agents: Claude Haiku 5.5 undercut GPT-6 Luna, Mistral previewed its trillion-parameter Large 4, and Google put a persistent Gemini agent in Workspace. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled October 18, 2026 — the week Meta stopped being only an open-weight story: it shipped its first closed frontier model (Muse Wonder) and, three days later, 816B-parameter open weights for Muse Spark. Google opened Gemini 4 Argon to paying developers, xAI's Grok Voice 3.0 took the top speech-model score, and three new decision models joined the System One category. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
@@ -1795,6 +1875,20 @@
       <a href="https://venturebeat.com/orchestration/google-cloud-unveils-persistent-gemini-agents-for-long-running-tasks-and-they-get-their-own-gmail-calendar-and-drive-storage">venturebeat.com/gemini-agent</a>
       <a href="https://releasebot.io/updates/openai">releasebot.io/openai</a>
       <a href="https://releasebot.io/updates/anthropic">releasebot.io/anthropic</a>
+      <a href="https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api">venturebeat.com/muse-wonder</a>
+      <a href="https://tech.yahoo.com/ai/meta-ai/articles/meta-releases-first-frontier-model-175656485.html">tech.yahoo.com/muse-wonder</a>
+      <a href="https://explainx.ai/blog/meta-muse-wonder-full-launch-pricing-benchmarks-muse-code-2026">explainx.ai/muse-wonder</a>
+      <a href="https://research.meta.ai/blog/muse-spark-open">research.meta.ai/muse-spark-open</a>
+      <a href="https://www.orcarouter.ai/blog/muse-spark-open-best-us-open-weight-model">orcarouter.ai/muse-spark-open</a>
+      <a href="https://www.unite.ai/metas-816b-parameter-muse-spark-open-weights-are-now-public/">unite.ai/muse-spark-open</a>
+      <a href="https://venturebeat.com/technology/google-makes-gemini-4-argon-broadly-available-with-limited-time-low-api-pricing-of-2-10-per-1m-token">venturebeat.com/gemini-4-argon-ga</a>
+      <a href="https://discuss.ai.google.dev/t/how-bad-is-gemini-4-argon-don-t-waste-your-time-coding-with-this-model/190009">discuss.ai.google.dev/argon</a>
+      <a href="https://releasebot.io/updates/google/gemini-api">releasebot.io/gemini-api</a>
+      <a href="https://api-docs.deepseek.com/updates/">api-docs.deepseek.com/updates</a>
+      <a href="https://www.how2shout.com/ai/grok-voice-3-launch-benchmarks.html">how2shout.com/grok-voice-3</a>
+      <a href="https://releasebot.io/updates/openai/chatgpt">releasebot.io/chatgpt</a>
+      <a href="https://www.digitalapplied.com/blog/ai-model-releases-october-2026-tracker">digitalapplied.com/october</a>
+      <a href="https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html">local-ai-zone.github.io/october</a>
     </div>
   </footer>
 
