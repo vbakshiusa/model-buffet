@@ -610,7 +610,7 @@
     <h1>Model Buffet</h1>
     <p class="dek">A working cheat sheet across the labs that matter right now — from the quick, cheap counter items to the five-course flagship reasoning.</p>
     <div class="meta-row">
-      <span>Snapshot: Oct 18, 2026</span>
+      <span>Snapshot: Oct 24, 2026</span>
       <span>Moves fast — recheck pricing before you budget on it</span>
     </div>
   </header>
@@ -627,7 +627,7 @@
       <div class="qp-item"><span class="qp-need">Self-hosting on a budget</span><span class="qp-ans">Qwen3.8&#8209;27B · DeepSeek V4.1 Flash</span></div>
       <div class="qp-item"><span class="qp-need">Frontier-grade reasoning, open weights</span><span class="qp-ans">Qwen3.8&#8209;Max</span></div>
       <div class="qp-item"><span class="qp-need">Talk to it live / build a voice agent</span><span class="qp-ans">Grok Voice 3.0 · GPT&#8209;Live</span></div>
-      <div class="qp-item"><span class="qp-need">An agent that keeps working while you're away</span><span class="qp-ans">Dots · Gemini agent · Muse</span></div>
+      <div class="qp-item"><span class="qp-need">An agent that keeps working while you're away</span><span class="qp-ans">Dots · Claude Duet · Muse</span></div>
     </div>
   </div>
 
@@ -1393,6 +1393,16 @@
           </td>
         </tr>
       </tbody>
+      <tbody style="--co:var(--c-systemone)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Decider v1.2 / Flash</div><div class="co-line">Perplexity · mid-Oct 2026 · open weight</div></th>
+          <td class="ent-models">Open-weight decision models in two sizes (27B and 4B) that take text or images and return probabilities for yes/no, category, and rubric-score questions, running every question about an input in one pass.</td>
+          <td class="ent-pick">Self-hosted or Perplexity's API<br>Apache 2.0 &middot; Flash lists at $0.01 / 1M input tokens on OpenRouter</td>
+          <td class="ent-why">Perplexity says the 27B ranks #2 and Flash is the top 4B model on the Hugging Face Decision Index (one outlet has the 27B at #3), with inference up to 5&times; faster. The lowest listed price in this category by a wide margin &mdash; treat the rankings as Perplexity's own until others confirm them.
+            <a href="https://vercel.com/changelog/perplexity-decider-v1-2-models-now-available-on-ai-gateway" target="_blank" rel="noopener">vercel.com &rarr;</a> <a href="https://openrouter.ai/perplexity/pplx-decider-flash-v1.2" target="_blank" rel="noopener">openrouter.ai &rarr;</a> <a href="https://agihunt.info/en/story/1a1461f447367d0743b6b8b8bff" target="_blank" rel="noopener">agihunt.info &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
@@ -1705,6 +1715,16 @@
           </td>
         </tr>
       </tbody>
+      <tbody style="--co:var(--c-anthropic)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Claude Duet</div><div class="co-line">Anthropic · Oct 21, 2026</div></th>
+          <td class="ent-models">Anthropic's proactive agent for professionals and small businesses, running on Opus 5.5 in its own virtual machine: it builds a daily briefing, dashboards, and forecasts, schedules meetings, and keeps working when your device is off.</td>
+          <td class="ent-pick">Professional &amp; small business · hosted SaaS, research preview<br>US-only waitlist for Claude Pro and Max subscribers</td>
+          <td class="ent-why">Anthropic's answer to Dots and Muse, aimed at work rather than errands &mdash; it says Duet is poor at booking tickets. It asks before sending messages or paying, and won't trade securities or move money. Every's two-week review calls it the first personal agent that feels like a pro tool, but its email drafts trail Dots and scheduled runs can't use custom connectors; one Hacker News user found its output useless on a data-heavy task. Anthropic says it will reach the $20 Pro plan at general availability (Dots needs OpenAI's $100 Pro tier), and background checks count against your shared Claude usage limits.
+            <a href="https://every.to/vibe-check/vibe-check-duet-anthropic-s-always-on-agent" target="_blank" rel="noopener">every.to &rarr;</a> <a href="https://www.engadget.com/2293646/claude-duet-is-anthropics-answer-to-meta-muse-and-openai-dots/" target="_blank" rel="noopener">engadget.com &rarr;</a> <a href="https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/" target="_blank" rel="noopener">techcrunch.com &rarr;</a> <a href="https://news.ycombinator.com/item?id=50186455" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
@@ -1738,7 +1758,7 @@
           <th class="co-cell"><div class="co-name">Claude.ai</div><div class="co-line">Anthropic</div></th>
           <td class="ent-models">Standalone app and web, with a model picker across Haiku, Sonnet, Opus, and Fable.</td>
           <td class="ent-pick">Choosing your own model tier; strongest reputation among developers</td>
-          <td class="ent-why">Holds roughly 17% of the consumer mobile chatbot market, with US mobile daily actives up 1,100% year-to-date in 2026 — the fastest-growing major challenger to ChatGPT.
+          <td class="ent-why">Holds roughly 17% of the consumer mobile chatbot market, with US mobile daily actives up 1,100% year-to-date in 2026 — the fastest-growing major challenger to ChatGPT. Its new Duet agent (research preview) is covered under Always-on agents.
             <a href="https://www.getpanto.ai/blog/claude-ai-statistics" target="_blank" rel="noopener">getpanto.ai &rarr;</a>
           </td>
         </tr>
@@ -1797,7 +1817,7 @@
   </div>
 
   <footer>
-    <p>Snapshot compiled October 18, 2026 — the week Meta stopped being only an open-weight story: it shipped its first closed frontier model (Muse Wonder) and, three days later, 816B-parameter open weights for Muse Spark. Google opened Gemini 4 Argon to paying developers, xAI's Grok Voice 3.0 took the top speech-model score, and three new decision models joined the System One category. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled October 24, 2026 — Anthropic joined the always-on agent race with Claude Duet, putting it head to head with OpenAI's Dots and Meta's Muse, and Perplexity released a pair of open-weight decision models for the System One category. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
@@ -1889,6 +1909,12 @@
       <a href="https://releasebot.io/updates/openai/chatgpt">releasebot.io/chatgpt</a>
       <a href="https://www.digitalapplied.com/blog/ai-model-releases-october-2026-tracker">digitalapplied.com/october</a>
       <a href="https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html">local-ai-zone.github.io/october</a>
+      <a href="https://every.to/vibe-check/vibe-check-duet-anthropic-s-always-on-agent">every.to/claude-duet</a>
+      <a href="https://www.engadget.com/2293646/claude-duet-is-anthropics-answer-to-meta-muse-and-openai-dots/">engadget.com/claude-duet</a>
+      <a href="https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/">techcrunch.com/claude-duet</a>
+      <a href="https://news.ycombinator.com/item?id=50186455">news.ycombinator.com/claude-duet</a>
+      <a href="https://vercel.com/changelog/perplexity-decider-v1-2-models-now-available-on-ai-gateway">vercel.com/perplexity-decider</a>
+      <a href="https://agihunt.info/en/story/1a1461f447367d0743b6b8b8bff">agihunt.info/perplexity-decider</a>
     </div>
   </footer>
 
