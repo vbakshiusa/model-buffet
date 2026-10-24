@@ -23,6 +23,7 @@
     --c-deepseek:#8A7A45;
     --c-qwen:#B15C4E;
     --c-mistral:#4E8C82;
+    --c-reflection:#A05A78;
 
     --c-copilot:#3B4A63;
     --c-cursor:#5B5FA6;
@@ -64,6 +65,7 @@
       --c-deepseek:#BBA968;
       --c-qwen:#D08D7C;
       --c-mistral:#7EBAAF;
+      --c-reflection:#D08FAE;
 
       --c-copilot:#8C9BB5;
       --c-cursor:#A6A9DE;
@@ -104,6 +106,7 @@
     --c-deepseek:#BBA968;
     --c-qwen:#D08D7C;
     --c-mistral:#7EBAAF;
+      --c-reflection:#D08FAE;
 
     --c-copilot:#8C9BB5;
     --c-cursor:#A6A9DE;
@@ -1071,7 +1074,7 @@
           <td>
             <div class="cell-model">Muse Spark Open</div><div class="cell-spec">816B MoE / 42B active · 1M ctx · open weights</div>
             <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">Weights went public Oct 15 on Hugging Face and four clouds, under Meta's custom Muse Model License rather than an OSI open-source license. Meta calls it the most capable US open-weight model, but that is its own claim.</div>
+            <div class="usage-evidence">Weights went public Oct 15 on Hugging Face and four clouds, under Meta's custom Muse Model License rather than an OSI open-source license. Meta calls it the most capable US open-weight model, and Artificial Analysis agrees on the ranking: its index of 39 tops US open weights, ahead of Reflection's Beam at 30.</div>
             <ul class="cell-sources">
           <li>Meta's launch post calls it the most capable US open-weight model to date and says the open version got extra safety post-training. <a href="https://research.meta.ai/blog/muse-spark-open" target="_blank" rel="noopener">research.meta.ai &rarr;</a></li>
           <li>License fine print: you must display "Built with Muse Spark Open," and model-as-a-service providers above $20M revenue need a separate agreement with Meta. <a href="https://www.orcarouter.ai/blog/muse-spark-open-best-us-open-weight-model" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></li>
@@ -1216,6 +1219,24 @@
               <div class="prior-delta">Large 4 grows to roughly 1T total / ~50B active parameters with a 1M-token context (up from 256K) and hybrid reasoning, and AA's index jumps from 9.3 to 38.4. It is also dearer: about 39% more per output token even at the launch-sale rate, double that at list. Large 3 stays Apache 2.0 and available; Large 4's license and weights have not been published.</div>
               <div class="prior-links"><a href="https://www.eesel.ai/blog/mistral-large-4-review" target="_blank" rel="noopener">eesel.ai &rarr;</a><a href="https://aiweekly.co/alerts/mistral-previews-1t-param-open-weight-large-4-le-chonk" target="_blank" rel="noopener">aiweekly.co &rarr;</a></div>
             </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody style="--co:var(--c-reflection)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Reflection AI</div><div class="co-line">open weight · Apache 2.0</div></th>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Beam</div><div class="cell-spec">1M ctx · 501B MoE / 23B active · Apache 2.0</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Announced Oct 5, with weights on Hugging Face from Oct 16 and a long list of cloud hosts. Artificial Analysis scores it 30 &mdash; second among US open-weights models behind Muse Spark Open (39), tenth among all open weights &mdash; and there is no adoption data yet.</div>
+            <ul class="cell-sources">
+          <li>Uses about 26K output tokens per index task, roughly half of the model one point ahead, but its hallucination rate is 47% and Terminal-Bench 4.0 is just 3.0%. <a href="https://artificialanalysis.ai/articles/reflection-beam" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></li>
+          <li>The pitch is fewer tokens, not cheaper tokens (about 25K per Terminal-Bench 2.1 attempt vs ~80K for GLM-5.2), but there is no cost-per-task figure, no named paying customer, and top Chinese models still score higher. <a href="https://venturebeat.com/technology/reflections-beam-aims-to-undercut-chinese-open-models-with-fewer-tokens-not-cheaper-tokens" target="_blank" rel="noopener">venturebeat.com &rarr;</a></li>
+          <li>Weights ship in BF16, FP8, and NVFP4 with a speculative-decoding drafter; the hosted API is free in public beta with no price yet, and Dell and HPE offer on-premises and air-gapped installs. <a href="https://reflection.ai/blog/beam-is-available" target="_blank" rel="noopener">reflection.ai &rarr;</a></li>
+            </ul>
           </td>
         </tr>
       </tbody>
@@ -1817,7 +1838,7 @@
   </div>
 
   <footer>
-    <p>Snapshot compiled October 24, 2026 — Anthropic joined the always-on agent race with Claude Duet, putting it head to head with OpenAI's Dots and Meta's Muse, and Perplexity released a pair of open-weight decision models for the System One category. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled October 24, 2026 — Anthropic joined the always-on agent race with Claude Duet, putting it head to head with OpenAI's Dots and Meta's Muse, and Perplexity released a pair of open-weight decision models for the System One category. Reflection AI's Beam, a 501B open-weight model, landed as the second-strongest US open-weights entry on Artificial Analysis's index. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
@@ -1915,6 +1936,9 @@
       <a href="https://news.ycombinator.com/item?id=50186455">news.ycombinator.com/claude-duet</a>
       <a href="https://vercel.com/changelog/perplexity-decider-v1-2-models-now-available-on-ai-gateway">vercel.com/perplexity-decider</a>
       <a href="https://agihunt.info/en/story/1a1461f447367d0743b6b8b8bff">agihunt.info/perplexity-decider</a>
+      <a href="https://artificialanalysis.ai/articles/reflection-beam">artificialanalysis.ai/reflection-beam</a>
+      <a href="https://venturebeat.com/technology/reflections-beam-aims-to-undercut-chinese-open-models-with-fewer-tokens-not-cheaper-tokens">venturebeat.com/reflection-beam</a>
+      <a href="https://reflection.ai/blog/beam-is-available">reflection.ai/beam-is-available</a>
     </div>
   </footer>
 
