@@ -595,7 +595,7 @@
     <div class="topbar-scroll">
       <a class="topbar-link" href="#tier-matrix">Tier matrix</a>
       <a class="topbar-link" href="#voice-live">Voice &amp; live</a>
-      <a class="topbar-link" href="#system-one">System One</a>
+      <a class="topbar-link" href="#decision-models">Decision models</a>
       <a class="topbar-link" href="#enterprise-ide">Enterprise &amp; IDE</a>
       <a class="topbar-link" href="#model-routers">Routers</a>
       <a class="topbar-link" href="#computer-use">Computer-use</a>
@@ -1339,10 +1339,10 @@
     </table>
   </div>
 
-  <div class="section-head" id="system-one">
-    <h2>System One models</h2>
+  <div class="section-head" id="decision-models">
+    <h2>Decision models</h2>
   </div>
-  <p class="section-sub">A different shape of model entirely — no prose in or out. You send text plus typed questions (a multiple choice, a 1&ndash;10 score, a yes/no), and it answers with calibrated probabilities in one parallel pass instead of generating tokens one at a time. Built for classification, routing, and guardrail decisions sitting in front of — or instead of — a chat model.</p>
+  <p class="section-sub">Models that answer with a probability instead of writing text. You send text or an image plus typed questions (multiple choice, a 1&ndash;10 score, a yes/no) and get calibrated confidence back &mdash; built for classification, routing, and guardrail decisions in front of, or instead of, a chat model. Also marketed as &ldquo;System One&rdquo; models, TypeSafe&rsquo;s term borrowed from Kahneman&rsquo;s fast-versus-slow thinking. Two designs sit under the label: purpose-built models that answer every question in one parallel pass (Jev, Laya, Clef, Strands Decider, d1-ultra, Perplexity&rsquo;s Decider), and OpenAI&rsquo;s Decisions API, which constrains a regular chat model to a fixed list of answers. Skeptics call the purpose-built kind a zero-shot classifier with a new name &mdash; the task is old, and independent benchmarks are still thin. The shape of the output is guaranteed; the answers themselves are probabilistic.</p>
 
   <div class="table-wrap">
     <table class="enterprise">
@@ -1838,7 +1838,7 @@
   </div>
 
   <footer>
-    <p>Snapshot compiled October 24, 2026 — Anthropic joined the always-on agent race with Claude Duet, putting it head to head with OpenAI's Dots and Meta's Muse, and Perplexity released a pair of open-weight decision models for the System One category. Reflection AI's Beam, a 501B open-weight model, landed as the second-strongest US open-weights entry on Artificial Analysis's index. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled October 24, 2026 — Anthropic joined the always-on agent race with Claude Duet, putting it head to head with OpenAI's Dots and Meta's Muse, and Perplexity released a pair of open-weight decision models for the Decision models category. Reflection AI's Beam, a 501B open-weight model, landed as the second-strongest US open-weights entry on Artificial Analysis's index. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
