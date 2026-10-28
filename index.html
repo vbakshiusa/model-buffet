@@ -25,6 +25,8 @@
     --c-mistral:#4E8C82;
     --c-reflection:#A05A78;
     --c-compress:#5A7D8C;
+    --c-frameworks:#6A7BA8;
+    --c-orch:#8A6A4F;
 
     --c-copilot:#3B4A63;
     --c-cursor:#5B5FA6;
@@ -68,6 +70,8 @@
       --c-mistral:#7EBAAF;
       --c-reflection:#D08FAE;
       --c-compress:#8FB4C4;
+      --c-frameworks:#A3B1DB;
+      --c-orch:#C9A685;
 
       --c-copilot:#8C9BB5;
       --c-cursor:#A6A9DE;
@@ -110,6 +114,8 @@
     --c-mistral:#7EBAAF;
       --c-reflection:#D08FAE;
       --c-compress:#8FB4C4;
+      --c-frameworks:#A3B1DB;
+      --c-orch:#C9A685;
 
     --c-copilot:#8C9BB5;
     --c-cursor:#A6A9DE;
@@ -600,8 +606,10 @@
       <a class="topbar-link" href="#voice-live">Voice &amp; live</a>
       <a class="topbar-link" href="#decision-models">Decision models</a>
       <a class="topbar-link" href="#enterprise-ide">Enterprise &amp; IDE</a>
+      <a class="topbar-link" href="#agent-orchestrators">Orchestrators</a>
       <a class="topbar-link" href="#model-routers">Routers</a>
       <a class="topbar-link" href="#context-compression">Context compression</a>
+      <a class="topbar-link" href="#agent-frameworks">Agent frameworks</a>
       <a class="topbar-link" href="#computer-use">Computer-use</a>
       <a class="topbar-link" href="#always-on">Always-on agents</a>
       <a class="topbar-link" href="#consumer">Consumer apps</a>
@@ -1575,6 +1583,85 @@
     </table>
   </div>
 
+  <div class="section-head" id="agent-orchestrators">
+    <h2>Coding-agent orchestrators</h2>
+  </div>
+  <p class="section-sub">Desktop and terminal tools that run several coding agents at once &mdash; one git worktree each &mdash; then help you review and merge the results. The pattern is the same everywhere; the differences are platform, which agents they support, and price. The sources agree the real bottleneck is reviewing the output, not launching agents, and most leave merge conflicts to you. One guide puts the sweet spot at 3&ndash;10 agents on a codebase you know well.
+    <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators" target="_blank" rel="noopener">openalternative.co &rarr;</a></p>
+
+  <div class="table-wrap">
+    <table class="enterprise">
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th class="tier-head">What it does</th>
+          <th class="tier-head">Platform &amp; price</th>
+          <th class="tier-head">Note</th>
+        </tr>
+      </thead>
+      <tbody style="--co:var(--c-orch)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Conductor</div><div class="co-line">Melty Labs · closed source</div></th>
+          <td class="ent-models">Runs Claude Code, Codex, and Cursor agents in isolated git worktrees, with checkpoints and rollback and a side-by-side model compare mode.</td>
+          <td class="ent-pick">macOS only<br>Free for local workspaces on your own subscriptions; Pro $50/mo for cloud workspaces; Teams $60/user/mo</td>
+          <td class="ent-why">The most polished of the group, and the most-cited. The tradeoffs: closed source, Mac-only, paid beyond local work, no self-hosting. The source ranks it lower partly because it favors open code.
+            <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators" target="_blank" rel="noopener">openalternative.co &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-orch)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Paradev (formerly Superset)</div><div class="co-line">source-available · ~15.7K GitHub stars</div></th>
+          <td class="ent-models">An agentic IDE for running many coding agents in parallel worktrees, with automations you can drive from a CLI, a TypeScript SDK, or an MCP server.</td>
+          <td class="ent-pick">macOS-first (Linux experimental, no Windows)<br>Elastic License 2.0; free for one user locally, Pro $20/user/mo (prices from before the rename)</td>
+          <td class="ent-why">The most mature automations in the category, and it handles large fleets. The repository now carries the Paradev name, so older coverage lists it as Superset; the license is source-available, not OSI open source.
+            <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators" target="_blank" rel="noopener">openalternative.co &rarr;</a> <a href="https://github.com/ParadevAI/Paradev" target="_blank" rel="noopener">github.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-orch)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Emdash</div><div class="co-line">General Action · Apache 2.0 · ~6.1K stars</div></th>
+          <td class="ent-models">Runs 25+ coding agents (Codex, Cursor, Claude Code, Amp, and more), each in its own worktree, with scheduled repeat runs, a built-in preview browser, and SSH to remote machines.</td>
+          <td class="ent-pick">macOS, Windows, and Linux<br>Free; no paid tier announced</td>
+          <td class="ent-why">The only one here with real builds on all three desktop systems. It is newer and less battle-tested, with no mobile app or managed remote access.
+            <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators" target="_blank" rel="noopener">openalternative.co &rarr;</a> <a href="https://github.com/generalaction/emdash" target="_blank" rel="noopener">github.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-orch)">
+        <tr>
+          <th class="co-cell"><div class="co-name">T3 Code</div><div class="co-line">Ping Labs · MIT · ~22K stars (per source)</div></th>
+          <td class="ent-models">A clean desktop interface for Claude Code, Codex, OpenCode, Cursor, Grok, and Antigravity, with per-thread branches, a strong pull-request workflow, and mobile access through a relay.</td>
+          <td class="ent-pick">Desktop, with mobile via its relay<br>Free; bring your own subscriptions</td>
+          <td class="ent-why">Easy to learn, but young and occasionally unstable, with no scheduled automations.
+            <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators" target="_blank" rel="noopener">openalternative.co &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-orch)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Claude Squad</div><div class="co-line">smtg-ai · AGPL-3.0 · ~8.7K stars</div></th>
+          <td class="ent-models">A terminal tool that runs several agents in separate tmux sessions and git worktrees. Defaults to Claude Code and also supports Codex, Aider, Gemini, OpenCode, and Amp.</td>
+          <td class="ent-pick">Terminal, any platform with tmux<br>Free and open source</td>
+          <td class="ent-why">The solo-developer option. Its last code push was Aug 20, so check it is still maintained, and note the AGPL license if you plan to build on it.
+            <a href="https://github.com/smtg-ai/claude-squad" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://www.augmentcode.com/tools/open-source-agent-orchestrators" target="_blank" rel="noopener">augmentcode.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-orch)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Hydra</div><div class="co-line">five unrelated small GitHub projects</div></th>
+          <td class="ent-models">Not one product. At least five small open-source projects share the name: a container-isolated orchestrator built on the Claude Agent SDK, a desktop app that runs Claude Code and Codex sessions side by side, a worktree CLI with a review-and-merge step, and a CLI that routes work across Claude, Gemini, and Codex.</td>
+          <td class="ent-pick">Open source, mostly MIT<br>0&ndash;18 GitHub stars each</td>
+          <td class="ent-why">None is an established framework (the busiest has 18 stars), so I would not build on one without testing it. A separate research project spelled HyDRA &mdash; hybrid dynamic RAG agents &mdash; has 20 stars and was last updated in October 2025. If you meant a specific one, tell me which.
+            <a href="https://github.com/RickConsole/hydra" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://github.com/lckcjdn/hydra" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://github.com/mikecubed/Hydra" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://github.com/hassenhamdi/HyDRA" target="_blank" rel="noopener">github.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <div class="section-head" id="model-routers">
     <h2>Model routers</h2>
   </div>
@@ -1716,6 +1803,105 @@
           <td class="ent-pick">Local CLI and skill</td>
           <td class="ent-why">Its own docs say the reply skill does not reduce input cost; a separate engine and proxy handle input. Sourced only from a competitor's comparison page.
             <a href="https://www.supercompress.dev/context-compression-tools-compared" target="_blank" rel="noopener">supercompress.dev &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-head" id="agent-frameworks">
+    <h2>Agent frameworks</h2>
+  </div>
+  <p class="section-sub">Libraries you build your own agents with &mdash; as opposed to the finished agents under Always-on agents, which you just run. They differ in how much structure they impose, which languages they cover, and how tightly they tie you to one model vendor. Stars are only a rough popularity signal, taken from GitHub on Oct 28, and the comparison guides behind this table come from vendors with their own angle (an observability company and a software agency), so read their verdicts as opinion.
+    <a href="https://arize.com/ai-agents/agent-frameworks/" target="_blank" rel="noopener">arize.com &rarr;</a> <a href="https://techsy.io/en/blog/langgraph-vs-crewai-vs-openai-agents-sdk" target="_blank" rel="noopener">techsy.io &rarr;</a></p>
+
+  <div class="table-wrap">
+    <table class="enterprise">
+      <thead>
+        <tr>
+          <th>Framework</th>
+          <th class="tier-head">What it is for</th>
+          <th class="tier-head">Languages &amp; model support</th>
+          <th class="tier-head">Note</th>
+        </tr>
+      </thead>
+      <tbody style="--co:var(--c-frameworks)">
+        <tr>
+          <th class="co-cell"><div class="co-name">LangGraph</div><div class="co-line">LangChain · MIT · ~44K stars</div></th>
+          <td class="ent-models">Explicit nodes, edges, and shared state, with checkpoints and human-in-the-loop pauses. Mixes fixed steps with model-directed ones.</td>
+          <td class="ent-pick">Python and TypeScript<br>Model-flexible</td>
+          <td class="ent-why">The pick for complex, durable workflows that need audit trails; in one hands-on test it had the strongest reliability. The cost is that it is low-level &mdash; you design state, retries, and termination yourself.
+            <a href="https://github.com/langchain-ai/langgraph" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://techsy.io/en/blog/langgraph-vs-crewai-vs-openai-agents-sdk" target="_blank" rel="noopener">techsy.io &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-frameworks)">
+        <tr>
+          <th class="co-cell"><div class="co-name">CrewAI</div><div class="co-line">CrewAI · MIT · ~60K stars</div></th>
+          <td class="ent-models">Role-based teams of agents (Crews) plus event-driven Flows for stateful control.</td>
+          <td class="ent-pick">Python<br>Model-flexible</td>
+          <td class="ent-why">The fastest to learn and the most popular by stars. A hands-on test found a complexity cliff once you need custom orchestration, and manager agents add cost, latency, and coordination risk.
+            <a href="https://github.com/crewAIInc/crewAI" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://techsy.io/en/blog/langgraph-vs-crewai-vs-openai-agents-sdk" target="_blank" rel="noopener">techsy.io &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-frameworks)">
+        <tr>
+          <th class="co-cell"><div class="co-name">OpenAI Agents SDK</div><div class="co-line">OpenAI · MIT · ~30K stars</div></th>
+          <td class="ent-models">A small set of building blocks &mdash; agents, tools, handoffs, guardrails, sessions &mdash; with built-in tracing.</td>
+          <td class="ent-pick">Python and TypeScript<br>OpenAI-first; other providers possible but test their behavior</td>
+          <td class="ent-why">The lowest friction if you are already on OpenAI. Durable workflows and complex state machines need extra code or another orchestration layer.
+            <a href="https://github.com/openai/openai-agents-python" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://arize.com/ai-agents/agent-frameworks/" target="_blank" rel="noopener">arize.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-frameworks)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Microsoft Agent Framework</div><div class="co-line">Microsoft · MIT · ~14K stars</div></th>
+          <td class="ent-models">AutoGen's agent abstractions combined with Semantic Kernel's enterprise features: session state, middleware, and telemetry.</td>
+          <td class="ent-pick">.NET and Python<br>Leans toward Azure</td>
+          <td class="ent-why">AutoGen and Semantic Kernel are now in maintenance mode, so this is where those users migrate &mdash; as a port, not a configuration change.
+            <a href="https://github.com/microsoft/agent-framework" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://arize.com/ai-agents/agent-frameworks/" target="_blank" rel="noopener">arize.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-frameworks)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Google ADK</div><div class="co-line">Google · Apache 2.0 · ~22K stars</div></th>
+          <td class="ent-models">Sequential, loop, and parallel agent patterns, plus graph workflows, checkpointing, and support for the MCP and A2A protocols.</td>
+          <td class="ent-pick">Python, Java, Go, TypeScript, and Kotlin<br>Model-flexible but tuned for Gemini and Vertex AI</td>
+          <td class="ent-why">The broadest language coverage here, and the natural choice on Google Cloud. With several control patterns, teams must decide who owns routing and termination.
+            <a href="https://github.com/google/adk-python" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://arize.com/ai-agents/agent-frameworks/" target="_blank" rel="noopener">arize.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-frameworks)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Claude Agent SDK</div><div class="co-line">Anthropic · MIT · ~8K stars</div></th>
+          <td class="ent-models">Built-in file and shell tools, MCP, hooks, permission modes, and subagents &mdash; closer to a ready-made coding harness than a minimal library.</td>
+          <td class="ent-pick">Python SDK confirmed; other languages not checked<br>Built around Claude</td>
+          <td class="ent-why">Best for Claude-native coding and research agents that work with files and terminals. Those same tools create real security and audit needs, so review the permissive modes deliberately.
+            <a href="https://github.com/anthropics/claude-agent-sdk-python" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://arize.com/ai-agents/agent-frameworks/" target="_blank" rel="noopener">arize.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-frameworks)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Pydantic AI</div><div class="co-line">Pydantic · MIT · ~21K stars</div></th>
+          <td class="ent-models">Typed structured outputs, dependency injection, easy testing, and OpenTelemetry tracing for ordinary Python engineering teams.</td>
+          <td class="ent-pick">Python<br>Works with many providers</td>
+          <td class="ent-why">Validates the shape of a model's output, not whether it is correct. Durable execution comes from an external system such as Temporal or DBOS, which you then have to run.
+            <a href="https://github.com/pydantic/pydantic-ai" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://arize.com/ai-agents/agent-frameworks/" target="_blank" rel="noopener">arize.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-frameworks)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Mastra</div><div class="co-line">Mastra · ~29K stars</div></th>
+          <td class="ent-models">A full-stack TypeScript toolkit covering agents, typed workflows, memory, storage, a server, and evals.</td>
+          <td class="ent-pick">TypeScript<br>Model support not stated in the sources</td>
+          <td class="ent-why">The TypeScript counterpart to the Python options. Its breadth means deeper coupling to one framework, and its harness APIs are still changing. GitHub does not state a license, so check before adopting.
+            <a href="https://github.com/mastra-ai/mastra" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://arize.com/ai-agents/agent-frameworks/" target="_blank" rel="noopener">arize.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -2050,6 +2236,10 @@
       <a href="https://github.com/rtk-ai/rtk">github.com/rtk</a>
       <a href="https://www.supercompress.dev/context-compression-tools-compared">supercompress.dev/compression-tools</a>
       <a href="https://www.pointfive.co/guides/top-prompt-compression-solutions-2026">pointfive.co/prompt-compression</a>
+      <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators">openalternative.co/orchestrators</a>
+      <a href="https://arize.com/ai-agents/agent-frameworks/">arize.com/agent-frameworks</a>
+      <a href="https://techsy.io/en/blog/langgraph-vs-crewai-vs-openai-agents-sdk">techsy.io/agent-frameworks</a>
+      <a href="https://www.augmentcode.com/tools/open-source-agent-orchestrators">augmentcode.com/orchestrators</a>
     </div>
   </footer>
 
