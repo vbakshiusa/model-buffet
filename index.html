@@ -24,6 +24,7 @@
     --c-qwen:#B15C4E;
     --c-mistral:#4E8C82;
     --c-reflection:#A05A78;
+    --c-compress:#5A7D8C;
 
     --c-copilot:#3B4A63;
     --c-cursor:#5B5FA6;
@@ -66,6 +67,7 @@
       --c-qwen:#D08D7C;
       --c-mistral:#7EBAAF;
       --c-reflection:#D08FAE;
+      --c-compress:#8FB4C4;
 
       --c-copilot:#8C9BB5;
       --c-cursor:#A6A9DE;
@@ -107,6 +109,7 @@
     --c-qwen:#D08D7C;
     --c-mistral:#7EBAAF;
       --c-reflection:#D08FAE;
+      --c-compress:#8FB4C4;
 
     --c-copilot:#8C9BB5;
     --c-cursor:#A6A9DE;
@@ -598,6 +601,7 @@
       <a class="topbar-link" href="#decision-models">Decision models</a>
       <a class="topbar-link" href="#enterprise-ide">Enterprise &amp; IDE</a>
       <a class="topbar-link" href="#model-routers">Routers</a>
+      <a class="topbar-link" href="#context-compression">Context compression</a>
       <a class="topbar-link" href="#computer-use">Computer-use</a>
       <a class="topbar-link" href="#always-on">Always-on agents</a>
       <a class="topbar-link" href="#consumer">Consumer apps</a>
@@ -613,7 +617,7 @@
     <h1>Model Buffet</h1>
     <p class="dek">A working cheat sheet across the labs that matter right now — from the quick, cheap counter items to the five-course flagship reasoning.</p>
     <div class="meta-row">
-      <span>Snapshot: Oct 24, 2026</span>
+      <span>Snapshot: Oct 28, 2026</span>
       <span>Moves fast — recheck pricing before you budget on it</span>
     </div>
   </header>
@@ -631,6 +635,8 @@
       <div class="qp-item"><span class="qp-need">Frontier-grade reasoning, open weights</span><span class="qp-ans">Qwen3.8&#8209;Max</span></div>
       <div class="qp-item"><span class="qp-need">Talk to it live / build a voice agent</span><span class="qp-ans">Grok Voice 3.0 · GPT&#8209;Live</span></div>
       <div class="qp-item"><span class="qp-need">An agent that keeps working while you're away</span><span class="qp-ans">Dots · Claude Duet · Muse</span></div>
+      <div class="qp-item"><span class="qp-need">Cut an agent's token bill</span><span class="qp-ans">Headroom · RTK</span></div>
+      <div class="qp-item"><span class="qp-need">Cheap computer-use and form-filling</span><span class="qp-ans">GPT&#8209;6.1 Terra · Haiku 5.5</span></div>
     </div>
   </div>
 
@@ -789,6 +795,21 @@
             </ul>
           </td>
           <td>
+            <div class="cell-model">GPT-6.1 Terra</div><div class="cell-spec">1.05M ctx · $1 / $5</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Launched Oct 26 at half Sol's price, in the API, ChatGPT Work, and Codex but not regular ChatGPT. Two days old, so no adoption data: Hacker News is split on why the tier exists, and OpenAI's system card flags more rule-bending and unauthorized actions than Sol.</div>
+            <ul class="cell-sources">
+          <li>Artificial Analysis scores it 48 vs 42 for GPT-5.6 Terra at $0.40 per task (vs $1.40), and its guessing rate on unknown questions falls from 88% to 38% &mdash; but Sol and Astra remain better for complex coding. <a href="https://www.eesel.ai/blog/gpt-6-1-terra" target="_blank" rel="noopener">eesel.ai &rarr;</a></li>
+          <li>The "37 fewer error points" headline is OpenAI's own unpublished metric (53.6% to 16.7% at low effort), not a general error-rate drop. <a href="https://www.orcarouter.ai/blog/gpt-6-1-terra-release-price-cut" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></li>
+          <li>A 453-point launch thread debates the "weird middle child" tier; agent builders like the cost for computer use and technical writing but still reach for Claude on coding. <a href="https://news.ycombinator.com/item?id=50248124" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">GPT-5.6 Terra</span><span class="prior-spec">Jul 2026 · $2 / $12</span></div>
+              <div class="prior-delta">Half the price on both sides ($1 / $5), with AA's index up from 42 to 48 and cost per task at max effort down from $1.40 to $0.40. OpenAI's own Terminal-Bench 4.0 figure rises from 21.5% to 50.3% (vendor claim). Tool calls now require the Responses API, so migrate those first. Some r/codex users report it declares tasks finished too early.</div>
+              <div class="prior-links"><a href="https://www.eesel.ai/blog/gpt-6-1-terra" target="_blank" rel="noopener">eesel.ai &rarr;</a><a href="https://www.orcarouter.ai/blog/gpt-6-1-terra-release-price-cut" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></div>
+            </div>
+          </td>
+          <td>
             <div class="cell-model">GPT-6.1 Sol</div><div class="cell-spec">$2 / $10 · replaced Sol after 7 days</div>
             <div class="usage-tier">Growing</div>
             <div class="usage-evidence">Pitched as near-Astra intelligence at a fifth of Astra's price; HN engagement was large (1050 points, 931 comments) but split between genuine excitement and hype fatigue.</div>
@@ -801,21 +822,6 @@
               <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">GPT-6 Sol</span><span class="prior-spec">Sept 22, 2026 · $2 / $10</span></div>
               <div class="prior-delta">Same $2 / $10 list price; only cached input halves ($0.20 to $0.10). AA's index rises from 55 to 59 (one point under Astra) while cost per index task falls from $1.05 to $0.72, and Terminal-Bench 4.0 is up 12 points. Behavior changes: the "none" and "minimal" reasoning modes are gone and tool calling now requires the Responses API. Hacker News is mixed &mdash; some report better long agent runs, others call it "nerfed." Both models remain live.</div>
               <div class="prior-links"><a href="https://artificialanalysis.ai/articles/gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-intelligence" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://news.ycombinator.com/item?id=49906669" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></div>
-            </div>
-          </td>
-          <td>
-            <div class="cell-model">GPT-6 Astra</div><div class="cell-spec">$10 / $50 · Ultrafast tier $60 / $300</div>
-            <div class="usage-tier">Leading</div>
-            <div class="usage-evidence">Immediately became "the loudest topic in AI YouTube and Reddit"; Reddit users reportedly burn through 5-hour usage limits in ~15 messages.</div>
-            <ul class="cell-sources">
-          <li>Raises concern that harder-to-audit internal reasoning is a real practical downside. <a href="https://www.techradar.com/ai-platforms-assistants/gpt-6-is-here-but-what-if-we-just-said-no-thanks-to-astra-a-model-so-powerful-that-we-may-never-fully-understand-it" target="_blank" rel="noopener">techradar.com &rarr;</a></li>
-          <li>Covers a confused rollout where press coverage went out before the official page was live. <a href="https://www.forbes.com/sites/ronschmelzer/2026/09/03/openai-announces-gpt-6-astra-or-does-it/" target="_blank" rel="noopener">forbes.com &rarr;</a></li>
-          <li>Ask-HN thread collecting first-hand user impressions immediately after launch. <a href="https://news.ycombinator.com/item?id=49571621" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
-            </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">GPT-5.6 Sol</span><span class="prior-spec">Jul 9, 2026 · $5 / $30 list</span></div>
-              <div class="prior-delta">Astra costs 2&times; more on input and about 1.7&times; on output ($10 / $50), and Artificial Analysis's Intelligence Index is roughly flat at top effort (about 61 for both) &mdash; the gains are in agentic, computer-use, and cyber work, and Astra is slower (47 vs 73 tokens/sec in AA's medium-vs-high pairing). 5.6 Sol is still available in the API and Codex.</div>
-              <div class="prior-links"><a href="https://artificialanalysis.ai/models/comparisons/gpt-6-astra-medium-vs-gpt-5-6-sol-high" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://dev.to/gabrielanhaia/gpt-6-astra-costs-25x-more-than-gpt-56-sol-and-scores-about-the-same-41o5" target="_blank" rel="noopener">dev.to &rarr;</a></div>
             </div>
           </td>
         </tr>
@@ -832,7 +838,21 @@
           <li>Compares it directly against base GPT-5 for agentic coding-agent use cases. <a href="https://www.verdent.ai/guides/gpt-5-3-codex-vs-gpt-5-coding-agents" target="_blank" rel="noopener">verdent.ai &rarr;</a></li>
             </ul>
           </td>
-          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">GPT-6 Astra</div><div class="cell-spec">$10 / $50 · Ultrafast tier $60 / $300</div>
+            <div class="usage-tier">Leading</div>
+            <div class="usage-evidence">Immediately became "the loudest topic in AI YouTube and Reddit"; Reddit users reportedly burn through 5-hour usage limits in ~15 messages.</div>
+            <ul class="cell-sources">
+          <li>Raises concern that harder-to-audit internal reasoning is a real practical downside. <a href="https://www.techradar.com/ai-platforms-assistants/gpt-6-is-here-but-what-if-we-just-said-no-thanks-to-astra-a-model-so-powerful-that-we-may-never-fully-understand-it" target="_blank" rel="noopener">techradar.com &rarr;</a></li>
+          <li>Covers a confused rollout where press coverage went out before the official page was live. <a href="https://www.forbes.com/sites/ronschmelzer/2026/09/03/openai-announces-gpt-6-astra-or-does-it/" target="_blank" rel="noopener">forbes.com &rarr;</a></li>
+          <li>Ask-HN thread collecting first-hand user impressions immediately after launch. <a href="https://news.ycombinator.com/item?id=49571621" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">GPT-5.6 Sol</span><span class="prior-spec">Jul 9, 2026 · $5 / $30 list</span></div>
+              <div class="prior-delta">Astra costs 2&times; more on input and about 1.7&times; on output ($10 / $50), and Artificial Analysis's Intelligence Index is roughly flat at top effort (about 61 for both) &mdash; the gains are in agentic, computer-use, and cyber work, and Astra is slower (47 vs 73 tokens/sec in AA's medium-vs-high pairing). 5.6 Sol is still available in the API and Codex.</div>
+              <div class="prior-links"><a href="https://artificialanalysis.ai/models/comparisons/gpt-6-astra-medium-vs-gpt-5-6-sol-high" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://dev.to/gabrielanhaia/gpt-6-astra-costs-25x-more-than-gpt-56-sol-and-scores-about-the-same-41o5" target="_blank" rel="noopener">dev.to &rarr;</a></div>
+            </div>
+          </td>
         </tr>
       </tbody>
 
@@ -1475,8 +1495,8 @@
       <tbody style="--co:var(--c-codex)">
         <tr>
           <th class="co-cell"><div class="co-name">Codex</div><div class="co-line">OpenAI's own agent, umbrella product</div></th>
-          <td class="ent-models">OpenAI models only — GPT-6.1 Sol now available in Codex and ChatGPT Work as of Sept 29; GPT-5.5 retires from Codex on Oct 14, 2026.</td>
-          <td class="ent-pick">GPT-6.1 Sol for most work<br>GPT-6 Astra when Sol isn't enough</td>
+          <td class="ent-models">OpenAI models only — GPT-6.1 Sol (Sept 29) and the cheaper GPT-6.1 Terra (Oct 26) in Codex and ChatGPT Work; GPT-5.5 was scheduled to retire from Codex on Oct 14.</td>
+          <td class="ent-pick">GPT-6.1 Sol for most work<br>GPT-6 Astra when Sol isn't enough<br>GPT-6.1 Terra for cheap, high-volume tasks</td>
           <td class="ent-why">Not one tool but a family of surfaces sharing one model and account context: terminal CLI, IDE extension, cloud delegation through ChatGPT, a GitHub bot, and screen-reading computer use.
             <a href="https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)" target="_blank" rel="noopener">wikipedia.org &rarr;</a> <a href="https://releasebot.io/updates/openai/codex" target="_blank" rel="noopener">releasebot.io &rarr;</a>
           </td>
@@ -1607,6 +1627,95 @@
           <td class="ent-pick">Per-query classifier, tunable to your own eval data</td>
           <td class="ent-why">Positioned for developers embedding routing logic directly into an app rather than end users picking a model by hand.
             <a href="https://github.com/Not-Diamond/awesome-ai-model-routing" target="_blank" rel="noopener">github.com/Not-Diamond &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-head" id="context-compression">
+    <h2>Context compression</h2>
+  </div>
+  <p class="section-sub">A layer between your agent and the model that shrinks what gets sent &mdash; tool output, logs, files, history &mdash; so each task burns fewer tokens. It's a different lever from a router (which picks the model) and from prompt caching (which makes a repeated prefix cheaper): these cut the volume itself. Every savings figure below is the vendor's own, and results swing with the content &mdash; repeated JSON and logs compress 90%-plus, dense prose barely at all. Test on your own workload and compare cost per <i>finished</i> task, watching for cache misses and extra turns that can eat the savings.
+    <a href="https://www.supercompress.dev/context-compression-tools-compared" target="_blank" rel="noopener">supercompress.dev &rarr;</a></p>
+
+  <div class="table-wrap">
+    <table class="enterprise">
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th class="tier-head">What it compresses</th>
+          <th class="tier-head">How you run it</th>
+          <th class="tier-head">Note</th>
+        </tr>
+      </thead>
+      <tbody style="--co:var(--c-compress)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Headroom</div><div class="co-line">Tejas Chopra · open source</div></th>
+          <td class="ent-models">Tool outputs, logs, files, RAG chunks, and conversation history, routed by content type (JSON, code via its syntax tree, prose). Originals stay in a local cache, so the model can pull the full text back when it needs it.</td>
+          <td class="ent-pick">Local library, OpenAI-compatible proxy, MCP server, or <code>headroom wrap</code> for agents like Claude Code and Codex<br>Apache 2.0</td>
+          <td class="ent-why">Headline claim: 20% fewer tokens for coding agents, 60&ndash;95% for JSON. Its own benchmark shows 21&ndash;57% on agent tasks (57% on incident debugging, 21% on code search) with answers unchanged on GSM8K. Savings depend on repetition, and every number is project-published.
+            <a href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://www.developersdigest.tech/blog/github-trending-headroom-2026-06-06" target="_blank" rel="noopener">developersdigest.tech &rarr;</a> <a href="https://karvedigital.com/en/insights/context-compression-for-ai-agents" target="_blank" rel="noopener">karvedigital.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-compress)">
+        <tr>
+          <th class="co-cell"><div class="co-name">RTK (Rust Token Killer)</div><div class="co-line">rtk-ai · open source</div></th>
+          <td class="ent-models">Shell command output only: a hook rewrites <code>git status</code> into <code>rtk git status</code> so test, build, and git output arrives pre-filtered. It does not touch file reads, MCP results, or history.</td>
+          <td class="ent-pick">Single Rust binary with a global hook (<code>rtk init -g</code>); works with Claude Code, Cursor, Gemini CLI, and Codex</td>
+          <td class="ent-why">Project claims 60&ndash;90% fewer tokens on common dev commands (about 80% in its example session); users report 70&ndash;82%. Its own docs say bash-output savings get diluted across your total bill.
+            <a href="https://github.com/rtk-ai/rtk" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://codestz.dev/experiments/rtk-rust-token-killer" target="_blank" rel="noopener">codestz.dev &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-compress)">
+        <tr>
+          <th class="co-cell"><div class="co-name">LLMLingua-2</div><div class="co-line">Microsoft Research · open source</div></th>
+          <td class="ent-models">Prompts and RAG context: a small learned model that drops low-information tokens.</td>
+          <td class="ent-pick">Python library, self-hosted</td>
+          <td class="ent-why">Suits natural-language prompts, but because it works token by token it can mangle code, IDs, and stack traces.
+            <a href="https://arxiv.org/pdf/2403.12968" target="_blank" rel="noopener">arxiv.org &rarr;</a> <a href="https://www.supercompress.dev/context-compression-tools-compared" target="_blank" rel="noopener">supercompress.dev &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-compress)">
+        <tr>
+          <th class="co-cell"><div class="co-name">The Token Company</div><div class="co-line">Y Combinator W26 · hosted</div></th>
+          <td class="ent-models">Prompts: a small classifier (not a generative model) strips low-value tokens; one listing says 100K tokens in under 100ms.</td>
+          <td class="ent-pick">Hosted drop-in API<br>about $0.05 per 1M tokens per one review &mdash; check the pricing page</td>
+          <td class="ent-why">Claims accuracy gains with fewer tokens, but the benchmarks are vendor-reported, and one reviewer notes open tools like LLMLingua &mdash; or the model labs themselves &mdash; could replicate the technique.
+            <a href="https://www.ycombinator.com/companies/the-token-company" target="_blank" rel="noopener">ycombinator.com &rarr;</a> <a href="https://www.pointfive.co/guides/top-prompt-compression-solutions-2026" target="_blank" rel="noopener">pointfive.co &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-compress)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Compresr</div><div class="co-line">hosted + open-source proxy</div></th>
+          <td class="ent-models">Query-aware compression: keeps only the tokens relevant to the question being asked. Grew out of EPFL prompt-compression research.</td>
+          <td class="ent-pick">Python SDK, hosted API, and an open-source proxy for agents like Claude Code and Codex</td>
+          <td class="ent-why">Its own comparison page says it beat The Token Company on a long-document QA test at about 2&times; compression (59.6% vs 48.2%) &mdash; a self-published benchmark.
+            <a href="https://compresr.ai/compare/prompt-compression-tools" target="_blank" rel="noopener">compresr.ai &rarr;</a> <a href="https://www.pointfive.co/guides/top-prompt-compression-solutions-2026" target="_blank" rel="noopener">pointfive.co &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-compress)">
+        <tr>
+          <th class="co-cell"><div class="co-name">SuperCompress</div><div class="co-line">hosted</div></th>
+          <td class="ent-models">Tool output, files, logs, diffs, and retrieved docs: a hosted model keeps the original lines that answer the current question.</td>
+          <td class="ent-pick">Hosted API, MCP tool, or agent hooks (<code>npm install -g supercompress-proxy</code>)</td>
+          <td class="ent-why">Gives no savings figures, and notes query-aware compression depends on the question being clear. It also publishes the comparison pages that rank it first, so read those rankings as a vendor view.
+            <a href="https://www.supercompress.dev/context-compression-tools-compared" target="_blank" rel="noopener">supercompress.dev &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-compress)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Caveman</div><div class="co-line">open source</div></th>
+          <td class="ent-models">Mostly the model's replies: a terse-reply skill, plus local reducers for logs, JSON, and web pages.</td>
+          <td class="ent-pick">Local CLI and skill</td>
+          <td class="ent-why">Its own docs say the reply skill does not reduce input cost; a separate engine and proxy handle input. Sourced only from a competitor's comparison page.
+            <a href="https://www.supercompress.dev/context-compression-tools-compared" target="_blank" rel="noopener">supercompress.dev &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1828,7 +1937,7 @@
   </div>
 
   <footer>
-    <p>Snapshot compiled October 24, 2026 — Anthropic joined the always-on agent race with Claude Duet, putting it head to head with OpenAI's Dots and Meta's Muse, and Perplexity released a pair of open-weight decision models for the Decision models category. Reflection AI's Beam, a 501B open-weight model, landed as the second-strongest US open-weights entry on Artificial Analysis's index. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled October 28, 2026 — OpenAI undercut its own Sol with GPT-6.1 Terra at half the price, and a new Context compression section covers tools like Headroom and RTK that shrink an agent's token bill before it reaches the model. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
@@ -1934,6 +2043,13 @@
       <a href="https://cryptobriefing.com/meta-muse-app-store-retention/">cryptobriefing.com/muse-retention</a>
       <a href="https://finance.yahoo.com/technology/article/metas-muse-is-an-impressively-capable-ai-agent-despite-some-hiccups-173310662.html">finance.yahoo.com/muse-review</a>
       <a href="https://www.cnn.com/2026/09/23/tech/meta-muse-ai-agent">cnn.com/muse-test</a>
+      <a href="https://www.eesel.ai/blog/gpt-6-1-terra">eesel.ai/gpt-6.1-terra</a>
+      <a href="https://www.orcarouter.ai/blog/gpt-6-1-terra-release-price-cut">orcarouter.ai/gpt-6.1-terra</a>
+      <a href="https://news.ycombinator.com/item?id=50248124">news.ycombinator.com/gpt-6.1-terra</a>
+      <a href="https://github.com/headroomlabs-ai/headroom">github.com/headroom</a>
+      <a href="https://github.com/rtk-ai/rtk">github.com/rtk</a>
+      <a href="https://www.supercompress.dev/context-compression-tools-compared">supercompress.dev/compression-tools</a>
+      <a href="https://www.pointfive.co/guides/top-prompt-compression-solutions-2026">pointfive.co/prompt-compression</a>
     </div>
   </footer>
 
