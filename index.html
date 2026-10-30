@@ -1542,8 +1542,18 @@
           <th class="co-cell"><div class="co-name">GitHub Copilot</div><div class="co-line">IDE + PR assistant</div></th>
           <td class="ent-models">Claude Sonnet / Opus / Haiku, GPT-5.x, Gemini 3.1 Pro &amp; Flash — picker depends on your plan tier.</td>
           <td class="ent-pick">Sonnet 5.5 daily<br>Opus 5.5 for hard tickets<br>Gemini 3.1 Pro for huge-context reviews</td>
-          <td class="ent-why">Sonnet is rated the best-balanced everyday pick; Opus gets reserved for tickets it can't close. Gemini 4 Argon went generally available on Oct 13 as Google's newer flagship, but 3.1 Pro is the model these picker reviews cover. Carbon, announced Oct 28, is limited to cyber defenders for now.
+          <td class="ent-why">Sonnet is rated the best-balanced everyday pick; Opus gets reserved for tickets it can't close. Gemini 4 Argon went generally available on Oct 13 as Google's newer flagship, but 3.1 Pro is the model these picker reviews cover. Carbon, announced Oct 28, is limited to cyber defenders for now. The runtime behind Copilot's agent mode is now sold separately as the Microsoft Copilot harness (next row).
             <a href="https://standardcompute.com/best-ai-model/for/github-copilot" target="_blank" rel="noopener">standardcompute.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-copilot)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Microsoft Copilot harness</div><div class="co-line">Microsoft · Oct 28, 2026</div></th>
+          <td class="ent-models">The agent runtime that GitHub built for Copilot, now shared across Microsoft: it runs the agent loop and sandbox, while you supply instructions, skills, tools, and the model. Microsoft says it works across 20+ frontier models (OpenAI and Anthropic families) plus bring-your-own-key, and that it will route work to the right model per task. It powers GitHub Copilot's CLI and VS Code, and Copilot Studio.</td>
+          <td class="ent-pick">Not a model pick &mdash; a place to run agents<br>Public preview in Microsoft Foundry (Agent Service), or as a downloadable SDK<br>Free in preview through Nov 30, then consumption billing</td>
+          <td class="ent-why">The first Microsoft product on this page that is itself multi-model orchestration: the closest Microsoft-side counterpart to the Claude Agent SDK and Codex, but model-neutral. All performance figures are Microsoft's own. In Copilot Studio tests it lifted pass rates 10.8 points with an OpenAI model and 22.1 with an Anthropic model versus Microsoft's Standard harness, and Microsoft says swapping models changed results far less than swapping harnesses. It used nearly twice as many model calls, offset by caching (15&ndash;21% lower input-processing cost, per Microsoft). Caveats: the routing logic isn't documented; reports conflict on bring-your-own-model (Microsoft's post says bring-your-own-key, one outlet says unavailable for Studio prompt agents); and Tech Times warns that adopting it means accepting Microsoft's session policies, pricing, and routing. Compute is reported at $0.0994 per vCPU-hour (Tech Times only; check Foundry's pricing page).
+            <a href="https://blogs.microsoft.com/blog/2026/10/28/introducing-the-microsoft-copilot-harness-unlocking-the-potential-of-truly-multi-model-agentic-work/" target="_blank" rel="noopener">blogs.microsoft.com &rarr;</a> <a href="https://www.microsoft.com/en-us/copilot/blog/copilot-studio/the-github-copilot-harness-in-copilot-studio-is-now-the-microsoft-copilot-harness/" target="_blank" rel="noopener">microsoft.com/copilot-studio &rarr;</a> <a href="https://www.techtimes.com/articles/329667/20261029/microsoft-copilot-harness-opens-enterprise-developers-model-flexibility-platform-lock.htm" target="_blank" rel="noopener">techtimes.com &rarr;</a> <a href="https://www.remio.ai/post/microsoft-copilot-harness-opens-through-foundry-shifting-the-build-or-buy-decisi" target="_blank" rel="noopener">remio.ai &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -2190,7 +2200,7 @@
   </div>
 
   <footer>
-    <p>Snapshot compiled October 28, 2026 — Google announced Gemini 4 Carbon the same week OpenAI undercut its own Sol with GPT-6.1 Terra. Every model now shows its launch date, and the model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled October 28, 2026 — Google announced Gemini 4 Carbon the same week OpenAI undercut its own Sol with GPT-6.1 Terra, and Microsoft opened its multi-model Copilot harness to developers. Every model now shows its launch date, and the model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
@@ -2312,6 +2322,10 @@
       <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon">blog.google/gemini-4-carbon</a>
       <a href="https://docs.x.ai/developers/migration/may-15-retirement">docs.x.ai/may-15-retirement</a>
       <a href="https://docs.oracle.com/en-us/iaas/Content/generative-ai/xai-grok-4-1-fast.htm">docs.oracle.com/grok-4-1-fast</a>
+      <a href="https://blogs.microsoft.com/blog/2026/10/28/introducing-the-microsoft-copilot-harness-unlocking-the-potential-of-truly-multi-model-agentic-work/">blogs.microsoft.com/copilot-harness</a>
+      <a href="https://www.microsoft.com/en-us/copilot/blog/copilot-studio/the-github-copilot-harness-in-copilot-studio-is-now-the-microsoft-copilot-harness/">microsoft.com/copilot-harness-studio</a>
+      <a href="https://www.techtimes.com/articles/329667/20261029/microsoft-copilot-harness-opens-enterprise-developers-model-flexibility-platform-lock.htm">techtimes.com/copilot-harness</a>
+      <a href="https://www.remio.ai/post/microsoft-copilot-harness-opens-through-foundry-shifting-the-build-or-buy-decisi">remio.ai/copilot-harness</a>
     </div>
   </footer>
 
