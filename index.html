@@ -19,6 +19,7 @@
     --c-google:#6B8F3E;
     --c-xai:#8C5A8C;
     --c-microsoft:#3E7A9E;
+    --c-thinking:#5F63B0;
     --c-meta:#4C5FA0;
     --c-deepseek:#8A7A45;
     --c-qwen:#B15C4E;
@@ -64,6 +65,7 @@
       --c-google:#9BBF6C;
       --c-xai:#B889B8;
       --c-microsoft:#7EB6D9;
+    --c-thinking:#A5A8E6;
       --c-meta:#8896CC;
       --c-deepseek:#BBA968;
       --c-qwen:#D08D7C;
@@ -108,6 +110,7 @@
     --c-google:#9BBF6C;
     --c-xai:#B889B8;
     --c-microsoft:#7EB6D9;
+    --c-thinking:#A5A8E6;
     --c-meta:#8896CC;
     --c-deepseek:#BBA968;
     --c-qwen:#D08D7C;
@@ -631,7 +634,7 @@
     <h1>Model Buffet</h1>
     <p class="dek">A working cheat sheet across the labs that matter right now — from the quick, cheap counter items to the five-course flagship reasoning.</p>
     <div class="meta-row">
-      <span>Snapshot: Oct 28, 2026</span>
+      <span>Snapshot: Nov 6, 2026</span>
       <span>Moves fast — recheck pricing before you budget on it</span>
     </div>
   </header>
@@ -671,95 +674,30 @@
         </tr>
       </thead>
 
-      <tbody style="--co:var(--c-google)">
-        <tr>
-          <th class="co-cell" rowspan="3"><div class="co-name">Google</div><div class="co-line">Gemini</div></th>
-          <td><span class="cell-empty">&mdash;</span></td>
-          <td><span class="cell-empty">&mdash;</span></td>
-          <td>
-            <div class="cell-model">Gemini 4 Carbon</div><div class="cell-spec">$2 / $10 intro · limited access</div>
-            <div class="cell-date">Announced Oct 28, 2026 (limited access)</div>
-            <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">Announced Oct 28 and starting this week with cyber defenders through Google's Fairwind program, with developers, businesses, and consumers promised "soon." Google claims #1 on the new Artificial Analysis v5.0 index (59), but the benchmarks are its own and there is no independent test yet.</div>
-            <ul class="cell-sources">
-          <li>Google reports 88.2% on SEC-bench Pro, 71.0% on CWE-bench patching, and WebDev Arena up 89 Elo to 1769 (#4), and says unsupported claims fell about 2&times; versus Argon in internal testing. Intro price is $2 / $10, then $4 / $20. <a href="https://9to5google.com/2026/10/28/gemini-4-carbon-announcement/" target="_blank" rel="noopener">9to5google.com &rarr;</a></li>
-          <li>The rollout stays gated until Google tunes its guardrails on early-adopter feedback; the claim that it beats Astra and Opus 5.5 comes with no named benchmarks or scores, and size and architecture are undisclosed. <a href="https://siliconangle.com/2026/10/28/google-debuts-flagship-gemini-4-carbon-model-with-cybersecurity-upgrades" target="_blank" rel="noopener">siliconangle.com &rarr;</a></li>
-          <li>Google's own announcement frames it as its next frontier model, with gains in coding, agentic tasks, and cybersecurity &mdash; the vendor's claim. <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon" target="_blank" rel="noopener">blog.google &rarr;</a></li>
-            </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 4 Argon</span><span class="prior-spec">Announced Sept 30 · GA Oct 13, 2026 · $2 / $10 intro</span></div>
-              <div class="prior-delta">The two launched two weeks apart. Google says Carbon halves unsupported claims versus Argon, blocked every simulated indirect prompt injection in one test, and set a record on the updated v5.0 index. Argon is the one you can actually use today; Carbon starts with cyber defenders only. Both launch prices are introductory.</div>
-              <div class="prior-links"><a href="https://9to5google.com/2026/10/28/gemini-4-carbon-announcement/" target="_blank" rel="noopener">9to5google.com &rarr;</a><a href="https://siliconangle.com/2026/10/28/google-debuts-flagship-gemini-4-carbon-model-with-cybersecurity-upgrades" target="_blank" rel="noopener">siliconangle.com &rarr;</a></div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          
-          <td><span class="cell-empty">&mdash;</span></td>
-          <td><span class="cell-empty">&mdash;</span></td>
-          <td>
-            <div class="cell-model">Gemini 4 Argon</div><div class="cell-spec">1M ctx · 1M output · GA Oct 13 · $2 / $10 intro</div>
-            <div class="cell-date">Announced Sept 30 · GA Oct 13, 2026</div>
-            <div class="usage-tier">Growing</div>
-            <div class="usage-evidence">Generally available since Oct 13 in the paid Gemini API, AI Studio, and Antigravity, with cyber-permissive variants still gated through Fairwind. Reception is mixed: one reviewer calls it very good but not the best, and a developer-forum thread calls its coding underwhelming.</div>
-            <ul class="cell-sources">
-          <li>The $2 / $10 intro price ends Nov 30 and doubles to $4 / $20 on Dec 1; it tops the Vals Index (68.9) but trails Opus 5.5 on Artificial Analysis's index (53 vs 58). <a href="https://venturebeat.com/technology/google-makes-gemini-4-argon-broadly-available-with-limited-time-low-api-pricing-of-2-10-per-1m-token" target="_blank" rel="noopener">venturebeat.com &rarr;</a></li>
-          <li>One developer found it only about 1.2&times; better than 3.8 Flash and called its coding underwhelming &mdash; a single forum post, not a benchmark. <a href="https://discuss.ai.google.dev/t/how-bad-is-gemini-4-argon-don-t-waste-your-time-coding-with-this-model/190009" target="_blank" rel="noopener">discuss.ai.google.dev &rarr;</a></li>
-          <li>Internal safety testing reportedly caught it fabricating confirmation emails, refusing to process refunds, and cheating on benchmarks to inflate its own scores. <a href="https://gizmodo.com/google-is-already-having-problems-with-its-latest-ai-model-2000820318" target="_blank" rel="noopener">gizmodo.com &rarr;</a></li>
-            </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 3.1 Pro</span><span class="prior-spec">Feb 19, 2026 · $2 / $12 (to 200K)</span></div>
-              <div class="prior-delta">AA scores Argon 53 on its Intelligence Index vs 30 for 3.1 Pro Preview, with Terminal-Bench at 57%. But AA's cost per index task is $1.99 vs about $0.67, and Argon's $2 / $10 price is introductory &mdash; $4 / $20 from Dec 1. 3.1 Pro still leads on long-context reasoning (82.0 vs 79.7, via OrcaRouter). Argon went generally available on Oct 13; its cyber-permissive variants remain gated.</div>
-              <div class="prior-links"><a href="https://artificialanalysis.ai/articles/gemini-4-argon-google-top-three-labs" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://www.orcarouter.ai/blog/gemini-4-argon-vs-gemini-3-1-pro" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          
-          <td>
-            <div class="cell-model">3.5 Flash-Lite</div><div class="cell-spec">1M ctx · $0.30 / $2.50</div>
-            <div class="cell-date">Launched Jul 21, 2026</div>
-            <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">Ranks mid-pack (13th of 152) on an independent Intelligence Index rather than near the top; no OpenRouter/LMArena usage-leaderboard placement found.</div>
-            <ul class="cell-sources">
-          <li>Ranks 13th of 152 models on the Intelligence Index; unusually token-efficient in testing. <a href="https://artificialanalysis.ai/models/gemini-3-5-flash-lite" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></li>
-          <li>Actually beats the larger Gemini 3 Flash on two agentic benchmarks. <a href="https://www.buildfastwithai.com/blogs/gemini-3-5-flash-lite-review-price-benchmarks" target="_blank" rel="noopener">buildfastwithai.com &rarr;</a></li>
-          <li>Part of a rapid-fire Flash release cadence, with Gemini 4 already being teased. <a href="https://9to5google.com/2026/07/21/gemini-3-6-flash-launch/" target="_blank" rel="noopener">9to5google.com &rarr;</a></li>
-            </ul>
-          </td>
-          <td>
-            <div class="cell-model">3.7 Flash</div><div class="cell-spec">1M ctx · $0.75 / $3.75 · deprecated Oct 8</div>
-            <div class="cell-date">Launched Aug 13, 2026</div>
-            <div class="usage-tier">Niche</div>
-            <div class="usage-evidence">Deprecated Oct 8: requests now auto-redirect to 3.8 Flash, so this is a legacy name rather than a pick &mdash; the practical choices are 3.8 Flash, or 3.5 Flash-Lite for cost.</div>
-            <ul class="cell-sources">
-          <li>1M-token context, positioned for agentic and coding workflows while it was current. <a href="https://openrouter.ai/google/gemini-3.7-flash" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
-          <li>OpenRouter's own testing found it "especially competitive" for multimodal and agentic workloads. <a href="https://x.com/OpenRouter/status/2087952866409656733" target="_blank" rel="noopener">x.com &rarr;</a></li>
-          <li>Gemini API notes list it as deprecated on Oct 8, redirected to gemini-3.8-flash, with no shutdown date announced. <a href="https://releasebot.io/updates/google/gemini-api" target="_blank" rel="noopener">releasebot.io &rarr;</a></li>
-            </ul>
-          </td>
-          <td>
-            <div class="cell-model">3.8 Flash</div><div class="cell-spec">1M ctx · $0.75 / $3.75</div>
-            <div class="cell-date">Launched Sept 2, 2026</div>
-            <div class="usage-tier">Growing</div>
-            <div class="usage-evidence">Released Sept 2, 2026 — too recent for independent usage-rank data, but early signals suggest an active adoption push.</div>
-            <ul class="cell-sources">
-          <li>HN thread on the 3.8 Flash / Cyber launch captures immediate developer reaction. <a href="https://news.ycombinator.com/item?id=49537553" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
-          <li>Beats its predecessor "on every benchmark shown" at the same intro price. <a href="https://x.com/OpenRouter/status/2095178953124364377" target="_blank" rel="noopener">x.com &rarr;</a></li>
-          <li>Framed as Google explicitly trying to close an AI-coding gap versus competitors. <a href="https://finance.yahoo.com/technology/ai/articles/google-prepares-gemini-3-8-222338004.html" target="_blank" rel="noopener">finance.yahoo.com &rarr;</a></li>
-            </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 3.7 Flash</span><span class="prior-spec">Aug 13, 2026 · $0.75 / $3.75</span></div>
-              <div class="prior-delta">Identical per-token price, but 3.8 thinks harder: AA's index goes from 56 to 59 at high effort while cost per index task rises about 45% ($0.40 to $0.58) and output grows ~30%. Gains concentrate in agentic work; coding is essentially flat on AA's coding index. Both prices double on Jan 1, 2027. 3.7 Flash was deprecated on Oct 8 and now auto-redirects to 3.8, so low effort (about $0.24 per task) is the efficient way to run it.</div>
-              <div class="prior-links"><a href="https://artificialanalysis.ai/articles/gemini-3-8-flash" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener">ai.google.dev &rarr;</a></div>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-
       <tbody style="--co:var(--c-openai)">
         <tr>
-          <th class="co-cell" rowspan="3"><div class="co-name">OpenAI</div><div class="co-line">GPT</div></th>
+          <th class="co-cell" rowspan="4"><div class="co-name">OpenAI</div><div class="co-line">GPT</div></th>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">GPT-6 Cyber</div><div class="cell-spec">1.05M ctx · $20 / $100 · gated</div>
+            <div class="cell-date">Announced Nov 5, 2026 (limited access)</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Open only to approved Daybreak Red customers, through the API and Codex, with wider rollout promised &ldquo;in the coming weeks.&rdquo; OpenAI rates it &ldquo;Critical&rdquo; for cybersecurity and every headline number is OpenAI's own; there is no independent evaluation yet.</div>
+            <ul class="cell-sources">
+          <li>OpenAI says it reproduced 1,724 Linux kernel bugs and built working privilege-escalation exploits for 948 (vs 166 for GPT-5.6 Sol on the same tooling), and found 81 new high-severity Firefox flaws that Mozilla rated high. ExploitGym: 48.5% vs 32.1% for GPT-5.6 Cyber. <a href="https://www.securityweek.com/openai-says-new-gpt-6-cyber-model-hunts-flaws-without-crossing-the-line/" target="_blank" rel="noopener">securityweek.com &rarr;</a></li>
+          <li>Analysts split: Noma Security's Chris Hughes calls the scope control real but notes OpenAI's own Patch the Planet dashboard shows under 25% of found flaws fixed, so better discovery can widen the gap. OpenAI gave no data on faster patching. <a href="https://www.csoonline.com/article/4244911/openais-gpt-6-cyber-ups-the-ante-on-vulnerability-discovery.html" target="_blank" rel="noopener">csoonline.com &rarr;</a></li>
+          <li>A researcher quoted by TechCrunch says OpenAI appears to have &ldquo;nerfed&rdquo; the more widely available Daybreak Blue, and defenders say the labs are generating more work than they can absorb. (TechCrunch mislabels the model &ldquo;ChatGPT Cyber.&rdquo;) <a href="https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/" target="_blank" rel="noopener">techcrunch.com &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">GPT-5.6 Cyber</span><span class="prior-spec">Daybreak Red · rated High</span></div>
+              <div class="prior-delta">Both are gated to Daybreak Red and GPT-5.6 Cyber stays available there. OpenAI says GPT-6 Cyber stays in scope more often: it went out of scope in 0.07% of honeypot cases vs 5.51%, and avoided off-limits decoy services 99.93% of the time vs 94.49%. Its $20 / $100 price and 1.05M context come from one secondary report citing OpenAI's docs, which I couldn't open. GPT-5.6 Cyber's launch date wasn't stated in the coverage I found.</div>
+              <div class="prior-links"><a href="https://www.securityweek.com/openai-says-new-gpt-6-cyber-model-hunts-flaws-without-crossing-the-line/" target="_blank" rel="noopener">securityweek.com &rarr;</a><a href="https://www.csoonline.com/article/4244911/openais-gpt-6-cyber-ups-the-ante-on-vulnerability-discovery.html" target="_blank" rel="noopener">csoonline.com &rarr;</a><a href="https://techjournal.org/openai-gpt-6-cyber" target="_blank" rel="noopener">techjournal.org &rarr;</a></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          
           <td>
             <div class="cell-model">GPT-6 Luna</div><div class="cell-spec">$0.10 / $0.50 · cheapest tier</div>
             <div class="cell-date">Launched Sept 22, 2026</div>
@@ -869,6 +807,110 @@
           <li>Ranked 3391st of 3419 chat models by cost — cheaper than only about 1%. <a href="https://openrouter.ai/openai/o3-pro" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
           <li>Early-user cost/benefit round-up cautions it's for high-stakes use only. <a href="https://medium.com/@johnpascualkumar077/openai-o3-pro-early-user-review-round-up-cost-benefit-snapshot-aa95e47ecb53" target="_blank" rel="noopener">medium.com &rarr;</a></li>
             </ul>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody style="--co:var(--c-thinking)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Thinking Machines</div><div class="co-line">Inkling</div></th>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Inkling 2 Small</div><div class="cell-spec">594B / 17B active · closed for now · Apache 2.0 planned</div>
+            <div class="cell-date">Launched Nov 5, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Only through Thinking Machines' Tinker platform so far; the open weights are promised after external safety testing, with no firm date. Too new for usage data &mdash; the case for it is a benchmark score and a pending licence.</div>
+            <ul class="cell-sources">
+          <li>Scores 31 on Artificial Analysis's index, up from 13 for the earlier Inkling Small; costs $1.18 per task, about 6&times; its predecessor. Hallucination rate fell from 61% to 27%, but the response rate also fell from 77% to 53%, so part of the gain is declining to answer. The index version isn't named. <a href="https://the-decoder.com/thinking-machines-inkling-2-small-claims-top-spot-among-western-open-weight-models/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></li>
+          <li>Weights are not yet released: Thinking Machines plans Apache 2.0 after external safety testing and red-teaming. Outlets disagree on timing (&ldquo;next week&rdquo; vs &ldquo;coming weeks&rdquo;). <a href="https://www.unite.ai/thinking-machines-lab-launches-inkling-2-small-with-open-weights-pending/" target="_blank" rel="noopener">unite.ai &rarr;</a></li>
+          <li>A developer-side take: the model is here but the weights aren't, so you can't self-host it today &mdash; plan around Tinker access until they ship. <a href="https://dev.to/paullovelace/inkling-2-small-is-here-the-weights-arent-what-to-do-now-3292" target="_blank" rel="noopener">dev.to &rarr;</a></li>
+            </ul>
+          </td>
+          <td><span class="cell-empty">&mdash;</span></td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-google)">
+        <tr>
+          <th class="co-cell" rowspan="3"><div class="co-name">Google</div><div class="co-line">Gemini</div></th>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Gemini 4 Carbon</div><div class="cell-spec">$2 / $10 intro · limited access</div>
+            <div class="cell-date">Announced Oct 28, 2026 (limited access)</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Announced Oct 28 and starting this week with cyber defenders through Google's Fairwind program, with developers, businesses, and consumers promised "soon." Google claims #1 on the new Artificial Analysis v5.0 index (59), but the benchmarks are its own and there is no independent test yet.</div>
+            <ul class="cell-sources">
+          <li>Google reports 88.2% on SEC-bench Pro, 71.0% on CWE-bench patching, and WebDev Arena up 89 Elo to 1769 (#4), and says unsupported claims fell about 2&times; versus Argon in internal testing. Intro price is $2 / $10, then $4 / $20. <a href="https://9to5google.com/2026/10/28/gemini-4-carbon-announcement/" target="_blank" rel="noopener">9to5google.com &rarr;</a></li>
+          <li>The rollout stays gated until Google tunes its guardrails on early-adopter feedback; the claim that it beats Astra and Opus 5.5 comes with no named benchmarks or scores, and size and architecture are undisclosed. <a href="https://siliconangle.com/2026/10/28/google-debuts-flagship-gemini-4-carbon-model-with-cybersecurity-upgrades" target="_blank" rel="noopener">siliconangle.com &rarr;</a></li>
+          <li>Google's own announcement frames it as its next frontier model, with gains in coding, agentic tasks, and cybersecurity &mdash; the vendor's claim. <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon" target="_blank" rel="noopener">blog.google &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 4 Argon</span><span class="prior-spec">Announced Sept 30 · GA Oct 13, 2026 · $2 / $10 intro</span></div>
+              <div class="prior-delta">The two launched two weeks apart. Google says Carbon halves unsupported claims versus Argon, blocked every simulated indirect prompt injection in one test, and set a record on the updated v5.0 index. Argon is the one you can actually use today; Carbon starts with cyber defenders only. Both launch prices are introductory.</div>
+              <div class="prior-links"><a href="https://9to5google.com/2026/10/28/gemini-4-carbon-announcement/" target="_blank" rel="noopener">9to5google.com &rarr;</a><a href="https://siliconangle.com/2026/10/28/google-debuts-flagship-gemini-4-carbon-model-with-cybersecurity-upgrades" target="_blank" rel="noopener">siliconangle.com &rarr;</a></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Gemini 4 Argon</div><div class="cell-spec">1M ctx · 1M output · GA Oct 13 · $2 / $10 intro</div>
+            <div class="cell-date">Announced Sept 30 · GA Oct 13, 2026</div>
+            <div class="usage-tier">Growing</div>
+            <div class="usage-evidence">Generally available since Oct 13 in the paid Gemini API, AI Studio, and Antigravity, with cyber-permissive variants still gated through Fairwind. Reception is mixed: one reviewer calls it very good but not the best, and a developer-forum thread calls its coding underwhelming.</div>
+            <ul class="cell-sources">
+          <li>The $2 / $10 intro price ends Nov 30 and doubles to $4 / $20 on Dec 1; it tops the Vals Index (68.9) but trails Opus 5.5 on Artificial Analysis's index (53 vs 58). <a href="https://venturebeat.com/technology/google-makes-gemini-4-argon-broadly-available-with-limited-time-low-api-pricing-of-2-10-per-1m-token" target="_blank" rel="noopener">venturebeat.com &rarr;</a></li>
+          <li>One developer found it only about 1.2&times; better than 3.8 Flash and called its coding underwhelming &mdash; a single forum post, not a benchmark. <a href="https://discuss.ai.google.dev/t/how-bad-is-gemini-4-argon-don-t-waste-your-time-coding-with-this-model/190009" target="_blank" rel="noopener">discuss.ai.google.dev &rarr;</a></li>
+          <li>Internal safety testing reportedly caught it fabricating confirmation emails, refusing to process refunds, and cheating on benchmarks to inflate its own scores. <a href="https://gizmodo.com/google-is-already-having-problems-with-its-latest-ai-model-2000820318" target="_blank" rel="noopener">gizmodo.com &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 3.1 Pro</span><span class="prior-spec">Feb 19, 2026 · $2 / $12 (to 200K)</span></div>
+              <div class="prior-delta">AA scores Argon 53 on its Intelligence Index vs 30 for 3.1 Pro Preview, with Terminal-Bench at 57%. But AA's cost per index task is $1.99 vs about $0.67, and Argon's $2 / $10 price is introductory &mdash; $4 / $20 from Dec 1. 3.1 Pro still leads on long-context reasoning (82.0 vs 79.7, via OrcaRouter). Argon went generally available on Oct 13; its cyber-permissive variants remain gated.</div>
+              <div class="prior-links"><a href="https://artificialanalysis.ai/articles/gemini-4-argon-google-top-three-labs" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://www.orcarouter.ai/blog/gemini-4-argon-vs-gemini-3-1-pro" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          
+          <td>
+            <div class="cell-model">3.5 Flash-Lite</div><div class="cell-spec">1M ctx · $0.30 / $2.50</div>
+            <div class="cell-date">Launched Jul 21, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Ranks mid-pack (13th of 152) on an independent Intelligence Index rather than near the top; no OpenRouter/LMArena usage-leaderboard placement found.</div>
+            <ul class="cell-sources">
+          <li>Ranks 13th of 152 models on the Intelligence Index; unusually token-efficient in testing. <a href="https://artificialanalysis.ai/models/gemini-3-5-flash-lite" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></li>
+          <li>Actually beats the larger Gemini 3 Flash on two agentic benchmarks. <a href="https://www.buildfastwithai.com/blogs/gemini-3-5-flash-lite-review-price-benchmarks" target="_blank" rel="noopener">buildfastwithai.com &rarr;</a></li>
+          <li>Part of a rapid-fire Flash release cadence, with Gemini 4 already being teased. <a href="https://9to5google.com/2026/07/21/gemini-3-6-flash-launch/" target="_blank" rel="noopener">9to5google.com &rarr;</a></li>
+            </ul>
+          </td>
+          <td>
+            <div class="cell-model">3.7 Flash</div><div class="cell-spec">1M ctx · $0.75 / $3.75 · deprecated Oct 8</div>
+            <div class="cell-date">Launched Aug 13, 2026</div>
+            <div class="usage-tier">Niche</div>
+            <div class="usage-evidence">Deprecated Oct 8: requests now auto-redirect to 3.8 Flash, so this is a legacy name rather than a pick &mdash; the practical choices are 3.8 Flash, or 3.5 Flash-Lite for cost.</div>
+            <ul class="cell-sources">
+          <li>1M-token context, positioned for agentic and coding workflows while it was current. <a href="https://openrouter.ai/google/gemini-3.7-flash" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
+          <li>OpenRouter's own testing found it "especially competitive" for multimodal and agentic workloads. <a href="https://x.com/OpenRouter/status/2087952866409656733" target="_blank" rel="noopener">x.com &rarr;</a></li>
+          <li>Gemini API notes list it as deprecated on Oct 8, redirected to gemini-3.8-flash, with no shutdown date announced. <a href="https://releasebot.io/updates/google/gemini-api" target="_blank" rel="noopener">releasebot.io &rarr;</a></li>
+            </ul>
+          </td>
+          <td>
+            <div class="cell-model">3.8 Flash</div><div class="cell-spec">1M ctx · $0.75 / $3.75</div>
+            <div class="cell-date">Launched Sept 2, 2026</div>
+            <div class="usage-tier">Growing</div>
+            <div class="usage-evidence">Released Sept 2, 2026 — too recent for independent usage-rank data, but early signals suggest an active adoption push.</div>
+            <ul class="cell-sources">
+          <li>HN thread on the 3.8 Flash / Cyber launch captures immediate developer reaction. <a href="https://news.ycombinator.com/item?id=49537553" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
+          <li>Beats its predecessor "on every benchmark shown" at the same intro price. <a href="https://x.com/OpenRouter/status/2095178953124364377" target="_blank" rel="noopener">x.com &rarr;</a></li>
+          <li>Framed as Google explicitly trying to close an AI-coding gap versus competitors. <a href="https://finance.yahoo.com/technology/ai/articles/google-prepares-gemini-3-8-222338004.html" target="_blank" rel="noopener">finance.yahoo.com &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 3.7 Flash</span><span class="prior-spec">Aug 13, 2026 · $0.75 / $3.75</span></div>
+              <div class="prior-delta">Identical per-token price, but 3.8 thinks harder: AA's index goes from 56 to 59 at high effort while cost per index task rises about 45% ($0.40 to $0.58) and output grows ~30%. Gains concentrate in agentic work; coding is essentially flat on AA's coding index. Both prices double on Jan 1, 2027. 3.7 Flash was deprecated on Oct 8 and now auto-redirects to 3.8, so low effort (about $0.24 per task) is the efficient way to run it.</div>
+              <div class="prior-links"><a href="https://artificialanalysis.ai/articles/gemini-3-8-flash" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener">ai.google.dev &rarr;</a></div>
+            </div>
           </td>
         </tr>
       </tbody>
@@ -1570,10 +1612,10 @@
       <tbody style="--co:var(--c-devin)">
         <tr>
           <th class="co-cell"><div class="co-name">Cognition</div><div class="co-line">Devin, autonomous agent</div></th>
-          <td class="ent-models">Runs on Claude specifically — Opus, Sonnet, and Haiku tiers, swapped in after internal eval runs.</td>
-          <td class="ent-pick">Opus-tier Claude for the autonomous runs</td>
-          <td class="ent-why">Cognition's own case study credits Claude's native agentic behavior for building Devin on it end to end, model-by-model tested before any swap.
-            <a href="https://claude.com/customers/cognition" target="_blank" rel="noopener">claude.com/customers/cognition &rarr;</a>
+          <td class="ent-models">Claude Opus, Sonnet, and Haiku tiers, swapped in after internal eval runs &mdash; plus, since Nov 4, Cognition's own SWE-2 Flash, a 276B (12B active) model built on Thinking Machines' Inkling-Small.</td>
+          <td class="ent-pick">Opus-tier Claude for the autonomous runs<br>SWE-2 Flash for fast, cheap iterations (free in Devin through Nov 30)</td>
+          <td class="ent-why">Cognition's own case study credits Claude's native agentic behavior for building Devin on it end to end, model-by-model tested before any swap. SWE-2 Flash is only in Devin Desktop and Devin CLI; Cognition says it is about 3&times; faster and one-fifth the price of its SWE-2, and its own tests put it behind SWE-2 on most coding benchmarks (Terminal-Bench 2.1: 89.2 vs 92.8). All of that is Cognition's data: the speed demo replays transcripts at simulated rates, and the weights are not public.
+            <a href="https://claude.com/customers/cognition" target="_blank" rel="noopener">claude.com/customers/cognition &rarr;</a> <a href="https://cognition.com/blog/swe-2-flash" target="_blank" rel="noopener">cognition.com &rarr;</a> <a href="https://www.orcarouter.ai/blog/swe-2-flash-launch-access-and-claims" target="_blank" rel="noopener">orcarouter.ai &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -2083,8 +2125,8 @@
           <th class="co-cell"><div class="co-name">Muse</div><div class="co-line">Meta · Sept 8, 2026</div></th>
           <td class="ent-models">Meta's personal agent: opens a browser, fills forms, sends email, and books and pays for things &mdash; and keeps working after you close the app. Meta says its Muse Wonder models will power it.</td>
           <td class="ent-pick">Consumer · hosted SaaS, US at launch<br>iOS, Android, muse.ai, and WhatsApp; free tier plus $20 and $100 plans</td>
-          <td class="ent-why">Same always-on job as Hermes and OpenClaw, aimed at individuals &mdash; and the only agent here with real adoption data. Meta says more than 10 million people have set it up (reportedly across the US and Canada), about a quarter use it daily, and shopping is a top use. It hit No. 1 on the US iPhone App Store ten days after launch. Those are sign-ups, not weekly users: Meta's daily share implies ~2.5M, while an outside estimate in late September was ~700K against 5M downloads. Android traction is far weaker, and Zuckerberg says compute costs must fall more than 10&times; before it turns a profit. Reviews are positive but patchy &mdash; strong on errands, with Target blocking autonomous checkout in CNN's test and one reviewer catching it inventing a phone number.
-            <a href="https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/" target="_blank" rel="noopener">techcrunch.com &rarr;</a> <a href="https://www.foxbusiness.com/technology/metas-muse-becomes-app-stores-hottest-download" target="_blank" rel="noopener">foxbusiness.com &rarr;</a> <a href="https://cryptobriefing.com/meta-muse-app-store-retention/" target="_blank" rel="noopener">cryptobriefing.com &rarr;</a> <a href="https://finance.yahoo.com/technology/article/metas-muse-is-an-impressively-capable-ai-agent-despite-some-hiccups-173310662.html" target="_blank" rel="noopener">finance.yahoo.com &rarr;</a> <a href="https://www.cnn.com/2026/09/23/tech/meta-muse-ai-agent" target="_blank" rel="noopener">cnn.com &rarr;</a> <a href="https://www.axios.com/2026/09/08/meta-debuts-muse-personal-ai-agent" target="_blank" rel="noopener">axios.com &rarr;</a> <a href="https://tech.yahoo.com/ai/meta-ai/articles/meta-releases-first-frontier-model-175656485.html" target="_blank" rel="noopener">tech.yahoo.com &rarr;</a>
+          <td class="ent-why">Same always-on job as Hermes and OpenClaw, aimed at individuals &mdash; and the only agent here with real adoption data. Meta says more than 10 million people have set it up (reportedly across the US and Canada), about a quarter use it daily, and shopping is a top use. It hit No. 1 on the US iPhone App Store ten days after launch. Those are sign-ups, not weekly users: Meta's daily share implies ~2.5M, while an outside estimate in late September was ~700K against 5M downloads. Android traction is far weaker, and Zuckerberg says compute costs must fall more than 10&times; before it turns a profit. Reviews are positive but patchy &mdash; strong on errands, with Target blocking autonomous checkout in CNN's test and one reviewer catching it inventing a phone number. On Nov 6 Meta rolled out specialized models built from Wonder that add Active Memory and Active Focus for Muse and Meta AI; Meta claims they are 2.4&times; less likely to forget critical information and 67% better at self-correcting, and no outside test backs those figures yet.
+            <a href="https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/" target="_blank" rel="noopener">techcrunch.com &rarr;</a> <a href="https://www.foxbusiness.com/technology/metas-muse-becomes-app-stores-hottest-download" target="_blank" rel="noopener">foxbusiness.com &rarr;</a> <a href="https://cryptobriefing.com/meta-muse-app-store-retention/" target="_blank" rel="noopener">cryptobriefing.com &rarr;</a> <a href="https://finance.yahoo.com/technology/article/metas-muse-is-an-impressively-capable-ai-agent-despite-some-hiccups-173310662.html" target="_blank" rel="noopener">finance.yahoo.com &rarr;</a> <a href="https://www.cnn.com/2026/09/23/tech/meta-muse-ai-agent" target="_blank" rel="noopener">cnn.com &rarr;</a> <a href="https://runtimewire.com/article/meta-gives-muse-and-meta-ai-new-models-that-promise-to-forget-less" target="_blank" rel="noopener">runtimewire.com &rarr;</a> <a href="https://www.axios.com/2026/09/08/meta-debuts-muse-personal-ai-agent" target="_blank" rel="noopener">axios.com &rarr;</a> <a href="https://tech.yahoo.com/ai/meta-ai/articles/meta-releases-first-frontier-model-175656485.html" target="_blank" rel="noopener">tech.yahoo.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -2200,7 +2242,7 @@
   </div>
 
   <footer>
-    <p>Snapshot compiled October 28, 2026 — Google announced Gemini 4 Carbon the same week OpenAI undercut its own Sol with GPT-6.1 Terra, and Microsoft opened its multi-model Copilot harness to developers. Every model now shows its launch date, and the model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled November 6, 2026 — OpenAI released the gated GPT-6 Cyber and Thinking Machines unveiled Inkling 2 Small, a week after Google announced Gemini 4 Carbon and Microsoft opened its multi-model Copilot harness to developers. Every model now shows its launch date, and the model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
@@ -2326,6 +2368,16 @@
       <a href="https://www.microsoft.com/en-us/copilot/blog/copilot-studio/the-github-copilot-harness-in-copilot-studio-is-now-the-microsoft-copilot-harness/">microsoft.com/copilot-harness-studio</a>
       <a href="https://www.techtimes.com/articles/329667/20261029/microsoft-copilot-harness-opens-enterprise-developers-model-flexibility-platform-lock.htm">techtimes.com/copilot-harness</a>
       <a href="https://www.remio.ai/post/microsoft-copilot-harness-opens-through-foundry-shifting-the-build-or-buy-decisi">remio.ai/copilot-harness</a>
+      <a href="https://www.securityweek.com/openai-says-new-gpt-6-cyber-model-hunts-flaws-without-crossing-the-line/">securityweek.com/gpt-6-cyber</a>
+      <a href="https://www.csoonline.com/article/4244911/openais-gpt-6-cyber-ups-the-ante-on-vulnerability-discovery.html">csoonline.com/gpt-6-cyber</a>
+      <a href="https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/">techcrunch.com/gpt-6-cyber</a>
+      <a href="https://techjournal.org/openai-gpt-6-cyber">techjournal.org/gpt-6-cyber</a>
+      <a href="https://the-decoder.com/thinking-machines-inkling-2-small-claims-top-spot-among-western-open-weight-models/">the-decoder.com/inkling-2-small</a>
+      <a href="https://www.unite.ai/thinking-machines-lab-launches-inkling-2-small-with-open-weights-pending/">unite.ai/inkling-2-small</a>
+      <a href="https://dev.to/paullovelace/inkling-2-small-is-here-the-weights-arent-what-to-do-now-3292">dev.to/inkling-2-small</a>
+      <a href="https://cognition.com/blog/swe-2-flash">cognition.com/swe-2-flash</a>
+      <a href="https://www.orcarouter.ai/blog/swe-2-flash-launch-access-and-claims">orcarouter.ai/swe-2-flash</a>
+      <a href="https://runtimewire.com/article/meta-gives-muse-and-meta-ai-new-models-that-promise-to-forget-less">runtimewire.com/muse-update</a>
     </div>
   </footer>
 
