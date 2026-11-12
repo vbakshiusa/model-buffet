@@ -481,6 +481,31 @@
     line-height:1.55;
     max-width:24ch;
   }
+  .ent-allow{
+    font-size:12.5px;
+    line-height:1.5;
+    color:var(--ink);
+    max-width:30ch;
+  }
+  .ent-allow b{ font-weight:600; }
+  .ent-allow a{
+    display:inline-block;
+    margin-top:5px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    color:var(--co, var(--accent));
+    text-decoration:none;
+    border-bottom:1px dotted var(--co, var(--accent));
+  }
+  .ent-reviews{
+    margin-top:10px;
+    padding-top:9px;
+    border-top:1px dashed var(--line-strong);
+    font-size:12px;
+    line-height:1.5;
+  }
+  .ent-reviews b{ color:var(--ink); font-weight:600; }
+  table.enterprise.wide{ min-width:1180px; }
   .ent-why{
     font-size:12.5px;
     line-height:1.5;
@@ -1929,15 +1954,16 @@
   <div class="section-head" id="always-on">
     <h2>Always-on agents</h2>
   </div>
-  <p class="section-sub">Same job — an agent that runs continuously and takes action without being asked each time — for three different audiences: developers who self-host it, enterprises buying it as automation, and consumers who just want a personal agent in their pocket.</p>
+  <p class="section-sub">Same job — an agent that runs continuously and takes action without being asked each time — for three different audiences: developers who self-host it, enterprises buying it as automation, and consumers who just want a personal agent in their pocket. Each row also says which models the agent allows (and its default) and links the public reviews, with their limits.</p>
 
   <div class="table-wrap">
-    <table class="enterprise">
+    <table class="enterprise wide">
       <thead>
         <tr>
           <th>Framework</th>
           <th class="tier-head">What it is</th>
           <th class="tier-head">Audience &amp; deployment</th>
+          <th class="tier-head">Models it allows</th>
           <th class="tier-head">Note</th>
         </tr>
       </thead>
@@ -1945,9 +1971,14 @@
         <tr>
           <th class="co-cell"><div class="co-name">Perplexity Teammates</div><div class="co-line">Perplexity · Nov 4&ndash;5, 2026</div></th>
           <td class="ent-models">Persistent work agents built on Perplexity Computer: you give one a standing responsibility (a research beat, a weekly dashboard, bug triage), it plans the work, keeps project memory, spins up extra agents when needed, can coordinate with other teammates, and interrupts you only for decisions. Each gets its own desktop and browser, and can be tagged in Slack, GitHub, and Linear.</td>
-          <td class="ent-pick">Individual, hosted SaaS, research preview<br>Perplexity Max only ($200/month, or $2,000/year), web first, mobile later; Enterprise excluded by default<br>New teammates default to Claude Opus 5.5, and the model can be changed per teammate</td>
-          <td class="ent-why">The work-colleague version of the always-on idea, closest to Claude Duet and Dots, and unlike Muse it is built around standing jobs and Slack, not errands. Perplexity says its own staff run about 10,000 teammates, an internal figure with no customer or revenue numbers behind it. Cost is the open question: free during a launch promotion with no end date given, then it draws on Max's monthly credits. A default $200 monthly spending cap (adjustable to $5,000) exists because background agents keep spending without new prompts, and one analyst's rough estimate is $205&ndash;$385 a month for a single daily research teammate. The help center doesn't explain how to pause one. Reports differ on the launch date (Nov 4 or 5) and on which mobile platforms are coming, and I found no independent hands-on reviews yet.
+          <td class="ent-pick">Individual, hosted SaaS, research preview<br>Perplexity Max only ($200/month, or $2,000/year), on the web and iOS per Perplexity's page, with Android and desktop coming; Enterprise excluded by default</td>
+          <td class="ent-allow"><b>Default:</b> Claude Opus 5.5, with a different model selectable per teammate, as reported by Data Studios and i-SCOOP. Perplexity's own product page names no models, so the selectable list isn't published. Underneath, it runs on Perplexity Computer, which routes among 19&ndash;20+ models from several labs; whether teammates can draw on that whole pool is unconfirmed.
+            <a href="https://www.datastudios.org/post/perplexity-teammates-always-on-ai-agents-max-200-month-credits" target="_blank" rel="noopener">datastudios.org &rarr;</a> <a href="https://www.i-scoop.eu/perplexity-teammates/" target="_blank" rel="noopener">i-scoop.eu &rarr;</a> <a href="https://www.perplexity.ai/hub/products/teammates" target="_blank" rel="noopener">perplexity.ai &rarr;</a></td>
+          <td class="ent-why">The work-colleague version of the always-on idea, closest to Claude Duet and Dots, and unlike Muse it is built around standing jobs and Slack, not errands. Perplexity says its own staff run about 10,000 teammates, an internal figure with no customer or revenue numbers behind it. Cost is the open question: free during a launch promotion with no end date given, then it draws on Max's monthly credits. A default $200 monthly spending cap (adjustable to $5,000) exists because background agents keep spending without new prompts, and one analyst's rough estimate is $205&ndash;$385 a month for a single daily research teammate. The help center doesn't explain how to pause one. Reports differ on the launch date (Nov 4 or 5).
             <a href="https://www.datastudios.org/post/perplexity-teammates-always-on-ai-agents-max-200-month-credits" target="_blank" rel="noopener">datastudios.org &rarr;</a> <a href="https://startupfortune.com/perplexity-launches-teammates-ai-agents-as-wall-street-doubts-ai-payoffs/" target="_blank" rel="noopener">startupfortune.com &rarr;</a> <a href="https://itdaily.com/news/software/perplexity-teammates-ai-colleagues/" target="_blank" rel="noopener">itdaily.com &rarr;</a>
+          
+            <div class="ent-reviews"><b>Public reviews:</b> no hands-on ones yet. The closest are cost-and-risk analyses that did not test it &mdash; i-SCOOP and Just Being Resourceful, both built on Perplexity's own material &mdash; and Digital Trends' launch coverage, which rests on a Perplexity demo.
+            <a href="https://www.i-scoop.eu/perplexity-teammates/" target="_blank" rel="noopener">i-scoop.eu &rarr;</a> <a href="https://justbeingresourceful.com/2026/11/08/perplexity-teammates-explained-setup-cost-and-limits/" target="_blank" rel="noopener">justbeingresourceful.com &rarr;</a> <a href="https://www.digitaltrends.com/cool-tech/perplexitys-new-ai-coworkers-can-take-over-your-workload-but-they-dont-come-cheap/" target="_blank" rel="noopener">digitaltrends.com &rarr;</a></div>
           </td>
         </tr>
       </tbody>
@@ -1956,8 +1987,13 @@
           <th class="co-cell"><div class="co-name">Claude Duet</div><div class="co-line">Anthropic · Oct 21, 2026</div></th>
           <td class="ent-models">Anthropic's proactive agent for professionals and small businesses, running on Opus 5.5 in its own virtual machine: it builds a daily briefing, dashboards, and forecasts, schedules meetings, and keeps working when your device is off.</td>
           <td class="ent-pick">Professional &amp; small business · hosted SaaS, research preview<br>US-only waitlist for Claude Pro and Max subscribers</td>
+          <td class="ent-allow"><b>Claude Opus 5.5 only.</b> There is no model or effort picker; Duet decides how much effort each job needs.
+            <a href="https://www.eesel.ai/blog/claude-duet-review" target="_blank" rel="noopener">eesel.ai &rarr;</a></td>
           <td class="ent-why">Anthropic's answer to Dots and Muse, aimed at work rather than errands &mdash; it says Duet is poor at booking tickets. It asks before sending messages or paying, and won't trade securities or move money. Every's two-week review calls it the first personal agent that feels like a pro tool, but its email drafts trail Dots and scheduled runs can't use custom connectors; one Hacker News user found its output useless on a data-heavy task. Anthropic says it will reach the $20 Pro plan at general availability (Dots needs OpenAI's $100 Pro tier), and background checks count against your shared Claude usage limits.
             <a href="https://every.to/vibe-check/vibe-check-duet-anthropic-s-always-on-agent" target="_blank" rel="noopener">every.to &rarr;</a> <a href="https://www.engadget.com/2293646/claude-duet-is-anthropics-answer-to-meta-muse-and-openai-dots/" target="_blank" rel="noopener">engadget.com &rarr;</a> <a href="https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/" target="_blank" rel="noopener">techcrunch.com &rarr;</a> <a href="https://news.ycombinator.com/item?id=50186455" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a>
+          
+            <div class="ent-reviews"><b>Public reviews:</b> eesel scores it 3.5/5 (safety and judgment 4.5, transparency 2.5, availability 1.5) and notes it sells a competing support product. Claire Vo's How I AI test (Oct 26) found it worth trying but not her main agent: long jobs went quiet, a deck ignored her Figma and fonts, and it has no desktop app or team sharing. Every's two-week review, linked above, is the most positive.
+            <a href="https://www.eesel.ai/blog/claude-duet-review" target="_blank" rel="noopener">eesel.ai &rarr;</a> <a href="https://www.chatprd.ai/how-i-ai/claude-duet-review" target="_blank" rel="noopener">chatprd.ai &rarr;</a></div>
           </td>
         </tr>
       </tbody>
@@ -1966,8 +2002,13 @@
           <th class="co-cell"><div class="co-name">Gemini agent</div><div class="co-line">Google Cloud · Oct 8, 2026</div></th>
           <td class="ent-models">Google's "universal agent for work": give it an objective and it researches, writes documents and code, spins up sub-agents, and works on tasks lasting hours or days. Persistent coworker agents get their own email address, calendar, and Drive storage.</td>
           <td class="ent-pick">Enterprise · hosted SaaS, private preview<br>inside Gemini Enterprise and Workspace; runs on Gemini but also supports Claude</td>
+          <td class="ent-allow"><b>Gemini and Claude.</b> Admins can restrict which models agents use, and &ldquo;Smart Routing&rdquo; picks among the permitted ones by task and cost. Google hasn't named the Gemini versions, Claude is early access rather than open to every Gemini Enterprise customer, and Google hasn't said where prompts go when Claude handles a job.
+            <a href="https://www.implicator.ai/google-launches-gemini-agent-that-gives-ai-coworkers-their-own-workspace-email/" target="_blank" rel="noopener">implicator.ai &rarr;</a></td>
           <td class="ent-why">The workplace counterpart to Dots, with governance built in &mdash; attested agent identities, isolated containers, full activity logs, and an Agent Gateway enforcing company policy. Included at no extra charge where Gemini Enterprise is available, but pricing for long-running coworker agents is unclear.
             <a href="https://venturebeat.com/orchestration/google-cloud-unveils-persistent-gemini-agents-for-long-running-tasks-and-they-get-their-own-gmail-calendar-and-drive-storage" target="_blank" rel="noopener">venturebeat.com &rarr;</a> <a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work/" target="_blank" rel="noopener">blog.google &rarr;</a>
+          
+            <div class="ent-reviews"><b>Public reviews:</b> none hands-on &mdash; it is a private preview. Analyst reactions only: Info-Tech's Mahmoud Ramin says it creates no new category, and Carmi Levy questions whether CIOs can trust it with mission-critical work. No independent benchmarks exist for long multi-app tasks.
+            <a href="https://www.implicator.ai/google-launches-gemini-agent-that-gives-ai-coworkers-their-own-workspace-email/" target="_blank" rel="noopener">implicator.ai &rarr;</a></div>
           </td>
         </tr>
       </tbody>
@@ -1976,8 +2017,13 @@
           <th class="co-cell"><div class="co-name">Dots</div><div class="co-line">OpenAI · Sept 29, 2026</div></th>
           <td class="ent-models">OpenAI's own always-on agent, built on GPT-6 Astra — each dot gets its own cloud computer and browser, works toward a goal 24/7, and connects to 4,000+ apps; reachable via Slack and Teams.</td>
           <td class="ent-pick">Consumer + Enterprise · hosted SaaS<br>Pro and Business Premium plans, eligible markets</td>
+          <td class="ent-allow"><b>GPT-6 Astra.</b> None of the reviews I read mention a model picker.
+            <a href="https://cryptobriefing.com/openai-dots-ai-agent-hands-on-review/" target="_blank" rel="noopener">cryptobriefing.com &rarr;</a> <a href="https://www.eesel.ai/blog/openai-dots-review" target="_blank" rel="noopener">eesel.ai &rarr;</a></td>
           <td class="ent-why">Covered outright as "OpenAI's Muse competitor" — launched to a polarized 750-point, 629-comment HN thread split between genuine utility and privacy alarm. A day later, OpenAI said its agents had leaked 53 ChatGPT user images and reached SEC, Commerce, and Census sites.
             <a href="https://www.macrumors.com/2026/09/29/openai-launches-dots/" target="_blank" rel="noopener">macrumors.com &rarr;</a> <a href="https://news.ycombinator.com/item?id=49896604" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a>
+          
+            <div class="ent-reviews"><b>Public reviews:</b> an unnamed evaluator's October test of ten business tasks scored it 8.8/10, third of five agents (Claude Cowork led at 9.3). eesel gives it 3/5 &mdash; strong safety design, but repeated confirmations, slow, and no way to edit single memories (eesel sells a competing support product). OpenAI's own system card puts scope violations at 8.6% on five-task chains and 19.7% on ten-task chains.
+            <a href="https://cryptobriefing.com/openai-dots-ai-agent-hands-on-review/" target="_blank" rel="noopener">cryptobriefing.com &rarr;</a> <a href="https://www.eesel.ai/blog/openai-dots-review" target="_blank" rel="noopener">eesel.ai &rarr;</a></div>
           </td>
         </tr>
       </tbody>
@@ -1986,8 +2032,13 @@
           <th class="co-cell"><div class="co-name">Muse</div><div class="co-line">Meta · Sept 8, 2026</div></th>
           <td class="ent-models">Meta's personal agent: opens a browser, fills forms, sends email, and books and pays for things &mdash; and keeps working after you close the app. Meta says its Muse Wonder models will power it.</td>
           <td class="ent-pick">Consumer · hosted SaaS, US at launch<br>iOS, Android, muse.ai, and WhatsApp; free tier plus $20 and $100 plans</td>
+          <td class="ent-allow"><b>Muse Spark today.</b> Meta says Muse Wonder is coming to the app, first for subscribers, and on Nov 6 it rolled out specialized models built from Wonder. I found no model picker in the app. Developers can pick Spark, Wonder or Ember by model ID in the Meta Model API, but that is separate from the app.
+            <a href="https://zapier.com/blog/meta-ai-muse-spark/" target="_blank" rel="noopener">zapier.com &rarr;</a></td>
           <td class="ent-why">Same always-on job as Hermes and OpenClaw, aimed at individuals &mdash; and the only agent here with real adoption data. Meta says more than 10 million people have set it up (reportedly across the US and Canada), about a quarter use it daily, and shopping is a top use. It hit No. 1 on the US iPhone App Store ten days after launch. Those are sign-ups, not weekly users: Meta's daily share implies ~2.5M, while an outside estimate in late September was ~700K against 5M downloads. Android traction is far weaker, and Zuckerberg says compute costs must fall more than 10&times; before it turns a profit. Reviews are positive but patchy &mdash; strong on errands, with Target blocking autonomous checkout in CNN's test and one reviewer catching it inventing a phone number. On Nov 6 Meta rolled out specialized models built from Wonder that add Active Memory and Active Focus for Muse and Meta AI; Meta claims they are 2.4&times; less likely to forget critical information and 67% better at self-correcting, and no outside test backs those figures yet.
             <a href="https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/" target="_blank" rel="noopener">techcrunch.com &rarr;</a> <a href="https://www.foxbusiness.com/technology/metas-muse-becomes-app-stores-hottest-download" target="_blank" rel="noopener">foxbusiness.com &rarr;</a> <a href="https://cryptobriefing.com/meta-muse-app-store-retention/" target="_blank" rel="noopener">cryptobriefing.com &rarr;</a> <a href="https://finance.yahoo.com/technology/article/metas-muse-is-an-impressively-capable-ai-agent-despite-some-hiccups-173310662.html" target="_blank" rel="noopener">finance.yahoo.com &rarr;</a> <a href="https://www.cnn.com/2026/09/23/tech/meta-muse-ai-agent" target="_blank" rel="noopener">cnn.com &rarr;</a> <a href="https://runtimewire.com/article/meta-gives-muse-and-meta-ai-new-models-that-promise-to-forget-less" target="_blank" rel="noopener">runtimewire.com &rarr;</a> <a href="https://www.axios.com/2026/09/08/meta-debuts-muse-personal-ai-agent" target="_blank" rel="noopener">axios.com &rarr;</a> <a href="https://tech.yahoo.com/ai/meta-ai/articles/meta-releases-first-frontier-model-175656485.html" target="_blank" rel="noopener">tech.yahoo.com &rarr;</a>
+          
+            <div class="ent-reviews"><b>Public reviews:</b> Yahoo Finance found it impressively capable despite some hiccups, and CNN's test saw Target block autonomous checkout. There is no independent test of the Nov 6 models yet.
+            <a href="https://finance.yahoo.com/technology/article/metas-muse-is-an-impressively-capable-ai-agent-despite-some-hiccups-173310662.html" target="_blank" rel="noopener">finance.yahoo.com &rarr;</a> <a href="https://www.cnn.com/2026/09/23/tech/meta-muse-ai-agent" target="_blank" rel="noopener">cnn.com &rarr;</a></div>
           </td>
         </tr>
       </tbody>
@@ -1996,8 +2047,13 @@
           <th class="co-cell"><div class="co-name">Grok Bot</div><div class="co-line">xAI · Aug 11, 2026</div></th>
           <td class="ent-models">An "always-on teammate," not a chat window — runs continuously on its own cloud machine to work sales outbound, CRM updates, email, expense handling, and bug reproduction end to end.</td>
           <td class="ent-pick">Enterprise · hosted SaaS only<br>runs on xAI's cloud, not self-hostable or model-choosable</td>
+          <td class="ent-allow"><b>xAI's Grok models only; no picker.</b> Reviewers saw Grok 4.6, then 4.7, but xAI's docs name no model. Musk has said Bots will use the best back-end model for each task; one reviewer treats that as announced, not shipped.
+            <a href="https://zenaegis.com/grok-bot-review/" target="_blank" rel="noopener">zenaegis.com &rarr;</a> <a href="https://aliakbarfakhri.com/grok-bot-review/" target="_blank" rel="noopener">aliakbarfakhri.com &rarr;</a></td>
           <td class="ent-why">Same always-on job as Hermes and OpenClaw, but sold as B2B automation: access requires a SuperGrok, Cursor Pro, or Cursor Teams subscription.
             <a href="https://x.ai/news/introducing-grok-bot" target="_blank" rel="noopener">x.ai &rarr;</a>
+          
+            <div class="ent-reviews"><b>Public reviews:</b> Zen Aegis rates it 3/5 after three weeks, calling it a strong harness that needs a more trustworthy model: frequent hallucinated completions, and all bots share one computer and its logins. A seven-day test (Oct 8) calls it a narrow win because it finishes browser work, but found connectors failing, an unpublished usage allowance, and a multi-day shared-computer outage (the author has affiliate links).
+            <a href="https://zenaegis.com/grok-bot-review/" target="_blank" rel="noopener">zenaegis.com &rarr;</a> <a href="https://aliakbarfakhri.com/grok-bot-review/" target="_blank" rel="noopener">aliakbarfakhri.com &rarr;</a></div>
           </td>
         </tr>
       </tbody>
@@ -2006,8 +2062,13 @@
           <th class="co-cell"><div class="co-name">Hermes Agent</div><div class="co-line">Nous Research · Feb 2026</div></th>
           <td class="ent-models">Self-hosted agent with persistent memory across sessions; codifies repeated successful tasks into reusable, human-readable skill files.</td>
           <td class="ent-pick">Developer · self-hosted<br>model-neutral — OpenRouter, OpenAI, Anthropic, or your own endpoint</td>
+          <td class="ent-allow"><b>Any model; no built-in default.</b> A fresh install is unset and <i>hermes setup</i> picks one. It supports Nous Portal (300+ models, the recommended route), OpenRouter, Anthropic, xAI, MiniMax, DeepSeek, Ollama and any OpenAI-compatible endpoint. <i>/model</i> switches mid-session, and cheaper models can be assigned to side jobs such as compression and vision.
+            <a href="https://hermes-agent.nousresearch.com/docs/user-guide/configuring-models" target="_blank" rel="noopener">hermes-agent docs &rarr;</a></td>
           <td class="ent-why">Claimed the #1 spot on OpenRouter by daily token usage within its first three months of release.
             <a href="https://hermes-agent.org/" target="_blank" rel="noopener">hermes-agent.org &rarr;</a>
+          
+            <div class="ent-reviews"><b>Public reviews:</b> broadly positive but mostly single-author. Axis Intelligence scores it 8.2/10 after three weeks; andrew.ooo ran it two weeks for about $1.40 of compute across ~120 conversations but calls skill quality uneven; a Medium review warns that a prompt injection can persist inside a saved skill.
+            <a href="https://axis-intelligence.com/hermes-agent-review-tested/" target="_blank" rel="noopener">axis-intelligence.com &rarr;</a> <a href="https://andrew.ooo/posts/hermes-agent-nous-research-self-improving-review/" target="_blank" rel="noopener">andrew.ooo &rarr;</a> <a href="https://kisztof.medium.com/hermes-agent-review-nous-researchs-self-improving-ai-agent-e72bc244435a" target="_blank" rel="noopener">medium.com &rarr;</a></div>
           </td>
         </tr>
       </tbody>
@@ -2016,8 +2077,13 @@
           <th class="co-cell"><div class="co-name">OpenClaw</div><div class="co-line">OpenClaw Foundation · MIT · named Jan 29, 2026</div></th>
           <td class="ent-models">Self-hosted personal agent that executes real actions — shell commands, file management, web automation — via 100+ prebuilt AgentSkills, not just chat replies.</td>
           <td class="ent-pick">Developer · self-hosted<br>model-agnostic — connects to Claude, GPT, and others</td>
+          <td class="ent-allow"><b>Any model; no fixed default.</b> You set the primary model in config; the docs example uses Claude Opus 4.6 but recommends none. Providers include Anthropic, OpenAI, xAI, Mistral, Qwen, Z.AI (GLM), Moonshot (Kimi), OpenRouter, Bedrock and local Ollama, with Gemini through a CLI bridge. Some doc mirrors claim a Gemini default; the official page doesn't.
+            <a href="https://docs.openclaw.ai/providers/models" target="_blank" rel="noopener">docs.openclaw.ai &rarr;</a></td>
           <td class="ent-why">Went from a November 2025 side project to 355K GitHub stars by April 2026; now stewarded by an independent non-profit foundation.
             <a href="https://openclaw.ai/" target="_blank" rel="noopener">openclaw.ai &rarr;</a>
+          
+            <div class="ent-reviews"><b>Public reviews:</b> mixed. VelvetShark's 50-day review says yes, with conditions: daily value 9/10, but silent memory loss, an update job that failed unnoticed for seven days, and browser automation rated 5/10. A $47 one-week test found it good at repetitive jobs (about 2,000 emails sorted in 20 minutes at ~90% accuracy) but sometimes reporting success when nothing had happened. Hive Security's May assessment treats it as a serious security risk; its malicious-skill counts conflict (341 vs 1,184).
+            <a href="https://velvetshark.com/50-days-with-openclaw" target="_blank" rel="noopener">velvetshark.com &rarr;</a> <a href="https://dev.to/likhit/i-spent-47-testing-openclaw-for-a-week-heres-whats-actually-happening-4j2b" target="_blank" rel="noopener">dev.to &rarr;</a> <a href="https://hivesecurity.gitlab.io/blog/openclaw-ai-agent-security-crisis-2026/" target="_blank" rel="noopener">hivesecurity.gitlab.io &rarr;</a></div>
           </td>
         </tr>
       </tbody>
@@ -2257,6 +2323,26 @@
       <a href="https://technode.com/2026/11/11/alibaba-opens-qwen4-max-preview-with-a-million-token-context-window/">technode.com/qwen4-max-preview</a>
       <a href="https://www.gadgetpilipinas.net/2026/11/qwen4-max-preview-1m-context/">gadgetpilipinas.net/qwen4-max-preview</a>
       <a href="https://www.datastudios.org/post/alibaba-qwen4-max-preview-token-plan-1m-context-until-november-25">datastudios.org/qwen4-max-preview</a>
+      <a href="https://www.perplexity.ai/hub/products/teammates">perplexity.ai/teammates</a>
+      <a href="https://www.i-scoop.eu/perplexity-teammates/">i-scoop.eu/perplexity-teammates</a>
+      <a href="https://justbeingresourceful.com/2026/11/08/perplexity-teammates-explained-setup-cost-and-limits/">justbeingresourceful.com/teammates</a>
+      <a href="https://www.digitaltrends.com/cool-tech/perplexitys-new-ai-coworkers-can-take-over-your-workload-but-they-dont-come-cheap/">digitaltrends.com/perplexity-teammates</a>
+      <a href="https://www.eesel.ai/blog/claude-duet-review">eesel.ai/claude-duet-review</a>
+      <a href="https://www.chatprd.ai/how-i-ai/claude-duet-review">chatprd.ai/claude-duet-review</a>
+      <a href="https://www.implicator.ai/google-launches-gemini-agent-that-gives-ai-coworkers-their-own-workspace-email/">implicator.ai/gemini-agent</a>
+      <a href="https://cryptobriefing.com/openai-dots-ai-agent-hands-on-review/">cryptobriefing.com/dots-test</a>
+      <a href="https://www.eesel.ai/blog/openai-dots-review">eesel.ai/dots-review</a>
+      <a href="https://zapier.com/blog/meta-ai-muse-spark/">zapier.com/muse-models</a>
+      <a href="https://zenaegis.com/grok-bot-review/">zenaegis.com/grok-bot-review</a>
+      <a href="https://aliakbarfakhri.com/grok-bot-review/">aliakbarfakhri.com/grok-bot-review</a>
+      <a href="https://hermes-agent.nousresearch.com/docs/user-guide/configuring-models">hermes-agent docs/configuring-models</a>
+      <a href="https://axis-intelligence.com/hermes-agent-review-tested/">axis-intelligence.com/hermes-agent</a>
+      <a href="https://andrew.ooo/posts/hermes-agent-nous-research-self-improving-review/">andrew.ooo/hermes-agent</a>
+      <a href="https://kisztof.medium.com/hermes-agent-review-nous-researchs-self-improving-ai-agent-e72bc244435a">medium.com/hermes-agent-review</a>
+      <a href="https://docs.openclaw.ai/providers/models">docs.openclaw.ai/models</a>
+      <a href="https://velvetshark.com/50-days-with-openclaw">velvetshark.com/50-days-with-openclaw</a>
+      <a href="https://dev.to/likhit/i-spent-47-testing-openclaw-for-a-week-heres-whats-actually-happening-4j2b">dev.to/openclaw-47-test</a>
+      <a href="https://hivesecurity.gitlab.io/blog/openclaw-ai-agent-security-crisis-2026/">hivesecurity.gitlab.io/openclaw</a>
     </div>
   </footer>
 
