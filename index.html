@@ -692,7 +692,7 @@
     <h1>Model Buffet</h1>
     <p class="dek">A working cheat sheet across the labs that matter right now — from the quick, cheap counter items to the five-course flagship reasoning.</p>
     <div class="meta-row">
-      <span>Snapshot: Nov 11, 2026</span>
+      <span>Snapshot: Nov 14, 2026</span>
       <span>Moves fast — recheck pricing before you budget on it</span>
     </div>
   </header>
@@ -705,7 +705,7 @@
       <div class="qp-item"><span class="qp-need">Fastest & cheapest, still sharp</span><span class="qp-ans">Haiku 5.5 · GPT&#8209;6 Luna</span></div>
       <div class="qp-item"><span class="qp-need">Feeding it a huge document set</span><span class="qp-ans">GPT&#8209;6.1 Terra (1.05M) · Sonnet 5.5 (1M)</span></div>
       <div class="qp-item"><span class="qp-need">Real-time web / social context</span><span class="qp-ans">Grok 4.7 (built-in X search)</span></div>
-      <div class="qp-item"><span class="qp-need">Deep inside Gmail/Docs/Workspace</span><span class="qp-ans">Gemini 4 Argon</span></div>
+      <div class="qp-item"><span class="qp-need">Deep inside Gmail/Docs/Workspace</span><span class="qp-ans">Gemini 4 Hydrogen · Argon</span></div>
       <div class="qp-item"><span class="qp-need">Self-hosting on a budget</span><span class="qp-ans">Qwen3.8&#8209;27B · DeepSeek V4.1 Flash</span></div>
       <div class="qp-item"><span class="qp-need">Frontier-grade reasoning, open weights</span><span class="qp-ans">Qwen3.8&#8209;Max</span></div>
       <div class="qp-item"><span class="qp-need">Talk to it live / build a voice agent</span><span class="qp-ans">Grok Voice 3.0 · GPT&#8209;Live</span></div>
@@ -719,7 +719,7 @@
     <h2>Tier matrix</h2>
     <div class="axis">cheap / fast <span class="arrow">&rarr;</span> expensive / deep-thinking</div>
   </div>
-  <p class="section-sub">Each cell carries three independent takes — not one blog's opinion — plus a <b>usage tier</b>: how much real-world adoption evidence backs the model up (OpenRouter/LMArena rank, forum consensus, production use), from <span class="usage-tier" style="color:var(--accent)">Leading</span> down to <span class="usage-tier" style="color:var(--accent)">Niche</span> or a plain "too new to tell." Advanced and flagship models share one column, and each carries a compact <b>prior version</b> underneath so you can see what the upgrade actually bought you. Every model shows its launch date. <b>Companies are ranked by a usage score</b>: Leading counts 4 points, Strong 3, Growing 2, Emerging 1 and Niche 0, summed over a company's three best-evidenced models (the number beside each name). Newly launched models score low until adoption shows up, so the order reflects what people are actually using, not who launched last. The one exception is a drop-in successor in the same line (Fable 5.2 after Fable 5.1), which carries its predecessor's tier until its own data arrives; its cell says so. Within a company, models run newest first, and each shows <b>one older version</b> only &mdash; earlier generations that were listed on their own before have been cut. One caution: Artificial Analysis moved its Intelligence Index to v5.0 on Oct 28 (two benchmarks added, easy questions dropped), so index numbers quoted in this table come from different versions &mdash; compare scores only within one source.</p>
+  <p class="section-sub">Each cell carries three independent takes — not one blog's opinion — plus a <b>usage tier</b>: how much real-world adoption evidence backs the model up (OpenRouter/LMArena rank, forum consensus, production use), from <span class="usage-tier" style="color:var(--accent)">Leading</span> down to <span class="usage-tier" style="color:var(--accent)">Niche</span> or a plain "too new to tell." Advanced and flagship models share one column, and each carries a compact <b>prior version</b> underneath so you can see what the upgrade actually bought you. Every model shows its launch date. <b>Companies are ranked by a usage score</b>: Leading counts 4 points, Strong 3, Growing 2, Emerging 1 and Niche 0, summed over a company's three best-evidenced models (the number beside each name). Newly launched models score low until adoption shows up, so the order reflects what people are actually using, not who launched last. The one exception is a successor in the same line (Fable 5.2 after Fable 5.1, Gemini 4 Hydrogen after 3.8 Flash), which carries its predecessor's tier until its own data arrives; its cell says so. Within a company, models run newest first, and each shows <b>one older version</b> only &mdash; earlier generations that were listed on their own before have been cut. One caution: Artificial Analysis moved its Intelligence Index to v5.0 on Oct 28 (two benchmarks added, easy questions dropped), so index numbers quoted in this table come from different versions &mdash; compare scores only within one source.</p>
 
   <div class="table-wrap">
     <table class="matrix">
@@ -1009,7 +1009,7 @@
 
       <tbody style="--co:var(--c-google)">
         <tr>
-          <th class="co-cell" rowspan="2"><div class="co-name">Google</div><div class="co-line">Gemini · 4 pts</div></th>
+          <th class="co-cell"><div class="co-name">Google</div><div class="co-line">Gemini · 4 pts</div></th>
           <td>
             <div class="cell-model">3.5 Flash-Lite</div><div class="cell-spec">1M ctx · $0.30 / $2.50</div>
             <div class="cell-date">Launched Jul 21, 2026</div>
@@ -1021,7 +1021,22 @@
           <li>Part of a rapid-fire Flash release cadence, with Gemini 4 already being teased. <a href="https://9to5google.com/2026/07/21/gemini-3-6-flash-launch/" target="_blank" rel="noopener">9to5google.com &rarr;</a></li>
             </ul>
           </td>
-          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Gemini 4 Hydrogen</div><div class="cell-spec">1M ctx · $1.50 / $7.50 · four thinking levels</div>
+            <div class="cell-date">Launched Nov 12, 2026</div>
+            <div class="usage-tier">Growing</div>
+            <div class="usage-evidence">Carries 3.8 Flash's Growing tier for now: Google calls it the Flash successor, free Gemini app users get it through automatic model selection, and it powers Google Search. It is two days old and pricier than Flash, so it has no usage-rank data of its own. Artificial Analysis, the independent source here, scores it 51 at the default high setting and 54 at xhigh.</div>
+            <ul class="cell-sources">
+          <li>Standard price is $1.50 / $7.50 ($0.075 cached), twice Flash's intro rate and about 15&times; the cheapest rates of Haiku 5.5, GPT-6 Luna and Muse Ember. On Artificial Analysis's Terminal-Bench 4.0 it scores 54% vs 40.9% for Ember, 32.8% for Haiku and 12.6% for Luna, but at medium effort it costs more per task than all three. <a href="https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor" target="_blank" rel="noopener">venturebeat.com &rarr;</a></li>
+          <li>Adapted from Carbon and meant for execution: in Antigravity, Carbon plans and Hydrogen edits code and runs tests. Google's own table has it at 57% on Terminal-Bench 4.1, behind Sonnet 5.5 at 63.9%, with a 5.57-point rise in unjustified refusals vs 3.8 Flash. The article says it is AI-generated and editor-reviewed. <a href="https://www.unite.ai/google-launches-gemini-4-hydrogen-for-everyday-agentic-workflows/" target="_blank" rel="noopener">unite.ai &rarr;</a></li>
+          <li>Google says it runs 2.5&times; faster than 3.8 Flash and makes over 5&times; fewer fabricated claims, and it leads Terra and Sonnet 5.5 on knowledge benchmarks but trails slightly on science and math, computer use and Terminal-Bench 4.1. All of that is Google's; there is no hands-on testing. <a href="https://www.digitaltrends.com/cool-tech/googles-next-gen-gemini-4-hydrogen-ai-model-is-here-touting-faster-intelligence-for-all/" target="_blank" rel="noopener">digitaltrends.com &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 3.8 Flash</span><span class="prior-spec">Sept 2, 2026 · $0.75 / $3.75 intro</span></div>
+              <div class="prior-delta">Hydrogen costs twice 3.8 Flash's intro rate; the two prices meet when Flash's doubles on Jan 1, 2027. It defaults to high thinking, up from medium, and rejects the old thinking_budget and MINIMAL settings. On Artificial Analysis's v5.0.1 index it scores 51 against 31 for 3.8 Flash at high, at about $1.87 vs $7.77 per benchmark task. 3.8 Flash scored 59 on the older index version, so don't compare across versions. Google's 2.5&times; speed figure is its own claim.</div>
+              <div class="prior-links"><a href="https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor" target="_blank" rel="noopener">venturebeat.com &rarr;</a><a href="https://artificialanalysis.ai/articles/gemini-3-8-flash" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></div>
+            </div>
+          </td>
           <td>
             <div class="cell-model">Gemini 4 Carbon</div><div class="cell-spec">$2 / $10 intro, $4 / $20 after Nov 30 · GA</div>
             <div class="cell-date">Announced Oct 28 · GA Nov 10, 2026</div>
@@ -1036,27 +1051,6 @@
               <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 4 Argon</span><span class="prior-spec">Announced Sept 30 · GA Oct 13, 2026 · $2 / $10 intro</span></div>
               <div class="prior-delta">Google says Carbon complements Argon rather than replacing it: Argon stays the better choice for most software engineering and knowledge work, and Carbon is for harder multi-step coding, debugging and research. Both list at $2 / $10 until Nov 30, then $4 / $20. Google reports Carbon's per-attempt breach rate falling from 3.1% to 0.8% and its honesty pass rate rising from 70% to 92% (Google's tests). Cyber capabilities still go to defenders through Google's Fairwind program.</div>
               <div class="prior-links"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener">blog.google &rarr;</a><a href="https://the-decoder.com/gemini-4-carbon-arrives-just-in-time-to-feel-like-yesterdays-news-in-the-fastest-model-cycle-yet/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          
-          <td><span class="cell-empty">&mdash;</span></td>
-          <td><span class="cell-empty">&mdash;</span></td>
-          <td>
-            <div class="cell-model">3.8 Flash</div><div class="cell-spec">1M ctx · $0.75 / $3.75</div>
-            <div class="cell-date">Launched Sept 2, 2026</div>
-            <div class="usage-tier">Growing</div>
-            <div class="usage-evidence">Released Sept 2, 2026 — too recent for independent usage-rank data, but early signals suggest an active adoption push.</div>
-            <ul class="cell-sources">
-          <li>HN thread on the 3.8 Flash / Cyber launch captures immediate developer reaction. <a href="https://news.ycombinator.com/item?id=49537553" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
-          <li>Beats its predecessor "on every benchmark shown" at the same intro price. <a href="https://x.com/OpenRouter/status/2095178953124364377" target="_blank" rel="noopener">x.com &rarr;</a></li>
-          <li>Framed as Google explicitly trying to close an AI-coding gap versus competitors. <a href="https://finance.yahoo.com/technology/ai/articles/google-prepares-gemini-3-8-222338004.html" target="_blank" rel="noopener">finance.yahoo.com &rarr;</a></li>
-            </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 3.7 Flash</span><span class="prior-spec">Aug 13, 2026 · $0.75 / $3.75</span></div>
-              <div class="prior-delta">Identical per-token price, but 3.8 thinks harder: AA's index goes from 56 to 59 at high effort while cost per index task rises about 45% ($0.40 to $0.58) and output grows ~30%. Gains concentrate in agentic work; coding is essentially flat on AA's coding index. Both prices double on Jan 1, 2027. 3.7 Flash was deprecated on Oct 8 and now auto-redirects to 3.8, so low effort (about $0.24 per task) is the efficient way to run it.</div>
-              <div class="prior-links"><a href="https://artificialanalysis.ai/articles/gemini-3-8-flash" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener">ai.google.dev &rarr;</a></div>
             </div>
           </td>
         </tr>
@@ -1378,7 +1372,7 @@
   <div class="section-head" id="decision-models">
     <h2>Decision models</h2>
   </div>
-  <p class="section-sub">Models that answer with a probability instead of writing text. You send text or an image plus typed questions (multiple choice, a 1&ndash;10 score, a yes/no) and get calibrated confidence back &mdash; built for classification, routing, and guardrail decisions in front of, or instead of, a chat model. Also marketed as &ldquo;System One&rdquo; models, TypeSafe&rsquo;s term borrowed from Kahneman&rsquo;s fast-versus-slow thinking. Two designs sit under the label: purpose-built models that answer every question in one parallel pass (Jev, Laya, Clef, Strands Decider, d1-ultra, Perplexity&rsquo;s Decider), and OpenAI&rsquo;s Decisions API, which constrains a regular chat model to a fixed list of answers. Skeptics call the purpose-built kind a zero-shot classifier with a new name &mdash; the task is old, and independent benchmarks are still thin. The shape of the output is guaranteed; the answers themselves are probabilistic.</p>
+  <p class="section-sub">Models that answer with a probability instead of writing text. You send text or an image plus typed questions (multiple choice, a 1&ndash;10 score, a yes/no) and get calibrated confidence back &mdash; built for classification, routing, and guardrail decisions in front of, or instead of, a chat model. Also marketed as &ldquo;System One&rdquo; models, TypeSafe&rsquo;s term borrowed from Kahneman&rsquo;s fast-versus-slow thinking. Two designs sit under the label: purpose-built models that answer every question in one parallel pass (Jev, Laya, Clef, Strands Decider, d1-ultra, Perplexity&rsquo;s Decider, Google&rsquo;s Gemini Decision 1), and OpenAI&rsquo;s Decisions API, which constrains a regular chat model to a fixed list of answers. Skeptics call the purpose-built kind a zero-shot classifier with a new name &mdash; the task is old, and independent benchmarks are still thin. The shape of the output is guaranteed; the answers themselves are probabilistic.</p>
 
   <div class="table-wrap">
     <table class="enterprise">
@@ -1390,6 +1384,16 @@
           <th class="tier-head">Note</th>
         </tr>
       </thead>
+      <tbody style="--co:var(--c-google)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Gemini Decision 1</div><div class="co-line">Google · Nov 11, 2026</div></th>
+          <td class="ent-models">The model behind Google's new Gemini Decisions API (not OpenAI's similarly named product). One request carries a single input &mdash; text, images, audio, video or PDFs, up to 256K tokens &mdash; plus up to 1,000 independent questions: yes/no, multiple choice (2&ndash;255 options) or a rubric score, each returned with probabilities and a confidence.</td>
+          <td class="ent-pick">Gemini API; limited free tier in AI Studio<br>$0.10 / 1M input tokens, output free; the shared input is billed once per request</td>
+          <td class="ent-why">The third big-lab design in this category, after OpenAI's constrained chat model and Perplexity's open Decider. Google says it led on 7 of 9 of its own benchmarks, for example 92.2% vs 90.9% for GPT-6 Luna on JevBench, and lost to TypeSafe's Jev 1.14 on Mind2Web and When2Call, where Jev is also slightly cheaper. Latency is 150&ndash;250 ms end to end (Google's figure, measured on contexts up to 16K tokens). Every number is Google's, on rivals it chose; I found no independent ranking, and a blog's claim of a 9th-of-18 Artificial Analysis placement is unverified.
+            <a href="https://siliconangle.com/2026/11/11/google-enters-the-decision-model-market-with-gemini-decisions-api/" target="_blank" rel="noopener">siliconangle.com &rarr;</a> <a href="https://eu.36kr.com/en/p/4065770698331011" target="_blank" rel="noopener">36kr.com &rarr;</a> <a href="https://mlq.ai/news/google-launches-gemini-decision-1-a-model-that-scores-up-to-1000-questions-in-one-pass/" target="_blank" rel="noopener">mlq.ai &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
       <tbody style="--co:var(--c-systemone)">
         <tr>
           <th class="co-cell"><div class="co-name">Decider v1.2 / Flash</div><div class="co-line">Perplexity · Oct 16, 2026 · open weight</div></th>
@@ -2173,8 +2177,8 @@
           <th class="co-cell"><div class="co-name">Gemini</div><div class="co-line">Google</div></th>
           <td class="ent-models">Gmail, Docs, Sheets, Slides, Calendar, Android, Search.</td>
           <td class="ent-pick">Google-ecosystem productivity</td>
-          <td class="ent-why">Reviewers still hand Gemini 3.1 Pro the top reasoning scores against Grok and GPT-5.6 in several independent benchmark rounds.
-            <a href="https://tech-insider.org/best-ai-chatbots-2026/" target="_blank" rel="noopener">tech-insider.org &rarr;</a>
+          <td class="ent-why">Reviewers still hand Gemini 3.1 Pro the top reasoning scores against Grok and GPT-5.6 in several independent benchmark rounds. Since Nov 12, Gemini 4 Hydrogen is what free app users get through automatic model selection, and it powers Google Search.
+            <a href="https://tech-insider.org/best-ai-chatbots-2026/" target="_blank" rel="noopener">tech-insider.org &rarr;</a> <a href="https://www.digitaltrends.com/cool-tech/googles-next-gen-gemini-4-hydrogen-ai-model-is-here-touting-faster-intelligence-for-all/" target="_blank" rel="noopener">digitaltrends.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -2202,7 +2206,7 @@
   </div>
 
   <footer>
-    <p>Snapshot compiled November 11, 2026 — Anthropic released Claude Fable 5.2 and Mythos 5.2, Google made Gemini 4 Carbon generally available, and Meta and Alibaba shipped Muse Ember and Qwen4-Max-Preview, following the week's GPT-6 Cyber, Inkling 2 Small and Perplexity Teammates. Every model now shows its launch date. The tier matrix ranks companies by a usage-evidence score and shows one older version per model; the other model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled November 14, 2026 — Google launched Gemini 4 Hydrogen and Gemini Decision 1, after Anthropic released Claude Fable 5.2 and Mythos 5.2, Google made Gemini 4 Carbon generally available, and Meta and Alibaba shipped Muse Ember and Qwen4-Max-Preview. Every model now shows its launch date. The tier matrix ranks companies by a usage-evidence score and shows one older version per model; the other model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
@@ -2376,6 +2380,12 @@
       <a href="https://velvetshark.com/50-days-with-openclaw">velvetshark.com/50-days-with-openclaw</a>
       <a href="https://dev.to/likhit/i-spent-47-testing-openclaw-for-a-week-heres-whats-actually-happening-4j2b">dev.to/openclaw-47-test</a>
       <a href="https://hivesecurity.gitlab.io/blog/openclaw-ai-agent-security-crisis-2026/">hivesecurity.gitlab.io/openclaw</a>
+      <a href="https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor">venturebeat.com/gemini-4-hydrogen</a>
+      <a href="https://www.unite.ai/google-launches-gemini-4-hydrogen-for-everyday-agentic-workflows/">unite.ai/gemini-4-hydrogen</a>
+      <a href="https://www.digitaltrends.com/cool-tech/googles-next-gen-gemini-4-hydrogen-ai-model-is-here-touting-faster-intelligence-for-all/">digitaltrends.com/gemini-4-hydrogen</a>
+      <a href="https://siliconangle.com/2026/11/11/google-enters-the-decision-model-market-with-gemini-decisions-api/">siliconangle.com/gemini-decision-1</a>
+      <a href="https://eu.36kr.com/en/p/4065770698331011">36kr.com/gemini-decision-1</a>
+      <a href="https://mlq.ai/news/google-launches-gemini-decision-1-a-model-that-scores-up-to-1000-questions-in-one-pass/">mlq.ai/gemini-decision-1</a>
     </div>
   </footer>
 
