@@ -247,7 +247,7 @@
     justify-content:space-between;
     gap:16px;
     flex-wrap:wrap;
-    scroll-margin-top:68px;
+    scroll-margin-top:118px;
   }
   .section-head h2{
     font-family:'Fraunces', serif;
@@ -604,6 +604,85 @@
   .theme-toggle:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
   .theme-toggle svg{ width:15px; height:15px; display:block; }
 
+  /* ---------- Category filter ---------- */
+  .filterbar{
+    position:sticky;
+    top:var(--topbar-h, 52px);
+    z-index:40;
+    background:var(--bg);
+    border-bottom:1px solid var(--line);
+    padding:10px 0;
+    margin:0 0 4px;
+  }
+  .fb-inner{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:8px 20px;
+  }
+  .fb-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+  .fb-group{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:6px;
+  }
+  .fb-glabel{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    background:none;
+    border:none;
+    border-bottom:1px dotted var(--line-strong);
+    color:var(--ink-faint);
+    padding:3px 1px;
+    margin-right:2px;
+    cursor:pointer;
+  }
+  .fb-glabel:hover, .fb-glabel:focus-visible{ color:var(--ink); outline:none; border-bottom-style:solid; }
+  .fb-glabel[aria-pressed="true"]{ color:var(--accent); border-bottom:1px solid var(--accent); }
+  .fb-chip{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    padding:5px 11px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:var(--surface);
+    color:var(--ink-soft);
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .fb-chip:hover, .fb-chip:focus-visible{ border-color:var(--accent); color:var(--ink); outline:none; }
+  .fb-chip[aria-pressed="true"]{ background:var(--accent); border-color:var(--accent); color:var(--surface); }
+  .fb-status{
+    margin-left:auto;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+  }
+  .fb-clear{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    background:none;
+    border:none;
+    color:var(--accent);
+    text-decoration:underline;
+    cursor:pointer;
+    padding:2px 4px;
+  }
+  .fb-clear[hidden], section.cat[hidden], .quickpick[hidden]{ display:none; }
+  @media (max-width:700px){
+    .filterbar{ position:static; }
+    .fb-status{ margin-left:0; width:100%; }
+  }
+
   /* ---------- Sticky top bar ---------- */
   .topbar{
     position:sticky;
@@ -697,6 +776,39 @@
     </div>
   </header>
 
+  <nav class="filterbar" id="filterbar" aria-label="Filter by category">
+    <div class="fb-inner">
+      <span class="fb-label">Show</span>
+      <button class="fb-chip fb-all" id="fb-all" type="button" aria-pressed="true">All</button>
+      <div class="fb-group" role="group" aria-label="Models">
+        <button class="fb-glabel" type="button" data-cats="tier-matrix,voice-live,decision-models" title="The engines themselves: pick a model by tier, by voice or live use, or by decision type." aria-pressed="false">Models</button>
+        <button class="fb-chip" type="button" data-cat="tier-matrix" title="Every lab's models from cheap and fast to flagship" aria-pressed="false">Tier matrix</button>
+        <button class="fb-chip" type="button" data-cat="voice-live" title="Real-time speech-in, speech-out models" aria-pressed="false">Voice &amp; live</button>
+        <button class="fb-chip" type="button" data-cat="decision-models" title="Models that return a probability instead of text" aria-pressed="false">Decision models</button>
+      </div>
+      <div class="fb-group" role="group" aria-label="Harnesses &amp; agents">
+        <button class="fb-glabel" type="button" data-cats="enterprise-ide,agent-orchestrators,agent-frameworks,computer-use,always-on" title="The loop, tools and permissions wrapped around a model: finished coding tools, the orchestrators that run several of them, the frameworks you build your own with, computer-use agents and always-on agents." aria-pressed="false">Harnesses &amp; agents</button>
+        <button class="fb-chip" type="button" data-cat="enterprise-ide" title="Coding harnesses: Copilot, Cursor, Codex, Cognition, Claude Code" aria-pressed="false">Enterprise &amp; IDE</button>
+        <button class="fb-chip" type="button" data-cat="agent-orchestrators" title="Tools that run several coding agents at once" aria-pressed="false">Orchestrators</button>
+        <button class="fb-chip" type="button" data-cat="agent-frameworks" title="Libraries for building your own harness" aria-pressed="false">Agent frameworks</button>
+        <button class="fb-chip" type="button" data-cat="computer-use" title="Agents that operate a screen while you watch" aria-pressed="false">Computer-use</button>
+        <button class="fb-chip" type="button" data-cat="always-on" title="Agents that keep working in the background" aria-pressed="false">Always-on agents</button>
+      </div>
+      <div class="fb-group" role="group" aria-label="Routing &amp; tokens">
+        <button class="fb-glabel" type="button" data-cats="model-routers,context-compression" title="What sits between the harness and the model: choosing the model or provider, and shrinking what gets sent." aria-pressed="false">Routing &amp; tokens</button>
+        <button class="fb-chip" type="button" data-cat="model-routers" title="Pick the model or provider per request" aria-pressed="false">Routers</button>
+        <button class="fb-chip" type="button" data-cat="context-compression" title="Cut the tokens sent to the model" aria-pressed="false">Context compression</button>
+      </div>
+      <div class="fb-group" role="group" aria-label="Apps">
+        <button class="fb-glabel" type="button" data-cats="consumer" title="Finished assistants people use directly." aria-pressed="false">Apps</button>
+        <button class="fb-chip" type="button" data-cat="consumer" title="What people actually download and use" aria-pressed="false">Consumer apps</button>
+      </div>
+      <span class="fb-status" id="fb-status" aria-live="polite">Showing all 11 categories</span>
+      <button class="fb-clear" id="fb-clear" type="button" hidden>Clear filter</button>
+    </div>
+  </nav>
+
+  
   <div class="quickpick">
     <div class="quickpick-head"><h2>If you need to&hellip;</h2></div>
     <div class="qp-grid">
@@ -715,6 +827,7 @@
     </div>
   </div>
 
+  <section class="cat" data-cat="tier-matrix" data-layer="models">
   <div class="section-head" id="tier-matrix">
     <h2>Tier matrix</h2>
     <div class="axis">cheap / fast <span class="arrow">&rarr;</span> expensive / deep-thinking</div>
@@ -1273,7 +1386,9 @@
 
     </table>
   </div>
+  </section>
 
+  <section class="cat" data-cat="voice-live" data-layer="models">
   <div class="section-head" id="voice-live">
     <h2>Real-time voice &amp; live models</h2>
   </div>
@@ -1368,7 +1483,9 @@
       </tbody>
     </table>
   </div>
+  </section>
 
+  <section class="cat" data-cat="decision-models" data-layer="models">
   <div class="section-head" id="decision-models">
     <h2>Decision models</h2>
   </div>
@@ -1466,7 +1583,9 @@
       </tbody>
     </table>
   </div>
+  </section>
 
+  <section class="cat" data-cat="enterprise-ide" data-layer="harness">
   <div class="section-head" id="enterprise-ide">
     <h2>Enterprise &amp; IDE picks</h2>
   </div>
@@ -1604,7 +1723,9 @@
       </tbody>
     </table>
   </div>
+  </section>
 
+  <section class="cat" data-cat="agent-orchestrators" data-layer="harness">
   <div class="section-head" id="agent-orchestrators">
     <h2>Coding-agent orchestrators</h2>
   </div>
@@ -1683,7 +1804,9 @@
       </tbody>
     </table>
   </div>
+  </section>
 
+  <section class="cat" data-cat="model-routers" data-layer="routing">
   <div class="section-head" id="model-routers">
     <h2>Model routers</h2>
   </div>
@@ -1751,7 +1874,9 @@
       </tbody>
     </table>
   </div>
+  </section>
 
+  <section class="cat" data-cat="context-compression" data-layer="routing">
   <div class="section-head" id="context-compression">
     <h2>Context compression</h2>
   </div>
@@ -1840,7 +1965,9 @@
       </tbody>
     </table>
   </div>
+  </section>
 
+  <section class="cat" data-cat="agent-frameworks" data-layer="harness">
   <div class="section-head" id="agent-frameworks">
     <h2>Agent frameworks</h2>
   </div>
@@ -1939,7 +2066,9 @@
       </tbody>
     </table>
   </div>
+  </section>
 
+  <section class="cat" data-cat="computer-use" data-layer="harness">
   <div class="section-head" id="computer-use">
     <h2>Computer-use &amp; browser agents</h2>
   </div>
@@ -1997,7 +2126,9 @@
       </tbody>
     </table>
   </div>
+  </section>
 
+  <section class="cat" data-cat="always-on" data-layer="harness">
   <div class="section-head" id="always-on">
     <h2>Always-on agents</h2>
   </div>
@@ -2136,7 +2267,9 @@
       </tbody>
     </table>
   </div>
+  </section>
 
+  <section class="cat" data-cat="consumer" data-layer="apps">
   <div class="section-head" id="consumer">
     <h2>Consumer apps &amp; assistants</h2>
   </div>
@@ -2214,6 +2347,7 @@
       </tbody>
     </table>
   </div>
+  </section>
 
   <footer>
     <p>Snapshot compiled November 17, 2026 — OpenAI released GPT-6.2 Astra and Sol, Perplexity launched its Orchestrator API and Multiagent, and Alibaba took Qwen4-Max out of preview, a week after Google's Gemini 4 Hydrogen and Decision 1 and Anthropic's Fable 5.2 and Mythos 5.2. Every model now shows its launch date. The tier matrix ranks companies by a usage-evidence score and shows one older version per model; the other model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
@@ -2456,6 +2590,97 @@
       setSaved(next);
       apply(next);
     });
+  }
+})();
+</script>
+
+<script>
+(function(){
+  var KEY = 'model-buffet-filter';
+  var secs = [].slice.call(document.querySelectorAll('section.cat'));
+  var chips = [].slice.call(document.querySelectorAll('.fb-chip[data-cat]'));
+  var glabels = [].slice.call(document.querySelectorAll('.fb-glabel'));
+  var allBtn = document.getElementById('fb-all');
+  var clearBtn = document.getElementById('fb-clear');
+  var status = document.getElementById('fb-status');
+  var quick = document.querySelector('.quickpick');
+  var topbar = document.querySelector('.topbar');
+  var ids = secs.map(function(s){ return s.getAttribute('data-cat'); });
+  var sel = [];
+
+  function load(){
+    try {
+      var v = JSON.parse(localStorage.getItem(KEY) || '[]');
+      return Array.isArray(v) ? v.filter(function(x){ return ids.indexOf(x) >= 0; }) : [];
+    } catch(e){ return []; }
+  }
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(sel)); } catch(e){} }
+  function measure(){
+    if (topbar) document.documentElement.style.setProperty('--topbar-h', topbar.offsetHeight + 'px');
+  }
+  function has(id){ return sel.indexOf(id) >= 0; }
+
+  function render(){
+    var filtered = sel.length > 0;
+    secs.forEach(function(s){ s.hidden = filtered && !has(s.getAttribute('data-cat')); });
+    if (quick) quick.hidden = filtered && !has('tier-matrix');
+    chips.forEach(function(c){ c.setAttribute('aria-pressed', has(c.getAttribute('data-cat')) ? 'true' : 'false'); });
+    glabels.forEach(function(g){
+      var cats = g.getAttribute('data-cats').split(',');
+      g.setAttribute('aria-pressed', filtered && cats.every(has) ? 'true' : 'false');
+    });
+    if (allBtn) allBtn.setAttribute('aria-pressed', filtered ? 'false' : 'true');
+    if (status) status.textContent = filtered
+      ? 'Showing ' + sel.length + ' of ' + ids.length + ' categories'
+      : 'Showing all ' + ids.length + ' categories';
+    if (clearBtn) clearBtn.hidden = !filtered;
+  }
+  function jumpToFirst(){
+    var first = secs.filter(function(s){ return !s.hidden; })[0];
+    if (!first) return;
+    var head = first.querySelector('.section-head') || first;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    head.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  }
+  function commit(scroll){ save(); render(); if (scroll && sel.length) jumpToFirst(); }
+
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      var id = c.getAttribute('data-cat');
+      var i = sel.indexOf(id);
+      if (i >= 0) sel.splice(i, 1); else sel.push(id);
+      commit(true);
+    });
+  });
+  glabels.forEach(function(g){
+    g.addEventListener('click', function(){
+      var cats = g.getAttribute('data-cats').split(',');
+      if (cats.every(has)) { sel = sel.filter(function(x){ return cats.indexOf(x) < 0; }); }
+      else { cats.forEach(function(x){ if (!has(x)) sel.push(x); }); }
+      commit(true);
+    });
+  });
+  function reset(){ sel = []; commit(false); }
+  if (allBtn) allBtn.addEventListener('click', reset);
+  if (clearBtn) clearBtn.addEventListener('click', reset);
+
+  // A top-bar link or #hash that points at a hidden category reveals it instead of doing nothing.
+  function reveal(id){
+    if (sel.length && ids.indexOf(id) >= 0 && !has(id)) { sel.push(id); save(); render(); }
+  }
+  [].forEach.call(document.querySelectorAll('a.topbar-link'), function(a){
+    a.addEventListener('click', function(){ reveal((a.getAttribute('href') || '').slice(1)); });
+  });
+  window.addEventListener('hashchange', function(){ reveal(location.hash.slice(1)); });
+  window.addEventListener('resize', measure);
+
+  measure();
+  sel = load();
+  reveal(location.hash.slice(1));
+  render();
+  if (location.hash) {
+    var t = document.getElementById(location.hash.slice(1));
+    if (t && !t.closest('[hidden]')) t.scrollIntoView();
   }
 })();
 </script>
