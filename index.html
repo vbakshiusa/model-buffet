@@ -247,7 +247,7 @@
     justify-content:space-between;
     gap:16px;
     flex-wrap:wrap;
-    scroll-margin-top:118px;
+    scroll-margin-top:68px;
   }
   .section-head h2{
     font-family:'Fraunces', serif;
@@ -606,9 +606,6 @@
 
   /* ---------- Category filter ---------- */
   .filterbar{
-    position:sticky;
-    top:var(--topbar-h, 52px);
-    z-index:40;
     background:var(--bg);
     border-bottom:1px solid var(--line);
     padding:10px 0;
@@ -679,7 +676,6 @@
   }
   .fb-clear[hidden], section.cat[hidden], .quickpick[hidden]{ display:none; }
   @media (max-width:700px){
-    .filterbar{ position:static; }
     .fb-status{ margin-left:0; width:100%; }
   }
 
