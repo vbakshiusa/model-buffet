@@ -774,7 +774,7 @@
     <h1>Model Buffet</h1>
     <p class="dek">A working cheat sheet across the labs that matter right now — from the quick, cheap counter items to the five-course flagship reasoning.</p>
     <div class="meta-row">
-      <span>Snapshot: Nov 20, 2026</span>
+      <span>Snapshot: Nov 21, 2026</span>
       <span>Moves fast — recheck pricing before you budget on it</span>
     </div>
   </header>
@@ -904,7 +904,7 @@
             <div class="cell-model">GPT-5.3-Codex</div><div class="cell-spec">repo-aware coding</div>
             <div class="cell-date">Launched Feb 5, 2026</div>
             <div class="usage-tier">Strong</div>
-            <div class="usage-evidence">Called "the most capable agentic coding model to date" at launch; can introduce technical debt without close supervision.</div>
+            <div class="usage-evidence">Called "the most capable agentic coding model to date" at launch; can introduce technical debt without close supervision. It is now a legacy Codex model: Codex runs on GPT-6.2 Sol and Astra, and the tier reflects its launch-era usage.</div>
             <ul class="cell-sources">
           <li>Walks through Codex-app usage and adoption decisions in practice, not just benchmark scores. <a href="https://smartscope.blog/en/blog/gpt-5-3-codex-complete-guide/" target="_blank" rel="noopener">smartscope.blog &rarr;</a></li>
           <li>Head-to-head "vibe coding" comparison against Claude and Gemini competitors. <a href="https://medium.com/codex/i-tested-gpt-5-3-codex-vs-sonnet-4-6-vs-gemini-3-1-for-vibe-coding-heres-who-winner-7310dcf54a9e" target="_blank" rel="noopener">medium.com &rarr;</a></li>
@@ -1195,6 +1195,82 @@
         </tr>
       </tbody>
 
+      <tbody style="--co:var(--c-microsoft)">
+        <tr>
+          <th class="co-cell" rowspan="3"><div class="co-name">Microsoft</div><div class="co-line">MAI · Foundry · 4 pts</div></th>
+          <td>
+            <div class="cell-model">MAI Code 2 Flash</div><div class="cell-spec">coding · cheap · limited Foundry preview</div>
+            <div class="cell-date">Announced Nov 17, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Announced at Ignite and already in GitHub Copilot, including the Free and Student plans. Microsoft says it matches GPT-6 Luna at 65% of the price and Claude Haiku 5.5 at 20% of the price &mdash; its own claim. No per-token price or context size appears in the coverage, and Microsoft hasn&rsquo;t said whether it replaces MAI-Code-1-Flash, so both are listed.</div>
+            <ul class="cell-sources">
+          <li>TestingCatalog&rsquo;s write-up: live in GitHub Copilot across VS Code, Visual Studio, the CLI, JetBrains, Xcode and Eclipse, on every plan including Free and Student, plus a limited preview on Microsoft Foundry. <a href="https://www.testingcatalog.com/microsoft-launches-seven-mai-models-at-ignite-2026/" target="_blank" rel="noopener">testingcatalog.com &rarr;</a></li>
+          <li>VKTR says the same two comparisons (Luna at 65% of the price, Haiku 5.5 at 20%) and presents the seven-model launch as priced to undercut OpenAI and Anthropic. It labels the figures as Microsoft&rsquo;s. <a href="https://www.vktr.com/ai-market/microsoft-releases-7-mai-models-priced-to-undercut-openai-and-anthropic/" target="_blank" rel="noopener">vktr.com &rarr;</a></li>
+          <li>Thurrott confirms the Luna and Haiku comparisons and lists Code 2 Flash among seven new MAI models announced on Nov 17. <a href="https://www.thurrott.com/?p=343999" target="_blank" rel="noopener">thurrott.com &rarr;</a></li>
+            </ul>
+          </td>
+          <td>
+            <div class="cell-model">MAI Code 2</div><div class="cell-spec">coding · in GitHub Copilot paid plans</div>
+            <div class="cell-date">Announced Nov 17, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Microsoft says it reaches 98% of GPT-6.1 Sol&rsquo;s quality at about 40% of the price and 96% of Claude Opus 5.5&rsquo;s at about 5% of the price, averaged over DeepSWE 1.1, Terminal Bench 2.1, SWE-Atlas and FrontierCode v1.1 &mdash; all Microsoft&rsquo;s own tests, and no per-token price is published. Microsoft says it isn&rsquo;t tuned for fundamental science or very long-horizon agent work.</div>
+            <ul class="cell-sources">
+          <li>TestingCatalog: available in GitHub Copilot Pro, Pro+, Max, Business and Enterprise (via GitHub&rsquo;s changelog) with the 98% and 96% comparisons and the stated limits on science and long-horizon work. <a href="https://www.testingcatalog.com/microsoft-launches-seven-mai-models-at-ignite-2026/" target="_blank" rel="noopener">testingcatalog.com &rarr;</a></li>
+          <li>VKTR adds a blind frontend test in which developers preferred it to a GPT-6 Sol model 64% of the time (the article says &ldquo;GPT-6 Sol&rdquo; here but &ldquo;GPT-6.1 Sol&rdquo; for the 98% figure). <a href="https://www.vktr.com/ai-market/microsoft-releases-7-mai-models-priced-to-undercut-openai-and-anthropic/" target="_blank" rel="noopener">vktr.com &rarr;</a></li>
+          <li>Thurrott lists it as the larger of the two new coding models in the seven-model Ignite launch. <a href="https://www.thurrott.com/?p=343999" target="_blank" rel="noopener">thurrott.com &rarr;</a></li>
+            </ul>
+          </td>
+          <td>
+            <div class="cell-model">MAI-Thinking-1</div><div class="cell-spec">256K ctx · 35B active (MoE)</div>
+            <div class="cell-date">Launched Jun 2, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Coverage is entirely about the launch announcement and self-reported benchmarks; no forum usage discussion or ranking found.</div>
+            <ul class="cell-sources">
+          <li>Self-reported 97.0% AIME 2025, ~53% SWE-Bench Pro, on par with Claude Opus 4.6. <a href="https://microsoft.ai/news/introducing-mai-thinking-1/" target="_blank" rel="noopener">microsoft.ai &rarr;</a></li>
+          <li>Independent analysis notes the benchmarks are self-reported and not yet confirmed. <a href="https://medium.com/@candemir13/microsofts-mai-models-what-the-benchmarks-show-and-what-they-don-t-0882e84f8238" target="_blank" rel="noopener">medium.com &rarr;</a></li>
+          <li>Newsletter coverage calls the model report unusually transparent for its scale. <a href="https://www.latent.space/p/ainews-microsoft-build-mai-thinking" target="_blank" rel="noopener">latent.space &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">MAI-1-preview</span><span class="prior-spec">Aug 28, 2025 · non-reasoning</span></div>
+              <div class="prior-delta">No earlier MAI reasoning model exists &mdash; Thinking-1 is Microsoft's first, and a different class from MAI-1-preview (the everyday chat model in the Balanced column): a ~1T-total / 35B-active mixture-of-experts with 256K context, trained from scratch without distilling third-party models, per Microsoft. Every benchmark claim is Microsoft's own, and it's still in Foundry preview with no published price. Simon Willison notes the "commercially licensed data" wording understates what the technical paper shows.</div>
+              <div class="prior-links"><a href="https://microsoft.ai/news/introducing-mai-thinking-1/" target="_blank" rel="noopener">microsoft.ai &rarr;</a><a href="https://simonwillison.net/2026/Jun/2/microsofts-new-models/" target="_blank" rel="noopener">simonwillison.net &rarr;</a></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          
+          <td>
+            <div class="cell-model">MAI Cyber 2 Flash</div><div class="cell-spec">security · 1M ctx · $0.10 / $0.50 · gated</div>
+            <div class="cell-date">Announced Nov 17, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Reserved for verified defenders and exclusive to Microsoft&rsquo;s security products, so most readers can&rsquo;t use it. Microsoft says it scores 92.3% on CyberGym-E2E against GPT-6 Astra&rsquo;s 91.5% at under 2% of the cost per task (one outlet says &ldquo;matches,&rdquo; another &ldquo;beats&rdquo;). The predecessor is MAI Cyber 1.1 Flash per one outlet; coverage conflicts on whether it already handles about 40% of MDASH scans or arrives there in mid-December.</div>
+            <ul class="cell-sources">
+          <li>TestingCatalog: 1M-token context (four times the previous version), $0.10 in and $0.50 out per 1M tokens, exclusive to Microsoft security products and replacing the current model in Codename MDASH from mid-December. <a href="https://www.testingcatalog.com/microsoft-launches-seven-mai-models-at-ignite-2026/" target="_blank" rel="noopener">testingcatalog.com &rarr;</a></li>
+          <li>VKTR names MAI Cyber 1.1 Flash as the predecessor, with output tokens 86% cheaper, and says Cyber 2 Flash already handles almost 40% of MDASH scans &mdash; which conflicts with the mid-December date. <a href="https://www.vktr.com/ai-market/microsoft-releases-7-mai-models-priced-to-undercut-openai-and-anthropic/" target="_blank" rel="noopener">vktr.com &rarr;</a></li>
+          <li>Thurrott: matches GPT-6 Astra quality at under 2% of the cost per task, access limited to verified defenders. Every figure is Microsoft&rsquo;s own. <a href="https://www.thurrott.com/?p=343999" target="_blank" rel="noopener">thurrott.com &rarr;</a></li>
+            </ul>
+          </td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td><span class="cell-empty">&mdash;</span></td>
+        </tr>
+        <tr>
+          
+          <td>
+            <div class="cell-model">MAI-Code-1-Flash</div><div class="cell-spec">coding, efficient</div>
+            <div class="cell-date">Launched Jun 2, 2026</div>
+            <div class="usage-tier">Growing</div>
+            <div class="usage-evidence">Shipped directly into GitHub Copilot with a dedicated rollout, but an independent comparison found it losing on price/performance to a rival flash model.</div>
+            <ul class="cell-sources">
+          <li>The updated 1.1 version loses to DeepSeek's competing flash model on both price and performance. <a href="https://the-decoder.com/microsofts-new-mai-code-1-1-flash-gets-crushed-by-deepseek-on-both-price-and-performance/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></li>
+          <li>VS Code team's own blog reports early results from real developer workflows after Copilot integration. <a href="https://code.visualstudio.com/blogs/2026/07/29/mai-code-1-flash" target="_blank" rel="noopener">code.visualstudio.com &rarr;</a></li>
+          <li>Live GitHub Copilot community discussion thread reacting to the rollout. <a href="https://github.com/orgs/community/discussions/197306" target="_blank" rel="noopener">github.com &rarr;</a></li>
+            </ul>
+          </td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td><span class="cell-empty">&mdash;</span></td>
+        </tr>
+      </tbody>
+
       <tbody style="--co:var(--c-mistral)">
         <tr>
           <th class="co-cell"><div class="co-name">Mistral</div><div class="co-line">open weight · Large 4 modified-MIT licence · 3 pts</div></th>
@@ -1224,7 +1300,7 @@
             <div class="cell-model">Large 4</div><div class="cell-spec">1M ctx · ~1T MoE / ~52B active · open weights</div>
             <div class="cell-date">Preview Oct 6 · weights Oct 29, 2026</div>
             <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">The open weights are out (Oct 29, modified-MIT license with a model-as-a-service restriction), but Mistral's docs still call the API a preview as of Nov 3. Artificial Analysis's current index scores it 26, the highest open model built outside China and 7th among open-weight models. The earlier 38.4 was on an older index version, so the drop is not a regression.</div>
+            <div class="usage-evidence">The open weights are out (Oct 29, modified-MIT license with a model-as-a-service restriction), and Mistral's docs now list the API as generally available from Nov 5, though they called it a preview on Nov 3. Artificial Analysis's current index scores it 26, the highest open model built outside China and 7th among open-weight models. The earlier 38.4 was on an older index version, so the drop is not a regression.</div>
             <ul class="cell-sources">
           <li>Cybersecurity is the standout and output is quick (~116 tokens/sec), but a 41.9% hallucination rate and ~18.7s time-to-first-token hurt customer-facing use. <a href="https://www.eesel.ai/blog/mistral-large-4-review" target="_blank" rel="noopener">eesel.ai &rarr;</a></li>
           <li>API preview launched at $1.36 / $4.18, with live prices since Oct 29 near $0.70 / $2.10; the weights are Mistral's first with a model-as-a-service restriction. Mistral's own coding scores depend on its agent harness (41.4% Terminal-Bench vs 24.7% in AA's standard test), and Omniscience is weak (5.1). <a href="https://www.lindy.ai/blog/mistral-large-4" target="_blank" rel="noopener">lindy.ai &rarr;</a></li>
@@ -1268,40 +1344,6 @@
               <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Grok 4.6</span><span class="prior-spec">Aug 12, 2026 · $2 / $6</span></div>
               <div class="prior-delta">Same price and 500K context. AA's index is 46 vs 44 (at different effort levels), but 4.7 burns about 81k output tokens per task vs 36k &mdash; roughly double the cost to run the index, and one Cursor Ultra user reported ~2.5&times; plan usage for the same task. At matched xhigh effort, Terminal-Bench 4.0 is 33% vs 18% and hallucination rate 29% vs 34%. Grok 4.6 remains available.</div>
               <div class="prior-links"><a href="https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-grok-4-6" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://codersera.com/blog/grok-4-7-vs-grok-4-6-2026/" target="_blank" rel="noopener">codersera.com &rarr;</a></div>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-
-      <tbody style="--co:var(--c-microsoft)">
-        <tr>
-          <th class="co-cell"><div class="co-name">Microsoft</div><div class="co-line">MAI · Foundry · 3 pts</div></th>
-          <td>
-            <div class="cell-model">MAI-Code-1-Flash</div><div class="cell-spec">coding, efficient</div>
-            <div class="cell-date">Launched Jun 2, 2026</div>
-            <div class="usage-tier">Growing</div>
-            <div class="usage-evidence">Shipped directly into GitHub Copilot with a dedicated rollout, but an independent comparison found it losing on price/performance to a rival flash model.</div>
-            <ul class="cell-sources">
-          <li>The updated 1.1 version loses to DeepSeek's competing flash model on both price and performance. <a href="https://the-decoder.com/microsofts-new-mai-code-1-1-flash-gets-crushed-by-deepseek-on-both-price-and-performance/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></li>
-          <li>VS Code team's own blog reports early results from real developer workflows after Copilot integration. <a href="https://code.visualstudio.com/blogs/2026/07/29/mai-code-1-flash" target="_blank" rel="noopener">code.visualstudio.com &rarr;</a></li>
-          <li>Live GitHub Copilot community discussion thread reacting to the rollout. <a href="https://github.com/orgs/community/discussions/197306" target="_blank" rel="noopener">github.com &rarr;</a></li>
-            </ul>
-          </td>
-          <td><span class="cell-empty">&mdash;</span></td>
-          <td>
-            <div class="cell-model">MAI-Thinking-1</div><div class="cell-spec">256K ctx · 35B active (MoE)</div>
-            <div class="cell-date">Launched Jun 2, 2026</div>
-            <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">Coverage is entirely about the launch announcement and self-reported benchmarks; no forum usage discussion or ranking found.</div>
-            <ul class="cell-sources">
-          <li>Self-reported 97.0% AIME 2025, ~53% SWE-Bench Pro, on par with Claude Opus 4.6. <a href="https://microsoft.ai/news/introducing-mai-thinking-1/" target="_blank" rel="noopener">microsoft.ai &rarr;</a></li>
-          <li>Independent analysis notes the benchmarks are self-reported and not yet confirmed. <a href="https://medium.com/@candemir13/microsofts-mai-models-what-the-benchmarks-show-and-what-they-don-t-0882e84f8238" target="_blank" rel="noopener">medium.com &rarr;</a></li>
-          <li>Newsletter coverage calls the model report unusually transparent for its scale. <a href="https://www.latent.space/p/ainews-microsoft-build-mai-thinking" target="_blank" rel="noopener">latent.space &rarr;</a></li>
-            </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">MAI-1-preview</span><span class="prior-spec">Aug 28, 2025 · non-reasoning</span></div>
-              <div class="prior-delta">No earlier MAI reasoning model exists &mdash; Thinking-1 is Microsoft's first, and a different class from MAI-1-preview (the everyday chat model in the Balanced column): a ~1T-total / 35B-active mixture-of-experts with 256K context, trained from scratch without distilling third-party models, per Microsoft. Every benchmark claim is Microsoft's own, and it's still in Foundry preview with no published price. Simon Willison notes the "commercially licensed data" wording understates what the technical paper shows.</div>
-              <div class="prior-links"><a href="https://microsoft.ai/news/introducing-mai-thinking-1/" target="_blank" rel="noopener">microsoft.ai &rarr;</a><a href="https://simonwillison.net/2026/Jun/2/microsofts-new-models/" target="_blank" rel="noopener">simonwillison.net &rarr;</a></div>
             </div>
           </td>
         </tr>
@@ -1481,18 +1523,18 @@
       </thead>
       <tbody style="--co:var(--c-openai)">
         <tr>
-          <th class="co-cell"><div class="co-name">GPT-Live</div><div class="co-line">OpenAI · Jul 2026 · 1.1 on Oct 15</div></th>
+          <th class="co-cell"><div class="co-name">GPT-Live</div><div class="co-line">OpenAI · Jul 2026 · 1.1 on Oct 15 · API Nov 19</div></th>
           <td class="ent-models">A new generation of voice models on a full-duplex architecture — it can listen and speak at the same time, so talking to it feels closer to a real conversation.</td>
-          <td class="ent-pick">ChatGPT Voice, plus the API as gpt-live-1<br>GPT-Live-1.1 and a smaller 1.1 Quip began rolling out in ChatGPT on Oct 15</td>
-          <td class="ent-why">OpenAI's pitch is conversation that flows rather than trading turns. GPT-Live-1 scores 83.2 on Artificial Analysis's speech index, behind Grok Voice 3.0, but it still leads on simulated support calls (74.5% vs 71.6%). The 1.1 update adds new voices (French, German, Hindi, Japanese, Korean, Mexican Spanish) and has no API release yet.
-            <a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">openai.com &rarr;</a> <a href="https://releasebot.io/updates/openai/chatgpt" target="_blank" rel="noopener">releasebot.io &rarr;</a>
+          <td class="ent-pick">ChatGPT Voice, plus the API (gpt-live-1, and 1.1 since Nov 19&ndash;20)<br>GPT-Live-1.1 and a smaller 1.1 Quip began rolling out in ChatGPT on Oct 15</td>
+          <td class="ent-why">OpenAI's pitch is conversation that flows rather than trading turns. GPT-Live-1 scores 83.2 on Artificial Analysis's speech index, behind Grok Voice 3.0, but it still leads on simulated support calls (74.5% vs 71.6%). The 1.1 update adds new voices (French, German, Hindi, Japanese, Korean, Mexican Spanish). It reached the API on Nov 19&ndash;20, reportedly at $0.05 a minute active and $0.02 on standby &mdash; one outlet&rsquo;s figure; I haven&rsquo;t seen OpenAI&rsquo;s own price page.
+            <a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">openai.com &rarr;</a> <a href="https://releasebot.io/updates/openai/chatgpt" target="_blank" rel="noopener">releasebot.io &rarr;</a> <a href="https://aiweekly.co/alerts/openai-opens-gpt-live-11-to-api-with-002min-standby" target="_blank" rel="noopener">aiweekly.co &rarr;</a>
           </td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-xai)">
         <tr>
           <th class="co-cell"><div class="co-name">Grok Voice 3.0</div><div class="co-line">xAI · Oct 14, 2026</div></th>
-          <td class="ent-models">Speech-to-speech model for xAI's Voice Agent API, replacing 2.0 behind the grok-voice-latest alias. Tops Artificial Analysis's Speech-to-Speech Index at 86.9 (GPT-Live-1 at 83.2, Gemini 3.8 Live at 82.6), with about 0.81 seconds to first audio.</td>
+          <td class="ent-models">Speech-to-speech model for xAI's Voice Agent API, replacing 2.0 behind the grok-voice-latest alias. Topped Artificial Analysis's Speech-to-Speech Index at 86.9 when it launched in October (GPT-Live-1 at 83.2, Gemini 3.8 Live at 82.6), though newer reports disagree on whether it still leads, with about 0.81 seconds to first audio.</td>
           <td class="ent-pick">xAI Voice Agent API<br>$0.08 / minute ($4.80 / hour)</td>
           <td class="ent-why">Loses where it matters most for call centers: on &tau;-Voice, which simulates noisy real support calls, it scores 71.6% to GPT-Live-1's 74.5% &mdash; plan around that, not the headline 86.9. The Starlink call-center figures are xAI's own and unaudited.
             <a href="https://www.how2shout.com/ai/grok-voice-3-launch-benchmarks.html" target="_blank" rel="noopener">how2shout.com &rarr;</a> <a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">docs.x.ai &rarr;</a>
@@ -1501,7 +1543,7 @@
       </tbody>
       <tbody style="--co:var(--c-microsoft)">
         <tr>
-          <th class="co-cell" rowspan="2"><div class="co-name">MAI-Voice-2.1 / Flash</div><div class="co-line">Microsoft · updated Oct 1, 2026</div></th>
+          <th class="co-cell" rowspan="3"><div class="co-name">MAI-Voice-2.1 / Flash</div><div class="co-line">Microsoft · Realtime 1 added Nov 17, 2026</div></th>
           <td class="ent-models">Expressive, high-fidelity text-to-speech across 23 languages; Flash trades some expressiveness for lower latency. Updated from the Build 2026 MAI-Voice-2 generation.</td>
           <td class="ent-pick">Foundry<br>$22 / 1M chars (2.1), $15 / 1M chars (Flash)</td>
           <td class="ent-why">Designed to work as a stack with MAI-Thinking-1 for reasoning and the new streaming transcriber below — Microsoft's full voice-agent pipeline, independent of OpenAI or Anthropic.
@@ -1513,6 +1555,13 @@
           <td class="ent-pick">Vercel AI Gateway<br>$0.54 / audio hour</td>
           <td class="ent-why">First streaming transcription model in the MAI line — initial results land in ~320ms on average, enabling live captioning before a speaker finishes a sentence. The non-streaming MAI-Transcribe-2 is over 5&times; cheaper at $0.10/hour when live updates aren't needed.
             <a href="https://siliconangle.com/2026/10/01/microsoft-targets-ultra-realistic-voice-agents-with-its-first-streaming-transcription-model/" target="_blank" rel="noopener">siliconangle.com &rarr;</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="ent-models">MAI Realtime 1: Microsoft&rsquo;s first speech-to-speech model. It handles interruptions, picks out requests in noisy rooms, lets you set the speaking style through the prompt, and works with the OpenAI Realtime API.</td>
+          <td class="ent-pick">Waitlist through MAI Labs, plus a limited Foundry preview<br>From $0.01 per audio minute (one outlet says inference is billed separately)</td>
+          <td class="ent-why">Announced at Ignite on Nov 17, so it completes Microsoft&rsquo;s own voice stack (transcribe, think, speak) without OpenAI. Microsoft says it beats GPT-Realtime-2.1 but the coverage shows no numbers, so treat that as a vendor claim.
+            <a href="https://www.testingcatalog.com/microsoft-launches-seven-mai-models-at-ignite-2026/" target="_blank" rel="noopener">testingcatalog.com &rarr;</a> <a href="https://www.vktr.com/ai-market/microsoft-releases-7-mai-models-priced-to-undercut-openai-and-anthropic/" target="_blank" rel="noopener">vktr.com &rarr;</a> <a href="https://www.thurrott.com/?p=343999" target="_blank" rel="noopener">thurrott.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1548,11 +1597,11 @@
       </tbody>
       <tbody style="--co:var(--c-openai)">
         <tr>
-          <th class="co-cell"><div class="co-name">GPT-Realtime-2</div><div class="co-line">OpenAI · May 7, 2026</div></th>
-          <td class="ent-models">GPT-5-class reasoning inside live speech, with 128K context and a 96.6% score on Big Bench Audio. Sibling models translate 70+ input languages into 13 outputs and transcribe as you speak.</td>
-          <td class="ent-pick">Realtime API</td>
-          <td class="ent-why">The developer route to building voice agents on OpenAI, with Translate and Whisper variants alongside.
-            <a href="https://9to5mac.com/2026/05/07/openai-has-new-voice-models-that-reason-translate-and-transcribe-as-you-speak/" target="_blank" rel="noopener">9to5mac.com &rarr;</a>
+          <th class="co-cell"><div class="co-name">GPT-Realtime-2.1 / mini</div><div class="co-line">OpenAI · 2.1 on Jul 6, 2026 (2: May 7)</div></th>
+          <td class="ent-models">GPT-5-class reasoning inside live speech. The 2.1 update (Jul 6) and a mini reasoning variant cut p95 latency by at least 25%; the 128K context and 96.6% Big Bench Audio score were published for GPT-Realtime-2. Sibling models translate 70+ input languages into 13 outputs and transcribe as you speak.</td>
+          <td class="ent-pick">Realtime API (gpt-realtime-2.1 and gpt-realtime-2.1-mini)<br>Mini lists at $0.60 in / $2.40 out per 1M text tokens; Vercel lists the full model at $4 / $24</td>
+          <td class="ent-why">The developer route to building voice agents on OpenAI, with Translate and Whisper variants alongside. Sources give Jul 6 and Jul 9 for the 2.1 release; Jul 6 has more support.
+            <a href="https://9to5mac.com/2026/05/07/openai-has-new-voice-models-that-reason-translate-and-transcribe-as-you-speak/" target="_blank" rel="noopener">9to5mac.com &rarr;</a> <a href="https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini" target="_blank" rel="noopener">developers.openai.com &rarr;</a> <a href="https://www.marktechpost.com/2026/07/06/openai-gpt-realtime-2-1-mini-reasoning-realtime-api/" target="_blank" rel="noopener">marktechpost.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1564,7 +1613,7 @@
   <div class="section-head" id="decision-models">
     <h2>Decision models</h2>
   </div>
-  <p class="section-sub">Models that answer with a probability instead of writing text. You send text or an image plus typed questions (multiple choice, a 1&ndash;10 score, a yes/no) and get calibrated confidence back &mdash; built for classification, routing, and guardrail decisions in front of, or instead of, a chat model. Also marketed as &ldquo;System One&rdquo; models, TypeSafe&rsquo;s term borrowed from Kahneman&rsquo;s fast-versus-slow thinking. Two designs sit under the label: purpose-built models that answer every question in one parallel pass (Jev, Laya, Clef, Strands Decider, d1-ultra, Perplexity&rsquo;s Decider, Google&rsquo;s Gemini Decision 1), and OpenAI&rsquo;s Decisions API, which constrains a regular chat model to a fixed list of answers. Skeptics call the purpose-built kind a zero-shot classifier with a new name &mdash; the task is old, and independent benchmarks are still thin. The shape of the output is guaranteed; the answers themselves are probabilistic.</p>
+  <p class="section-sub">Models that answer with a probability instead of writing text. You send text or an image plus typed questions (multiple choice, a 1&ndash;10 score, a yes/no) and get calibrated confidence back &mdash; built for classification, routing, and guardrail decisions in front of, or instead of, a chat model. Also marketed as &ldquo;System One&rdquo; models, TypeSafe&rsquo;s term borrowed from Kahneman&rsquo;s fast-versus-slow thinking. Two designs sit under the label: purpose-built models that answer every question in one parallel pass (Jev, Laya, Clef, Strands Decider, d1-ultra, Perplexity&rsquo;s Decider, Google&rsquo;s Gemini Decision 1, Microsoft&rsquo;s MAI Decision 1.1), and OpenAI&rsquo;s Decisions API, which constrains a regular chat model to a fixed list of answers. Skeptics call the purpose-built kind a zero-shot classifier with a new name &mdash; the task is old, and independent benchmarks are still thin. The shape of the output is guaranteed; the answers themselves are probabilistic.</p>
 
   <div class="table-wrap">
     <table class="enterprise">
@@ -1576,6 +1625,16 @@
           <th class="tier-head">Note</th>
         </tr>
       </thead>
+      <tbody style="--co:var(--c-microsoft)">
+        <tr>
+          <th class="co-cell"><div class="co-name">MAI Decision 1.1</div><div class="co-line">Microsoft · Nov 17, 2026</div></th>
+          <td class="ent-models">An update to Microsoft&rsquo;s Decision 1: it returns probabilities over a predefined list of options instead of writing text.</td>
+          <td class="ent-pick">Generally available per one outlet; Decision 1 is on Foundry and OpenRouter, and the coverage doesn&rsquo;t name channels for 1.1<br>$0.042 / 1M input tokens, the same as Decision 1 (relayed from Artificial Analysis)</td>
+          <td class="ent-why">The independent number is Artificial Analysis&rsquo;s: 68 on its Decision Index v2.1, up from 62 for Decision 1 (as relayed by TestingCatalog). Microsoft&rsquo;s own claim is 50&times; faster and 79&times; cheaper than GPT-6.1 Sol. VKTR also cites 4,000 customers and a lead over rivals, which I couldn&rsquo;t verify.
+            <a href="https://www.testingcatalog.com/microsoft-launches-seven-mai-models-at-ignite-2026/" target="_blank" rel="noopener">testingcatalog.com &rarr;</a> <a href="https://www.vktr.com/ai-market/microsoft-releases-7-mai-models-priced-to-undercut-openai-and-anthropic/" target="_blank" rel="noopener">vktr.com &rarr;</a> <a href="https://www.thurrott.com/?p=343999" target="_blank" rel="noopener">thurrott.com &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
       <tbody style="--co:var(--c-google)">
         <tr>
           <th class="co-cell"><div class="co-name">Gemini Decision 1</div><div class="co-line">Google · Nov 11, 2026</div></th>
@@ -1588,11 +1647,11 @@
       </tbody>
       <tbody style="--co:var(--c-systemone)">
         <tr>
-          <th class="co-cell"><div class="co-name">Decider v1.2 / Flash</div><div class="co-line">Perplexity · Oct 16, 2026 · open weight</div></th>
+          <th class="co-cell"><div class="co-name">Decider v1.3 / Flash</div><div class="co-line">Perplexity · v1.3 Nov 12, 2026 (v1.2: Oct 16) · open weight</div></th>
           <td class="ent-models">Open-weight decision models in two sizes (27B and 4B) that take text or images and return probabilities for yes/no, category, and rubric-score questions, running every question about an input in one pass.</td>
           <td class="ent-pick">Self-hosted or Perplexity's API<br>Apache 2.0 &middot; Flash lists at $0.01 / 1M input tokens on OpenRouter</td>
-          <td class="ent-why">Perplexity says the 27B ranks #2 and Flash is the top 4B model on the Hugging Face Decision Index (one outlet has the 27B at #3), with inference up to 5&times; faster. The lowest listed price in this category by a wide margin &mdash; treat the rankings as Perplexity's own until others confirm them.
-            <a href="https://vercel.com/changelog/perplexity-decider-v1-2-models-now-available-on-ai-gateway" target="_blank" rel="noopener">vercel.com &rarr;</a> <a href="https://openrouter.ai/perplexity/pplx-decider-flash-v1.2" target="_blank" rel="noopener">openrouter.ai &rarr;</a> <a href="https://agihunt.info/en/story/1a1461f447367d0743b6b8b8bff" target="_blank" rel="noopener">agihunt.info &rarr;</a>
+          <td class="ent-why">v1.3 (Nov 12) adds a &ldquo;locate&rdquo; task and moves the &ldquo;latest&rdquo; aliases; the rankings below were made for v1.2. Perplexity says the 27B ranks #2 and Flash is the top 4B model on the Hugging Face Decision Index (one outlet has the 27B at #3), with inference up to 5&times; faster. The lowest listed price in this category by a wide margin &mdash; treat the rankings as Perplexity's own until others confirm them.
+            <a href="https://aiweekly.co/alerts/perplexity-ships-decider-v13-classifier-916-on-63-tasks" target="_blank" rel="noopener">aiweekly.co &rarr;</a> <a href="https://vercel.com/changelog/perplexity-decider-v1-2-models-now-available-on-ai-gateway" target="_blank" rel="noopener">vercel.com &rarr;</a> <a href="https://openrouter.ai/perplexity/pplx-decider-flash-v1.2" target="_blank" rel="noopener">openrouter.ai &rarr;</a> <a href="https://agihunt.info/en/story/1a1461f447367d0743b6b8b8bff" target="_blank" rel="noopener">agihunt.info &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1648,10 +1707,10 @@
       </tbody>
       <tbody style="--co:var(--c-systemone)">
         <tr>
-          <th class="co-cell"><div class="co-name">Jev 1.13</div><div class="co-line">TypeSafe AI · Sept 15, 2026</div></th>
+          <th class="co-cell"><div class="co-name">Jev 1.14</div><div class="co-line">TypeSafe AI · 1.14 on Oct 14, 2026 (1.13: Sept 15)</div></th>
           <td class="ent-models">Reads a block of text or JSON, evaluates every typed question against it at once (Choice, Score, or Noul for a binary probability), and returns calibrated answers in 70&ndash;500ms.</td>
           <td class="ent-pick">Hosted API<br>$0.042 / 1M input tokens, output free</td>
-          <td class="ent-why">TypeSafe's own benchmark claims 193.6&times; faster and 444.6&times; cheaper than an LLM on the same classification or routing task.
+          <td class="ent-why">1.14 (Oct 14) adds experimental image input and long context; the speed and price figures below were published for 1.13. TypeSafe's own benchmark claims 193.6&times; faster and 444.6&times; cheaper than an LLM on the same classification or routing task.
             <a href="https://www.marktechpost.com/2026/09/19/typesafe-ai-releases-jev/" target="_blank" rel="noopener">marktechpost.com &rarr;</a>
           </td>
         </tr>
@@ -1679,9 +1738,9 @@
       <tbody style="--co:var(--c-copilot)">
         <tr>
           <th class="co-cell"><div class="co-name">GitHub Copilot</div><div class="co-line">IDE + PR assistant</div></th>
-          <td class="ent-models">Claude Sonnet / Opus / Haiku, GPT-6.2 Astra and Sol and Gemini 4 Neon (new this week), plus older GPT-5.x and Gemini 3.1 models — picker depends on your plan tier.</td>
+          <td class="ent-models">Claude Sonnet / Opus / Haiku, GPT-6.2 Astra and Sol and Gemini 4 Neon (new last week), Microsoft's own MAI Code 2 and Code 2 Flash (Nov 17), plus older GPT-5.x and Gemini 3.1 models — picker depends on your plan tier.</td>
           <td class="ent-pick">Sonnet 5.5 daily<br>Opus 5.5 for hard tickets<br>Gemini 3.1 Pro for huge-context reviews</td>
-          <td class="ent-why">Sonnet is rated the best-balanced everyday pick; Opus gets reserved for tickets it can't close. Gemini 4 Argon went generally available on Oct 13 as Google's newer flagship, but 3.1 Pro is the model these picker reviews cover. GPT-6.2 Astra and Sol (Nov 17) and Gemini 4 Neon (Nov 18) are now generally available in Copilot for Pro+, Max, Business and Enterprise, billed at provider list pricing under usage-based billing, with a gradual rollout; the changelog page I read doesn't mention Fable 5.2, Carbon or Hydrogen. The runtime behind Copilot's agent mode is now sold separately as the Microsoft Copilot harness (next row).
+          <td class="ent-why">Sonnet is rated the best-balanced everyday pick; Opus gets reserved for tickets it can't close. Gemini 4 Argon went generally available on Oct 13 as Google's newer flagship, but 3.1 Pro is the model these picker reviews cover. GPT-6.2 Astra and Sol (Nov 17) and Gemini 4 Neon (Nov 18) are now generally available in Copilot for Pro+, Max, Business and Enterprise, billed at provider list pricing under usage-based billing, with a gradual rollout; the changelog page I read doesn't mention Fable 5.2, Carbon or Hydrogen. MAI Code 2 Flash is on every plan including Free and Student, and MAI Code 2 on Pro, Pro+, Max, Business and Enterprise, per TestingCatalog's reading of GitHub's changelog. The runtime behind Copilot's agent mode is now sold separately as the Microsoft Copilot harness (next row).
             <a href="https://standardcompute.com/best-ai-model/for/github-copilot" target="_blank" rel="noopener">standardcompute.com &rarr;</a> <a href="https://releasebot.io/updates/github" target="_blank" rel="noopener">releasebot.io &rarr;</a>
           </td>
         </tr>
@@ -1701,7 +1760,7 @@
           <th class="co-cell"><div class="co-name">Cursor</div><div class="co-line">AI-native editor</div></th>
           <td class="ent-models">Claude, GPT-5.x, Gemini, Grok, plus Cursor's in-house Composer 2.5 and Fusion.</td>
           <td class="ent-pick">Sonnet 5.5 daily<br>Opus 5.5 or GPT-6.1 Sol for architecture<br>Grok 4.3 for value</td>
-          <td class="ent-why">Sonnet has become the forum-consensus default on Reddit and Discord threads, prized for pairing its 1M-token window with strong agent-mode behavior.
+          <td class="ent-why">Sonnet has become the forum-consensus default on Reddit and Discord threads, prized for pairing its 1M-token window with strong agent-mode behavior. The model names here come from one third-party guide; I couldn't confirm "Fusion" or the GPT-6.1 Sol pick against Cursor's own docs, and GPT-6.2 Sol is newer.
             <a href="https://lopezproductions.ai/playbook/what-model-should-i-use-for-cursor-ai-in-2026" target="_blank" rel="noopener">lopezproductions.ai &rarr;</a>
           </td>
         </tr>
@@ -1738,11 +1797,11 @@
       </tbody>
       <tbody style="--co:var(--c-windsurf)">
         <tr>
-          <th class="co-cell"><div class="co-name">Windsurf</div><div class="co-line">AI-native editor</div></th>
-          <td class="ent-models">Model-agnostic — Claude, GPT-5.x, and Gemini selectable inside its Cascade agent.</td>
+          <th class="co-cell"><div class="co-name">Devin Desktop (formerly Windsurf)</div><div class="co-line">AI-native editor · Cognition · renamed Jun 2, 2026</div></th>
+          <td class="ent-models">Model-agnostic — Claude, GPT-5.x, and Gemini selectable, plus Cognition's own SWE models. Devin Local, rewritten in Rust, replaces the Cascade agent, which is now legacy.</td>
           <td class="ent-pick">Sonnet 5.5 daily</td>
-          <td class="ent-why">Reviewed alongside Cursor as one of the two leading AI-first IDEs, with Cascade building a project-wide dependency graph before it edits.
-            <a href="https://jobsbyculture.com/blog/ai-coding-agents-compared-2026" target="_blank" rel="noopener">jobsbyculture.com &rarr;</a>
+          <td class="ent-why">Reviewed alongside Cursor as one of the two leading AI-first IDEs, with Cascade building a project-wide dependency graph before it edits &mdash; but that review covers it under the Windsurf name. Cognition renamed it on Jun 2, made the Agent Command Center the default view and kept the full IDE; Cognition's FAQ says existing plans, pricing and settings carry over.
+            <a href="https://jobsbyculture.com/blog/ai-coding-agents-compared-2026" target="_blank" rel="noopener">jobsbyculture.com &rarr;</a> <a href="https://docs.devin.ai/desktop/devin-desktop-faq" target="_blank" rel="noopener">docs.devin.ai &rarr;</a> <a href="https://dev.to/creeta/windsurf-is-devin-desktop-now-cascade-has-27-days-left-34kj" target="_blank" rel="noopener">dev.to &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1759,10 +1818,10 @@
       <tbody style="--co:var(--c-claudecode)">
         <tr>
           <th class="co-cell"><div class="co-name">Claude Code</div><div class="co-line">Anthropic's CLI agent</div></th>
-          <td class="ent-models">Claude only — Haiku, Sonnet, Opus, selectable per session.</td>
+          <td class="ent-models">Claude only — Haiku, Sonnet, Opus and Fable, selectable per session. Fable 5.2 became the default Fable model in v2.1.321 on Nov 9.</td>
           <td class="ent-pick">Sonnet 5.5 daily<br>Opus 5.5 for hard tickets</td>
           <td class="ent-why">Named the gold standard for terminal-based agentic coding, cited at a 93% benchmark success rate.
-            <a href="https://jobsbyculture.com/blog/ai-coding-agents-compared-2026" target="_blank" rel="noopener">jobsbyculture.com &rarr;</a>
+            <a href="https://jobsbyculture.com/blog/ai-coding-agents-compared-2026" target="_blank" rel="noopener">jobsbyculture.com &rarr;</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">github.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1771,7 +1830,7 @@
           <th class="co-cell"><div class="co-name">Cline</div><div class="co-line">Open-source VS Code sidebar</div></th>
           <td class="ent-models">Model-agnostic, bring-your-own API key — any of the above.</td>
           <td class="ent-pick">Sonnet 5.5, or DeepSeek V4 Pro on a budget</td>
-          <td class="ent-why">The strongest free option once you're paying for API calls yourself — Apache 2.0, with growing support across JetBrains, Cursor, Windsurf, and Zed.
+          <td class="ent-why">The strongest free option once you're paying for API calls yourself — Apache 2.0, with growing support across JetBrains, Cursor, Devin Desktop (formerly Windsurf), and Zed.
             <a href="https://jobsbyculture.com/blog/ai-coding-agents-compared-2026" target="_blank" rel="noopener">jobsbyculture.com &rarr;</a>
           </td>
         </tr>
@@ -1781,8 +1840,8 @@
           <th class="co-cell"><div class="co-name">Aider</div><div class="co-line">Git-aware CLI pair programmer</div></th>
           <td class="ent-models">Model-agnostic, bring-your-own API key.</td>
           <td class="ent-pick">Sonnet 5.5, or DeepSeek V4 Pro on a budget</td>
-          <td class="ent-why">Rated a CLI gold standard alongside Claude Code, especially strong at git-aware multi-file edits.
-            <a href="https://jobsbyculture.com/blog/ai-coding-agents-compared-2026" target="_blank" rel="noopener">jobsbyculture.com &rarr;</a>
+          <td class="ent-why">Rated a CLI gold standard alongside Claude Code, especially strong at git-aware multi-file edits &mdash; but that rating is dated: the repository&rsquo;s last push was May 22 and its last release was in Aug 2025, so check it is still maintained before relying on it.
+            <a href="https://jobsbyculture.com/blog/ai-coding-agents-compared-2026" target="_blank" rel="noopener">jobsbyculture.com &rarr;</a> <a href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener">github.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1798,11 +1857,11 @@
       </tbody>
       <tbody style="--co:var(--c-amazonq)">
         <tr>
-          <th class="co-cell"><div class="co-name">Amazon Q Developer</div><div class="co-line">AWS-native assistant</div></th>
+          <th class="co-cell"><div class="co-name">Amazon Q Developer</div><div class="co-line">AWS-native assistant · being replaced by Kiro</div></th>
           <td class="ent-models">AWS-managed model mix, tuned for AWS APIs; not a user-selectable picker.</td>
           <td class="ent-pick">Use as-is — best inside AWS-heavy repos</td>
-          <td class="ent-why">Strong specifically on AWS-specific APIs and infrastructure code; reviewers say it trails the general-purpose leaders outside that lane.
-            <a href="https://jobsbyculture.com/blog/ai-coding-agents-compared-2026" target="_blank" rel="noopener">jobsbyculture.com &rarr;</a>
+          <td class="ent-why">Strong specifically on AWS-specific APIs and infrastructure code; reviewers say it trails the general-purpose leaders outside that lane. AWS is retiring it in favor of Kiro: new free-tier accounts and subscriptions were blocked on May 15, 2026, and IDE plugin and paid-subscription support ends Apr 30, 2027, so don&rsquo;t start new work on it.
+            <a href="https://jobsbyculture.com/blog/ai-coding-agents-compared-2026" target="_blank" rel="noopener">jobsbyculture.com &rarr;</a> <a href="https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/" target="_blank" rel="noopener">aws.amazon.com &rarr;</a> <a href="https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-developer-ide-end-of-support.html" target="_blank" rel="noopener">docs.aws.amazon.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1839,7 +1898,7 @@
       </tbody>
       <tbody style="--co:var(--c-orch)">
         <tr>
-          <th class="co-cell"><div class="co-name">Paradev (formerly Superset)</div><div class="co-line">source-available · ~15.7K GitHub stars</div></th>
+          <th class="co-cell"><div class="co-name">Paradev (formerly Superset)</div><div class="co-line">source-available · ~16.4K GitHub stars</div></th>
           <td class="ent-models">An agentic IDE for running many coding agents in parallel worktrees, with automations you can drive from a CLI, a TypeScript SDK, or an MCP server.</td>
           <td class="ent-pick">macOS-first (Linux experimental, no Windows)<br>Elastic License 2.0; free for one user locally, Pro $20/user/mo (prices from before the rename)</td>
           <td class="ent-why">The most mature automations in the category, and it handles large fleets. The repository now carries the Paradev name, so older coverage lists it as Superset; the license is source-available, not OSI open source.
@@ -1859,7 +1918,7 @@
       </tbody>
       <tbody style="--co:var(--c-orch)">
         <tr>
-          <th class="co-cell"><div class="co-name">T3 Code</div><div class="co-line">Ping Labs · MIT · ~22K stars (per source)</div></th>
+          <th class="co-cell"><div class="co-name">T3 Code</div><div class="co-line">Ping Labs · MIT · ~69K stars (GitHub, Nov 21)</div></th>
           <td class="ent-models">A clean desktop interface for Claude Code, Codex, OpenCode, Cursor, Grok, and Antigravity, with per-thread branches, a strong pull-request workflow, and mobile access through a relay.</td>
           <td class="ent-pick">Desktop, with mobile via its relay<br>Free; bring your own subscriptions</td>
           <td class="ent-why">Easy to learn, but young and occasionally unstable, with no scheduled automations.
@@ -2176,11 +2235,11 @@
       </tbody>
       <tbody style="--co:var(--c-frameworks)">
         <tr>
-          <th class="co-cell"><div class="co-name">Microsoft Agent Framework</div><div class="co-line">Microsoft · MIT · ~14K stars</div></th>
+          <th class="co-cell"><div class="co-name">Microsoft Agent Framework</div><div class="co-line">Microsoft · MIT · star count unverified</div></th>
           <td class="ent-models">AutoGen's agent abstractions combined with Semantic Kernel's enterprise features: session state, middleware, and telemetry.</td>
           <td class="ent-pick">.NET and Python<br>Leans toward Azure</td>
-          <td class="ent-why">AutoGen and Semantic Kernel are now in maintenance mode, so this is where those users migrate &mdash; as a port, not a configuration change.
-            <a href="https://github.com/microsoft/agent-framework" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://arize.com/ai-agents/agent-frameworks/" target="_blank" rel="noopener">arize.com &rarr;</a>
+          <td class="ent-why">AutoGen&rsquo;s repository is now archived (last push Nov 12) and Semantic Kernel is in maintenance mode, so this is where those users migrate &mdash; as a port, not a configuration change. I couldn&rsquo;t load this project&rsquo;s own GitHub page on Nov 21 (the old link returned 404), so its status and star count are unconfirmed.
+            <a href="https://github.com/microsoft/autogen" target="_blank" rel="noopener">github.com &rarr;</a> <a href="https://arize.com/ai-agents/agent-frameworks/" target="_blank" rel="noopener">arize.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -2325,8 +2384,8 @@
           <th class="co-cell"><div class="co-name">ChatGPT Agent</div><div class="co-line">OpenAI · was Operator / CUA</div></th>
           <td class="ent-models">The original Computer-Using Agent model that powered the standalone Operator product; Operator was shut down in Aug 2025 and folded into "agent mode" inside ChatGPT.</td>
           <td class="ent-pick">ChatGPT composer, Plus plans and up ($20/mo+)</td>
-          <td class="ent-why">OpenAI's own Atlas browser is being deprecated (stops working Aug 9, 2026), with its browser-agentic capability consolidating into ChatGPT and Codex instead.
-            <a href="https://presenc.ai/research/openai-operator-update-tracker-2026" target="_blank" rel="noopener">presenc.ai &rarr;</a>
+          <td class="ent-why">OpenAI's own Atlas browser was discontinued on Aug 9, 2026, with its browser-agentic capability folded into ChatGPT and Codex; ChatGPT Work is the newer agent surface. This row describes the original Operator-era model and probably needs replacing with the current one.
+            <a href="https://presenc.ai/research/openai-operator-update-tracker-2026" target="_blank" rel="noopener">presenc.ai &rarr;</a> <a href="https://9to5mac.com/2026/07/09/openai-is-discontinuing-chatgpt-atlas-its-standalone-desktop-browser/" target="_blank" rel="noopener">9to5mac.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -2483,7 +2542,7 @@
           <td class="ent-pick" data-label="Audience &amp; deployment">Developer · self-hosted<br>model-agnostic — connects to Claude, GPT, and others</td>
           <td class="ent-allow" data-label="Models it allows"><b>Any model; no fixed default.</b> You set the primary model in config; the docs example uses Claude Opus 4.6 but recommends none. Providers include Anthropic, OpenAI, xAI, Mistral, Qwen, Z.AI (GLM), Moonshot (Kimi), OpenRouter, Bedrock and local Ollama, with Gemini through a CLI bridge. Some doc mirrors claim a Gemini default; the official page doesn't.
             <a href="https://docs.openclaw.ai/providers/models" target="_blank" rel="noopener">docs.openclaw.ai &rarr;</a></td>
-          <td class="ent-why" data-label="Note">Went from a November 2025 side project to 355K GitHub stars by April 2026; now stewarded by an independent non-profit foundation.
+          <td class="ent-why" data-label="Note">Went from a November 2025 side project to 355K GitHub stars by April 2026 and about 395K by Nov 21; now stewarded by an independent non-profit foundation.
             <a href="https://openclaw.ai/" target="_blank" rel="noopener">openclaw.ai &rarr;</a>
           
             <div class="ent-reviews"><b>Public reviews:</b> mixed. VelvetShark's 50-day review says yes, with conditions: daily value 9/10, but silent memory loss, an update job that failed unnoticed for seven days, and browser automation rated 5/10. A $47 one-week test found it good at repetitive jobs (about 2,000 emails sorted in 20 minutes at ~90% accuracy) but sometimes reporting success when nothing had happened. Hive Security's May assessment treats it as a serious security risk; its malicious-skill counts conflict (341 vs 1,184).
@@ -2526,7 +2585,7 @@
           <th class="co-cell"><div class="co-name">Claude.ai</div><div class="co-line">Anthropic</div></th>
           <td class="ent-models">Standalone app and web, with a model picker across Haiku, Sonnet, Opus, and Fable.</td>
           <td class="ent-pick">Choosing your own model tier; strongest reputation among developers</td>
-          <td class="ent-why">Holds roughly 17% of the consumer mobile chatbot market, with US mobile daily actives up 1,100% year-to-date in 2026 — the fastest-growing major challenger to ChatGPT. Its new Duet agent (research preview) is covered under Always-on agents.
+          <td class="ent-why">Holds roughly 17% of the consumer mobile chatbot market, with US mobile daily actives up 1,100% year-to-date in 2026 — the fastest-growing major challenger to ChatGPT. Its new Duet agent (research preview) is covered under Always-on agents. Anthropic reportedly added Sheets, Whiteboards, Data and Meetings on Nov 10; I haven't read its own announcement.
             <a href="https://www.getpanto.ai/blog/claude-ai-statistics" target="_blank" rel="noopener">getpanto.ai &rarr;</a>
           </td>
         </tr>
@@ -2546,7 +2605,7 @@
           <th class="co-cell"><div class="co-name">Gemini</div><div class="co-line">Google</div></th>
           <td class="ent-models">Gmail, Docs, Sheets, Slides, Calendar, Android, Search.</td>
           <td class="ent-pick">Google-ecosystem productivity</td>
-          <td class="ent-why">Reviewers still hand Gemini 3.1 Pro the top reasoning scores against Grok and GPT-5.6 in several independent benchmark rounds. Since Nov 12, Gemini 4 Hydrogen is what free app users get through automatic model selection, and it powers Google Search. On Nov 18 Gemini 4 Neon replaced Argon for AI Pro and Ultra subscribers, and Gemini 3.1 Pro is being removed from the app.
+          <td class="ent-why">Earlier 2026 reviews gave Gemini 3.1 Pro the top reasoning scores against Grok and GPT-5.6, but Google has since moved the app to Gemini 4 and I haven't found a fresh independent comparison. Since Nov 12, Gemini 4 Hydrogen is what free app users get through automatic model selection, and it powers Google Search. On Nov 18 Gemini 4 Neon replaced Argon for AI Pro and Ultra subscribers, and Gemini 3.1 Pro is being removed from the app.
             <a href="https://tech-insider.org/best-ai-chatbots-2026/" target="_blank" rel="noopener">tech-insider.org &rarr;</a> <a href="https://www.digitaltrends.com/cool-tech/googles-next-gen-gemini-4-hydrogen-ai-model-is-here-touting-faster-intelligence-for-all/" target="_blank" rel="noopener">digitaltrends.com &rarr;</a> <a href="https://9to5google.com/2026/11/18/gemini-4-neon-announcement/" target="_blank" rel="noopener">9to5google.com &rarr;</a>
           </td>
         </tr>
@@ -2556,7 +2615,7 @@
           <th class="co-cell"><div class="co-name">Microsoft Copilot</div><div class="co-line">Microsoft</div></th>
           <td class="ent-models">Word, Excel, Teams, Outlook, Windows.</td>
           <td class="ent-pick">Editing/analyzing inside Microsoft 365</td>
-          <td class="ent-why">Built to help create, edit, and analyze content without leaving the app you're already working in — not a separate destination.
+          <td class="ent-why">Built to help create, edit, and analyze content without leaving the app you're already working in — not a separate destination. Microsoft's Nov 17 Ignite announcements were mostly developer and security models (MAI Code 2, Cyber 2 Flash, Decision 1.1, Realtime 1), covered in the tier matrix and the voice and decision sections.
             <a href="https://www.techrepublic.com/article/news-ai-chatbot-cheat-sheet-overview/" target="_blank" rel="noopener">techrepublic.com &rarr;</a>
           </td>
         </tr>
@@ -2576,7 +2635,7 @@
   </section>
 
   <footer>
-    <p>Snapshot compiled November 20, 2026 — Google launched Gemini 4 Neon, Thinking Machines released Inkling 2 Mini and opened up Inkling 2 Small, and NVIDIA's Nemotron joined the tier matrix, following new categories for inference hosts and model chaining, OpenAI's GPT-6.2 Astra and Sol, Perplexity's Orchestrator API and Multiagent, and Alibaba's Qwen4-Max. Every model now shows its launch date. The tier matrix ranks companies by a usage-evidence score and shows one older version per model; the other model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled November 21, 2026 — Microsoft's seven Ignite MAI models (Code 2, Cyber 2 Flash, Decision 1.1, Realtime 1) joined the page, and a staleness audit corrected Windsurf (now Devin Desktop), Amazon Q Developer (replaced by Kiro), the discontinued Atlas browser, GPT-Live's API release, Decider v1.3, Jev 1.14, and several star counts, following Google's Gemini 4 Neon, Thinking Machines' Inkling 2 Mini, NVIDIA's Nemotron, inference hosts and model chaining, OpenAI's GPT-6.2 Astra and Sol, and Alibaba's Qwen4-Max. Every model now shows its launch date. The tier matrix ranks companies by a usage-evidence score and shows one older version per model; the other model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
@@ -2805,6 +2864,21 @@
       <a href="https://9to5google.com/2026/05/21/google-has-tripled-gemini-usage-limits-for-antigravity-twice/">9to5google.com/antigravity-limits</a>
       <a href="https://www.theregister.com/ai-and-ml/2026/11/19/google-continues-model-chemistry-experiment-with-neon/5310934">theregister.com/gemini-4-neon</a>
       <a href="https://en.wikipedia.org/wiki/Google_Antigravity">wikipedia.org/google-antigravity</a>
+      <a href="https://www.testingcatalog.com/microsoft-launches-seven-mai-models-at-ignite-2026/">testingcatalog.com/mai-ignite-2026</a>
+      <a href="https://www.vktr.com/ai-market/microsoft-releases-7-mai-models-priced-to-undercut-openai-and-anthropic/">vktr.com/mai-ignite-2026</a>
+      <a href="https://www.thurrott.com/?p=343999">thurrott.com/mai-ignite-2026</a>
+      <a href="https://docs.devin.ai/desktop/devin-desktop-faq">docs.devin.ai/devin-desktop-faq</a>
+      <a href="https://dev.to/creeta/windsurf-is-devin-desktop-now-cascade-has-27-days-left-34kj">dev.to/windsurf-is-devin-desktop</a>
+      <a href="https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/">aws.amazon.com/q-developer-end-of-support</a>
+      <a href="https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-developer-ide-end-of-support.html">docs.aws.amazon.com/q-developer-ide-end-of-support</a>
+      <a href="https://9to5mac.com/2026/07/09/openai-is-discontinuing-chatgpt-atlas-its-standalone-desktop-browser/">9to5mac.com/chatgpt-atlas-discontinued</a>
+      <a href="https://aiweekly.co/alerts/openai-opens-gpt-live-11-to-api-with-002min-standby">aiweekly.co/gpt-live-1-1-api</a>
+      <a href="https://aiweekly.co/alerts/perplexity-ships-decider-v13-classifier-916-on-63-tasks">aiweekly.co/perplexity-decider-v1-3</a>
+      <a href="https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini">developers.openai.com/gpt-realtime-2-1-mini</a>
+      <a href="https://www.marktechpost.com/2026/07/06/openai-gpt-realtime-2-1-mini-reasoning-realtime-api/">marktechpost.com/gpt-realtime-2-1</a>
+      <a href="https://github.com/microsoft/autogen">github.com/microsoft/autogen</a>
+      <a href="https://github.com/anthropics/claude-code/releases">github.com/anthropics/claude-code/releases</a>
+      <a href="https://github.com/Aider-AI/aider">github.com/Aider-AI/aider</a>
     </div>
   </footer>
 
