@@ -20,6 +20,7 @@
     --c-xai:#8C5A8C;
     --c-microsoft:#3E7A9E;
     --c-thinking:#5F63B0;
+    --c-nvidia:#5E9E1F;
     --c-meta:#4C5FA0;
     --c-deepseek:#8A7A45;
     --c-qwen:#B15C4E;
@@ -66,6 +67,7 @@
       --c-xai:#B889B8;
       --c-microsoft:#7EB6D9;
     --c-thinking:#A5A8E6;
+    --c-nvidia:#9BD14C;
       --c-meta:#8896CC;
       --c-deepseek:#BBA968;
       --c-qwen:#D08D7C;
@@ -111,6 +113,7 @@
     --c-xai:#B889B8;
     --c-microsoft:#7EB6D9;
     --c-thinking:#A5A8E6;
+    --c-nvidia:#9BD14C;
     --c-meta:#8896CC;
     --c-deepseek:#BBA968;
     --c-qwen:#D08D7C;
@@ -771,7 +774,7 @@
     <h1>Model Buffet</h1>
     <p class="dek">A working cheat sheet across the labs that matter right now — from the quick, cheap counter items to the five-course flagship reasoning.</p>
     <div class="meta-row">
-      <span>Snapshot: Nov 18, 2026</span>
+      <span>Snapshot: Nov 20, 2026</span>
       <span>Moves fast — recheck pricing before you budget on it</span>
     </div>
   </header>
@@ -819,7 +822,7 @@
       <div class="qp-item"><span class="qp-need">Fastest & cheapest, still sharp</span><span class="qp-ans">Haiku 5.5 · GPT&#8209;6 Luna</span></div>
       <div class="qp-item"><span class="qp-need">Feeding it a huge document set</span><span class="qp-ans">GPT&#8209;6.1 Terra (1.05M) · Sonnet 5.5 (1M)</span></div>
       <div class="qp-item"><span class="qp-need">Real-time web / social context</span><span class="qp-ans">Grok 4.7 (built-in X search)</span></div>
-      <div class="qp-item"><span class="qp-need">Deep inside Gmail/Docs/Workspace</span><span class="qp-ans">Gemini 4 Hydrogen · Argon</span></div>
+      <div class="qp-item"><span class="qp-need">Deep inside Gmail/Docs/Workspace</span><span class="qp-ans">Gemini 4 Hydrogen · Neon</span></div>
       <div class="qp-item"><span class="qp-need">Self-hosting on a budget</span><span class="qp-ans">Qwen3.8&#8209;27B · DeepSeek V4.1 Flash</span></div>
       <div class="qp-item"><span class="qp-need">Frontier-grade reasoning, open weights</span><span class="qp-ans">Qwen3.8&#8209;Max</span></div>
       <div class="qp-item"><span class="qp-need">Talk to it live / build a voice agent</span><span class="qp-ans">Grok Voice 3.0 · GPT&#8209;Live</span></div>
@@ -1124,7 +1127,7 @@
 
       <tbody style="--co:var(--c-google)">
         <tr>
-          <th class="co-cell"><div class="co-name">Google</div><div class="co-line">Gemini · 4 pts</div></th>
+          <th class="co-cell" rowspan="2"><div class="co-name">Google</div><div class="co-line">Gemini · 4 pts</div></th>
           <td>
             <div class="cell-model">3.5 Flash-Lite</div><div class="cell-spec">1M ctx · $0.30 / $2.50</div>
             <div class="cell-date">Launched Jul 21, 2026</div>
@@ -1137,19 +1140,19 @@
             </ul>
           </td>
           <td>
-            <div class="cell-model">Gemini 4 Hydrogen</div><div class="cell-spec">1M ctx · $1.50 / $7.50 · four thinking levels</div>
-            <div class="cell-date">Launched Nov 12, 2026</div>
-            <div class="usage-tier">Growing</div>
-            <div class="usage-evidence">Carries 3.8 Flash's Growing tier for now: Google calls it the Flash successor, free Gemini app users get it through automatic model selection, and it powers Google Search. It is two days old and pricier than Flash, so it has no usage-rank data of its own. Artificial Analysis, the independent source here, scores it 51 at the default high setting and 54 at xhigh.</div>
+            <div class="cell-model">Gemini 4 Neon</div><div class="cell-spec">1M ctx · $3 / $15 · cached $0.15 · four thinking levels</div>
+            <div class="cell-date">Launched Nov 18, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Google's mid-tier model between Hydrogen and Carbon. It replaced Argon in the Gemini app for AI Pro and Ultra subscribers on launch day and is already in GitHub Copilot, but it is two days old, so there is no usage data. Artificial Analysis scores it 61 at its top thinking level, third overall, and first on its Coding Agent Index (58.6), but those numbers reach me through Google's announcement.</div>
             <ul class="cell-sources">
-          <li>Standard price is $1.50 / $7.50 ($0.075 cached), twice Flash's intro rate and about 15&times; the cheapest rates of Haiku 5.5, GPT-6 Luna and Muse Ember. On Artificial Analysis's Terminal-Bench 4.0 it scores 54% vs 40.9% for Ember, 32.8% for Haiku and 12.6% for Luna, but at medium effort it costs more per task than all three. <a href="https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor" target="_blank" rel="noopener">venturebeat.com &rarr;</a></li>
-          <li>Adapted from Carbon and meant for execution: in Antigravity, Carbon plans and Hydrogen edits code and runs tests. Google's own table has it at 57% on Terminal-Bench 4.1, behind Sonnet 5.5 at 63.9%, with a 5.57-point rise in unjustified refusals vs 3.8 Flash. The article says it is AI-generated and editor-reviewed. <a href="https://www.unite.ai/google-launches-gemini-4-hydrogen-for-everyday-agentic-workflows/" target="_blank" rel="noopener">unite.ai &rarr;</a></li>
-          <li>Google says it runs 2.5&times; faster than 3.8 Flash and makes over 5&times; fewer fabricated claims, and it leads Terra and Sonnet 5.5 on knowledge benchmarks but trails slightly on science and math, computer use and Terminal-Bench 4.1. All of that is Google's; there is no hands-on testing. <a href="https://www.digitaltrends.com/cool-tech/googles-next-gen-gemini-4-hydrogen-ai-model-is-here-touting-faster-intelligence-for-all/" target="_blank" rel="noopener">digitaltrends.com &rarr;</a></li>
+          <li>Positioned as Carbon-class performance at Flash speeds and lower cost; it replaces Argon in the Gemini app and Gemini 3.1 Pro is being removed. At $3 / $15 it costs twice Hydrogen and, after Nov 30, about 25% less than Carbon's $4 / $20. Google's benchmark list is long and mostly its own or partners' figures, and the article notes it trails larger, slower models overall. <a href="https://9to5google.com/2026/11/18/gemini-4-neon-announcement/" target="_blank" rel="noopener">9to5google.com &rarr;</a></li>
+          <li>Google says its cost per task at the default high setting is 32% lower than Carbon's. It is in the Gemini API (paid tier), Gemini for business, AI Studio and Antigravity for paid subscribers; Carbon stays Ultra-only in the app, so Neon is the Pro subscriber's step up, and free users stay on Hydrogen. The page includes no independent evaluation. <a href="https://www.powerfulai.tools/blog/gemini-4-neon-google-ai-model-launch-2026" target="_blank" rel="noopener">powerfulai.tools &rarr;</a></li>
+          <li>GitHub made it generally available in Copilot on Nov 18 for Pro+, Max, Business and Enterprise, aimed at agentic coding and multistep tool use, billed at provider list pricing under usage-based billing, with a gradual rollout. <a href="https://releasebot.io/updates/github" target="_blank" rel="noopener">releasebot.io &rarr;</a></li>
             </ul>
             <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 3.8 Flash</span><span class="prior-spec">Sept 2, 2026 · $0.75 / $3.75 intro</span></div>
-              <div class="prior-delta">Hydrogen costs twice 3.8 Flash's intro rate; the two prices meet when Flash's doubles on Jan 1, 2027. It defaults to high thinking, up from medium, and rejects the old thinking_budget and MINIMAL settings. On Artificial Analysis's v5.0.1 index it scores 51 against 31 for 3.8 Flash at high, at about $1.87 vs $7.77 per benchmark task. 3.8 Flash scored 59 on the older index version, so don't compare across versions. Google's 2.5&times; speed figure is its own claim.</div>
-              <div class="prior-links"><a href="https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor" target="_blank" rel="noopener">venturebeat.com &rarr;</a><a href="https://artificialanalysis.ai/articles/gemini-3-8-flash" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></div>
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 4 Argon</span><span class="prior-spec">Announced Sept 30 · GA Oct 13, 2026 · $2 / $10 intro</span></div>
+              <div class="prior-delta">Neon replaces Argon in the Gemini app. Per token it costs 50% more than Argon's intro price, and $3 / $15 against $4 / $20 once the intro prices end on Nov 30. Google claims Neon's cost per task is below Carbon's, and I found no published cost-per-task comparison with Argon.</div>
+              <div class="prior-links"><a href="https://9to5google.com/2026/11/18/gemini-4-neon-announcement/" target="_blank" rel="noopener">9to5google.com &rarr;</a><a href="https://www.powerfulai.tools/blog/gemini-4-neon-google-ai-model-launch-2026" target="_blank" rel="noopener">powerfulai.tools &rarr;</a></div>
             </div>
           </td>
           <td>
@@ -1168,6 +1171,27 @@
               <div class="prior-links"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener">blog.google &rarr;</a><a href="https://the-decoder.com/gemini-4-carbon-arrives-just-in-time-to-feel-like-yesterdays-news-in-the-fastest-model-cycle-yet/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></div>
             </div>
           </td>
+        </tr>
+        <tr>
+          
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Gemini 4 Hydrogen</div><div class="cell-spec">1M ctx · $1.50 / $7.50 · four thinking levels</div>
+            <div class="cell-date">Launched Nov 12, 2026</div>
+            <div class="usage-tier">Growing</div>
+            <div class="usage-evidence">Carries 3.8 Flash's Growing tier for now: Google calls it the Flash successor, free Gemini app users get it through automatic model selection, and it powers Google Search. It is two days old and pricier than Flash, so it has no usage-rank data of its own. Artificial Analysis, the independent source here, scores it 51 at the default high setting and 54 at xhigh.</div>
+            <ul class="cell-sources">
+          <li>Standard price is $1.50 / $7.50 ($0.075 cached), twice Flash's intro rate and about 15&times; the cheapest rates of Haiku 5.5, GPT-6 Luna and Muse Ember. On Artificial Analysis's Terminal-Bench 4.0 it scores 54% vs 40.9% for Ember, 32.8% for Haiku and 12.6% for Luna, but at medium effort it costs more per task than all three. <a href="https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor" target="_blank" rel="noopener">venturebeat.com &rarr;</a></li>
+          <li>Adapted from Carbon and meant for execution: in Antigravity, Carbon plans and Hydrogen edits code and runs tests. Google's own table has it at 57% on Terminal-Bench 4.1, behind Sonnet 5.5 at 63.9%, with a 5.57-point rise in unjustified refusals vs 3.8 Flash. The article says it is AI-generated and editor-reviewed. <a href="https://www.unite.ai/google-launches-gemini-4-hydrogen-for-everyday-agentic-workflows/" target="_blank" rel="noopener">unite.ai &rarr;</a></li>
+          <li>Google says it runs 2.5&times; faster than 3.8 Flash and makes over 5&times; fewer fabricated claims, and it leads Terra and Sonnet 5.5 on knowledge benchmarks but trails slightly on science and math, computer use and Terminal-Bench 4.1. All of that is Google's; there is no hands-on testing. <a href="https://www.digitaltrends.com/cool-tech/googles-next-gen-gemini-4-hydrogen-ai-model-is-here-touting-faster-intelligence-for-all/" target="_blank" rel="noopener">digitaltrends.com &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 3.8 Flash</span><span class="prior-spec">Sept 2, 2026 · $0.75 / $3.75 intro</span></div>
+              <div class="prior-delta">Hydrogen costs twice 3.8 Flash's intro rate; the two prices meet when Flash's doubles on Jan 1, 2027. It defaults to high thinking, up from medium, and rejects the old thinking_budget and MINIMAL settings. On Artificial Analysis's v5.0.1 index it scores 51 against 31 for 3.8 Flash at high, at about $1.87 vs $7.77 per benchmark task. 3.8 Flash scored 59 on the older index version, so don't compare across versions. Google's 2.5&times; speed figure is its own claim.</div>
+              <div class="prior-links"><a href="https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor" target="_blank" rel="noopener">venturebeat.com &rarr;</a><a href="https://artificialanalysis.ai/articles/gemini-3-8-flash" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></div>
+            </div>
+          </td>
+          <td><span class="cell-empty">&mdash;</span></td>
         </tr>
       </tbody>
 
@@ -1350,20 +1374,69 @@
 
       <tbody style="--co:var(--c-thinking)">
         <tr>
-          <th class="co-cell"><div class="co-name">Thinking Machines</div><div class="co-line">Inkling · 1 pt</div></th>
-          <td><span class="cell-empty">&mdash;</span></td>
+          <th class="co-cell"><div class="co-name">Thinking Machines</div><div class="co-line">Inkling · open weight · 2 pts</div></th>
           <td>
-            <div class="cell-model">Inkling 2 Small</div><div class="cell-spec">594B / 17B active · closed for now · Apache 2.0 planned</div>
-            <div class="cell-date">Launched Nov 5, 2026</div>
+            <div class="cell-model">Inkling 2 Mini</div><div class="cell-spec">26.4B MoE · looped · ~20 GB · open weights</div>
+            <div class="cell-date">Launched Nov 20, 2026</div>
             <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">Only through Thinking Machines' Tinker platform so far; the open weights are promised after external safety testing, with no firm date. Too new for usage data &mdash; the case for it is a benchmark score and a pending licence.</div>
+            <div class="usage-evidence">Open weights on Hugging Face and hosted on Tinker. A looped design in which the middle 12 of 24 layers run three times per token, small enough for a Mac with 32 GB. Artificial Analysis scores it 20.1, tied with Qwen3.8-27B, at about $0.59 per task against $3.53, using Thinking Machines' own prices. It has no usage data yet.</div>
             <ul class="cell-sources">
-          <li>Scores 31 on Artificial Analysis's index, up from 13 for the earlier Inkling Small; costs $1.18 per task, about 6&times; its predecessor. Hallucination rate fell from 61% to 27%, but the response rate also fell from 77% to 53%, so part of the gain is declining to answer. The index version isn't named. <a href="https://the-decoder.com/thinking-machines-inkling-2-small-claims-top-spot-among-western-open-weight-models/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></li>
-          <li>Weights are not yet released: Thinking Machines plans Apache 2.0 after external safety testing and red-teaming. Outlets disagree on timing (&ldquo;next week&rdquo; vs &ldquo;coming weeks&rdquo;). <a href="https://www.unite.ai/thinking-machines-lab-launches-inkling-2-small-with-open-weights-pending/" target="_blank" rel="noopener">unite.ai &rarr;</a></li>
-          <li>A developer-side take: the model is here but the weights aren't, so you can't self-host it today &mdash; plan around Tinker access until they ship. <a href="https://dev.to/paullovelace/inkling-2-small-is-here-the-weights-arent-what-to-do-now-3292" target="_blank" rel="noopener">dev.to &rarr;</a></li>
+          <li>The lab reports 48.2% on DeepSWE v1.1 and 79.2% on SWE-bench Verified, notes that evaluation setups vary by model, and admits weaker multi-turn chat (50.0% on MultiChallenge) and many-constraint instructions (33.4%). The post doesn't state a license; reports say Apache 2.0, which I couldn't confirm. <a href="https://thinkingmachines.ai/news/inkling-2-mini/" target="_blank" rel="noopener">thinkingmachines.ai &rarr;</a></li>
+          <li>Relays Artificial Analysis's 20.1, level with Qwen3.8-27B and below GPT-6 Luna at max effort (28). The laptop claim rests on a single MacBook Pro demo, and most other numbers are the lab's own. <a href="https://www.testingcatalog.com/thinking-machines-releases-inkling-2-mini-looped-open-model/" target="_blank" rel="noopener">testingcatalog.com &rarr;</a></li>
+          <li>Artificial Analysis says Mini is about 6&times; cheaper and 4&times; faster per task than Qwen3.8-27B ($0.59 and 9.0 minutes against $3.53 and 38.2), with cost based on Thinking Machines' first-party pricing. <a href="https://x.com/ArtificialAnlys/status/2123877878568001635" target="_blank" rel="noopener">x.com &rarr;</a></li>
+            </ul>
+          </td>
+          <td>
+            <div class="cell-model">Inkling 2 Small</div><div class="cell-spec">594B / 17B active · open weights · Apache 2.0 per model card</div>
+            <div class="cell-date">Launched Nov 5, 2026 · weights Nov 12</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">The weights went up on Hugging Face on Nov 12, a week after the hosted-only launch, and Together lists the model at $0.30 / $1.00 per million tokens, matching Thinking Machines' own Tinker. It is still too new for usage data. Artificial Analysis scores it 31 (index version not stated).</div>
+            <ul class="cell-sources">
+          <li>Scores 31 on Artificial Analysis's index, up from 13 for the earlier Inkling Small; costs $1.18 per task, about 6&times; its predecessor. Hallucination rate fell from 61% to 27%, but the response rate also fell from 77% to 53%, so part of the gain is declining to answer. <a href="https://the-decoder.com/thinking-machines-inkling-2-small-claims-top-spot-among-western-open-weight-models/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></li>
+          <li>The primary checkpoint is about 394 GB (623 GB for the MXFP8 build) and needs roughly 500 GB or more of GPU memory. The model card says Apache 2.0 but the repo has no LICENSE file, serving support is still dev builds and nightlies, and the external safety testing tied to the release hasn't been published. <a href="https://www.orcarouter.ai/blog/inkling-2-small-open-weights-download" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></li>
+          <li>Apache 2.0 with a patent grant and 1M context when self-hosted (256K on Tinker), but Terminal-Bench 4.0 is 13% against 30% for Sonnet 5.5 at medium effort, there is no audio, and multi-turn chat is weaker. The author says small teams should stay on a hosted API; the open weights mainly guarantee the model can't be withdrawn. <a href="https://dev.to/paullovelace/inkling-2-small-weights-are-open-download-fine-tune-self-host-3l8b" target="_blank" rel="noopener">dev.to &rarr;</a></li>
             </ul>
           </td>
           <td><span class="cell-empty">&mdash;</span></td>
+        </tr>
+      </tbody>
+
+      <tbody style="--co:var(--c-nvidia)">
+        <tr>
+          <th class="co-cell"><div class="co-name">NVIDIA</div><div class="co-line">Nemotron · open weight · 2 pts</div></th>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Nemotron 3.5 Super VL</div><div class="cell-spec">120B / 12B active · 1M ctx · text, image, video in · open weights</div>
+            <div class="cell-date">Hugging Face Oct 15 · Nemotron for Science Nov 16, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">NVIDIA's mid-size multimodal open model, now the base of its Nemotron for Science package. I found no independent evaluation and no usage data: every performance figure comes from NVIDIA or its named partners.</div>
+            <ul class="cell-sources">
+          <li>Optimized to run locally on a 128 GB DGX Spark. Partner results, all reported through NVIDIA: Lila Sciences 61% against 54% for GPT-6 Astra on quantum-dot protocols at 10&ndash;20&times; lower inference cost, Terray about 76% on reaction recovery, and KTH 81% of GROMACS test setups fixed. <a href="https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents" target="_blank" rel="noopener">nvidia.com &rarr;</a></li>
+          <li>The article says the results cover bounded tasks, not general lab autonomy, and depend on how well each verifier measures what researchers want, and it cites no independent evaluation. The model's license isn't stated there; the dataset is CC-BY-SA-4.0. <a href="https://www.unite.ai/nvidia-launches-nemotron-for-science-and-open-chemistry-dataset/" target="_blank" rel="noopener">unite.ai &rarr;</a></li>
+          <li>One aggregator lists it at $0.15 / $0.47 on OpenRouter and 4&times; H100 or 2&times; GB200 to self-host, under OpenMDW-1.1, but its Nemotron table is inconsistent on licenses and on which models are current, so treat these as unconfirmed. <a href="https://www.secondtalent.com/resources/every-nemotron-ai-model-explained-compared/" target="_blank" rel="noopener">secondtalent.com &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Nemotron 3 Super</span><span class="prior-spec">Mar 11, 2026 · 120B / 12B active · text only</span></div>
+              <div class="prior-delta">The text-only predecessor of the same size. Artificial Analysis scored it 36 (ahead of gpt-oss-120b at 33, behind Qwen3.5 122B at 42), noted it was verbose at about 40% more output tokens than gpt-oss-120b, and measured hosted endpoints up to 484 tokens/sec. Super VL adds image and video input. The index has been revised since, so don't compare those scores with current ones.</div>
+              <div class="prior-links"><a href="https://artificialanalysis.ai/articles/nvidia-nemotron-3-super-the-new-leader-in-open-efficient-intelligence" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents" target="_blank" rel="noopener">nvidia.com &rarr;</a></div>
+            </div>
+          </td>
+          <td>
+            <div class="cell-model">Nemotron 3 Ultra</div><div class="cell-spec">~550B / ~55B active · 1M ctx · open weights</div>
+            <div class="cell-date">Launched Jun 4, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">The largest Nemotron and, at launch, Artificial Analysis's most intelligent US open-weights model (47.7), though it trailed China's Kimi K2.6 (53.9). That score predates AA's Oct 28 index change, so don't compare it with newer numbers such as Fable 5.2 at 65. I found no usage data.</div>
+            <ul class="cell-sources">
+          <li>Over 400 output tokens/sec on one host, faster than typical gpt-oss-120b serving despite being four times larger; 71% non-hallucination on AA-Omniscience; fastest on Terminal-Bench v2.1 under turn limits; GDPval-AA Elo 1378. Weak on graduate-level physics (CritPt 3%) and about a point behind Gemma 4 31B on coding. <a href="https://artificialanalysis.ai/articles/nvidia-nemotron-3-ultra-released" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></li>
+          <li>NVIDIA reports SWE-Bench Verified 70.7 and Terminal Bench 2.1 56.4 from its own runs. Listed at $0.60 / $2.40 on OpenRouter, and self-hosting needs 8&times; B200 or 16&times; H100 in BF16. The OpenMDW-1.1 license and 1M context come from this aggregator only. <a href="https://www.secondtalent.com/resources/every-nemotron-ai-model-explained-compared/" target="_blank" rel="noopener">secondtalent.com &rarr;</a></li>
+          <li>Part of the Nemotron 3 family, which mixes Mamba, attention and mixture-of-experts layers. NVIDIA also announced a Nemotron Coalition in March, whose first project is a base model co-developed with Mistral AI for a future Nemotron 4 family that hasn't been released. The page carries a maintenance notice about possible LLM-written text, so weigh it accordingly. <a href="https://en.wikipedia.org/wiki/Nemotron" target="_blank" rel="noopener">wikipedia.org &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Nemotron 3 Super</span><span class="prior-spec">Mar 11, 2026 · 120B / 12B active</span></div>
+              <div class="prior-delta">NVIDIA's top model before Ultra. Artificial Analysis scores Ultra 47.7 against 36 for Super, with Ultra using about 1M fewer output tokens on the same index run, and a GDPval-AA Elo of 1378 against 1027. Those figures come from two AA articles on different dates, so treat the gap as indicative.</div>
+              <div class="prior-links"><a href="https://artificialanalysis.ai/articles/nvidia-nemotron-3-ultra-released" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://artificialanalysis.ai/articles/nvidia-nemotron-3-super-the-new-leader-in-open-efficient-intelligence" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></div>
+            </div>
+          </td>
         </tr>
       </tbody>
 
@@ -1606,10 +1679,10 @@
       <tbody style="--co:var(--c-copilot)">
         <tr>
           <th class="co-cell"><div class="co-name">GitHub Copilot</div><div class="co-line">IDE + PR assistant</div></th>
-          <td class="ent-models">Claude Sonnet / Opus / Haiku, GPT-5.x, Gemini 3.1 Pro &amp; Flash — picker depends on your plan tier.</td>
+          <td class="ent-models">Claude Sonnet / Opus / Haiku, GPT-6.2 Astra and Sol and Gemini 4 Neon (new this week), plus older GPT-5.x and Gemini 3.1 models — picker depends on your plan tier.</td>
           <td class="ent-pick">Sonnet 5.5 daily<br>Opus 5.5 for hard tickets<br>Gemini 3.1 Pro for huge-context reviews</td>
-          <td class="ent-why">Sonnet is rated the best-balanced everyday pick; Opus gets reserved for tickets it can't close. Gemini 4 Argon went generally available on Oct 13 as Google's newer flagship, but 3.1 Pro is the model these picker reviews cover. Carbon went generally available in Google's own products on Nov 10; I haven't confirmed whether Copilot's picker offers it, or Anthropic's new Fable 5.2. The runtime behind Copilot's agent mode is now sold separately as the Microsoft Copilot harness (next row).
-            <a href="https://standardcompute.com/best-ai-model/for/github-copilot" target="_blank" rel="noopener">standardcompute.com &rarr;</a>
+          <td class="ent-why">Sonnet is rated the best-balanced everyday pick; Opus gets reserved for tickets it can't close. Gemini 4 Argon went generally available on Oct 13 as Google's newer flagship, but 3.1 Pro is the model these picker reviews cover. GPT-6.2 Astra and Sol (Nov 17) and Gemini 4 Neon (Nov 18) are now generally available in Copilot for Pro+, Max, Business and Enterprise, billed at provider list pricing under usage-based billing, with a gradual rollout; the changelog page I read doesn't mention Fable 5.2, Carbon or Hydrogen. The runtime behind Copilot's agent mode is now sold separately as the Microsoft Copilot harness (next row).
+            <a href="https://standardcompute.com/best-ai-model/for/github-copilot" target="_blank" rel="noopener">standardcompute.com &rarr;</a> <a href="https://releasebot.io/updates/github" target="_blank" rel="noopener">releasebot.io &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -1973,7 +2046,7 @@
   <div class="section-head" id="inference-hosts">
     <h2>Inference hosts</h2>
   </div>
-  <p class="section-sub">Where an open-weight model actually runs. A router or harness picks the model, and a host supplies the GPUs or custom chips that serve it. The same weights can cost many times more or less, and run many times faster or slower, depending on who serves them, and hosts also fine-tune and serve your own models. Compare prices only for the same model: the one cross-host table I found uses gpt-oss-120B, with prices checked Nov 6&ndash;17 but speeds from July, and its page carries affiliate links. Funding and usage figures below are the companies&rsquo; own unless stated.</p>
+  <p class="section-sub">Where an open-weight model actually runs. A router or harness picks the model, and a host supplies the GPUs or custom chips that serve it. The same weights can cost many times more or less, and run many times faster or slower, depending on who serves them, and hosts also fine-tune and serve your own models. Compare prices only for the same model: the one cross-host table I found uses gpt-oss-120B, with prices checked Nov 6&ndash;17 but speeds from July, and its page carries affiliate links. Funding and usage figures below are the companies&rsquo; own unless stated. NVIDIA is also an investor in Together AI, Baseten and Fireworks and licensed Groq&rsquo;s technology, so the hardware vendor backs several of these hosts.</p>
 
   <div class="table-wrap">
     <table class="enterprise stack c4">
@@ -1990,8 +2063,9 @@
           <th class="co-cell"><div class="co-name">Fireworks</div><div class="co-line">Fireworks AI · serverless and custom models</div></th>
           <td class="ent-models" data-label="What it is">Serves open-weight models and models customers specialize on their own data, with training and inference on one platform. Fireworks says it serves over 40 trillion tokens a day, that more than 95% come from customer-specialized models, and that its annual run rate tops $1 billion; Cursor and Harvey are named customers. Third-party writeups call it a &ldquo;compound AI&rdquo; platform, but I found no official compound-model launch.</td>
           <td class="ent-pick" data-label="Pricing &amp; access">Per-token serverless and batch inference; check Fireworks' pricing page for dedicated capacity<br>No gpt-oss-120B price in the one comparison I found<br>Nov 3: Ultrafast preview, multi-day prompt caching, background mode</td>
-          <td class="ent-why" data-label="Note">Two security incidents this autumn. In early October someone used internal credentials to reach customer accounts, exposing account and billing data and, for a limited set of accounts, secrets, datasets and incomplete models. On Oct 24 a breach of an external cloud provider that hosts its machines reportedly involved tens of thousands of files. Notion and Cursor are working with Fireworks on the fallout, with Palo Alto Networks supporting the investigation; it reportedly paused self-service dataset uploads and downloads for batch inference and dataset-based training. It raised $1.505B at $17.5B on July 15 and is reportedly in talks at $30&ndash;$40B. The speed claim (&ldquo;exceeding 1,500&rdquo;, no unit), the caching and cost claims and the usage figures are Fireworks&rsquo; own; European capacity on NVIDIA hardware starts in 2027.
-            <a href="https://fireworks.ai/blog/series-d-announcement" target="_blank" rel="noopener">fireworks.ai &rarr;</a> <a href="https://fortune.com/press-releases/fireworks-expands-european-capacity-nvidia-rubin-blackwell-2026-11-03/" target="_blank" rel="noopener">fortune.com &rarr;</a> <a href="https://www.insurancejournal.com/news/national/2026/11/10/892213.htm" target="_blank" rel="noopener">insurancejournal.com &rarr;</a></td>
+          <td class="ent-why" data-label="Note">Two security incidents this autumn, which Fireworks dates Aug 3&ndash;Oct 7 and Oct 23&ndash;30 and calls contained and remediated; the second was still under investigation on Nov 17. The first used stolen internal credentials, and the second began at a third-party cloud provider that hosts its machines. Account and billing data were reached and, for a limited set of accounts, secrets, datasets and incomplete models. Cursor says an attacker used an access key it had issued to Fireworks, which Cursor says Fireworks exposed, and Cursor has moved all inference off Fireworks. Notion has disconnected, deleted its data there and stopped using Fireworks for open-weight models; it says fewer than 1% of workspaces had AI chat transcripts exposed. Uber has notified about 149,000 people of driver&rsquo;s-license exposure, and per Rescana&rsquo;s summary of TechCrunch an Uber spokesperson named Fireworks, though Fireworks hasn&rsquo;t publicly linked Uber to either incident. Fireworks says its products are zero-data-retention by default, while Notion says data was retained anyway. It raised $1.505B at $17.5B on July 15 and is reportedly in early talks for more. The Nov 3 speed claim (&ldquo;exceeding 1,500&rdquo;, no unit), the caching and cost claims and the usage figures are Fireworks&rsquo; own, and Cerebras names it an early partner for its new disaggregated inference.
+            <a href="https://rescana.com/post/fireworks-ai-incident-uber-cursor-notion-prepare-now" target="_blank" rel="noopener">rescana.com &rarr;</a> <a href="https://fireworks.ai/blog/series-d-announcement" target="_blank" rel="noopener">fireworks.ai &rarr;</a> <a href="https://fortune.com/press-releases/fireworks-expands-european-capacity-nvidia-rubin-blackwell-2026-11-03/" target="_blank" rel="noopener">fortune.com &rarr;</a> <a href="https://www.insurancejournal.com/news/national/2026/11/10/892213.htm" target="_blank" rel="noopener">insurancejournal.com &rarr;</a>
+          </td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-router)">
@@ -2035,8 +2109,8 @@
           <th class="co-cell"><div class="co-name">Cerebras</div><div class="co-line">Cerebras · wafer-scale chips · Nasdaq: CBRS</div></th>
           <td class="ent-models" data-label="What it is">Serves open-weight models only (Llama, Qwen, DeepSeek distills, gpt-oss) on its wafer-scale chips, with no closed frontier models, and custom weights or fine-tuning only for enterprise customers.</td>
           <td class="ent-pick" data-label="Pricing &amp; access">gpt-oss-120B at $0.35 / $0.75, about 2.3&times; the usual input rate<br>$5 trial credit; developer tier from $10</td>
-          <td class="ent-why" data-label="Note">The speed leader: Cerebras claims about 3,000 tokens/sec on gpt-oss-120B, and one comparison cites Artificial Analysis at about 1,700 sustained. Best for latency-sensitive work such as voice and agent loops with many short calls, and poor value for batch. It listed on Nasdaq on May 14; its pre-IPO filing showed $510M of 2025 revenue and an OpenAI deal worth over $20B, so customer concentration is the main risk named. Its pricing page cites no independent benchmarks.
-            <a href="https://capitalandcompute.net/ai-inference-providers/cerebras/" target="_blank" rel="noopener">capitalandcompute.net &rarr;</a> <a href="https://www.investing.com/analysis/cerebras-48-billion-ipo-tests-the-markets-inference-bet-200680080" target="_blank" rel="noopener">investing.com &rarr;</a> <a href="https://infrabase.ai/blog/ai-inference-api-providers-compared" target="_blank" rel="noopener">infrabase.ai &rarr;</a></td>
+          <td class="ent-why" data-label="Note">The speed leader: Cerebras claims about 3,000 tokens/sec on gpt-oss-120B, and one comparison cites Artificial Analysis at about 1,700 sustained. Best for latency-sensitive work such as voice and agent loops with many short calls, and poor value for batch. It listed on Nasdaq on May 14; its pre-IPO filing showed $510M of 2025 revenue and an OpenAI deal worth over $20B, so customer concentration is the main risk named. Its pricing page cites no independent benchmarks. On Nov 17 it put &ldquo;disaggregated inference&rdquo; into production, with GPUs (AMD Instinct in its production deployment) handling the prompt and Cerebras chips generating the output. Cerebras claims 5&times; the tokens per megawatt of its own chips alone with no loss of speed, measured on one shared gpt-oss-120B endpoint, and names AWS, Fireworks, Gimlet Labs and General Compute as early partners; the figures are its own.
+            <a href="https://capitalandcompute.net/ai-inference-providers/cerebras/" target="_blank" rel="noopener">capitalandcompute.net &rarr;</a> <a href="https://www.investing.com/analysis/cerebras-48-billion-ipo-tests-the-markets-inference-bet-200680080" target="_blank" rel="noopener">investing.com &rarr;</a> <a href="https://www.cerebras.ai/blog/cerebras-launches-disaggregated-inference" target="_blank" rel="noopener">cerebras.ai &rarr;</a> <a href="https://infrabase.ai/blog/ai-inference-api-providers-compared" target="_blank" rel="noopener">infrabase.ai &rarr;</a></td>
         </tr>
       </tbody>
     </table>
@@ -2207,7 +2281,7 @@
       </tbody>
     </table>
   </div>
-  <p class="section-sub" style="margin-top:16px"><b>How to read this.</b> Chaining adds hidden spend: planner and advisor calls bill at the stronger model&rsquo;s rate and can fall outside the dashboards you watch, and one test counted about $11 of a $12 build as planner overhead. Prompt caches are generally model-specific, so switching models mid-task can forfeit cache hits. Most of the numbers above are vendors&rsquo; own and unreplicated. Anthropic&rsquo;s cost guidance, as a consultancy reads it, ranks a multi-model setup last of nine levers, behind prompt caching and effort tuning, so baseline one model across effort levels before you chain. It may still pay for parallel batch work, such as refactoring dozens of files, where one planner&rsquo;s cost spreads across many cheap executor runs, which is the caveat the benchmark&rsquo;s own author gives.</p>
+  <p class="section-sub" style="margin-top:16px"><b>How to read this.</b> Chaining adds hidden spend: planner and advisor calls bill at the stronger model&rsquo;s rate and can fall outside the dashboards you watch, and one test counted about $11 of a $12 build as planner overhead. Prompt caches are generally model-specific, so switching models mid-task can forfeit cache hits. Most of the numbers above are vendors&rsquo; own and unreplicated. Anthropic&rsquo;s cost guidance, as a consultancy reads it, ranks a multi-model setup last of nine levers, behind prompt caching and effort tuning, so baseline one model across effort levels before you chain. It may still pay for parallel batch work, such as refactoring dozens of files, where one planner&rsquo;s cost spreads across many cheap executor runs, which is the caveat the benchmark&rsquo;s own author gives. A Fireworks vice president told The Register that routing across a portfolio of models can cut bills by at least half, even &ldquo;six to eight times cheaper,&rdquo; and that Fireworks can prove it; the article shows no data, and Fireworks sells the capacity those models run on. <a href="https://www.theregister.com/ai-and-ml/2026/11/07/fireworks-says-youre-wasting-money-on-ai-unless-youre-using-all-the-models/5308277" target="_blank" rel="noopener">theregister.com &rarr;</a></p>
   </section>
 
   <section class="cat" data-cat="computer-use" data-layer="harness">
@@ -2462,8 +2536,8 @@
           <th class="co-cell"><div class="co-name">Gemini</div><div class="co-line">Google</div></th>
           <td class="ent-models">Gmail, Docs, Sheets, Slides, Calendar, Android, Search.</td>
           <td class="ent-pick">Google-ecosystem productivity</td>
-          <td class="ent-why">Reviewers still hand Gemini 3.1 Pro the top reasoning scores against Grok and GPT-5.6 in several independent benchmark rounds. Since Nov 12, Gemini 4 Hydrogen is what free app users get through automatic model selection, and it powers Google Search.
-            <a href="https://tech-insider.org/best-ai-chatbots-2026/" target="_blank" rel="noopener">tech-insider.org &rarr;</a> <a href="https://www.digitaltrends.com/cool-tech/googles-next-gen-gemini-4-hydrogen-ai-model-is-here-touting-faster-intelligence-for-all/" target="_blank" rel="noopener">digitaltrends.com &rarr;</a>
+          <td class="ent-why">Reviewers still hand Gemini 3.1 Pro the top reasoning scores against Grok and GPT-5.6 in several independent benchmark rounds. Since Nov 12, Gemini 4 Hydrogen is what free app users get through automatic model selection, and it powers Google Search. On Nov 18 Gemini 4 Neon replaced Argon for AI Pro and Ultra subscribers, and Gemini 3.1 Pro is being removed from the app.
+            <a href="https://tech-insider.org/best-ai-chatbots-2026/" target="_blank" rel="noopener">tech-insider.org &rarr;</a> <a href="https://www.digitaltrends.com/cool-tech/googles-next-gen-gemini-4-hydrogen-ai-model-is-here-touting-faster-intelligence-for-all/" target="_blank" rel="noopener">digitaltrends.com &rarr;</a> <a href="https://9to5google.com/2026/11/18/gemini-4-neon-announcement/" target="_blank" rel="noopener">9to5google.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -2492,7 +2566,7 @@
   </section>
 
   <footer>
-    <p>Snapshot compiled November 18, 2026 — new categories cover inference hosts and model chaining, after OpenAI released GPT-6.2 Astra and Sol, Perplexity launched its Orchestrator API and Multiagent, and Alibaba took Qwen4-Max out of preview, a week after Google's Gemini 4 Hydrogen and Decision 1 and Anthropic's Fable 5.2 and Mythos 5.2. Every model now shows its launch date. The tier matrix ranks companies by a usage-evidence score and shows one older version per model; the other model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled November 20, 2026 — Google launched Gemini 4 Neon, Thinking Machines released Inkling 2 Mini and opened up Inkling 2 Small, and NVIDIA's Nemotron joined the tier matrix, following new categories for inference hosts and model chaining, OpenAI's GPT-6.2 Astra and Sol, Perplexity's Orchestrator API and Multiagent, and Alibaba's Qwen4-Max. Every model now shows its launch date. The tier matrix ranks companies by a usage-evidence score and shows one older version per model; the other model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
@@ -2697,6 +2771,23 @@
       <a href="https://www.morphllm.com/multi-agent-model-routing">morphllm.com/multi-agent-routing</a>
       <a href="https://www.builder.io/blog/the-claude-advisor-pattern">builder.io/claude-advisor</a>
       <a href="https://dotzlaw.com/insights/ai-32-advisor-tool-pattern/">dotzlaw.com/advisor-tool</a>
+      <a href="https://9to5google.com/2026/11/18/gemini-4-neon-announcement/">9to5google.com/gemini-4-neon</a>
+      <a href="https://www.powerfulai.tools/blog/gemini-4-neon-google-ai-model-launch-2026">powerfulai.tools/gemini-4-neon</a>
+      <a href="https://releasebot.io/updates/github">releasebot.io/github-copilot</a>
+      <a href="https://rescana.com/post/fireworks-ai-incident-uber-cursor-notion-prepare-now">rescana.com/fireworks-incident</a>
+      <a href="https://www.theregister.com/ai-and-ml/2026/11/07/fireworks-says-youre-wasting-money-on-ai-unless-youre-using-all-the-models/5308277">theregister.com/fireworks-routing</a>
+      <a href="https://www.cerebras.ai/blog/cerebras-launches-disaggregated-inference">cerebras.ai/disaggregated-inference</a>
+      <a href="https://www.orcarouter.ai/blog/inkling-2-small-open-weights-download">orcarouter.ai/inkling-2-small-weights</a>
+      <a href="https://dev.to/paullovelace/inkling-2-small-weights-are-open-download-fine-tune-self-host-3l8b">dev.to/inkling-2-small-weights</a>
+      <a href="https://thinkingmachines.ai/news/inkling-2-mini/">thinkingmachines.ai/inkling-2-mini</a>
+      <a href="https://www.testingcatalog.com/thinking-machines-releases-inkling-2-mini-looped-open-model/">testingcatalog.com/inkling-2-mini</a>
+      <a href="https://x.com/ArtificialAnlys/status/2123877878568001635">x.com/artificialanalysis/inkling-2-mini</a>
+      <a href="https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents">nvidia.com/nemotron-for-science</a>
+      <a href="https://www.unite.ai/nvidia-launches-nemotron-for-science-and-open-chemistry-dataset/">unite.ai/nemotron-for-science</a>
+      <a href="https://www.secondtalent.com/resources/every-nemotron-ai-model-explained-compared/">secondtalent.com/nemotron</a>
+      <a href="https://artificialanalysis.ai/articles/nvidia-nemotron-3-ultra-released">artificialanalysis.ai/nemotron-3-ultra</a>
+      <a href="https://artificialanalysis.ai/articles/nvidia-nemotron-3-super-the-new-leader-in-open-efficient-intelligence">artificialanalysis.ai/nemotron-3-super</a>
+      <a href="https://en.wikipedia.org/wiki/Nemotron">wikipedia.org/nemotron</a>
     </div>
   </footer>
 
