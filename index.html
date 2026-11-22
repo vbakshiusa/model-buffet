@@ -21,6 +21,7 @@
     --c-microsoft:#3E7A9E;
     --c-thinking:#5F63B0;
     --c-nvidia:#5E9E1F;
+    --c-sarvam:#C2560F;
     --c-meta:#4C5FA0;
     --c-deepseek:#8A7A45;
     --c-qwen:#B15C4E;
@@ -68,6 +69,7 @@
       --c-microsoft:#7EB6D9;
     --c-thinking:#A5A8E6;
     --c-nvidia:#9BD14C;
+    --c-sarvam:#F2A15C;
       --c-meta:#8896CC;
       --c-deepseek:#BBA968;
       --c-qwen:#D08D7C;
@@ -114,6 +116,7 @@
     --c-microsoft:#7EB6D9;
     --c-thinking:#A5A8E6;
     --c-nvidia:#9BD14C;
+    --c-sarvam:#F2A15C;
     --c-meta:#8896CC;
     --c-deepseek:#BBA968;
     --c-qwen:#D08D7C;
@@ -629,6 +632,19 @@
     text-transform:uppercase;
     color:var(--ink-faint);
   }
+  .fb-select{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    padding:7px 10px;
+    border:1px solid var(--line-strong);
+    border-radius:8px;
+    background:var(--surface);
+    color:var(--ink);
+    min-width:min(340px, 100%);
+    max-width:100%;
+    cursor:pointer;
+  }
+  .fb-select:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
   .fb-group{
     display:flex;
     flex-wrap:wrap;
@@ -749,7 +765,8 @@
   <div class="topbar-inner">
     <a class="topbar-brand" href="#top">Model Buffet</a>
     <div class="topbar-scroll">
-      <a class="topbar-link" href="#tier-matrix">Tier matrix</a>
+      <a class="topbar-link" href="#tier-matrix">Leading models</a>
+      <a class="topbar-link" href="#open-models">Open weights</a>
       <a class="topbar-link" href="#voice-live">Voice &amp; live</a>
       <a class="topbar-link" href="#decision-models">Decision models</a>
       <a class="topbar-link" href="#enterprise-ide">Enterprise &amp; IDE</a>
@@ -774,42 +791,43 @@
     <h1>Model Buffet</h1>
     <p class="dek">A working cheat sheet across the labs that matter right now — from the quick, cheap counter items to the five-course flagship reasoning.</p>
     <div class="meta-row">
-      <span>Snapshot: Nov 21, 2026</span>
+      <span>Snapshot: Nov 22, 2026</span>
       <span>Moves fast — recheck pricing before you budget on it</span>
     </div>
   </header>
 
   <nav class="filterbar" id="filterbar" aria-label="Filter by category">
     <div class="fb-inner">
-      <span class="fb-label">Show</span>
-      <button class="fb-chip fb-all" id="fb-all" type="button" aria-pressed="true">All</button>
-      <div class="fb-group" role="group" aria-label="Models">
-        <button class="fb-glabel" type="button" data-cats="tier-matrix,voice-live,decision-models" title="The engines themselves: pick a model by tier, by voice or live use, or by decision type." aria-pressed="false">Models</button>
-        <button class="fb-chip" type="button" data-cat="tier-matrix" title="Every lab's models from cheap and fast to flagship" aria-pressed="false">Tier matrix</button>
-        <button class="fb-chip" type="button" data-cat="voice-live" title="Real-time speech-in, speech-out models" aria-pressed="false">Voice &amp; live</button>
-        <button class="fb-chip" type="button" data-cat="decision-models" title="Models that return a probability instead of text" aria-pressed="false">Decision models</button>
-      </div>
-      <div class="fb-group" role="group" aria-label="Harnesses &amp; agents">
-        <button class="fb-glabel" type="button" data-cats="enterprise-ide,agent-orchestrators,agent-frameworks,model-chaining,computer-use,always-on" title="The loop, tools and permissions wrapped around a model: finished coding tools, the orchestrators that run several of them, the frameworks you build your own with, computer-use agents and always-on agents." aria-pressed="false">Harnesses &amp; agents</button>
-        <button class="fb-chip" type="button" data-cat="enterprise-ide" title="Coding harnesses: Copilot, Cursor, Codex, Cognition, Claude Code" aria-pressed="false">Enterprise &amp; IDE</button>
-        <button class="fb-chip" type="button" data-cat="agent-orchestrators" title="Tools that run several coding agents at once" aria-pressed="false">Orchestrators</button>
-        <button class="fb-chip" type="button" data-cat="agent-frameworks" title="Libraries for building your own harness" aria-pressed="false">Agent frameworks</button>
-        <button class="fb-chip" type="button" data-cat="model-chaining" title="Planner and executor, advisor, cross-check and escalation patterns" aria-pressed="false">Model chaining</button>
-        <button class="fb-chip" type="button" data-cat="computer-use" title="Agents that operate a screen while you watch" aria-pressed="false">Computer-use</button>
-        <button class="fb-chip" type="button" data-cat="always-on" title="Agents that keep working in the background" aria-pressed="false">Always-on agents</button>
-      </div>
-      <div class="fb-group" role="group" aria-label="Routing &amp; tokens">
-        <button class="fb-glabel" type="button" data-cats="model-routers,context-compression,inference-hosts" title="What sits between the harness and the model: choosing the model or provider, and shrinking what gets sent." aria-pressed="false">Routing &amp; tokens</button>
-        <button class="fb-chip" type="button" data-cat="model-routers" title="Pick the model or provider per request" aria-pressed="false">Routers</button>
-        <button class="fb-chip" type="button" data-cat="context-compression" title="Cut the tokens sent to the model" aria-pressed="false">Context compression</button>
-        <button class="fb-chip" type="button" data-cat="inference-hosts" title="Where open-weight models actually run: Fireworks, Together, Groq and others" aria-pressed="false">Inference hosts</button>
-      </div>
-      <div class="fb-group" role="group" aria-label="Apps">
-        <button class="fb-glabel" type="button" data-cats="consumer" title="Finished assistants people use directly." aria-pressed="false">Apps</button>
-        <button class="fb-chip" type="button" data-cat="consumer" title="What people actually download and use" aria-pressed="false">Consumer apps</button>
-      </div>
-      <span class="fb-status" id="fb-status" aria-live="polite">Showing all 13 categories</span>
-      <button class="fb-clear" id="fb-clear" type="button" hidden>Clear filter</button>
+      <label class="fb-label" for="fb-select">Show</label>
+      <select class="fb-select" id="fb-select">
+        <option value="all">All categories</option>
+        <optgroup label="Models">
+          <option value="layer:models">Everything in Models</option>
+          <option value="tier-matrix">Leading models &middot; closed weights</option>
+          <option value="open-models">Leading models &middot; open weights</option>
+          <option value="voice-live">Voice &amp; live</option>
+          <option value="decision-models">Decision models</option>
+        </optgroup>
+        <optgroup label="Harnesses &amp; agents">
+          <option value="layer:harness">Everything in Harnesses &amp; agents</option>
+          <option value="enterprise-ide">Enterprise &amp; IDE</option>
+          <option value="agent-orchestrators">Orchestrators</option>
+          <option value="agent-frameworks">Agent frameworks</option>
+          <option value="model-chaining">Model chaining</option>
+          <option value="computer-use">Computer-use</option>
+          <option value="always-on">Always-on agents</option>
+        </optgroup>
+        <optgroup label="Routing &amp; tokens">
+          <option value="layer:routing">Everything in Routing &amp; tokens</option>
+          <option value="model-routers">Routers</option>
+          <option value="context-compression">Context compression</option>
+          <option value="inference-hosts">Inference hosts</option>
+        </optgroup>
+        <optgroup label="Apps">
+          <option value="consumer">Consumer apps</option>
+        </optgroup>
+      </select>
+      <span class="fb-status" id="fb-status" aria-live="polite">Showing all 14 categories</span>
     </div>
   </nav>
 
@@ -824,7 +842,7 @@
       <div class="qp-item"><span class="qp-need">Real-time web / social context</span><span class="qp-ans">Grok 4.7 (built-in X search)</span></div>
       <div class="qp-item"><span class="qp-need">Deep inside Gmail/Docs/Workspace</span><span class="qp-ans">Gemini 4 Hydrogen · Neon</span></div>
       <div class="qp-item"><span class="qp-need">Self-hosting on a budget</span><span class="qp-ans">Qwen3.8&#8209;27B · DeepSeek V4.1 Flash</span></div>
-      <div class="qp-item"><span class="qp-need">Frontier-grade reasoning, open weights</span><span class="qp-ans">Qwen3.8&#8209;Max</span></div>
+      <div class="qp-item"><span class="qp-need">Frontier-grade reasoning, open weights</span><span class="qp-ans">DeepSeek V4 Pro · Muse Spark Open · Nemotron 3 Ultra</span></div>
       <div class="qp-item"><span class="qp-need">Talk to it live / build a voice agent</span><span class="qp-ans">Grok Voice 3.0 · GPT&#8209;Live</span></div>
       <div class="qp-item"><span class="qp-need">An agent that keeps working while you're away</span><span class="qp-ans">Dots · Claude Duet · Muse</span></div>
       <div class="qp-item"><span class="qp-need">Cut an agent's token bill</span><span class="qp-ans">Headroom · RTK</span></div>
@@ -834,10 +852,10 @@
 
   <section class="cat" data-cat="tier-matrix" data-layer="models">
   <div class="section-head" id="tier-matrix">
-    <h2>Tier matrix</h2>
+    <h2>Leading models &middot; closed weights</h2>
     <div class="axis">cheap / fast <span class="arrow">&rarr;</span> expensive / deep-thinking</div>
   </div>
-  <p class="section-sub">Each cell carries three independent takes — not one blog's opinion — plus a <b>usage tier</b>: how much real-world adoption evidence backs the model up (OpenRouter/LMArena rank, forum consensus, production use), from <span class="usage-tier" style="color:var(--accent)">Leading</span> down to <span class="usage-tier" style="color:var(--accent)">Niche</span> or a plain "too new to tell." Advanced and flagship models share one column, and each carries a compact <b>prior version</b> underneath so you can see what the upgrade actually bought you. Every model shows its launch date. <b>Companies are ranked by a usage score</b>: Leading counts 4 points, Strong 3, Growing 2, Emerging 1 and Niche 0, summed over a company's three best-evidenced models (the number beside each name). Newly launched models score low until adoption shows up, so the order reflects what people are actually using, not who launched last. The one exception is a successor in the same line (Fable 5.2 after Fable 5.1, GPT-6.2 Astra and Sol after their predecessors, Gemini 4 Hydrogen after 3.8 Flash), which carries its predecessor's tier until its own data arrives; its cell says so. Within a company, models run newest first, and each shows <b>one older version</b> only &mdash; earlier generations that were listed on their own before have been cut. One caution: Artificial Analysis moved its Intelligence Index to v5.0 on Oct 28 (two benchmarks added, easy questions dropped), so index numbers quoted in this table come from different versions &mdash; compare scores only within one source.</p>
+  <p class="section-sub">This table covers closed-weight models, which you can reach only through the vendor&rsquo;s own app or API or a partner&rsquo;s; downloadable-weight models sit in the open-weights table below. Each cell carries three independent takes — not one blog's opinion — plus a <b>usage tier</b>: how much real-world adoption evidence backs the model up (OpenRouter/LMArena rank, forum consensus, production use), from <span class="usage-tier" style="color:var(--accent)">Leading</span> down to <span class="usage-tier" style="color:var(--accent)">Niche</span> or a plain "too new to tell." Advanced and flagship models share one column, and each carries a compact <b>prior version</b> underneath so you can see what the upgrade actually bought you. Every model shows its launch date. <b>Companies are ranked by a usage score</b> (separately in each table): Leading counts 4 points, Strong 3, Growing 2, Emerging 1 and Niche 0, summed over a company's three best-evidenced models (the number beside each name). Newly launched models score low until adoption shows up, so the order reflects what people are actually using, not who launched last. The one exception is a successor in the same line (Fable 5.2 after Fable 5.1, GPT-6.2 Astra and Sol after their predecessors, Gemini 4 Hydrogen after 3.8 Flash), which carries its predecessor's tier until its own data arrives; its cell says so. Within a company, models run newest first, and each shows <b>one older version</b> only &mdash; earlier generations that were listed on their own before have been cut. One caution: Artificial Analysis moved its Intelligence Index to v5.0 on Oct 28 (two benchmarks added, easy questions dropped), so index numbers quoted in this table come from different versions &mdash; compare scores only within one source.</p>
 
   <div class="table-wrap">
     <table class="matrix">
@@ -1047,84 +1065,6 @@
         </tr>
       </tbody>
 
-      <tbody style="--co:var(--c-deepseek)">
-        <tr>
-          <th class="co-cell"><div class="co-name">DeepSeek</div><div class="co-line">open weight · MIT · 7 pts</div></th>
-          <td>
-            <div class="cell-model">DeepSeek V4.1 Flash</div><div class="cell-spec">$0.15&ndash;0.30 / $0.60&ndash;1.20 · 1017 update</div>
-            <div class="cell-date">Launched Sept 10, 2026 · 1017 update Oct 17</div>
-            <div class="usage-tier">Leading</div>
-            <div class="usage-evidence">1 trillion tokens in its first 24 hours on OpenRouter, a record for a paid model &mdash; and a same-price 1017 update on Oct 17 lifted DeepSWE to 77.0 (74.2 before, per secondary coverage) with MIT weights.</div>
-            <ul class="cell-sources">
-          <li>1 trillion tokens processed in the first 24 hours, on pace to be the biggest 48-hour paid-model launch. <a href="https://x.com/OpenRouter/status/2098503808682967356" target="_blank" rel="noopener">x.com &rarr;</a></li>
-          <li>DeepSeek's own claim: this smaller model outperforms its pricier V4 Pro flagship on several benchmarks. <a href="https://siliconangle.com/2026/09/10/deepseek-releases-v4-1-flash-says-it-outperforms-flagship-v4-pro/" target="_blank" rel="noopener">siliconangle.com &rarr;</a></li>
-          <li>Changelog: V4.1-Flash-1017 keeps the price, scores 77.0 on DeepSWE v1.1 and 42.3 on Terminal-Bench 4.0, and the old deepseek-v4-flash names now route to it. <a href="https://api-docs.deepseek.com/updates/" target="_blank" rel="noopener">api-docs.deepseek.com &rarr;</a></li>
-            </ul>
-          </td>
-          <td><span class="cell-empty">&mdash;</span></td>
-          <td>
-            <div class="cell-model">DeepSeek V4 Pro</div><div class="cell-spec">1M ctx · 49B active · MIT</div>
-            <div class="cell-date">GA Aug 12, 2026 (preview Apr 24)</div>
-            <div class="usage-tier">Strong</div>
-            <div class="usage-evidence">Served by 16 independent providers, but its own traffic is now being redirected to the cheaper V4.1 Flash pending a real successor.</div>
-            <ul class="cell-sources">
-          <li>Served by 16 different inference providers, throughput varying 4&ndash;57 tokens/sec. <a href="https://openrouter.ai/deepseek/deepseek-v4-pro" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
-          <li>Hands-on review tests its agentic coding performance in practical use. <a href="https://www.geeky-gadgets.com/deepseek-v4-pro-review/" target="_blank" rel="noopener">geeky-gadgets.com &rarr;</a></li>
-          <li>DeepSeek began auto-routing all V4-Pro API requests to V4.1 Flash as of mid-September. <a href="https://siliconangle.com/2026/09/10/deepseek-releases-v4-1-flash-says-it-outperforms-flagship-v4-pro/" target="_blank" rel="noopener">siliconangle.com &rarr;</a></li>
-            </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">DeepSeek V3.2</span><span class="prior-spec">Dec 1, 2025 · open weight</span></div>
-              <div class="prior-delta">V4-Pro is a 1.6T-total / 49B-active model with 1M context (up from ~160K) under MIT. DeepSeek claims it needs 27% of V3.2's per-token compute (vendor claim); AA's index is 53. List price has moved and sources conflict ($0.435 / $0.87 vs $0.66 / $1.98 off-peak), so check DeepSeek's live page. Since Sept 14, DeepSeek routes all V4-Pro API calls to V4.1 Flash at Flash rates until a V4.1 Pro ships &mdash; production users complained about the unannounced change.</div>
-              <div class="prior-links"><a href="https://api-docs.deepseek.com/news/news260910/" target="_blank" rel="noopener">api-docs.deepseek.com &rarr;</a><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank" rel="noopener">huggingface.co &rarr;</a></div>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-
-      <tbody style="--co:var(--c-qwen)">
-        <tr>
-          <th class="co-cell"><div class="co-name">Qwen</div><div class="co-line">open weight · 6 pts</div></th>
-          <td>
-            <div class="cell-model">Qwen3.8-Omni-Flash</div><div class="cell-spec">$0.15 / $0.47 · omnimodal</div>
-            <div class="cell-date">Launched Sept 18, 2026</div>
-            <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">An independent aggregator has it tracked but not publicly ranked yet; it only shipped in September 2026.</div>
-            <ul class="cell-sources">
-          <li>Purpose-built for agentic audio-video understanding and tool use, not general chat. <a href="https://www.marktechpost.com/2026/09/18/alibaba-qwen-releases-qwen3-8-omni-flash/" target="_blank" rel="noopener">marktechpost.com &rarr;</a></li>
-          <li>Claims it beats Gemini 3.8 Flash on most audio benchmarks. <a href="https://qwen.ai/blog?id=qwen3.8-omni-flash" target="_blank" rel="noopener">qwen.ai &rarr;</a></li>
-          <li>Tracked but not publicly ranked yet. <a href="https://benchlm.ai/models/qwen3-8-omni-flash" target="_blank" rel="noopener">benchlm.ai &rarr;</a></li>
-            </ul>
-          </td>
-          <td>
-            <div class="cell-model">Qwen3.8-27B</div><div class="cell-spec">27B · Apache 2.0</div>
-            <div class="cell-date">Launched Aug 14, 2026</div>
-            <div class="usage-tier">Leading</div>
-            <div class="usage-evidence">Over 3 million Hugging Face downloads within 3 days of release, and the #1 trending model on the platform.</div>
-            <ul class="cell-sources">
-          <li>Passed 3 million Hugging Face downloads within three days of release. <a href="https://cybernews.com/tech/qwen-38-27b-ai-model-debuts-with-million-downloads/" target="_blank" rel="noopener">cybernews.com &rarr;</a></li>
-          <li>Hands-on guide runs it locally on a consumer RTX 5060 Ti (16GB VRAM). <a href="https://blog.margrop.net/en/post/qwen38-27b-local-deploy-5060ti-16g/" target="_blank" rel="noopener">blog.margrop.net &rarr;</a></li>
-          <li>Became the #1 trending model on the platform right after release. <a href="https://huggingface.co/Qwen/Qwen3.8-27B" target="_blank" rel="noopener">huggingface.co &rarr;</a></li>
-            </ul>
-          </td>
-          <td>
-            <div class="cell-model">Qwen4-Max</div><div class="cell-spec">1M ctx · $1.50 / $4.50 · closed weights</div>
-            <div class="cell-date">Launched Nov 15&ndash;16, 2026 (preview from Nov 11)</div>
-            <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">Out of preview five days after it opened, and the first Qwen 4 model to ship. Unlike Qwen3.8-Max it is closed-weight and API-only. Artificial Analysis scores it 43 (index version not stated), below Fable 5.2 (65), GPT-6.2 Astra (62) and Gemini 4 Carbon (60). Too new for usage-rank data.</div>
-            <ul class="cell-sources">
-          <li>Generally available on Alibaba's pay-as-you-go API and Token Plan as qwen4-max: a 2.4T-parameter MoE with 71B active, 1M context, no weights, and no fine-tuning or batch inference. Alibaba says smaller Qwen4 models will be open-sourced later, with no date. <a href="https://modelfit.io/blog/qwen4-max-general-availability-no-weights/" target="_blank" rel="noopener">modelfit.io &rarr;</a></li>
-          <li>Alibaba reports 75.7 on DeepSWE v1.1, just ahead of Opus 5.5 (74.2), but 48.5 on Terminal-Bench 4.0 against 59.6 for Opus 5.5 and 59.1 for GPT-6 Astra. These are Alibaba's figures; independent boards hadn't listed it when the guide was written. About 25% cheaper than Qwen3.8-Max per token. <a href="https://freakyjolly.com/qwen4-max-guide/" target="_blank" rel="noopener">freakyjolly.com &rarr;</a></li>
-          <li>OpenRouter lists the model at $1.425 / $4.275 through Alibaba Cloud (international), a few percent below the $1.50 / $4.50 Singapore list price, so the price depends on where you buy it. Not available through EU in-region routing. <a href="https://openrouter.ai/qwen/qwen4-max" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
-            </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Qwen3.8-Max</span><span class="prior-spec">Aug 3, 2026 · 1M ctx · open weights Aug 12</span></div>
-              <div class="prior-delta">Still the only Qwen flagship with open weights: a 2.4T-parameter MoE (95B active) under a custom license (attribution above 100M monthly users or $20M monthly revenue, and a commercial license for model-as-a-service above $50M), text-only and 262K native context in the open build, needing multi-node hardware. Real usage is small, about 0.1% of OpenRouter tokens (#27). Qwen4-Max is cheaper per token ($1.50 / $4.50 vs $2 / $6) and stronger on terminal tasks by Alibaba's numbers.</div>
-              <div class="prior-links"><a href="https://www.scmp.com/tech/tech-trends/article/3363927/alibaba-adds-commercial-restrictions-open-weight-qwen38-max-ai-model" target="_blank" rel="noopener">scmp.com &rarr;</a><a href="https://opencode.ai/data/qwen/qwen3-8-max" target="_blank" rel="noopener">opencode.ai &rarr;</a></div>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-
       <tbody style="--co:var(--c-google)">
         <tr>
           <th class="co-cell" rowspan="2"><div class="co-name">Google</div><div class="co-line">Gemini · 4 pts</div></th>
@@ -1271,50 +1211,6 @@
         </tr>
       </tbody>
 
-      <tbody style="--co:var(--c-mistral)">
-        <tr>
-          <th class="co-cell"><div class="co-name">Mistral</div><div class="co-line">open weight · Large 4 modified-MIT licence · 3 pts</div></th>
-          <td>
-            <div class="cell-model">Small 4</div><div class="cell-spec">efficient enterprise</div>
-            <div class="cell-date">Launched Mar 16, 2026</div>
-            <div class="usage-tier">Growing</div>
-            <div class="usage-evidence">Active HN testing within days of release, but the same threads say Mistral's small-model line has fallen well behind Qwen and Gemma at similar sizes.</div>
-            <ul class="cell-sources">
-          <li>Solid for a few months after each release, but generally trailing the "big 3" labs' offerings. <a href="https://news.ycombinator.com/item?id=47404575" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
-          <li>Real-world cost and provider positioning listing. <a href="https://openrouter.ai/mistralai/mistral-small-2603" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
-          <li>Frames its value as unifying three previously separate specialized models into one. <a href="https://dev.to/akaranjkar08/mistral-small-4-one-open-source-model-that-replaces-three-2026-5b96" target="_blank" rel="noopener">dev.to &rarr;</a></li>
-            </ul>
-          </td>
-          <td>
-            <div class="cell-model">Medium 3.5</div><div class="cell-spec">EU compliance focus</div>
-            <div class="cell-date">Launched Apr 29, 2026</div>
-            <div class="usage-tier">Niche</div>
-            <div class="usage-evidence">A Reddit commenter said it performs worse than DeepSeek models at a higher API price; ranks 328th of 457 on OpenRouter by cost.</div>
-            <ul class="cell-sources">
-          <li>Users discussed running it locally at Q4 quantization on ~70GB VRAM, near a maxed-out Mac Studio. <a href="https://news.ycombinator.com/item?id=47949642" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
-          <li>Highlights a built-in coding agent that can open pull requests directly. <a href="https://dev.to/techsifted/mistral-medium-35-review-a-128b-open-weight-model-with-a-coding-agent-that-opens-prs-for-you-5a0i" target="_blank" rel="noopener">dev.to &rarr;</a></li>
-          <li>Ranks only 328th of 457 chat models by input cost — a small, premium-priced footprint. <a href="https://openrouter.ai/mistralai/mistral-medium-3-5" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
-            </ul>
-          </td>
-          <td>
-            <div class="cell-model">Large 4</div><div class="cell-spec">1M ctx · ~1T MoE / ~52B active · open weights</div>
-            <div class="cell-date">Preview Oct 6 · weights Oct 29, 2026</div>
-            <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">The open weights are out (Oct 29, modified-MIT license with a model-as-a-service restriction), and Mistral's docs now list the API as generally available from Nov 5, though they called it a preview on Nov 3. Artificial Analysis's current index scores it 26, the highest open model built outside China and 7th among open-weight models. The earlier 38.4 was on an older index version, so the drop is not a regression.</div>
-            <ul class="cell-sources">
-          <li>Cybersecurity is the standout and output is quick (~116 tokens/sec), but a 41.9% hallucination rate and ~18.7s time-to-first-token hurt customer-facing use. <a href="https://www.eesel.ai/blog/mistral-large-4-review" target="_blank" rel="noopener">eesel.ai &rarr;</a></li>
-          <li>API preview launched at $1.36 / $4.18, with live prices since Oct 29 near $0.70 / $2.10; the weights are Mistral's first with a model-as-a-service restriction. Mistral's own coding scores depend on its agent harness (41.4% Terminal-Bench vs 24.7% in AA's standard test), and Omniscience is weak (5.1). <a href="https://www.lindy.ai/blog/mistral-large-4" target="_blank" rel="noopener">lindy.ai &rarr;</a></li>
-          <li>The weights went up on Hugging Face on Oct 29 (about 1.06 TB in bf16, 610 GB in NVFP4 for four B200s), after the promised date slipped. Businesses reselling it as a service need a separate Mistral license; internal use and embedding it in an end product are free. The promo price has no published end date. <a href="https://www.orcarouter.ai/blog/mistral-large-4-open-weights-licence" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></li>
-            </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Mistral Large 3</span><span class="prior-spec">Dec 2, 2025 · 256K ctx · $0.50 / $1.50</span></div>
-              <div class="prior-delta">Large 4 grows to roughly 1T total and ~52B active parameters with a 1M-token context (up from 256K) and hybrid reasoning. It is also dearer: even at the promotional rate about 39% more per output token. Large 3 stays Apache 2.0 with no restrictions, while Large 4's license adds the model-as-a-service condition, and the mistral-large-latest alias still points to Large 3. Sources disagree on the active-parameter count (49B or 52B) and on whether the discount ends.</div>
-              <div class="prior-links"><a href="https://www.orcarouter.ai/blog/mistral-large-4-open-weights-licence" target="_blank" rel="noopener">orcarouter.ai &rarr;</a><a href="https://www.lindy.ai/blog/mistral-large-4" target="_blank" rel="noopener">lindy.ai &rarr;</a></div>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-
       <tbody style="--co:var(--c-xai)">
         <tr>
           <th class="co-cell"><div class="co-name">xAI</div><div class="co-line">Grok · 3 pts</div></th>
@@ -1349,9 +1245,43 @@
         </tr>
       </tbody>
 
+      <tbody style="--co:var(--c-qwen)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Qwen</div><div class="co-line">open weight · 2 pts</div></th>
+          <td>
+            <div class="cell-model">Qwen3.8-Omni-Flash</div><div class="cell-spec">$0.15 / $0.47 · omnimodal</div>
+            <div class="cell-date">Launched Sept 18, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">An independent aggregator has it tracked but not publicly ranked yet; it only shipped in September 2026.</div>
+            <ul class="cell-sources">
+          <li>Purpose-built for agentic audio-video understanding and tool use, not general chat. <a href="https://www.marktechpost.com/2026/09/18/alibaba-qwen-releases-qwen3-8-omni-flash/" target="_blank" rel="noopener">marktechpost.com &rarr;</a></li>
+          <li>Claims it beats Gemini 3.8 Flash on most audio benchmarks. <a href="https://qwen.ai/blog?id=qwen3.8-omni-flash" target="_blank" rel="noopener">qwen.ai &rarr;</a></li>
+          <li>Tracked but not publicly ranked yet. <a href="https://benchlm.ai/models/qwen3-8-omni-flash" target="_blank" rel="noopener">benchlm.ai &rarr;</a></li>
+            </ul>
+          </td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Qwen4-Max</div><div class="cell-spec">1M ctx · $1.50 / $4.50 · closed weights</div>
+            <div class="cell-date">Launched Nov 15&ndash;16, 2026 (preview from Nov 11)</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Out of preview five days after it opened, and the first Qwen 4 model to ship. Unlike Qwen3.8-Max it is closed-weight and API-only. Artificial Analysis scores it 43 (index version not stated), below Fable 5.2 (65), GPT-6.2 Astra (62) and Gemini 4 Carbon (60). Too new for usage-rank data.</div>
+            <ul class="cell-sources">
+          <li>Generally available on Alibaba's pay-as-you-go API and Token Plan as qwen4-max: a 2.4T-parameter MoE with 71B active, 1M context, no weights, and no fine-tuning or batch inference. Alibaba says smaller Qwen4 models will be open-sourced later, with no date. <a href="https://modelfit.io/blog/qwen4-max-general-availability-no-weights/" target="_blank" rel="noopener">modelfit.io &rarr;</a></li>
+          <li>Alibaba reports 75.7 on DeepSWE v1.1, just ahead of Opus 5.5 (74.2), but 48.5 on Terminal-Bench 4.0 against 59.6 for Opus 5.5 and 59.1 for GPT-6 Astra. These are Alibaba's figures; independent boards hadn't listed it when the guide was written. About 25% cheaper than Qwen3.8-Max per token. <a href="https://freakyjolly.com/qwen4-max-guide/" target="_blank" rel="noopener">freakyjolly.com &rarr;</a></li>
+          <li>OpenRouter lists the model at $1.425 / $4.275 through Alibaba Cloud (international), a few percent below the $1.50 / $4.50 Singapore list price, so the price depends on where you buy it. Not available through EU in-region routing. <a href="https://openrouter.ai/qwen/qwen4-max" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Qwen3.8-Max</span><span class="prior-spec">Aug 3, 2026 · 1M ctx · open weights Aug 12</span></div>
+              <div class="prior-delta">Still the only Qwen flagship with open weights: a 2.4T-parameter MoE (95B active) under a custom license (attribution above 100M monthly users or $20M monthly revenue, and a commercial license for model-as-a-service above $50M), text-only and 262K native context in the open build, needing multi-node hardware. Real usage is small, about 0.1% of OpenRouter tokens (#27). Qwen4-Max is cheaper per token ($1.50 / $4.50 vs $2 / $6) and stronger on terminal tasks by Alibaba's numbers.</div>
+              <div class="prior-links"><a href="https://www.scmp.com/tech/tech-trends/article/3363927/alibaba-adds-commercial-restrictions-open-weight-qwen38-max-ai-model" target="_blank" rel="noopener">scmp.com &rarr;</a><a href="https://opencode.ai/data/qwen/qwen3-8-max" target="_blank" rel="noopener">opencode.ai &rarr;</a></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
       <tbody style="--co:var(--c-meta)">
         <tr>
-          <th class="co-cell" rowspan="2"><div class="co-name">Meta</div><div class="co-line">Muse · 3 pts</div></th>
+          <th class="co-cell"><div class="co-name">Meta</div><div class="co-line">Muse · 2 pts</div></th>
           <td>
             <div class="cell-model">Muse Ember</div><div class="cell-spec">1M ctx · $0.10 / $0.50 · text, image, audio, video in</div>
             <div class="cell-date">Launched Nov 9, 2026</div>
@@ -1361,37 +1291,6 @@
           <li>Meta says it scores 36 on Artificial Analysis's index at about $0.14 a task (Muse Spark 1.3: 37 at $2.39) and matches Haiku 5.5's best score at roughly a third of the cost. It trails Haiku on FrontierCode 2.0-AA, 27.2% vs 34.9%. <a href="https://research.meta.ai/blog/muse-ember" target="_blank" rel="noopener">research.meta.ai &rarr;</a></li>
           <li>Pricing triples above 200K tokens ($0.30 / $1.50), several headline benchmarks are Meta internal evaluations, and rate limits and data terms aren't published. Aragon's view: good for routine agent steps with a router sending hard cases elsewhere. <a href="https://aragonresearch.com/meta-muse-ember-sets-a-new-agent-price-floor/" target="_blank" rel="noopener">aragonresearch.com &rarr;</a></li>
           <li>Same $0.10 / $0.50 list price as Haiku 5.5 and GPT-6 Luna, with cheaper cached input ($0.004) and a 512K output ceiling, but rivals offer batch rates of $0.05 / $0.25 that make them cheaper for asynchronous work. Sold on standard terms, not the data-training Contributor tier. <a href="https://www.datastudios.org/post/meta-muse-ember-api-pricing-0-10-input-0-50-output-1m-context" target="_blank" rel="noopener">datastudios.org &rarr;</a></li>
-            </ul>
-          </td>
-          <td><span class="cell-empty">&mdash;</span></td>
-          <td>
-            <div class="cell-model">Muse Spark Open</div><div class="cell-spec">816B MoE / 42B active · 1M ctx · open weights</div>
-            <div class="cell-date">Weights released Oct 15, 2026</div>
-            <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">Weights went public Oct 15 on Hugging Face and four clouds, under Meta's custom Muse Model License rather than an OSI open-source license. Meta calls it the most capable US open-weight model, and Artificial Analysis agrees on the ranking: its index of 39 tops US open weights, ahead of Reflection's Beam at 30.</div>
-            <ul class="cell-sources">
-          <li>Meta's launch post calls it the most capable US open-weight model to date and says the open version got extra safety post-training. <a href="https://research.meta.ai/blog/muse-spark-open" target="_blank" rel="noopener">research.meta.ai &rarr;</a></li>
-          <li>License fine print: you must display "Built with Muse Spark Open," and model-as-a-service providers above $20M revenue need a separate agreement with Meta. <a href="https://www.orcarouter.ai/blog/muse-spark-open-best-us-open-weight-model" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></li>
-          <li>Downloadable from Amazon SageMaker, Google Cloud Model Garden, Hugging Face, and Microsoft Foundry, and served by providers including Groq, Together, and OpenRouter. <a href="https://www.unite.ai/metas-816b-parameter-muse-spark-open-weights-are-now-public/" target="_blank" rel="noopener">unite.ai &rarr;</a></li>
-            </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Muse Spark 1.3 (hosted)</span><span class="prior-spec">Sept 2, 2026 · closed · $1.25 / $4.25</span></div>
-              <div class="prior-delta">Open gives you the weights; hosted 1.3 stays closed and metered. Meta publishes no price for Open &mdash; the only figure I found is a third-party OpenRouter route at the same $1.25 / $4.25. One commentary says the model sat quietly for about a month before the Oct 15 paperwork, so "release" is partly framing.</div>
-              <div class="prior-links"><a href="https://www.orcarouter.ai/blog/muse-spark-open-best-us-open-weight-model" target="_blank" rel="noopener">orcarouter.ai &rarr;</a><a href="https://www.digitalapplied.com/blog/ai-model-releases-october-2026-tracker" target="_blank" rel="noopener">digitalapplied.com &rarr;</a></div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          
-          <td>
-            <div class="cell-model">Muse Glimmer</div><div class="cell-spec">30B · open weight · one consumer GPU</div>
-            <div class="cell-date">Launched Aug 10, 2026</div>
-            <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">Early ecosystem tooling exists (an NVIDIA guide, fast community quantization), but no independent usage-share data yet.</div>
-            <ul class="cell-sources">
-          <li>Positioned as a local, on-device agentic model for tool use and local coding, not general chat. <a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model" target="_blank" rel="noopener">research.meta.ai &rarr;</a></li>
-          <li>Walks through running it as a local agent on consumer RTX GPUs. <a href="https://developer.nvidia.com/blog/run-local-agentic-ai-workflows-with-metas-muse-glimmer-on-nvidia/" target="_blank" rel="noopener">developer.nvidia.com &rarr;</a></li>
-          <li>Community quantized builds appeared within days of release. <a href="https://huggingface.co/blog/muse-glimmer" target="_blank" rel="noopener">huggingface.co &rarr;</a></li>
             </ul>
           </td>
           <td><span class="cell-empty">&mdash;</span></td>
@@ -1409,6 +1308,168 @@
               <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Muse Spark 1.3</span><span class="prior-spec">Sept 2, 2026 · $1.25 / $4.25</span></div>
               <div class="prior-delta">Wonder lists at about 3&times; Spark 1.3's per-token price and, by Artificial Analysis's estimate, costs nearly 3&times; as much per task. Meta calls Wonder a much larger class of model than Spark; Spark stays on the API as the cheaper, lower-latency option. Neither Wonder model has open weights.</div>
               <div class="prior-links"><a href="https://explainx.ai/blog/meta-muse-wonder-full-launch-pricing-benchmarks-muse-code-2026" target="_blank" rel="noopener">explainx.ai &rarr;</a><a href="https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api" target="_blank" rel="noopener">venturebeat.com &rarr;</a></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody style="--co:var(--c-mistral)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Mistral</div><div class="co-line">open weight · Large 4 modified-MIT licence · 0 pts</div></th>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Medium 3.5</div><div class="cell-spec">EU compliance focus</div>
+            <div class="cell-date">Launched Apr 29, 2026</div>
+            <div class="usage-tier">Niche</div>
+            <div class="usage-evidence">A Reddit commenter said it performs worse than DeepSeek models at a higher API price; ranks 328th of 457 on OpenRouter by cost.</div>
+            <ul class="cell-sources">
+          <li>Users discussed running it locally at Q4 quantization on ~70GB VRAM, near a maxed-out Mac Studio. <a href="https://news.ycombinator.com/item?id=47949642" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
+          <li>Highlights a built-in coding agent that can open pull requests directly. <a href="https://dev.to/techsifted/mistral-medium-35-review-a-128b-open-weight-model-with-a-coding-agent-that-opens-prs-for-you-5a0i" target="_blank" rel="noopener">dev.to &rarr;</a></li>
+          <li>Ranks only 328th of 457 chat models by input cost — a small, premium-priced footprint. <a href="https://openrouter.ai/mistralai/mistral-medium-3-5" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
+            </ul>
+          </td>
+          <td><span class="cell-empty">&mdash;</span></td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+  </section>
+
+  <section class="cat" data-cat="open-models" data-layer="models">
+  <div class="section-head" id="open-models">
+    <h2>Leading models &middot; open weights</h2>
+    <div class="axis">cheap / fast <span class="arrow">&rarr;</span> expensive / deep-thinking</div>
+  </div>
+  <p class="section-sub">Models whose weights you can download and run yourself, whatever the licence &mdash; Apache 2.0, MIT or a custom one, which each cell names. Tiers, usage scoring and the one-prior-version rule are the same as in the closed table above, and companies are ranked within this table. A company can appear in both tables: Qwen, Mistral and Meta each sell some models only through an API and release others as weights. Download counts and benchmark scores are not prices: what an open model costs depends on who hosts it (see Inference hosts), and on your own GPUs it costs whatever they do. Where I couldn&rsquo;t confirm that a model&rsquo;s weights are public, I treated it as closed: that applies to Qwen3.8-Omni-Flash and Mistral Medium 3.5, neither of whose cells mentions released weights, and I counted Mistral Small 4 as open because Artificial Analysis lists it among open-weight models.</p>
+
+  <div class="table-wrap">
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th>Company · line</th>
+          <th class="tier-head">Fast &amp; cheap</th>
+          <th class="tier-head">Balanced</th>
+          <th class="tier-head">Advanced &amp; flagship</th>
+        </tr>
+      </thead>
+
+      <tbody style="--co:var(--c-deepseek)">
+        <tr>
+          <th class="co-cell"><div class="co-name">DeepSeek</div><div class="co-line">open weight · MIT · 7 pts</div></th>
+          <td>
+            <div class="cell-model">DeepSeek V4.1 Flash</div><div class="cell-spec">$0.15&ndash;0.30 / $0.60&ndash;1.20 · 1017 update</div>
+            <div class="cell-date">Launched Sept 10, 2026 · 1017 update Oct 17</div>
+            <div class="usage-tier">Leading</div>
+            <div class="usage-evidence">1 trillion tokens in its first 24 hours on OpenRouter, a record for a paid model &mdash; and a same-price 1017 update on Oct 17 lifted DeepSWE to 77.0 (74.2 before, per secondary coverage) with MIT weights.</div>
+            <ul class="cell-sources">
+          <li>1 trillion tokens processed in the first 24 hours, on pace to be the biggest 48-hour paid-model launch. <a href="https://x.com/OpenRouter/status/2098503808682967356" target="_blank" rel="noopener">x.com &rarr;</a></li>
+          <li>DeepSeek's own claim: this smaller model outperforms its pricier V4 Pro flagship on several benchmarks. <a href="https://siliconangle.com/2026/09/10/deepseek-releases-v4-1-flash-says-it-outperforms-flagship-v4-pro/" target="_blank" rel="noopener">siliconangle.com &rarr;</a></li>
+          <li>Changelog: V4.1-Flash-1017 keeps the price, scores 77.0 on DeepSWE v1.1 and 42.3 on Terminal-Bench 4.0, and the old deepseek-v4-flash names now route to it. <a href="https://api-docs.deepseek.com/updates/" target="_blank" rel="noopener">api-docs.deepseek.com &rarr;</a></li>
+            </ul>
+          </td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">DeepSeek V4 Pro</div><div class="cell-spec">1M ctx · 49B active · MIT</div>
+            <div class="cell-date">GA Aug 12, 2026 (preview Apr 24)</div>
+            <div class="usage-tier">Strong</div>
+            <div class="usage-evidence">Served by 16 independent providers, but its own traffic is now being redirected to the cheaper V4.1 Flash pending a real successor.</div>
+            <ul class="cell-sources">
+          <li>Served by 16 different inference providers, throughput varying 4&ndash;57 tokens/sec. <a href="https://openrouter.ai/deepseek/deepseek-v4-pro" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
+          <li>Hands-on review tests its agentic coding performance in practical use. <a href="https://www.geeky-gadgets.com/deepseek-v4-pro-review/" target="_blank" rel="noopener">geeky-gadgets.com &rarr;</a></li>
+          <li>DeepSeek began auto-routing all V4-Pro API requests to V4.1 Flash as of mid-September. <a href="https://siliconangle.com/2026/09/10/deepseek-releases-v4-1-flash-says-it-outperforms-flagship-v4-pro/" target="_blank" rel="noopener">siliconangle.com &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">DeepSeek V3.2</span><span class="prior-spec">Dec 1, 2025 · open weight</span></div>
+              <div class="prior-delta">V4-Pro is a 1.6T-total / 49B-active model with 1M context (up from ~160K) under MIT. DeepSeek claims it needs 27% of V3.2's per-token compute (vendor claim); AA's index is 53. List price has moved and sources conflict ($0.435 / $0.87 vs $0.66 / $1.98 off-peak), so check DeepSeek's live page. Since Sept 14, DeepSeek routes all V4-Pro API calls to V4.1 Flash at Flash rates until a V4.1 Pro ships &mdash; production users complained about the unannounced change.</div>
+              <div class="prior-links"><a href="https://api-docs.deepseek.com/news/news260910/" target="_blank" rel="noopener">api-docs.deepseek.com &rarr;</a><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank" rel="noopener">huggingface.co &rarr;</a></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody style="--co:var(--c-qwen)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Qwen</div><div class="co-line">open weight · 4 pts</div></th>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Qwen3.8-27B</div><div class="cell-spec">27B · Apache 2.0</div>
+            <div class="cell-date">Launched Aug 14, 2026</div>
+            <div class="usage-tier">Leading</div>
+            <div class="usage-evidence">Over 3 million Hugging Face downloads within 3 days of release, and the #1 trending model on the platform.</div>
+            <ul class="cell-sources">
+          <li>Passed 3 million Hugging Face downloads within three days of release. <a href="https://cybernews.com/tech/qwen-38-27b-ai-model-debuts-with-million-downloads/" target="_blank" rel="noopener">cybernews.com &rarr;</a></li>
+          <li>Hands-on guide runs it locally on a consumer RTX 5060 Ti (16GB VRAM). <a href="https://blog.margrop.net/en/post/qwen38-27b-local-deploy-5060ti-16g/" target="_blank" rel="noopener">blog.margrop.net &rarr;</a></li>
+          <li>Became the #1 trending model on the platform right after release. <a href="https://huggingface.co/Qwen/Qwen3.8-27B" target="_blank" rel="noopener">huggingface.co &rarr;</a></li>
+            </ul>
+          </td>
+          <td><span class="cell-empty">&mdash;</span></td>
+        </tr>
+      </tbody>
+
+      <tbody style="--co:var(--c-mistral)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Mistral</div><div class="co-line">open weight · Large 4 modified-MIT licence · 3 pts</div></th>
+          <td>
+            <div class="cell-model">Small 4</div><div class="cell-spec">efficient enterprise</div>
+            <div class="cell-date">Launched Mar 16, 2026</div>
+            <div class="usage-tier">Growing</div>
+            <div class="usage-evidence">Active HN testing within days of release, but the same threads say Mistral's small-model line has fallen well behind Qwen and Gemma at similar sizes.</div>
+            <ul class="cell-sources">
+          <li>Solid for a few months after each release, but generally trailing the "big 3" labs' offerings. <a href="https://news.ycombinator.com/item?id=47404575" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
+          <li>Real-world cost and provider positioning listing. <a href="https://openrouter.ai/mistralai/mistral-small-2603" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
+          <li>Frames its value as unifying three previously separate specialized models into one. <a href="https://dev.to/akaranjkar08/mistral-small-4-one-open-source-model-that-replaces-three-2026-5b96" target="_blank" rel="noopener">dev.to &rarr;</a></li>
+            </ul>
+          </td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Large 4</div><div class="cell-spec">1M ctx · ~1T MoE / ~52B active · open weights</div>
+            <div class="cell-date">Preview Oct 6 · weights Oct 29, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">The open weights are out (Oct 29, modified-MIT license with a model-as-a-service restriction), and Mistral's docs now list the API as generally available from Nov 5, though they called it a preview on Nov 3. Artificial Analysis's current index scores it 26, the highest open model built outside China and 7th among open-weight models. The earlier 38.4 was on an older index version, so the drop is not a regression.</div>
+            <ul class="cell-sources">
+          <li>Cybersecurity is the standout and output is quick (~116 tokens/sec), but a 41.9% hallucination rate and ~18.7s time-to-first-token hurt customer-facing use. <a href="https://www.eesel.ai/blog/mistral-large-4-review" target="_blank" rel="noopener">eesel.ai &rarr;</a></li>
+          <li>API preview launched at $1.36 / $4.18, with live prices since Oct 29 near $0.70 / $2.10; the weights are Mistral's first with a model-as-a-service restriction. Mistral's own coding scores depend on its agent harness (41.4% Terminal-Bench vs 24.7% in AA's standard test), and Omniscience is weak (5.1). <a href="https://www.lindy.ai/blog/mistral-large-4" target="_blank" rel="noopener">lindy.ai &rarr;</a></li>
+          <li>The weights went up on Hugging Face on Oct 29 (about 1.06 TB in bf16, 610 GB in NVFP4 for four B200s), after the promised date slipped. Businesses reselling it as a service need a separate Mistral license; internal use and embedding it in an end product are free. The promo price has no published end date. <a href="https://www.orcarouter.ai/blog/mistral-large-4-open-weights-licence" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Mistral Large 3</span><span class="prior-spec">Dec 2, 2025 · 256K ctx · $0.50 / $1.50</span></div>
+              <div class="prior-delta">Large 4 grows to roughly 1T total and ~52B active parameters with a 1M-token context (up from 256K) and hybrid reasoning. It is also dearer: even at the promotional rate about 39% more per output token. Large 3 stays Apache 2.0 with no restrictions, while Large 4's license adds the model-as-a-service condition, and the mistral-large-latest alias still points to Large 3. Sources disagree on the active-parameter count (49B or 52B) and on whether the discount ends.</div>
+              <div class="prior-links"><a href="https://www.orcarouter.ai/blog/mistral-large-4-open-weights-licence" target="_blank" rel="noopener">orcarouter.ai &rarr;</a><a href="https://www.lindy.ai/blog/mistral-large-4" target="_blank" rel="noopener">lindy.ai &rarr;</a></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody style="--co:var(--c-meta)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Meta</div><div class="co-line">Muse · 2 pts</div></th>
+          <td>
+            <div class="cell-model">Muse Glimmer</div><div class="cell-spec">30B · open weight · one consumer GPU</div>
+            <div class="cell-date">Launched Aug 10, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Early ecosystem tooling exists (an NVIDIA guide, fast community quantization), but no independent usage-share data yet.</div>
+            <ul class="cell-sources">
+          <li>Positioned as a local, on-device agentic model for tool use and local coding, not general chat. <a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model" target="_blank" rel="noopener">research.meta.ai &rarr;</a></li>
+          <li>Walks through running it as a local agent on consumer RTX GPUs. <a href="https://developer.nvidia.com/blog/run-local-agentic-ai-workflows-with-metas-muse-glimmer-on-nvidia/" target="_blank" rel="noopener">developer.nvidia.com &rarr;</a></li>
+          <li>Community quantized builds appeared within days of release. <a href="https://huggingface.co/blog/muse-glimmer" target="_blank" rel="noopener">huggingface.co &rarr;</a></li>
+            </ul>
+          </td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Muse Spark Open</div><div class="cell-spec">816B MoE / 42B active · 1M ctx · open weights</div>
+            <div class="cell-date">Weights released Oct 15, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Weights went public Oct 15 on Hugging Face and four clouds, under Meta's custom Muse Model License rather than an OSI open-source license. Meta calls it the most capable US open-weight model, and Artificial Analysis agrees on the ranking: its index of 39 tops US open weights, ahead of Reflection's Beam at 30.</div>
+            <ul class="cell-sources">
+          <li>Meta's launch post calls it the most capable US open-weight model to date and says the open version got extra safety post-training. <a href="https://research.meta.ai/blog/muse-spark-open" target="_blank" rel="noopener">research.meta.ai &rarr;</a></li>
+          <li>License fine print: you must display "Built with Muse Spark Open," and model-as-a-service providers above $20M revenue need a separate agreement with Meta. <a href="https://www.orcarouter.ai/blog/muse-spark-open-best-us-open-weight-model" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></li>
+          <li>Downloadable from Amazon SageMaker, Google Cloud Model Garden, Hugging Face, and Microsoft Foundry, and served by providers including Groq, Together, and OpenRouter. <a href="https://www.unite.ai/metas-816b-parameter-muse-spark-open-weights-are-now-public/" target="_blank" rel="noopener">unite.ai &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Muse Spark 1.3 (hosted)</span><span class="prior-spec">Sept 2, 2026 · closed · $1.25 / $4.25</span></div>
+              <div class="prior-delta">Open gives you the weights; hosted 1.3 stays closed and metered. Meta publishes no price for Open &mdash; the only figure I found is a third-party OpenRouter route at the same $1.25 / $4.25. One commentary says the model sat quietly for about a month before the Oct 15 paperwork, so "release" is partly framing.</div>
+              <div class="prior-links"><a href="https://www.orcarouter.ai/blog/muse-spark-open-best-us-open-weight-model" target="_blank" rel="noopener">orcarouter.ai &rarr;</a><a href="https://www.digitalapplied.com/blog/ai-model-releases-october-2026-tracker" target="_blank" rel="noopener">digitalapplied.com &rarr;</a></div>
             </div>
           </td>
         </tr>
@@ -1498,6 +1559,30 @@
           <li>Weights ship in BF16, FP8, and NVFP4 with a speculative-decoding drafter; the hosted API is free in public beta with no price yet, and Dell and HPE offer on-premises and air-gapped installs. <a href="https://reflection.ai/blog/beam-is-available" target="_blank" rel="noopener">reflection.ai &rarr;</a></li>
             </ul>
           </td>
+        </tr>
+      </tbody>
+
+      <tbody style="--co:var(--c-sarvam)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Sarvam AI</div><div class="co-line">Sarvam · India · open weight · 1 pt</div></th>
+          <td>
+            <div class="cell-model">Sarvam-105B-1711</div><div class="cell-spec">105B MoE / 10.3B active · ~128K ctx · Apache 2.0 · $0.11 / $0.28</div>
+            <div class="cell-date">Launched Nov 22, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">A new checkpoint of Sarvam&rsquo;s 105B, released today and served on its own Token Factory at $0.11 in and $0.28 out per 1M tokens (Sarvam&rsquo;s &#8377;10 / &#8377;25 at its &#8377;90-to-a-dollar rate; $0.15 blended, down from $0.44). There is no adoption data yet, and every benchmark is Sarvam&rsquo;s own run on its own setup: it says the model matches Gemini 3.5 Flash-Lite&rsquo;s average at under a fifth of the price, while its own table shows it behind Gemini and GPT-6 Luna on knowledge tests such as GPQA Diamond (80.4 against 85.2 and 86.7). The blog gives the context window as both 160K and 128K.</div>
+            <ul class="cell-sources">
+          <li>Sarvam&rsquo;s own post: its eight-benchmark agent average rises from 42.6 to 73.9, with IFEval 96.5 and Tau2 85.5 against Gemini 3.5 Flash-Lite&rsquo;s 95.6 and 83.1. The Hugging Face card lists Apache 2.0, about 10.3B active parameters and a 131,072-token serving limit, with a 65 GB NVFP4 build and BF16 weights for fine-tuning. <a href="https://www.sarvam.ai/blogs/sarvam-105b-1711" target="_blank" rel="noopener">sarvam.ai &rarr;</a> <a href="https://huggingface.co/sarvamai/sarvam-105b-1711" target="_blank" rel="noopener">huggingface.co &rarr;</a></li>
+          <li>Artificial Analysis&rsquo;s Apr 2 evaluation of the earlier 105B gave it 18 on its Intelligence Index, behind gpt-oss-120B (33), Mistral Small 4 (27) and GLM-4.5-Air (23), and flagged high hallucination rates. It is the only independent score, and it predates this checkpoint. <a href="https://artificialanalysis.ai/articles/sarvam-105b-Sarvam-30b-everything-you-need-to-know" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></li>
+          <li>AlphaSignal&rsquo;s Nov 16 report on Token Factory repeats the &#8377;10 / &#8377;25 price and Sarvam&rsquo;s speed claims (0.2 seconds to first token, 330 tokens a second for one user), which it labels vendor-reported. <a href="https://alphasignal.ai/news/sarvam-ai-launches-token-factory-bringing-open-model-inference-to-indian-gpus" target="_blank" rel="noopener">alphasignal.ai &rarr;</a></li>
+            </ul>
+            <div class="prior-version">
+              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Sarvam 105B (earlier checkpoint)</span><span class="prior-spec">Announced Feb 2026 · weights Mar 6 · Apache 2.0</span></div>
+              <div class="prior-delta">By Sarvam&rsquo;s own numbers the new checkpoint follows instructions and calls tools far better (IFBench 32.5 to 82.5, Tau2 46.2 to 85.5) and its blended price fell from $0.44 to $0.15 per 1M tokens. The independent score of 18 from Artificial Analysis belongs to this earlier version, so the jump has not been checked by anyone else.</div>
+              <div class="prior-links"><a href="https://www.sarvam.ai/blogs/sarvam-30b-105b" target="_blank" rel="noopener">sarvam.ai &rarr;</a><a href="https://artificialanalysis.ai/articles/sarvam-105b-Sarvam-30b-everything-you-need-to-know" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></div>
+            </div>
+          </td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td><span class="cell-empty">&mdash;</span></td>
         </tr>
       </tbody>
 
@@ -1613,7 +1698,7 @@
   <div class="section-head" id="decision-models">
     <h2>Decision models</h2>
   </div>
-  <p class="section-sub">Models that answer with a probability instead of writing text. You send text or an image plus typed questions (multiple choice, a 1&ndash;10 score, a yes/no) and get calibrated confidence back &mdash; built for classification, routing, and guardrail decisions in front of, or instead of, a chat model. Also marketed as &ldquo;System One&rdquo; models, TypeSafe&rsquo;s term borrowed from Kahneman&rsquo;s fast-versus-slow thinking. Two designs sit under the label: purpose-built models that answer every question in one parallel pass (Jev, Laya, Clef, Strands Decider, d1-ultra, Perplexity&rsquo;s Decider, Google&rsquo;s Gemini Decision 1, Microsoft&rsquo;s MAI Decision 1.1), and OpenAI&rsquo;s Decisions API, which constrains a regular chat model to a fixed list of answers. Skeptics call the purpose-built kind a zero-shot classifier with a new name &mdash; the task is old, and independent benchmarks are still thin. The shape of the output is guaranteed; the answers themselves are probabilistic.</p>
+  <p class="section-sub">Models that answer with a probability instead of writing text. You send text or an image plus typed questions (multiple choice, a 1&ndash;10 score, a yes/no) and get calibrated confidence back &mdash; built for classification, routing, and guardrail decisions in front of, or instead of, a chat model. Also marketed as &ldquo;System One&rdquo; models, TypeSafe&rsquo;s term borrowed from Kahneman&rsquo;s fast-versus-slow thinking. Two designs sit under the label: purpose-built models that answer every question in one parallel pass (Jev, Laya, Clef, Strands Decider, d1-ultra, Perplexity&rsquo;s Decider, Google&rsquo;s Gemini Decision 1, Microsoft&rsquo;s MAI Decision 1.1, Sarvam&rsquo;s Prism), and OpenAI&rsquo;s Decisions API, which constrains a regular chat model to a fixed list of answers. Skeptics call the purpose-built kind a zero-shot classifier with a new name &mdash; the task is old, and independent benchmarks are still thin. The shape of the output is guaranteed; the answers themselves are probabilistic.</p>
 
   <div class="table-wrap">
     <table class="enterprise">
@@ -1642,6 +1727,16 @@
           <td class="ent-pick">Gemini API; limited free tier in AI Studio<br>$0.10 / 1M input tokens, output free; the shared input is billed once per request</td>
           <td class="ent-why">The third big-lab design in this category, after OpenAI's constrained chat model and Perplexity's open Decider. Google says it led on 7 of 9 of its own benchmarks, for example 92.2% vs 90.9% for GPT-6 Luna on JevBench, and lost to TypeSafe's Jev 1.14 on Mind2Web and When2Call, where Jev is also slightly cheaper. Latency is 150&ndash;250 ms end to end (Google's figure, measured on contexts up to 16K tokens). Every number is Google's, on rivals it chose; I found no independent ranking, and a blog's claim of a 9th-of-18 Artificial Analysis placement is unverified.
             <a href="https://siliconangle.com/2026/11/11/google-enters-the-decision-model-market-with-gemini-decisions-api/" target="_blank" rel="noopener">siliconangle.com &rarr;</a> <a href="https://eu.36kr.com/en/p/4065770698331011" target="_blank" rel="noopener">36kr.com &rarr;</a> <a href="https://mlq.ai/news/google-launches-gemini-decision-1-a-model-that-scores-up-to-1000-questions-in-one-pass/" target="_blank" rel="noopener">mlq.ai &rarr;</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody style="--co:var(--c-sarvam)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Sarvam Prism</div><div class="co-line">Sarvam AI · Nov 4, 2026 · open weight</div></th>
+          <td class="ent-models">A decision model built on Sarvam&rsquo;s 105B base: it returns calibrated probabilities for structured questions such as support routing, document analysis, security checks and agent evaluation. Sarvam says it answers in 44 ms on one NVIDIA B200 GPU.</td>
+          <td class="ent-pick">Apache 2.0 weights, and Sarvam&rsquo;s API<br>No price in the coverage I found</td>
+          <td class="ent-why">Every figure is Sarvam&rsquo;s own, relayed by a syndicated news story; I haven&rsquo;t read Sarvam&rsquo;s post. On its internal Indian-language test Prism scores 82.5 against 75 for Perplexity&rsquo;s Decider v1.2 and 70.8 for Jev 1.14, and on an internal cybersecurity test 89% against Clef&rsquo;s 84.5% and Jev&rsquo;s 78.6%. Perplexity shipped Decider v1.3 on Nov 12, so the comparison is already a version behind. Sarvam also reports a 71.8 average over three unnamed benchmarks and says that when Prism is at least 90% confident it is wrong on 2.2% of English answers.
+            <a href="https://www.tribuneindia.com/news/business/sarvam-launches-ai-decision-model-with-44-millisecond-response-time-open-weights-for-enterprises/" target="_blank" rel="noopener">tribuneindia.com &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -2182,6 +2277,15 @@
             <a href="https://capitalandcompute.net/ai-inference-providers/cerebras/" target="_blank" rel="noopener">capitalandcompute.net &rarr;</a> <a href="https://www.investing.com/analysis/cerebras-48-billion-ipo-tests-the-markets-inference-bet-200680080" target="_blank" rel="noopener">investing.com &rarr;</a> <a href="https://www.cerebras.ai/blog/cerebras-launches-disaggregated-inference" target="_blank" rel="noopener">cerebras.ai &rarr;</a> <a href="https://infrabase.ai/blog/ai-inference-api-providers-compared" target="_blank" rel="noopener">infrabase.ai &rarr;</a></td>
         </tr>
       </tbody>
+      <tbody style="--co:var(--c-sarvam)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Sarvam Token Factory</div><div class="co-line">Sarvam AI · India-hosted · reported Nov 16, 2026</div></th>
+          <td class="ent-models" data-label="What it is">Serves Sarvam&rsquo;s own 105B and open models from other labs on GPU clusters in India. AlphaSignal lists eight: Sarvam 105B, GLM 5.3 and GLM 5.3 Flash, DeepSeek V4.1 Flash and V4 Pro, Kimi K3 and K3.1 Pro, and Gemma 4 31B. Coverage describes an OpenAI-compatible API billed in rupees.</td>
+          <td class="ent-pick" data-label="Pricing &amp; access">Sarvam-105B-1711: $0.11 in / $0.28 out per 1M tokens<br>Gemma 4 31B: $0.39 / $1.00<br>DeepSeek V4.1 Flash: introductory $0.16 / $0.61, and about $0.09 blended at the standard rate<br>All converted at Sarvam&rsquo;s own &#8377;90 = $1 (the rupee prices are &#8377;10 / &#8377;25, &#8377;35 / &#8377;90 and &#8377;14 / &#8377;55)</td>
+          <td class="ent-why" data-label="Note">Sarvam says the 105B it serves here is its NVFP4 build, at about 6,000 tokens a second per B200 GPU across 64 users; AlphaSignal relays 0.2 seconds to first token, 330 tokens a second for one user, a 99.95% uptime SLA and optional zero data retention. All of those are vendor figures with no independent measurement, and the DeepSeek price is introductory. The one cross-host comparison on this page uses gpt-oss-120B, which Token Factory isn&rsquo;t reported to list, so these prices can&rsquo;t be set directly against the hosts above.
+            <a href="https://alphasignal.ai/news/sarvam-ai-launches-token-factory-bringing-open-model-inference-to-indian-gpus" target="_blank" rel="noopener">alphasignal.ai &rarr;</a> <a href="https://www.sarvam.ai/blogs/sarvam-105b-1711" target="_blank" rel="noopener">sarvam.ai &rarr;</a></td>
+        </tr>
+      </tbody>
     </table>
   </div>
   </section>
@@ -2635,7 +2739,7 @@
   </section>
 
   <footer>
-    <p>Snapshot compiled November 21, 2026 — Microsoft's seven Ignite MAI models (Code 2, Cyber 2 Flash, Decision 1.1, Realtime 1) joined the page, and a staleness audit corrected Windsurf (now Devin Desktop), Amazon Q Developer (replaced by Kiro), the discontinued Atlas browser, GPT-Live's API release, Decider v1.3, Jev 1.14, and several star counts, following Google's Gemini 4 Neon, Thinking Machines' Inkling 2 Mini, NVIDIA's Nemotron, inference hosts and model chaining, OpenAI's GPT-6.2 Astra and Sol, and Alibaba's Qwen4-Max. Every model now shows its launch date. The tier matrix ranks companies by a usage-evidence score and shows one older version per model; the other model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled November 22, 2026 — Sarvam's new 105B checkpoint, Prism decision model and Token Factory host joined the page; the tier matrix was renamed Leading models and split into closed-weight and open-weight tables; the category filter became a dropdown; and Microsoft's Ignite MAI models and the Nov 21 staleness corrections (Devin Desktop, Kiro, Atlas, GPT-Live, Decider v1.3, Jev 1.14) are in, following Google's Gemini 4 Neon, Thinking Machines' Inkling 2 Mini, NVIDIA's Nemotron, inference hosts and model chaining, OpenAI's GPT-6.2 Astra and Sol, and Alibaba's Qwen4-Max. Every model now shows its launch date. The tier matrix ranks companies by a usage-evidence score and shows one older version per model; the other model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
@@ -2879,6 +2983,12 @@
       <a href="https://github.com/microsoft/autogen">github.com/microsoft/autogen</a>
       <a href="https://github.com/anthropics/claude-code/releases">github.com/anthropics/claude-code/releases</a>
       <a href="https://github.com/Aider-AI/aider">github.com/Aider-AI/aider</a>
+      <a href="https://www.sarvam.ai/blogs/sarvam-105b-1711">sarvam.ai/sarvam-105b-1711</a>
+      <a href="https://huggingface.co/sarvamai/sarvam-105b-1711">huggingface.co/sarvam-105b-1711</a>
+      <a href="https://www.sarvam.ai/blogs/sarvam-30b-105b">sarvam.ai/sarvam-30b-105b</a>
+      <a href="https://artificialanalysis.ai/articles/sarvam-105b-Sarvam-30b-everything-you-need-to-know">artificialanalysis.ai/sarvam-105b</a>
+      <a href="https://alphasignal.ai/news/sarvam-ai-launches-token-factory-bringing-open-model-inference-to-indian-gpus">alphasignal.ai/sarvam-token-factory</a>
+      <a href="https://www.tribuneindia.com/news/business/sarvam-launches-ai-decision-model-with-44-millisecond-response-time-open-weights-for-enterprises/">tribuneindia.com/sarvam-prism</a>
     </div>
   </footer>
 
@@ -2936,20 +3046,39 @@
 (function(){
   var KEY = 'model-buffet-filter';
   var secs = [].slice.call(document.querySelectorAll('section.cat'));
-  var chips = [].slice.call(document.querySelectorAll('.fb-chip[data-cat]'));
-  var glabels = [].slice.call(document.querySelectorAll('.fb-glabel'));
-  var allBtn = document.getElementById('fb-all');
-  var clearBtn = document.getElementById('fb-clear');
+  var select = document.getElementById('fb-select');
   var status = document.getElementById('fb-status');
   var quick = document.querySelector('.quickpick');
   var topbar = document.querySelector('.topbar');
   var ids = secs.map(function(s){ return s.getAttribute('data-cat'); });
   var sel = [];
 
+  function layerCats(layer){
+    return secs.filter(function(s){ return s.getAttribute('data-layer') === layer; })
+      .map(function(s){ return s.getAttribute('data-cat'); });
+  }
+  function catsFor(v){
+    if (!v || v === 'all') return [];
+    if (v.indexOf('layer:') === 0) return layerCats(v.slice(6));
+    return ids.indexOf(v) >= 0 ? [v] : [];
+  }
+  function sameSet(x, y){
+    return x.length === y.length && x.every(function(i){ return y.indexOf(i) >= 0; });
+  }
+  function valueFor(list){
+    if (!list.length) return 'all';
+    if (list.length === 1) return list[0];
+    var found = 'all';
+    [].forEach.call(select.options, function(o){
+      if (o.value.indexOf('layer:') === 0 && sameSet(list, layerCats(o.value.slice(6)))) found = o.value;
+    });
+    return found;
+  }
   function load(){
     try {
       var v = JSON.parse(localStorage.getItem(KEY) || '[]');
-      return Array.isArray(v) ? v.filter(function(x){ return ids.indexOf(x) >= 0; }) : [];
+      var list = Array.isArray(v) ? v.filter(function(x){ return ids.indexOf(x) >= 0; }) : [];
+      return catsFor(valueFor(list));
     } catch(e){ return []; }
   }
   function save(){ try { localStorage.setItem(KEY, JSON.stringify(sel)); } catch(e){} }
@@ -2961,17 +3090,11 @@
   function render(){
     var filtered = sel.length > 0;
     secs.forEach(function(s){ s.hidden = filtered && !has(s.getAttribute('data-cat')); });
-    if (quick) quick.hidden = filtered && !has('tier-matrix');
-    chips.forEach(function(c){ c.setAttribute('aria-pressed', has(c.getAttribute('data-cat')) ? 'true' : 'false'); });
-    glabels.forEach(function(g){
-      var cats = g.getAttribute('data-cats').split(',');
-      g.setAttribute('aria-pressed', filtered && cats.every(has) ? 'true' : 'false');
-    });
-    if (allBtn) allBtn.setAttribute('aria-pressed', filtered ? 'false' : 'true');
+    if (quick) quick.hidden = filtered && !(has('tier-matrix') || has('open-models'));
+    if (select) select.value = valueFor(sel);
     if (status) status.textContent = filtered
       ? 'Showing ' + sel.length + ' of ' + ids.length + ' categories'
       : 'Showing all ' + ids.length + ' categories';
-    if (clearBtn) clearBtn.hidden = !filtered;
   }
   function jumpToFirst(){
     var first = secs.filter(function(s){ return !s.hidden; })[0];
@@ -2980,31 +3103,16 @@
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     head.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
   }
-  function commit(scroll){ save(); render(); if (scroll && sel.length) jumpToFirst(); }
 
-  chips.forEach(function(c){
-    c.addEventListener('click', function(){
-      var id = c.getAttribute('data-cat');
-      var i = sel.indexOf(id);
-      if (i >= 0) sel.splice(i, 1); else sel.push(id);
-      commit(true);
-    });
+  if (select) select.addEventListener('change', function(){
+    sel = catsFor(select.value);
+    save(); render();
+    if (sel.length) jumpToFirst();
   });
-  glabels.forEach(function(g){
-    g.addEventListener('click', function(){
-      var cats = g.getAttribute('data-cats').split(',');
-      if (cats.every(has)) { sel = sel.filter(function(x){ return cats.indexOf(x) < 0; }); }
-      else { cats.forEach(function(x){ if (!has(x)) sel.push(x); }); }
-      commit(true);
-    });
-  });
-  function reset(){ sel = []; commit(false); }
-  if (allBtn) allBtn.addEventListener('click', reset);
-  if (clearBtn) clearBtn.addEventListener('click', reset);
 
-  // A top-bar link or #hash that points at a hidden category reveals it instead of doing nothing.
+  // A top-bar link or #hash that points at a hidden category shows everything instead of doing nothing.
   function reveal(id){
-    if (sel.length && ids.indexOf(id) >= 0 && !has(id)) { sel.push(id); save(); render(); }
+    if (sel.length && ids.indexOf(id) >= 0 && !has(id)) { sel = []; save(); render(); }
   }
   [].forEach.call(document.querySelectorAll('a.topbar-link'), function(a){
     a.addEventListener('click', function(){ reveal((a.getAttribute('href') || '').slice(1)); });
