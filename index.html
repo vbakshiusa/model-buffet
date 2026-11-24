@@ -636,6 +636,12 @@
   .reviews li{ margin:0 0 7px; line-height:1.45; }
   .reviews li:last-child{ margin-bottom:0; }
   .reviews .rev-none{ color:var(--ink-faint); }
+  .prior-ref{ margin-top:8px; font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-faint); }
+  .prior-ref a{ color:var(--accent); }
+  .facts-h{ margin:12px 0 4px; padding-top:8px; border-top:1px dashed var(--line); font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); }
+  .facts{ list-style:none; margin:0; padding:0; font-size:12.5px; line-height:1.45; color:var(--ink-soft); }
+  .facts li{ margin:0 0 5px; }
+  .facts li:last-child{ margin-bottom:0; }
   .fb-select{
     font-family:'IBM Plex Mono', monospace;
     font-size:12px;
@@ -783,6 +789,7 @@
       <a class="topbar-link" href="#computer-use">Computer-use</a>
       <a class="topbar-link" href="#always-on">Always-on agents</a>
       <a class="topbar-link" href="#consumer">Consumer apps</a>
+      <a class="topbar-link" href="archive.html">Archive</a>
     </div>
     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light/dark theme"></button>
   </div>
@@ -859,7 +866,7 @@
     <h2>Leading models &middot; closed weights</h2>
     <div class="axis">cheap / fast <span class="arrow">&rarr;</span> expensive / deep-thinking</div>
   </div>
-  <p class="section-sub">This table covers closed-weight models, which you can reach only through the vendor&rsquo;s own app or API or a partner&rsquo;s; downloadable-weight models sit in the open-weights table below. Each cell carries three independent takes — not one blog's opinion — plus a <b>usage tier</b>: how much real-world adoption evidence backs the model up (OpenRouter/LMArena rank, forum consensus, production use), from <span class="usage-tier" style="color:var(--accent)">Leading</span> down to <span class="usage-tier" style="color:var(--accent)">Niche</span> or a plain "too new to tell." Advanced and flagship models share one column, and each carries a compact <b>prior version</b> underneath so you can see what the upgrade actually bought you. Every model shows its launch date. <b>Companies are ranked by a usage score</b> (separately in each table). The score measures evidence for each model, not company reach: Google&rsquo;s Gemini app has over a billion monthly users, but its Gemini 4 models are days or weeks old and score as Emerging, and Microsoft&rsquo;s Copilot runs mostly OpenAI, Anthropic and Google models, so that usage counts toward those labs rather than Microsoft&rsquo;s own MAI line: Leading counts 4 points, Strong 3, Growing 2, Emerging 1 and Niche 0, summed over a company's three best-evidenced models (the number beside each name). Newly launched models score low until adoption shows up, so the order reflects what people are actually using, not who launched last. The one exception is a successor in the same line (Fable 5.2 after Fable 5.1, GPT-6.2 Astra and Sol after their predecessors, Gemini 4 Hydrogen after 3.8 Flash), which carries its predecessor's tier until its own data arrives; its cell says so. Within a company, models run newest first, and each shows <b>one older version</b> only &mdash; earlier generations that were listed on their own before have been cut. One caution: Artificial Analysis moved its Intelligence Index to v5.0 on Oct 28 (two benchmarks added, easy questions dropped), so index numbers quoted in this table come from different versions &mdash; compare scores only within one source.</p>
+  <p class="section-sub">This table covers closed-weight models, which you can reach only through the vendor&rsquo;s own app or API or a partner&rsquo;s; downloadable-weight models sit in the open-weights table below. Each cell carries three independent takes — not one blog's opinion — plus a <b>usage tier</b>: how much real-world adoption evidence backs the model up (OpenRouter/LMArena rank, forum consensus, production use), from <span class="usage-tier" style="color:var(--accent)">Leading</span> down to <span class="usage-tier" style="color:var(--accent)">Niche</span> or a plain "too new to tell." Advanced and flagship models share one column, and each notes the version it replaced, with the comparison kept in the <a href="archive.html">archive</a>. Every model shows its launch date. <b>Companies are ranked by a usage score</b> (separately in each table). The score measures evidence for each model, not company reach: Google&rsquo;s Gemini app has over a billion monthly users, but its Gemini 4 models are days or weeks old and score as Emerging, and Microsoft&rsquo;s Copilot runs mostly OpenAI, Anthropic and Google models, so that usage counts toward those labs rather than Microsoft&rsquo;s own MAI line: Leading counts 4 points, Strong 3, Growing 2, Emerging 1 and Niche 0, summed over a company's three best-evidenced models (the number beside each name). Newly launched models score low until adoption shows up, so the order reflects what people are actually using, not who launched last. The one exception is a successor in the same line (Fable 5.2 after Fable 5.1, GPT-6.2 Astra and Sol after their predecessors, Gemini 4 Hydrogen after 3.8 Flash), which carries its predecessor's tier until its own data arrives; its cell says so. Within a company, models run newest first; previous versions, and models more than six months old, move to the <a href="archive.html">archive</a> at each refresh. One caution: Artificial Analysis moved its Intelligence Index to v5.0 on Oct 28 (two benchmarks added, easy questions dropped), so index numbers quoted in this table come from different versions &mdash; compare scores only within one source.</p>
 
   <div class="table-wrap">
     <table class="matrix">
@@ -874,7 +881,7 @@
 
       <tbody style="--co:var(--c-openai)">
         <tr>
-          <th class="co-cell" rowspan="3"><div class="co-name">OpenAI</div><div class="co-line">GPT · 11 pts</div></th>
+          <th class="co-cell" rowspan="3"><div class="co-name">OpenAI</div><div class="co-line">GPT · 10 pts</div></th>
           <td>
             <div class="cell-model">GPT-6 Luna</div><div class="cell-spec">$0.10 / $0.50 · cheapest tier</div>
             <div class="cell-date">Launched Sept 22, 2026</div>
@@ -896,11 +903,7 @@
           <li>The "37 fewer error points" headline is OpenAI's own unpublished metric (53.6% to 16.7% at low effort), not a general error-rate drop. <a href="https://www.orcarouter.ai/blog/gpt-6-1-terra-release-price-cut" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></li>
           <li>A 453-point launch thread debates the "weird middle child" tier; agent builders like the cost for computer use and technical writing but still reach for Claude on coding. <a href="https://news.ycombinator.com/item?id=50248124" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">GPT-5.6 Terra</span><span class="prior-spec">Jul 2026 · $2 / $12</span></div>
-              <div class="prior-delta">Half the price on both sides ($1 / $5), with AA's index up from 42 to 48 and cost per task at max effort down from $1.40 to $0.40. OpenAI's own Terminal-Bench 4.0 figure rises from 21.5% to 50.3% (vendor claim). Tool calls now require the Responses API, so migrate those first. Some r/codex users report it declares tasks finished too early.</div>
-              <div class="prior-links"><a href="https://www.eesel.ai/blog/gpt-6-1-terra" target="_blank" rel="noopener">eesel.ai &rarr;</a><a href="https://www.orcarouter.ai/blog/gpt-6-1-terra-release-price-cut" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>GPT-5.6 Terra</b> &middot; <a href="archive.html#a-gpt-5-6-terra-for-gpt-6-1-terra">archive</a></div>
           </td>
           <td>
             <div class="cell-model">GPT-6.2 Astra</div><div class="cell-spec">$8 / $40 · cached $0.40 · Critical-cyber</div>
@@ -912,27 +915,13 @@
           <li>On Artificial Analysis it scores 62 against 65 for Fable 5.2, so the gain over Fable is mostly cost per task ($4.00 vs $26.54), not raw score. Sol reaches 57 at $1.01 per task. Epoch AI, quoted in OpenAI's own system card, saw little change on research-style tasks. <a href="https://www.rdworldonline.com/openais-gpt-6-2-astra-trails-claude-fable-5-2-by-three-points-on-an-independent-ai-index-at-a-fraction-of-the-cost-per-task/" target="_blank" rel="noopener">rdworldonline.com &rarr;</a></li>
           <li>Coding is flat: Artificial Analysis finds no improvement over GPT-6 Astra on its coding index, and AA-Omniscience shows a 59% hallucination rate on very hard questions. Vals ranks it 7th overall at $10.68 per task, and legal results are weak (11th on HLAB). <a href="https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">GPT-6 Astra</span><span class="prior-spec">Sept 3, 2026 · $10 / $50</span></div>
-              <div class="prior-delta">The same line 20% cheaper, with cached input falling from $1 to $0.40. OpenAI claims +9 points on Terminal-Bench-Science, but Artificial Analysis sees no coding gain. In two of OpenAI's alignment tests the new model was more likely than GPT-6 Astra to leave out an obstacle such as a missing file, and OpenAI says added Codex instructions largely fix it. Its tighter cyber safeguards may also block legitimate vulnerability research, and OpenAI scrapped a planned October GPT-6.1 Astra over scope and authorization problems.</div>
-              <div class="prior-links"><a href="https://siliconangle.com/2026/11/17/openai-rolls-out-gpt-6-2-astra-for-professional-work-and-gpt-6-2-sol-for-everyday-work/" target="_blank" rel="noopener">siliconangle.com &rarr;</a><a href="https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>GPT-6 Astra</b> &middot; <a href="archive.html#a-gpt-6-astra-for-gpt-6-2-astra">archive</a></div>
           </td>
         </tr>
         <tr>
           
           <td><span class="cell-empty">&mdash;</span></td>
-          <td>
-            <div class="cell-model">GPT-5.3-Codex</div><div class="cell-spec">repo-aware coding</div>
-            <div class="cell-date">Launched Feb 5, 2026</div>
-            <div class="usage-tier">Strong</div>
-            <div class="usage-evidence">Called "the most capable agentic coding model to date" at launch; can introduce technical debt without close supervision. It is now a legacy Codex model: Codex runs on GPT-6.2 Sol and Astra, and the tier reflects its launch-era usage.</div>
-            <ul class="cell-sources">
-          <li>Walks through Codex-app usage and adoption decisions in practice, not just benchmark scores. <a href="https://smartscope.blog/en/blog/gpt-5-3-codex-complete-guide/" target="_blank" rel="noopener">smartscope.blog &rarr;</a></li>
-          <li>Head-to-head "vibe coding" comparison against Claude and Gemini competitors. <a href="https://medium.com/codex/i-tested-gpt-5-3-codex-vs-sonnet-4-6-vs-gemini-3-1-for-vibe-coding-heres-who-winner-7310dcf54a9e" target="_blank" rel="noopener">medium.com &rarr;</a></li>
-          <li>Compares it directly against base GPT-5 for agentic coding-agent use cases. <a href="https://www.verdent.ai/guides/gpt-5-3-codex-vs-gpt-5-coding-agents" target="_blank" rel="noopener">verdent.ai &rarr;</a></li>
-            </ul>
-          </td>
+          <td><span class="cell-empty">&mdash;</span></td>
           <td>
             <div class="cell-model">GPT-6.2 Sol</div><div class="cell-spec">$2 / $10 · cached $0.10 · price unchanged</div>
             <div class="cell-date">Launched Nov 17, 2026</div>
@@ -943,11 +932,7 @@
           <li>Artificial Analysis puts it at 57 and $1.01 per task, against 62 and $4.00 for Astra and 65 and $26.54 for Fable 5.2. Best value on that table, though behind on raw score. <a href="https://www.rdworldonline.com/openais-gpt-6-2-astra-trails-claude-fable-5-2-by-three-points-on-an-independent-ai-index-at-a-fraction-of-the-cost-per-task/" target="_blank" rel="noopener">rdworldonline.com &rarr;</a></li>
           <li>Coding drops three points from 6.1 Sol on Artificial Analysis, mainly a 14-point fall on SWE-Atlas-QnA. Vals ranks it 9th overall and the cheapest in its top ten ($3.18 per task) but 21st on a legal benchmark, and AA-Omniscience shows a 55% hallucination rate on hard questions. <a href="https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">GPT-6.1 Sol</span><span class="prior-spec">Sept 29, 2026 · $2 / $10</span></div>
-              <div class="prior-delta">The same price, with OpenAI promising more completed tasks per plan, and Artificial Analysis recording a three-point coding drop. Pro subscribers get an Ultrafast mode, Pro-200 with Sol first. OpenAI's alignment tests show the same tendency as Astra to omit obstacles. Artificial Analysis moved to a newer index version, so don't compare 6.1 Sol's old score with 57 directly.</div>
-              <div class="prior-links"><a href="https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/" target="_blank" rel="noopener">the-decoder.com &rarr;</a><a href="https://www.rdworldonline.com/openais-gpt-6-2-astra-trails-claude-fable-5-2-by-three-points-on-an-independent-ai-index-at-a-fraction-of-the-cost-per-task/" target="_blank" rel="noopener">rdworldonline.com &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>GPT-6.1 Sol</b> &middot; <a href="archive.html#a-gpt-6-1-sol-for-gpt-6-2-sol">archive</a></div>
           </td>
         </tr>
         <tr>
@@ -964,11 +949,7 @@
           <li>Analysts split: Noma Security's Chris Hughes calls the scope control real but notes OpenAI's own Patch the Planet dashboard shows under 25% of found flaws fixed, so better discovery can widen the gap. OpenAI gave no data on faster patching. <a href="https://www.csoonline.com/article/4244911/openais-gpt-6-cyber-ups-the-ante-on-vulnerability-discovery.html" target="_blank" rel="noopener">csoonline.com &rarr;</a></li>
           <li>A researcher quoted by TechCrunch says OpenAI appears to have &ldquo;nerfed&rdquo; the more widely available Daybreak Blue, and defenders say the labs are generating more work than they can absorb. (TechCrunch mislabels the model &ldquo;ChatGPT Cyber.&rdquo;) <a href="https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/" target="_blank" rel="noopener">techcrunch.com &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">GPT-5.6 Cyber</span><span class="prior-spec">Daybreak Red · rated High</span></div>
-              <div class="prior-delta">Both are gated to Daybreak Red and GPT-5.6 Cyber stays available there. OpenAI says GPT-6 Cyber stays in scope more often: it went out of scope in 0.07% of honeypot cases vs 5.51%, and avoided off-limits decoy services 99.93% of the time vs 94.49%. Its $20 / $100 price and 1.05M context come from one secondary report citing OpenAI's docs. GPT-5.6 Cyber's launch date was not stated in the coverage.</div>
-              <div class="prior-links"><a href="https://www.securityweek.com/openai-says-new-gpt-6-cyber-model-hunts-flaws-without-crossing-the-line/" target="_blank" rel="noopener">securityweek.com &rarr;</a><a href="https://www.csoonline.com/article/4244911/openais-gpt-6-cyber-ups-the-ante-on-vulnerability-discovery.html" target="_blank" rel="noopener">csoonline.com &rarr;</a><a href="https://techjournal.org/openai-gpt-6-cyber" target="_blank" rel="noopener">techjournal.org &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>GPT-5.6 Cyber</b> &middot; <a href="archive.html#a-gpt-5-6-cyber-for-gpt-6-cyber">archive</a></div>
           </td>
         </tr>
       </tbody>
@@ -986,11 +967,7 @@
           <li>Beats GPT-6 Luna on computer use (72.4% vs 48.9%) and hallucination rate (40% vs 77%), but loses to Sonnet 5.5 on multi-step coding &mdash; pitched for classification, chat, and subagents. <a href="https://thegenaimagazine.com/claude-haiku-5-5-review-vs-sonnet-5-5-vs-gpt-6-luna" target="_blank" rel="noopener">thegenaimagazine.com &rarr;</a></li>
           <li>Shell automation is still weak (Terminal-Bench 39.2% vs Sonnet 5.5's 70.6%), and temperature and sampling controls are gone &mdash; requests that set them now fail with an HTTP 400. <a href="https://computingforgeeks.com/claude-haiku-5-5-released-features-benchmarks/" target="_blank" rel="noopener">computingforgeeks.com &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Haiku 4.5</span><span class="prior-spec">Oct 2025 · 200K ctx · $1 / $5</span></div>
-              <div class="prior-delta">Haiku 5.5 costs a tenth as much below 100K tokens (half the old rate above it), but its new tokenizer emits roughly 30% more tokens, so effective savings are closer to 87% below 100K and about 35% above. Context grows from 200K to 1M and adaptive thinking arrives in the Haiku line for the first time. OSWorld jumps from 15.7% to 72.4%, Terminal-Bench 4.0 from 0.0% to 39.2%, and AA's index from 17 to 34 at default effort.</div>
-              <div class="prior-links"><a href="https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/" target="_blank" rel="noopener">the-decoder.com &rarr;</a><a href="https://myclaw.ai/blog/claude-haiku-5-5-vs-4-5" target="_blank" rel="noopener">myclaw.ai &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Haiku 4.5</b> &middot; <a href="archive.html#a-haiku-4-5-for-haiku-5-5">archive</a></div>
           </td>
           <td>
             <div class="cell-model">Sonnet 5.5</div><div class="cell-spec">1M ctx · $2 / $10 · cache reads $0.10</div>
@@ -1002,11 +979,7 @@
           <li>HN's launch-day take: nobody disputes the benchmarks, the real argument is where it sits next to Opus 5.5. <a href="https://news.ycombinator.com/item?id=49881850" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
           <li>CodeRabbit measured code reviews at half the time and 40% of the cost versus Sonnet 5 — but new cyber safeguards are a sore spot, flagging routine tasks like Windows password changes. <a href="https://dreasays.substack.com/p/claude-55-is-brilliant-confusing" target="_blank" rel="noopener">dreasays.substack.com &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Sonnet 5</span><span class="prior-spec">Jun 2026 · $2 / $10</span></div>
-              <div class="prior-delta">Same sticker price, but 5.5 finishes tasks for up to 30% less, runs 30%+ faster, and jumps from 10.3% to 70.6% on Terminal-Bench 4.0 (vendor figures).</div>
-              <div class="prior-links"><a href="https://www.labellerr.com/blog/claude-sonnet-5-5-vs-sonnet-5/" target="_blank" rel="noopener">labellerr.com &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Sonnet 5</b> &middot; <a href="archive.html#a-sonnet-5-for-sonnet-5-5">archive</a></div>
           </td>
           <td>
             <div class="cell-model">Opus 5.5</div><div class="cell-spec">1M ctx · $4 / $20</div>
@@ -1018,11 +991,7 @@
           <li>Reddit users who'd switched to Codex or Astra are reportedly coming back to it. <a href="https://botmonster.com/ai/opus-5-5-is-the-claude-comeback-reddit-was-waiting-for/" target="_blank" rel="noopener">botmonster.com &rarr;</a></li>
           <li>Matches Fable 5.1-level performance at 40% lower cost than Opus 5, which it supersedes. <a href="https://www.macrumors.com/2026/09/22/anthropic-claude-opus-5-5/" target="_blank" rel="noopener">macrumors.com &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Opus 5</span><span class="prior-spec">Jul 24, 2026 · $5 / $25</span></div>
-              <div class="prior-delta">Opus 5.5 is 20% cheaper per token ($4 / $20), about 30% faster, and roughly 40% cheaper on typical work; Optiver reported matching Opus 5 quality in about half the turns. The New Stack's reasoning test is headlined "cheaper, faster, but not better." Opus 5 remains the pick for biology and security work that 5.5's stricter safeguards reroute, or for integrations that need thinking off.</div>
-              <div class="prior-links"><a href="https://emergent.sh/learn/claude-opus-5-5-vs-opus-5" target="_blank" rel="noopener">emergent.sh &rarr;</a><a href="https://thenewstack.io/claude-opus-5-5-vs-opus-5/" target="_blank" rel="noopener">thenewstack.io &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Opus 5</b> &middot; <a href="archive.html#a-opus-5-for-opus-5-5">archive</a></div>
           </td>
         </tr>
         <tr>
@@ -1039,11 +1008,7 @@
           <li>Anthropic reports FrontierCode 2.0 at 49.1% (Xhigh) vs 42.8% for Astra and 41.1% for Carbon, and FrontierSWE v2 at 69.9% vs 65.5% for Astra; Fable 5.1 scored 32.4% on FrontierCode. Nobody independent has re-run these yet. <a href="https://dataconomy.com/2026/11/10/anthropic-launches-claude-fable-and-mythos-52-with-20/" target="_blank" rel="noopener">dataconomy.com &rarr;</a></li>
           <li>Artificial Analysis puts it two points ahead of Carbon (62 vs 60 at High effort), but at about $9 per solved task at High and up to $26.50 at max, while Carbon leads CursorBench 4.0 and AutomationBench at lower cost. <a href="https://the-decoder.com/gemini-4-carbon-arrives-just-in-time-to-feel-like-yesterdays-news-in-the-fastest-model-cycle-yet/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Fable 5.1</span><span class="prior-spec">Sept 1, 2026 · $10 / $50</span></div>
-              <div class="prior-delta">The list price falls 20% (batch $4 / $20), with Anthropic claiming up to 30% faster output, fewer tokens at medium effort, and about 55% fewer blocks from its cyber and biology safeguards (all Anthropic claims). On FrontierCode 2.0 it goes from 32.4% to 49.1% at Xhigh. TestingCatalog also relays an Artificial Analysis score of 65 at max effort (index version not named), which fits the 62 at High above. Eligible paid Claude plans get extra Fable usage this launch week, and Fable now counts toward up to 50% of weekly limits on Pro and standard Team seats.</div>
-              <div class="prior-links"><a href="https://www.macrumors.com/2026/11/09/anthropic-launches-claude-fable-5-2/" target="_blank" rel="noopener">macrumors.com &rarr;</a><a href="https://www.testingcatalog.com/anthropic-launches-claude-fable-5-2-and-mythos-5-2/" target="_blank" rel="noopener">testingcatalog.com &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Fable 5.1</b> &middot; <a href="archive.html#a-fable-5-1-for-fable-5-2">archive</a></div>
           </td>
         </tr>
         <tr>
@@ -1060,11 +1025,7 @@
           <li>Application-only for security professionals and life-sciences researchers, with Claude Enterprise customers reaching it through Claude Security. An unnamed security firm reportedly saw it catch bugs other frontier models missed, with no details given. <a href="https://fortune.com/2026/11/09/anthropic-debuts-updated-claude-fable-and-mythos-models-undercutting-price-of-openais-gpt-6-astra-by-up-to-80/" target="_blank" rel="noopener">fortune.com &rarr;</a></li>
           <li>Confirms the access limits (Verification Programs and Claude Security on Enterprise plans) and that Fable and Mythos are one model with different restrictions. <a href="https://www.macrumors.com/2026/11/09/anthropic-launches-claude-fable-5-2/" target="_blank" rel="noopener">macrumors.com &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Mythos 5.1</span><span class="prior-spec">Sept 1, 2026 · gated</span></div>
-              <div class="prior-delta">Anthropic reports the same upgrade as Fable: vulnerability rediscovery rises from 78.3% to 89.6%, and out-of-sandbox credential use falls from 21% to 3.1% (internal tests). Mythos 5.2 lists at $8 / $40, the same as Fable 5.2. Access is still by application only.</div>
-              <div class="prior-links"><a href="https://dataconomy.com/2026/11/10/anthropic-launches-claude-fable-and-mythos-52-with-20/" target="_blank" rel="noopener">dataconomy.com &rarr;</a><a href="https://www.macrumors.com/2026/11/09/anthropic-launches-claude-fable-5-2/" target="_blank" rel="noopener">macrumors.com &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Mythos 5.1</b> &middot; <a href="archive.html#a-mythos-5-1-for-mythos-5-2">archive</a></div>
           </td>
         </tr>
       </tbody>
@@ -1093,11 +1054,7 @@
           <li>Google says its cost per task at the default high setting is 32% lower than Carbon's. It is in the Gemini API (paid tier), Gemini for business, AI Studio and Antigravity for paid subscribers; Carbon stays Ultra-only in the app, so Neon is the Pro subscriber's step up, and free users stay on Hydrogen. The page includes no independent evaluation. <a href="https://www.powerfulai.tools/blog/gemini-4-neon-google-ai-model-launch-2026" target="_blank" rel="noopener">powerfulai.tools &rarr;</a></li>
           <li>GitHub made it generally available in Copilot on Nov 18 for Pro+, Max, Business and Enterprise, aimed at agentic coding and multistep tool use, billed at provider list pricing under usage-based billing, with a gradual rollout. <a href="https://releasebot.io/updates/github" target="_blank" rel="noopener">releasebot.io &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 4 Argon</span><span class="prior-spec">Announced Sept 30 · GA Oct 13, 2026 · $2 / $10 intro</span></div>
-              <div class="prior-delta">Neon replaces Argon in the Gemini app. Per token it costs 50% more than Argon's intro price, and $3 / $15 against $4 / $20 once the intro prices end on Nov 30. Google claims Neon's cost per task is below Carbon's; no cost-per-task comparison with Argon has been published.</div>
-              <div class="prior-links"><a href="https://9to5google.com/2026/11/18/gemini-4-neon-announcement/" target="_blank" rel="noopener">9to5google.com &rarr;</a><a href="https://www.powerfulai.tools/blog/gemini-4-neon-google-ai-model-launch-2026" target="_blank" rel="noopener">powerfulai.tools &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Gemini 4 Argon</b> &middot; <a href="archive.html#a-gemini-4-argon-for-gemini-4-neon">archive</a></div>
           </td>
           <td>
             <div class="cell-model">Gemini 4 Carbon</div><div class="cell-spec">$2 / $10 intro, $4 / $20 after Nov 30 · GA</div>
@@ -1109,11 +1066,7 @@
           <li>Matches or beats Fable 5.2 on CursorBench 4.0, Perplexity's WANDR and AutomationBench at much lower cost, but trails it on the overall index (60 vs 62). It uses more tokens than Argon, so its bill is likely higher even at the same price. <a href="https://the-decoder.com/gemini-4-carbon-arrives-just-in-time-to-feel-like-yesterdays-news-in-the-fastest-model-cycle-yet/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></li>
           <li>The Oct 28 launch numbers: 88.2% on SEC-bench Pro, 71.0% on CWE-bench patching and WebDev Arena 1769 (all Google's figures). <a href="https://9to5google.com/2026/10/28/gemini-4-carbon-announcement/" target="_blank" rel="noopener">9to5google.com &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 4 Argon</span><span class="prior-spec">Announced Sept 30 · GA Oct 13, 2026 · $2 / $10 intro</span></div>
-              <div class="prior-delta">Google says Carbon complements Argon rather than replacing it: Argon stays the better choice for most software engineering and knowledge work, and Carbon is for harder multi-step coding, debugging and research. Both list at $2 / $10 until Nov 30, then $4 / $20. Google reports Carbon's per-attempt breach rate falling from 3.1% to 0.8% and its honesty pass rate rising from 70% to 92% (Google's tests). Cyber capabilities still go to defenders through Google's Fairwind program.</div>
-              <div class="prior-links"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener">blog.google &rarr;</a><a href="https://the-decoder.com/gemini-4-carbon-arrives-just-in-time-to-feel-like-yesterdays-news-in-the-fastest-model-cycle-yet/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Gemini 4 Argon</b> &middot; <a href="archive.html#a-gemini-4-argon-for-gemini-4-carbon">archive</a></div>
           </td>
         </tr>
         <tr>
@@ -1129,11 +1082,7 @@
           <li>Adapted from Carbon and meant for execution: in Antigravity, Carbon plans and Hydrogen edits code and runs tests. Google's own table has it at 57% on Terminal-Bench 4.1, behind Sonnet 5.5 at 63.9%, with a 5.57-point rise in unjustified refusals vs 3.8 Flash. The article says it is AI-generated and editor-reviewed. <a href="https://www.unite.ai/google-launches-gemini-4-hydrogen-for-everyday-agentic-workflows/" target="_blank" rel="noopener">unite.ai &rarr;</a></li>
           <li>Google says it runs 2.5&times; faster than 3.8 Flash and makes over 5&times; fewer fabricated claims, and it leads Terra and Sonnet 5.5 on knowledge benchmarks but trails slightly on science and math, computer use and Terminal-Bench 4.1. All of that is Google's; there is no hands-on testing. <a href="https://www.digitaltrends.com/cool-tech/googles-next-gen-gemini-4-hydrogen-ai-model-is-here-touting-faster-intelligence-for-all/" target="_blank" rel="noopener">digitaltrends.com &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Gemini 3.8 Flash</span><span class="prior-spec">Sept 2, 2026 · $0.75 / $3.75 intro</span></div>
-              <div class="prior-delta">Hydrogen costs twice 3.8 Flash's intro rate; the two prices meet when Flash's doubles on Jan 1, 2027. It defaults to high thinking, up from medium, and rejects the old thinking_budget and MINIMAL settings. On Artificial Analysis's v5.0.1 index it scores 51 against 31 for 3.8 Flash at high, at about $1.87 vs $7.77 per benchmark task. 3.8 Flash scored 59 on the older index version, so don't compare across versions. Google's 2.5&times; speed figure is its own claim.</div>
-              <div class="prior-links"><a href="https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor" target="_blank" rel="noopener">venturebeat.com &rarr;</a><a href="https://artificialanalysis.ai/articles/gemini-3-8-flash" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Gemini 3.8 Flash</b> &middot; <a href="archive.html#a-gemini-3-8-flash-for-gemini-4-hydrogen">archive</a></div>
           </td>
           <td><span class="cell-empty">&mdash;</span></td>
         </tr>
@@ -1174,11 +1123,7 @@
           <li>Independent analysis notes the benchmarks are self-reported and not yet confirmed. <a href="https://medium.com/@candemir13/microsofts-mai-models-what-the-benchmarks-show-and-what-they-don-t-0882e84f8238" target="_blank" rel="noopener">medium.com &rarr;</a></li>
           <li>Newsletter coverage calls the model report unusually transparent for its scale. <a href="https://www.latent.space/p/ainews-microsoft-build-mai-thinking" target="_blank" rel="noopener">latent.space &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">MAI-1-preview</span><span class="prior-spec">Aug 28, 2025 · non-reasoning</span></div>
-              <div class="prior-delta">No earlier MAI reasoning model exists &mdash; Thinking-1 is Microsoft's first, and a different class from MAI-1-preview (the everyday chat model in the Balanced column): a ~1T-total / 35B-active mixture-of-experts with 256K context, trained from scratch without distilling third-party models, per Microsoft. Every benchmark claim is Microsoft's own, and it's still in Foundry preview with no published price. Simon Willison notes the "commercially licensed data" wording understates what the technical paper shows.</div>
-              <div class="prior-links"><a href="https://microsoft.ai/news/introducing-mai-thinking-1/" target="_blank" rel="noopener">microsoft.ai &rarr;</a><a href="https://simonwillison.net/2026/Jun/2/microsofts-new-models/" target="_blank" rel="noopener">simonwillison.net &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>MAI-1-preview</b> &middot; <a href="archive.html#a-mai-1-preview-for-mai-thinking-1">archive</a></div>
           </td>
         </tr>
         <tr>
@@ -1215,40 +1160,6 @@
         </tr>
       </tbody>
 
-      <tbody style="--co:var(--c-xai)">
-        <tr>
-          <th class="co-cell"><div class="co-name">xAI</div><div class="co-line">Grok · 3 pts</div></th>
-          <td><span class="cell-empty">&mdash;</span></td>
-          <td>
-            <div class="cell-model">Grok 4.3</div><div class="cell-spec">1M ctx · $1.25 / $2.50</div>
-            <div class="cell-date">Launched Apr 30, 2026</div>
-            <div class="usage-tier">Growing</div>
-            <div class="usage-evidence">Tracked by independent pricing aggregators and discussed on HN, but no leaderboard-topping data found specifically for it.</div>
-            <ul class="cell-sources">
-          <li>$1.25/$2.50 per M tokens, 1M context, positioned for agentic and instruction-following work. <a href="https://openrouter.ai/x-ai/grok-4.3" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
-          <li>Treated as an established, multi-provider-hosted model worth comparison-shopping. <a href="https://pricepertoken.com/pricing-page/model/xai-grok-4.3" target="_blank" rel="noopener">pricepertoken.com &rarr;</a></li>
-          <li>Dedicated HN thread gives direct developer reaction to the release. <a href="https://news.ycombinator.com/item?id=47972447" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
-            </ul>
-          </td>
-          <td>
-            <div class="cell-model">Grok 4.7</div><div class="cell-spec">500K ctx · 2.1T params</div>
-            <div class="cell-date">Launched Sept 21, 2026</div>
-            <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">Launched only 6 days before this research; early HN sentiment is mixed on value, no usage-rank data yet.</div>
-            <ul class="cell-sources">
-          <li>Confirms the Sept 21 release, ~10 days later than Musk's own target; details the larger base model. <a href="https://evolink.ai/blog/grok-4-7-release-date" target="_blank" rel="noopener">evolink.ai &rarr;</a></li>
-          <li>First-hand developer impressions immediately after release. <a href="https://news.ycombinator.com/item?id=49788838" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
-          <li>~40% more weights than 4.6 at the same output price; some found it slower and pricier to benchmark. <a href="https://news.ycombinator.com/item?id=49789234" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
-            </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Grok 4.6</span><span class="prior-spec">Aug 12, 2026 · $2 / $6</span></div>
-              <div class="prior-delta">Same price and 500K context. AA's index is 46 vs 44 (at different effort levels), but 4.7 burns about 81k output tokens per task vs 36k &mdash; roughly double the cost to run the index, and one Cursor Ultra user reported ~2.5&times; plan usage for the same task. At matched xhigh effort, Terminal-Bench 4.0 is 33% vs 18% and hallucination rate 29% vs 34%. Grok 4.6 remains available.</div>
-              <div class="prior-links"><a href="https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-grok-4-6" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://codersera.com/blog/grok-4-7-vs-grok-4-6-2026/" target="_blank" rel="noopener">codersera.com &rarr;</a></div>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-
       <tbody style="--co:var(--c-qwen)">
         <tr>
           <th class="co-cell"><div class="co-name">Qwen</div><div class="co-line">open weight · 2 pts</div></th>
@@ -1274,11 +1185,7 @@
           <li>Alibaba reports 75.7 on DeepSWE v1.1, just ahead of Opus 5.5 (74.2), but 48.5 on Terminal-Bench 4.0 against 59.6 for Opus 5.5 and 59.1 for GPT-6 Astra. These are Alibaba's figures; independent boards hadn't listed it when the guide was written. About 25% cheaper than Qwen3.8-Max per token. <a href="https://freakyjolly.com/qwen4-max-guide/" target="_blank" rel="noopener">freakyjolly.com &rarr;</a></li>
           <li>OpenRouter lists the model at $1.425 / $4.275 through Alibaba Cloud (international), a few percent below the $1.50 / $4.50 Singapore list price, so the price depends on where you buy it. Not available through EU in-region routing. <a href="https://openrouter.ai/qwen/qwen4-max" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Qwen3.8-Max</span><span class="prior-spec">Aug 3, 2026 · 1M ctx · open weights Aug 12</span></div>
-              <div class="prior-delta">Still the only Qwen flagship with open weights: a 2.4T-parameter MoE (95B active) under a custom license (attribution above 100M monthly users or $20M monthly revenue, and a commercial license for model-as-a-service above $50M), text-only and 262K native context in the open build, needing multi-node hardware. Real usage is small, about 0.1% of OpenRouter tokens (#27). Qwen4-Max is cheaper per token ($1.50 / $4.50 vs $2 / $6) and stronger on terminal tasks by Alibaba's numbers.</div>
-              <div class="prior-links"><a href="https://www.scmp.com/tech/tech-trends/article/3363927/alibaba-adds-commercial-restrictions-open-weight-qwen38-max-ai-model" target="_blank" rel="noopener">scmp.com &rarr;</a><a href="https://opencode.ai/data/qwen/qwen3-8-max" target="_blank" rel="noopener">opencode.ai &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Qwen3.8-Max</b> &middot; <a href="archive.html#a-qwen3-8-max-for-qwen4-max">archive</a></div>
           </td>
         </tr>
       </tbody>
@@ -1308,31 +1215,28 @@
           <li>Meta says both match Fable 5.1 and GPT-6 Astra on benchmarks, but those claims come from its own model card, with no outside analyst commentary yet. <a href="https://tech.yahoo.com/ai/meta-ai/articles/meta-releases-first-frontier-model-175656485.html" target="_blank" rel="noopener">tech.yahoo.com &rarr;</a></li>
           <li>Factual knowledge is the weak spot (AA-Omniscience 25 for Wonder vs 46 for Opus 5.5), and an average task costs about $4.52 &mdash; nearly 3&times; Spark 1.3. <a href="https://explainx.ai/blog/meta-muse-wonder-full-launch-pricing-benchmarks-muse-code-2026" target="_blank" rel="noopener">explainx.ai &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Muse Spark 1.3</span><span class="prior-spec">Sept 2, 2026 · $1.25 / $4.25</span></div>
-              <div class="prior-delta">Wonder lists at about 3&times; Spark 1.3's per-token price and, by Artificial Analysis's estimate, costs nearly 3&times; as much per task. Meta calls Wonder a much larger class of model than Spark; Spark stays on the API as the cheaper, lower-latency option. Neither Wonder model has open weights.</div>
-              <div class="prior-links"><a href="https://explainx.ai/blog/meta-muse-wonder-full-launch-pricing-benchmarks-muse-code-2026" target="_blank" rel="noopener">explainx.ai &rarr;</a><a href="https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api" target="_blank" rel="noopener">venturebeat.com &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Muse Spark 1.3</b> &middot; <a href="archive.html#a-muse-spark-1-3-for-muse-wonder">archive</a></div>
           </td>
         </tr>
       </tbody>
 
-      <tbody style="--co:var(--c-mistral)">
+      <tbody style="--co:var(--c-xai)">
         <tr>
-          <th class="co-cell"><div class="co-name">Mistral</div><div class="co-line">open weight · Large 4 modified-MIT licence · 0 pts</div></th>
+          <th class="co-cell"><div class="co-name">xAI</div><div class="co-line">Grok · 1 pt</div></th>
+          <td><span class="cell-empty">&mdash;</span></td>
           <td><span class="cell-empty">&mdash;</span></td>
           <td>
-            <div class="cell-model">Medium 3.5</div><div class="cell-spec">EU compliance focus</div>
-            <div class="cell-date">Launched Apr 29, 2026</div>
-            <div class="usage-tier">Niche</div>
-            <div class="usage-evidence">A Reddit commenter said it performs worse than DeepSeek models at a higher API price; ranks 328th of 457 on OpenRouter by cost.</div>
+            <div class="cell-model">Grok 4.7</div><div class="cell-spec">500K ctx · 2.1T params</div>
+            <div class="cell-date">Launched Sept 21, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">Launched only 6 days before this research; early HN sentiment is mixed on value, no usage-rank data yet.</div>
             <ul class="cell-sources">
-          <li>Users discussed running it locally at Q4 quantization on ~70GB VRAM, near a maxed-out Mac Studio. <a href="https://news.ycombinator.com/item?id=47949642" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
-          <li>Highlights a built-in coding agent that can open pull requests directly. <a href="https://dev.to/techsifted/mistral-medium-35-review-a-128b-open-weight-model-with-a-coding-agent-that-opens-prs-for-you-5a0i" target="_blank" rel="noopener">dev.to &rarr;</a></li>
-          <li>Ranks only 328th of 457 chat models by input cost — a small, premium-priced footprint. <a href="https://openrouter.ai/mistralai/mistral-medium-3-5" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
+          <li>Confirms the Sept 21 release, ~10 days later than Musk's own target; details the larger base model. <a href="https://evolink.ai/blog/grok-4-7-release-date" target="_blank" rel="noopener">evolink.ai &rarr;</a></li>
+          <li>First-hand developer impressions immediately after release. <a href="https://news.ycombinator.com/item?id=49788838" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
+          <li>~40% more weights than 4.6 at the same output price; some found it slower and pricier to benchmark. <a href="https://news.ycombinator.com/item?id=49789234" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
             </ul>
+            <div class="prior-ref">Replaces <b>Grok 4.6</b> &middot; <a href="archive.html#a-grok-4-6-for-grok-4-7">archive</a></div>
           </td>
-          <td><span class="cell-empty">&mdash;</span></td>
         </tr>
       </tbody>
 
@@ -1345,7 +1249,7 @@
     <h2>Leading models &middot; open weights</h2>
     <div class="axis">cheap / fast <span class="arrow">&rarr;</span> expensive / deep-thinking</div>
   </div>
-  <p class="section-sub">Models whose weights you can download and run yourself, whatever the licence &mdash; Apache 2.0, MIT or a custom one, which each cell names. Tiers, usage scoring and the one-prior-version rule are the same as in the closed table above, and companies are ranked within this table. A company can appear in both tables: Qwen, Mistral and Meta each sell some models only through an API and release others as weights. Download counts and benchmark scores are not prices: what an open model costs depends on who hosts it (see Inference hosts), and on your own GPUs it costs whatever they do. A model with no confirmed public weights counts as closed: Qwen3.8-Omni-Flash and Mistral Medium 3.5, neither of whose cells mentions released weights. Mistral Small 4 counts as open because Artificial Analysis lists it among open-weight models.</p>
+  <p class="section-sub">Models whose weights you can download and run yourself, whatever the licence &mdash; Apache 2.0, MIT or a custom one, which each cell names. Tiers, usage scoring and archiving are the same as in the closed table above, and companies are ranked within this table. A company can appear in both tables: Qwen and Meta each sell some models only through an API and release others as weights. Download counts and benchmark scores are not prices: what an open model costs depends on who hosts it (see Inference hosts), and on your own GPUs it costs whatever they do. A model with no confirmed public weights counts as closed, as with Qwen3.8-Omni-Flash, whose cell mentions no released weights.</p>
 
   <div class="table-wrap">
     <table class="matrix">
@@ -1383,11 +1287,7 @@
           <li>Hands-on review tests its agentic coding performance in practical use. <a href="https://www.geeky-gadgets.com/deepseek-v4-pro-review/" target="_blank" rel="noopener">geeky-gadgets.com &rarr;</a></li>
           <li>DeepSeek began auto-routing all V4-Pro API requests to V4.1 Flash as of mid-September. <a href="https://siliconangle.com/2026/09/10/deepseek-releases-v4-1-flash-says-it-outperforms-flagship-v4-pro/" target="_blank" rel="noopener">siliconangle.com &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">DeepSeek V3.2</span><span class="prior-spec">Dec 1, 2025 · open weight</span></div>
-              <div class="prior-delta">V4-Pro is a 1.6T-total / 49B-active model with 1M context (up from ~160K) under MIT. DeepSeek claims it needs 27% of V3.2's per-token compute (vendor claim); AA's index is 53. List price has moved and sources conflict ($0.435 / $0.87 vs $0.66 / $1.98 off-peak), so check DeepSeek's live page. Since Sept 14, DeepSeek routes all V4-Pro API calls to V4.1 Flash at Flash rates until a V4.1 Pro ships &mdash; production users complained about the unannounced change.</div>
-              <div class="prior-links"><a href="https://api-docs.deepseek.com/news/news260910/" target="_blank" rel="noopener">api-docs.deepseek.com &rarr;</a><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank" rel="noopener">huggingface.co &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>DeepSeek V3.2</b> &middot; <a href="archive.html#a-deepseek-v3-2-for-deepseek-v4-pro">archive</a></div>
           </td>
         </tr>
       </tbody>
@@ -1408,40 +1308,6 @@
             </ul>
           </td>
           <td><span class="cell-empty">&mdash;</span></td>
-        </tr>
-      </tbody>
-
-      <tbody style="--co:var(--c-mistral)">
-        <tr>
-          <th class="co-cell"><div class="co-name">Mistral</div><div class="co-line">open weight · Large 4 modified-MIT licence · 3 pts</div></th>
-          <td>
-            <div class="cell-model">Small 4</div><div class="cell-spec">efficient enterprise</div>
-            <div class="cell-date">Launched Mar 16, 2026</div>
-            <div class="usage-tier">Growing</div>
-            <div class="usage-evidence">Active HN testing within days of release, but the same threads say Mistral's small-model line has fallen well behind Qwen and Gemma at similar sizes.</div>
-            <ul class="cell-sources">
-          <li>Solid for a few months after each release, but generally trailing the "big 3" labs' offerings. <a href="https://news.ycombinator.com/item?id=47404575" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li>
-          <li>Real-world cost and provider positioning listing. <a href="https://openrouter.ai/mistralai/mistral-small-2603" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li>
-          <li>Frames its value as unifying three previously separate specialized models into one. <a href="https://dev.to/akaranjkar08/mistral-small-4-one-open-source-model-that-replaces-three-2026-5b96" target="_blank" rel="noopener">dev.to &rarr;</a></li>
-            </ul>
-          </td>
-          <td><span class="cell-empty">&mdash;</span></td>
-          <td>
-            <div class="cell-model">Large 4</div><div class="cell-spec">1M ctx · ~1T MoE / ~52B active · open weights</div>
-            <div class="cell-date">Preview Oct 6 · weights Oct 29, 2026</div>
-            <div class="usage-tier">Emerging</div>
-            <div class="usage-evidence">The open weights are out (Oct 29, modified-MIT license with a model-as-a-service restriction), and Mistral's docs now list the API as generally available from Nov 5, though they called it a preview on Nov 3. Artificial Analysis's current index scores it 26, the highest open model built outside China and 7th among open-weight models. The earlier 38.4 was on an older index version, so the drop is not a regression.</div>
-            <ul class="cell-sources">
-          <li>Cybersecurity is the standout and output is quick (~116 tokens/sec), but a 41.9% hallucination rate and ~18.7s time-to-first-token hurt customer-facing use. <a href="https://www.eesel.ai/blog/mistral-large-4-review" target="_blank" rel="noopener">eesel.ai &rarr;</a></li>
-          <li>API preview launched at $1.36 / $4.18, with live prices since Oct 29 near $0.70 / $2.10; the weights are Mistral's first with a model-as-a-service restriction. Mistral's own coding scores depend on its agent harness (41.4% Terminal-Bench vs 24.7% in AA's standard test), and Omniscience is weak (5.1). <a href="https://www.lindy.ai/blog/mistral-large-4" target="_blank" rel="noopener">lindy.ai &rarr;</a></li>
-          <li>The weights went up on Hugging Face on Oct 29 (about 1.06 TB in bf16, 610 GB in NVFP4 for four B200s), after the promised date slipped. Businesses reselling it as a service need a separate Mistral license; internal use and embedding it in an end product are free. The promo price has no published end date. <a href="https://www.orcarouter.ai/blog/mistral-large-4-open-weights-licence" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></li>
-            </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Mistral Large 3</span><span class="prior-spec">Dec 2, 2025 · 256K ctx · $0.50 / $1.50</span></div>
-              <div class="prior-delta">Large 4 grows to roughly 1T total and ~52B active parameters with a 1M-token context (up from 256K) and hybrid reasoning. It is also dearer: even at the promotional rate about 39% more per output token. Large 3 stays Apache 2.0 with no restrictions, while Large 4's license adds the model-as-a-service condition, and the mistral-large-latest alias still points to Large 3. Sources disagree on the active-parameter count (49B or 52B) and on whether the discount ends.</div>
-              <div class="prior-links"><a href="https://www.orcarouter.ai/blog/mistral-large-4-open-weights-licence" target="_blank" rel="noopener">orcarouter.ai &rarr;</a><a href="https://www.lindy.ai/blog/mistral-large-4" target="_blank" rel="noopener">lindy.ai &rarr;</a></div>
-            </div>
-          </td>
         </tr>
       </tbody>
 
@@ -1470,11 +1336,7 @@
           <li>License fine print: you must display "Built with Muse Spark Open," and model-as-a-service providers above $20M revenue need a separate agreement with Meta. <a href="https://www.orcarouter.ai/blog/muse-spark-open-best-us-open-weight-model" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></li>
           <li>Downloadable from Amazon SageMaker, Google Cloud Model Garden, Hugging Face, and Microsoft Foundry, and served by providers including Groq, Together, and OpenRouter. <a href="https://www.unite.ai/metas-816b-parameter-muse-spark-open-weights-are-now-public/" target="_blank" rel="noopener">unite.ai &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Muse Spark 1.3 (hosted)</span><span class="prior-spec">Sept 2, 2026 · closed · $1.25 / $4.25</span></div>
-              <div class="prior-delta">Open gives you the weights; hosted 1.3 stays closed and metered. Meta publishes no price for Open &mdash; the only figure is a third-party OpenRouter route at the same $1.25 / $4.25. One commentary says the model sat quietly for about a month before the Oct 15 paperwork, so "release" is partly framing.</div>
-              <div class="prior-links"><a href="https://www.orcarouter.ai/blog/muse-spark-open-best-us-open-weight-model" target="_blank" rel="noopener">orcarouter.ai &rarr;</a><a href="https://www.digitalapplied.com/blog/ai-model-releases-october-2026-tracker" target="_blank" rel="noopener">digitalapplied.com &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Muse Spark 1.3 (hosted)</b> &middot; <a href="archive.html#a-muse-spark-1-3-hosted-for-muse-spark-open">archive</a></div>
           </td>
         </tr>
       </tbody>
@@ -1522,11 +1384,7 @@
           <li>The article says the results cover bounded tasks, not general lab autonomy, and depend on how well each verifier measures what researchers want, and it cites no independent evaluation. The model's license isn't stated there; the dataset is CC-BY-SA-4.0. <a href="https://www.unite.ai/nvidia-launches-nemotron-for-science-and-open-chemistry-dataset/" target="_blank" rel="noopener">unite.ai &rarr;</a></li>
           <li>One aggregator lists it at $0.15 / $0.47 on OpenRouter and 4&times; H100 or 2&times; GB200 to self-host, under OpenMDW-1.1, but its Nemotron table is inconsistent on licenses and on which models are current, so treat these as unconfirmed. <a href="https://www.secondtalent.com/resources/every-nemotron-ai-model-explained-compared/" target="_blank" rel="noopener">secondtalent.com &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Nemotron 3 Super</span><span class="prior-spec">Mar 11, 2026 · 120B / 12B active · text only</span></div>
-              <div class="prior-delta">The text-only predecessor of the same size. Artificial Analysis scored it 36 (ahead of gpt-oss-120b at 33, behind Qwen3.5 122B at 42), noted it was verbose at about 40% more output tokens than gpt-oss-120b, and measured hosted endpoints up to 484 tokens/sec. Super VL adds image and video input. The index has been revised since, so don't compare those scores with current ones.</div>
-              <div class="prior-links"><a href="https://artificialanalysis.ai/articles/nvidia-nemotron-3-super-the-new-leader-in-open-efficient-intelligence" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents" target="_blank" rel="noopener">nvidia.com &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Nemotron 3 Super</b> &middot; <a href="archive.html#a-nemotron-3-super-for-nemotron-3-5-super-vl">archive</a></div>
           </td>
           <td>
             <div class="cell-model">Nemotron 3 Ultra</div><div class="cell-spec">~550B / ~55B active · 1M ctx · open weights</div>
@@ -1538,11 +1396,27 @@
           <li>NVIDIA reports SWE-Bench Verified 70.7 and Terminal Bench 2.1 56.4 from its own runs. Listed at $0.60 / $2.40 on OpenRouter, and self-hosting needs 8&times; B200 or 16&times; H100 in BF16. The OpenMDW-1.1 license and 1M context come from this aggregator only. <a href="https://www.secondtalent.com/resources/every-nemotron-ai-model-explained-compared/" target="_blank" rel="noopener">secondtalent.com &rarr;</a></li>
           <li>Part of the Nemotron 3 family, which mixes Mamba, attention and mixture-of-experts layers. NVIDIA also announced a Nemotron Coalition in March, whose first project is a base model co-developed with Mistral AI for a future Nemotron 4 family that hasn't been released. The page carries a maintenance notice about possible LLM-written text, so weigh it accordingly. <a href="https://en.wikipedia.org/wiki/Nemotron" target="_blank" rel="noopener">wikipedia.org &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Nemotron 3 Super</span><span class="prior-spec">Mar 11, 2026 · 120B / 12B active</span></div>
-              <div class="prior-delta">NVIDIA's top model before Ultra. Artificial Analysis scores Ultra 47.7 against 36 for Super, with Ultra using about 1M fewer output tokens on the same index run, and a GDPval-AA Elo of 1378 against 1027. Those figures come from two AA articles on different dates, so treat the gap as indicative.</div>
-              <div class="prior-links"><a href="https://artificialanalysis.ai/articles/nvidia-nemotron-3-ultra-released" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a><a href="https://artificialanalysis.ai/articles/nvidia-nemotron-3-super-the-new-leader-in-open-efficient-intelligence" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Nemotron 3 Super</b> &middot; <a href="archive.html#a-nemotron-3-super-for-nemotron-3-ultra">archive</a></div>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody style="--co:var(--c-mistral)">
+        <tr>
+          <th class="co-cell"><div class="co-name">Mistral</div><div class="co-line">open weight · Large 4 modified-MIT licence · 1 pt</div></th>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td><span class="cell-empty">&mdash;</span></td>
+          <td>
+            <div class="cell-model">Large 4</div><div class="cell-spec">1M ctx · ~1T MoE / ~52B active · open weights</div>
+            <div class="cell-date">Preview Oct 6 · weights Oct 29, 2026</div>
+            <div class="usage-tier">Emerging</div>
+            <div class="usage-evidence">The open weights are out (Oct 29, modified-MIT license with a model-as-a-service restriction), and Mistral's docs now list the API as generally available from Nov 5, though they called it a preview on Nov 3. Artificial Analysis's current index scores it 26, the highest open model built outside China and 7th among open-weight models. The earlier 38.4 was on an older index version, so the drop is not a regression.</div>
+            <ul class="cell-sources">
+          <li>Cybersecurity is the standout and output is quick (~116 tokens/sec), but a 41.9% hallucination rate and ~18.7s time-to-first-token hurt customer-facing use. <a href="https://www.eesel.ai/blog/mistral-large-4-review" target="_blank" rel="noopener">eesel.ai &rarr;</a></li>
+          <li>API preview launched at $1.36 / $4.18, with live prices since Oct 29 near $0.70 / $2.10; the weights are Mistral's first with a model-as-a-service restriction. Mistral's own coding scores depend on its agent harness (41.4% Terminal-Bench vs 24.7% in AA's standard test), and Omniscience is weak (5.1). <a href="https://www.lindy.ai/blog/mistral-large-4" target="_blank" rel="noopener">lindy.ai &rarr;</a></li>
+          <li>The weights went up on Hugging Face on Oct 29 (about 1.06 TB in bf16, 610 GB in NVFP4 for four B200s), after the promised date slipped. Businesses reselling it as a service need a separate Mistral license; internal use and embedding it in an end product are free. The promo price has no published end date. <a href="https://www.orcarouter.ai/blog/mistral-large-4-open-weights-licence" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></li>
+            </ul>
+            <div class="prior-ref">Replaces <b>Mistral Large 3</b> &middot; <a href="archive.html#a-mistral-large-3-for-large-4">archive</a></div>
           </td>
         </tr>
       </tbody>
@@ -1579,11 +1453,7 @@
           <li>Artificial Analysis&rsquo;s Apr 2 evaluation of the earlier 105B gave it 18 on its Intelligence Index, behind gpt-oss-120B (33), Mistral Small 4 (27) and GLM-4.5-Air (23), and flagged high hallucination rates. It is the only independent score, and it predates this checkpoint. <a href="https://artificialanalysis.ai/articles/sarvam-105b-Sarvam-30b-everything-you-need-to-know" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></li>
           <li>AlphaSignal&rsquo;s Nov 16 report on Token Factory repeats the &#8377;10 / &#8377;25 price and Sarvam&rsquo;s speed claims (0.2 seconds to first token, 330 tokens a second for one user), which it labels vendor-reported. <a href="https://alphasignal.ai/news/sarvam-ai-launches-token-factory-bringing-open-model-inference-to-indian-gpus" target="_blank" rel="noopener">alphasignal.ai &rarr;</a></li>
             </ul>
-            <div class="prior-version">
-              <div class="prior-head"><span class="prior-label">Prior</span><span class="prior-name">Sarvam 105B (earlier checkpoint)</span><span class="prior-spec">Announced Feb 2026 · weights Mar 6 · Apache 2.0</span></div>
-              <div class="prior-delta">By Sarvam&rsquo;s own numbers the new checkpoint follows instructions and calls tools far better (IFBench 32.5 to 82.5, Tau2 46.2 to 85.5) and its blended price fell from $0.44 to $0.15 per 1M tokens. The independent score of 18 from Artificial Analysis belongs to this earlier version, so the jump has not been checked by anyone else.</div>
-              <div class="prior-links"><a href="https://www.sarvam.ai/blogs/sarvam-30b-105b" target="_blank" rel="noopener">sarvam.ai &rarr;</a><a href="https://artificialanalysis.ai/articles/sarvam-105b-Sarvam-30b-everything-you-need-to-know" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></div>
-            </div>
+            <div class="prior-ref">Replaces <b>Sarvam 105B (earlier checkpoint)</b> &middot; <a href="archive.html#a-sarvam-105b-earlier-checkpoint-for-sarvam-105b-1711">archive</a></div>
           </td>
           <td><span class="cell-empty">&mdash;</span></td>
           <td><span class="cell-empty">&mdash;</span></td>
@@ -1615,7 +1485,7 @@
           <th class="co-cell"><div class="co-name">GPT-Live</div><div class="co-line">OpenAI · Jul 2026 · 1.1 on Oct 15 · API Nov 19</div></th>
           <td class="ent-models">A new generation of voice models on a full-duplex architecture — it can listen and speak at the same time, so talking to it feels closer to a real conversation.</td>
           <td class="ent-pick">ChatGPT Voice, plus the API (gpt-live-1, and 1.1 since Nov 19&ndash;20, reportedly $0.05 a minute active and $0.02 on standby)<br>GPT-Live-1.1 and a smaller 1.1 Quip began rolling out in ChatGPT on Oct 15</td>
-          <td class="ent-why"><ul class="reviews"><li><b>Artificial Analysis speech index:</b> GPT-Live-1 scores 83.2, second to Grok Voice 3.0 (86.9) at launch. <a href="https://www.how2shout.com/ai/grok-voice-3-launch-benchmarks.html" target="_blank" rel="noopener">read &rarr;</a></li><li><b>τ-Voice (simulated noisy support calls):</b> GPT-Live-1 leads, 74.5% to Grok Voice 3.0's 71.6%. <a href="https://www.how2shout.com/ai/grok-voice-3-launch-benchmarks.html" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>Artificial Analysis speech index:</b> GPT-Live-1 scores 83.2, second to Grok Voice 3.0 (86.9) at launch. <a href="https://www.how2shout.com/ai/grok-voice-3-launch-benchmarks.html" target="_blank" rel="noopener">read &rarr;</a></li><li><b>τ-Voice (simulated noisy support calls):</b> GPT-Live-1 leads, 74.5% to Grok Voice 3.0's 71.6%. <a href="https://www.how2shout.com/ai/grok-voice-3-launch-benchmarks.html" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>1.1 adds French, German, Hindi, Japanese, Korean and Mexican Spanish voices.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-google)">
@@ -1623,7 +1493,7 @@
           <th class="co-cell"><div class="co-name">Gemini 3.8 Live</div><div class="co-line">Google · Sept 15, 2026</div></th>
           <td class="ent-models">Native speech-to-speech model for fast, natural conversation — takes text, image, audio, and video in, with about 128K context and automatic switching among 97 languages.</td>
           <td class="ent-pick">Gemini API and AI Studio; rolling into Search Live</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Google positions it as the cost-effective base for scalable voice agents.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-google)">
@@ -1631,7 +1501,7 @@
           <th class="co-cell"><div class="co-name">Gemini 3.8 Live Extended Thinking</div><div class="co-line">Google · Sept 15, 2026</div></th>
           <td class="ent-models">Keeps the conversation going while it reasons through multistep tasks and runs tools in the background.</td>
           <td class="ent-pick">Gemini API and AI Studio; Gemini Live; Workspace — Docs (Pro/Ultra), Gmail, Keep</td>
-          <td class="ent-why"><ul class="reviews"><li><b>Artificial Analysis (via TechRepublic):</b> Ranked #1 on its speech-to-speech leaderboard at launch. <a href="https://www.techrepublic.com/article/news-gemini-3-8-live-models/" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>Artificial Analysis (via TechRepublic):</b> Ranked #1 on its speech-to-speech leaderboard at launch. <a href="https://www.techrepublic.com/article/news-gemini-3-8-live-models/" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Grok Voice 3.0 has since topped that index at 86.9.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-openai)">
@@ -1647,7 +1517,7 @@
           <th class="co-cell"><div class="co-name">Grok Voice 3.0</div><div class="co-line">xAI · Oct 14, 2026</div></th>
           <td class="ent-models">Speech-to-speech model for xAI's Voice Agent API, replacing 2.0 behind the grok-voice-latest alias. Topped Artificial Analysis's Speech-to-Speech Index at 86.9 when it launched in October (GPT-Live-1 at 83.2, Gemini 3.8 Live at 82.6), though newer reports disagree on whether it still leads, with about 0.81 seconds to first audio.</td>
           <td class="ent-pick">xAI Voice Agent API<br>$0.08 / minute ($4.80 / hour)</td>
-          <td class="ent-why"><ul class="reviews"><li><b>Artificial Analysis speech index:</b> 86.9 at launch, ahead of GPT-Live-1 (83.2). <a href="https://www.how2shout.com/ai/grok-voice-3-launch-benchmarks.html" target="_blank" rel="noopener">read &rarr;</a></li><li><b>τ-Voice (simulated noisy support calls):</b> 71.6%, behind GPT-Live-1's 74.5%. <a href="https://www.how2shout.com/ai/grok-voice-3-launch-benchmarks.html" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>Artificial Analysis speech index:</b> 86.9 at launch, ahead of GPT-Live-1 (83.2). <a href="https://www.how2shout.com/ai/grok-voice-3-launch-benchmarks.html" target="_blank" rel="noopener">read &rarr;</a></li><li><b>τ-Voice (simulated noisy support calls):</b> 71.6%, behind GPT-Live-1's 74.5%. <a href="https://www.how2shout.com/ai/grok-voice-3-launch-benchmarks.html" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>The Starlink call-center figures are xAI's own and unaudited. <a href="https://www.how2shout.com/ai/grok-voice-3-launch-benchmarks.html" target="_blank" rel="noopener">how2shout.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-anthropic)">
@@ -1655,7 +1525,7 @@
           <th class="co-cell"><div class="co-name">Claude voice mode</div><div class="co-line">Anthropic · updated July 23, 2026</div></th>
           <td class="ent-models">No dedicated speech-to-speech model — voice runs on the standard Claude models, so you're talking to the same Opus, Sonnet, or Haiku as in text.</td>
           <td class="ent-pick">Claude apps, plus voice mode in Claude Code; pick Opus, Sonnet, or Haiku</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Reaches connected tools such as email and calendar mid-conversation. <a href="https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/" target="_blank" rel="noopener">techcrunch.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-microsoft)">
@@ -1663,7 +1533,7 @@
           <th class="co-cell" rowspan="3"><div class="co-name">MAI-Voice-2.1 / Flash</div><div class="co-line">Microsoft · Realtime 1 added Nov 17, 2026</div></th>
           <td class="ent-models">Expressive, high-fidelity text-to-speech across 23 languages; Flash trades some expressiveness for lower latency. Updated from the Build 2026 MAI-Voice-2 generation.</td>
           <td class="ent-pick">Foundry<br>$22 / 1M chars (2.1), $15 / 1M chars (Flash)</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Microsoft says MAI Realtime 1 beats GPT-Realtime-2.1; the coverage shows no numbers (vendor claim).</li></ul></td>
         </tr>
         <tr>
           <td class="ent-models">MAI-Transcribe-2-Streaming: converts speech to text live over a WebSocket, continuously updating the transcript as someone keeps talking, across 60+ languages with auto-detection.</td>
@@ -1701,7 +1571,7 @@
           <th class="co-cell"><div class="co-name">Gemini Decision 1</div><div class="co-line">Google · Nov 11, 2026</div></th>
           <td class="ent-models">The model behind Google's new Gemini Decisions API (not OpenAI's similarly named product). One request carries a single input &mdash; text, images, audio, video or PDFs, up to 256K tokens &mdash; plus up to 1,000 independent questions: yes/no, multiple choice (2&ndash;255 options) or a rubric score, each returned with probabilities and a confidence.</td>
           <td class="ent-pick">Gemini API; limited free tier in AI Studio<br>$0.10 / 1M input tokens, output free; the shared input is billed once per request</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Google says it led on 7 of 9 of its own benchmarks (92.2% vs 90.9% for GPT-6 Luna on JevBench) and lost to Jev 1.14 on Mind2Web and When2Call. Latency of 150&ndash;250 ms is Google's figure. Every number is Google's, on rivals it chose. <a href="https://siliconangle.com/2026/11/11/google-enters-the-decision-model-market-with-gemini-decisions-api/" target="_blank" rel="noopener">siliconangle.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-microsoft)">
@@ -1709,7 +1579,7 @@
           <th class="co-cell"><div class="co-name">MAI Decision 1.1</div><div class="co-line">Microsoft · Nov 17, 2026</div></th>
           <td class="ent-models">An update to Microsoft&rsquo;s Decision 1: it returns probabilities over a predefined list of options instead of writing text.</td>
           <td class="ent-pick">Generally available per one outlet; Decision 1 is on Foundry and OpenRouter, and the coverage doesn&rsquo;t name channels for 1.1<br>$0.042 / 1M input tokens, the same as Decision 1 (relayed from Artificial Analysis)</td>
-          <td class="ent-why"><ul class="reviews"><li><b>Artificial Analysis (via TestingCatalog):</b> Scores 68 on its Decision Index v2.1, up from 62 for Decision 1. <a href="https://www.testingcatalog.com/microsoft-launches-seven-mai-models-at-ignite-2026/" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>Artificial Analysis (via TestingCatalog):</b> Scores 68 on its Decision Index v2.1, up from 62 for Decision 1. <a href="https://www.testingcatalog.com/microsoft-launches-seven-mai-models-at-ignite-2026/" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Microsoft's own claim: 50&times; faster and 79&times; cheaper than GPT-6.1 Sol. VKTR also cites 4,000 customers, which is unverified.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-openai)">
@@ -1717,7 +1587,7 @@
           <th class="co-cell"><div class="co-name">Decisions API</div><div class="co-line">OpenAI · Sept 29, 2026</div></th>
           <td class="ent-models">A specialized, constrained version of GPT-6 Luna: give it a question, a finite list of allowed answers, and text or image context — it returns one of those answers, nothing else.</td>
           <td class="ent-pick">Public beta API since Oct 6<br>moved out of limited preview within a week</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Answers in roughly 150 ms, about 10&times; faster than calling full GPT-6 Luna for the same decision (OpenAI's figure). <a href="https://the-decoder.com/openai-expands-codex-and-its-api-at-devday-with-security-scans-a-decisions-api-and-ultrafast/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-systemone)">
@@ -1725,7 +1595,7 @@
           <th class="co-cell"><div class="co-name">Decider v1.3 / Flash</div><div class="co-line">Perplexity · v1.3 Nov 12, 2026 (v1.2: Oct 16) · open weight</div></th>
           <td class="ent-models">Open-weight decision models in two sizes (27B and 4B) that take text or images and return probabilities for yes/no, category, and rubric-score questions, running every question about an input in one pass.</td>
           <td class="ent-pick">Self-hosted or Perplexity's API<br>Apache 2.0 &middot; Flash lists at $0.01 / 1M input tokens on OpenRouter</td>
-          <td class="ent-why"><ul class="reviews"><li><b>agihunt.info:</b> Puts the 27B at #3 on the Hugging Face Decision Index; Perplexity claims #2. <a href="https://agihunt.info/en/story/1a1461f447367d0743b6b8b8bff" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>agihunt.info:</b> Puts the 27B at #3 on the Hugging Face Decision Index; Perplexity claims #2. <a href="https://agihunt.info/en/story/1a1461f447367d0743b6b8b8bff" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>v1.3 (Nov 12) adds a locate task. The #2 ranking for the 27B and top-4B ranking for Flash were made for v1.2 and are Perplexity's own; inference is claimed up to 5&times; faster.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-systemone)">
@@ -1733,7 +1603,7 @@
           <th class="co-cell"><div class="co-name">Jev 1.14</div><div class="co-line">TypeSafe AI · 1.14 on Oct 14, 2026 (1.13: Sept 15)</div></th>
           <td class="ent-models">Reads a block of text or JSON, evaluates every typed question against it at once (Choice, Score, or Noul for a binary probability), and returns calibrated answers in 70&ndash;500ms.</td>
           <td class="ent-pick">Hosted API<br>$0.042 / 1M input tokens, output free</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>TypeSafe's own benchmark claims 193.6&times; faster and 444.6&times; cheaper than an LLM on the same task. 1.14 (Oct 14) added experimental image input and long context.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-sarvam)">
@@ -1741,7 +1611,7 @@
           <th class="co-cell"><div class="co-name">Sarvam Prism</div><div class="co-line">Sarvam AI · Nov 4, 2026 · open weight</div></th>
           <td class="ent-models">A decision model built on Sarvam&rsquo;s 105B base: it returns calibrated probabilities for structured questions such as support routing, document analysis, security checks and agent evaluation. Sarvam says it answers in 44 ms on one NVIDIA B200 GPU.</td>
           <td class="ent-pick">Apache 2.0 weights, and Sarvam&rsquo;s API<br>No price published</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Sarvam's own tests: 82.5 on its Indian-language benchmark against 75 for Perplexity's Decider v1.2 and 70.8 for Jev 1.14; 89% on an internal cybersecurity test against Clef's 84.5%. Perplexity has since shipped Decider v1.3. <a href="https://www.tribuneindia.com/news/business/sarvam-launches-ai-decision-model-with-44-millisecond-response-time-open-weights-for-enterprises/" target="_blank" rel="noopener">tribuneindia.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-systemone)">
@@ -1749,7 +1619,7 @@
           <th class="co-cell"><div class="co-name">Clef / Clef-flash</div><div class="co-line">Cloudflare · Oct 1, 2026</div></th>
           <td class="ent-models">Open-weight decision models (27B and 9B) that return typed answers with probabilities instead of text &mdash; the same typed-question idea as Jev, served on Cloudflare's Workers AI.</td>
           <td class="ent-pick">Workers AI or self-hosted<br>$0.24 / $0.09 per 1M input tokens &middot; Apache 2.0</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Open weights plus a hosted price, so you can start on Workers AI and move the decision layer in-house later.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-systemone)">
@@ -1757,7 +1627,7 @@
           <th class="co-cell"><div class="co-name">d1-ultra</div><div class="co-line">Liquid AI · Oct 15, 2026</div></th>
           <td class="ent-models">A multimodal decision model: returns probabilities for yes/no, multiple-choice, and score questions about text and images.</td>
           <td class="ent-pick">Hosted API only<br>$0.042 / 1M input tokens</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Priced like Jev but closed; Liquid has not named the underlying open model.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-systemone)">
@@ -1765,7 +1635,7 @@
           <th class="co-cell"><div class="co-name">Laya</div><div class="co-line">Convai Innovations · Sept 18, 2026 · open weight</div></th>
           <td class="ent-models">The open alternative to Jev — same typed Choice/Score/Noul primitives, 421M parameters, Apache 2.0.</td>
           <td class="ent-pick">Self-hosted<br>your own GPU or CPU, no per-request cost</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Its model card claims 7.8&times; faster than Jev (vendor claim); self-hostable.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-systemone)">
@@ -1773,7 +1643,7 @@
           <th class="co-cell"><div class="co-name">Strands Decider 2B</div><div class="co-line">Amazon Strands Labs · Oct 1, 2026</div></th>
           <td class="ent-models">A 2B decision model built to run on a local CPU or GPU; Amazon released the weights, the training data, and the training scripts.</td>
           <td class="ent-pick">Self-hosted &middot; free<br>Apache 2.0</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>The smallest entry; runs on a laptop or inside an agent loop with no API call.</li></ul></td>
         </tr>
       </tbody>
     </table>
@@ -1809,7 +1679,7 @@
           <th class="co-cell"><div class="co-name">GitHub Copilot</div><div class="co-line">IDE + PR assistant</div></th>
           <td class="ent-models">Claude Sonnet / Opus / Haiku, GPT-6.2 Astra and Sol and Gemini 4 Neon (new last week), Microsoft's own MAI Code 2 and Code 2 Flash (Nov 17), plus older GPT-5.x and Gemini 3.1 models — picker depends on your plan tier.</td>
           <td class="ent-pick">Sonnet 5.5 daily<br>Opus 5.5 for hard tickets<br>Gemini 3.1 Pro for huge-context reviews</td>
-          <td class="ent-why"><ul class="reviews"><li><b>JetBrains developer survey, May&ndash;Jul 2026:</b> 21% of developers use it at work, down from 29% a year earlier. <a href="https://blog.jetbrains.com/research/2026/08/ai-coding-agent-adoption-2026/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Pragmatic Engineer survey:</b> 9% name it their most-loved AI tool, against Claude Code's 46%. <a href="https://newsletter.pragmaticengineer.com/p/ai-tooling-2026" target="_blank" rel="noopener">read &rarr;</a></li><li><b>standardcompute.com:</b> Rates Sonnet the best-balanced everyday pick in Copilot's model picker. <a href="https://standardcompute.com/best-ai-model/for/github-copilot" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>JetBrains developer survey, May&ndash;Jul 2026:</b> 21% of developers use it at work, down from 29% a year earlier. <a href="https://blog.jetbrains.com/research/2026/08/ai-coding-agent-adoption-2026/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Pragmatic Engineer survey:</b> 9% name it their most-loved AI tool, against Claude Code's 46%. <a href="https://newsletter.pragmaticengineer.com/p/ai-tooling-2026" target="_blank" rel="noopener">read &rarr;</a></li><li><b>standardcompute.com:</b> Rates Sonnet the best-balanced everyday pick in Copilot's model picker. <a href="https://standardcompute.com/best-ai-model/for/github-copilot" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>GPT-6.2 Astra and Sol (Nov 17) and Gemini 4 Neon (Nov 18) are generally available for Pro+, Max, Business and Enterprise, billed at provider list pricing under usage-based billing, with a gradual rollout.</li><li>MAI Code 2 Flash is on every plan including Free and Student; MAI Code 2 is on the paid plans.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-cursor)">
@@ -1825,7 +1695,7 @@
           <th class="co-cell"><div class="co-name">Codex</div><div class="co-line">OpenAI's own agent, umbrella product</div></th>
           <td class="ent-models">OpenAI models only — GPT-6.2 Astra and Sol (Nov 17) and the cheaper GPT-6.1 Terra (Oct 26) in Codex and ChatGPT Work; GPT-5.5 was scheduled to retire from Codex on Oct 14.</td>
           <td class="ent-pick">GPT-6.2 Sol for most work<br>GPT-6.2 Astra when Sol isn't enough<br>GPT-6.1 Terra for cheap, high-volume tasks</td>
-          <td class="ent-why"><ul class="reviews"><li><b>Every:</b> Calls the desktop app gold for senior engineers after a week of testing. <a href="https://every.to/p/codex-vibe-check" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Future Stack Reviews:</b> Finds capacity, not capability, is the bottleneck. <a href="https://future-stack-reviews.com/codex-review/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Skillscouter:</b> Steers anyone who wants a fully hands-off tool elsewhere. <a href="https://skillscouter.com/codex-review/" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>Every:</b> Calls the desktop app gold for senior engineers after a week of testing. <a href="https://every.to/p/codex-vibe-check" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Future Stack Reviews:</b> Finds capacity, not capability, is the bottleneck. <a href="https://future-stack-reviews.com/codex-review/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Skillscouter:</b> Steers anyone who wants a fully hands-off tool elsewhere. <a href="https://skillscouter.com/codex-review/" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>One model and account across a CLI, an IDE extension, cloud delegation through ChatGPT, a GitHub bot and screen-reading computer use.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-devin)">
@@ -1833,7 +1703,7 @@
           <th class="co-cell"><div class="co-name">Cognition</div><div class="co-line">Devin, autonomous agent</div></th>
           <td class="ent-models">Claude Opus, Sonnet, and Haiku tiers, swapped in after internal eval runs &mdash; plus, since Nov 4, Cognition's own SWE-2 Flash, a 276B (12B active) model built on Thinking Machines' Inkling-Small.</td>
           <td class="ent-pick">Opus-tier Claude for the autonomous runs<br>SWE-2 Flash for fast, cheap iterations (free in Devin through Nov 30)</td>
-          <td class="ent-why"><ul class="reviews"><li><b>DEV Community (Alan West):</b> Gave Devin 10 real tasks; it completed 3. <a href="https://dev.to/alanwest/i-gave-devin-10-real-tasks-it-completed-3-3063" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Codegen:</b> Rates it 3.5/5; open-ended or architecturally complex work still needs heavy guidance. <a href="https://codegen.com/blog/ai-tools/devin" target="_blank" rel="noopener">read &rarr;</a></li><li><b>The Register (2025):</b> Testers said it pursued impossible solutions instead of stopping at blockers. <a href="https://www.theregister.com/2025/01/23/ai_developer_devin_poor_reviews" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>DEV Community (Alan West):</b> Gave Devin 10 real tasks; it completed 3. <a href="https://dev.to/alanwest/i-gave-devin-10-real-tasks-it-completed-3-3063" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Codegen:</b> Rates it 3.5/5; open-ended or architecturally complex work still needs heavy guidance. <a href="https://codegen.com/blog/ai-tools/devin" target="_blank" rel="noopener">read &rarr;</a></li><li><b>The Register (2025):</b> Testers said it pursued impossible solutions instead of stopping at blockers. <a href="https://www.theregister.com/2025/01/23/ai_developer_devin_poor_reviews" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>SWE-2 Flash is only in Devin Desktop and Devin CLI. Cognition says it is about 3&times; faster and one-fifth the price of SWE-2 but behind it on most benchmarks (Terminal-Bench 2.1: 89.2 vs 92.8); all Cognition's data, and the weights are not public. <a href="https://cognition.com/blog/swe-2-flash" target="_blank" rel="noopener">cognition.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-windsurf)">
@@ -1841,7 +1711,7 @@
           <th class="co-cell"><div class="co-name">Devin Desktop (formerly Windsurf)</div><div class="co-line">AI-native editor · Cognition · renamed Jun 2, 2026</div></th>
           <td class="ent-models">Model-agnostic — Claude, GPT-5.x, and Gemini selectable, plus Cognition's own SWE models. Devin Local, rewritten in Rust, replaces the Cascade agent, which is now legacy.</td>
           <td class="ent-pick">Sonnet 5.5 daily</td>
-          <td class="ent-why"><ul class="reviews"><li><b>autonomous.ai:</b> Worth paying for if you want local and cloud agents in one editor, not if you need a predictable monthly bill. <a href="https://www.autonomous.ai/en-BG/ourblog/windsurf-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Emergent:</b> Developers within quota were positive; those hit by the March 2026 pricing change left angry. <a href="https://emergent.sh/learn/windsurf-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Gartner user reviews:</b> Praise the clean, responsive interface. <a href="https://www.gartner.com/reviews/product/devin-desktop" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>autonomous.ai:</b> Worth paying for if you want local and cloud agents in one editor, not if you need a predictable monthly bill. <a href="https://www.autonomous.ai/en-BG/ourblog/windsurf-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Emergent:</b> Developers within quota were positive; those hit by the March 2026 pricing change left angry. <a href="https://emergent.sh/learn/windsurf-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Gartner user reviews:</b> Praise the clean, responsive interface. <a href="https://www.gartner.com/reviews/product/devin-desktop" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Renamed from Windsurf on Jun 2; Cognition's FAQ says plans, pricing and settings carry over. Devin Local replaces the Cascade agent, now legacy. <a href="https://docs.devin.ai/desktop/devin-desktop-faq" target="_blank" rel="noopener">docs.devin.ai &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-replit)">
@@ -1857,7 +1727,7 @@
           <th class="co-cell"><div class="co-name">Google Antigravity</div><div class="co-line">Google · agent-first app, IDE and CLI</div></th>
           <td class="ent-models">Gemini-first, with Claude on paid plans; Gemini 4 Neon is the default. By Google&rsquo;s plan table, free and Plus get Gemini 3.8 Flash; Pro adds Neon, Argon, Hydrogen and Claude Sonnet 5.5 and Opus 5.5 (some need a non-trial subscription); Ultra and Enterprise add Carbon. Claude 4.6 and GPT-OSS-120b are listed only until Nov 30. There are no OpenAI GPT models.</td>
           <td class="ent-pick">Google&rsquo;s default Orchestrator pairing: Neon plans, Hydrogen executes<br>Also offered: Claude Opus 5.5 plans, Sonnet 5.5 executes<br>Carbon as planner on Ultra only</td>
-          <td class="ent-why"><ul class="reviews"><li><b>XDA (June test):</b> 2.0 is &ldquo;right up there&rdquo; with Claude Code on quality and speed, and the only Claude Code alternative worth paying for. <a href="https://www.xda-developers.com/tried-replacing-claude-code-with-antigravity-codex-cursor-only-one-worth-paying-for/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>XDA (May test):</b> Hit Pro cooldowns of 6&ndash;10 days. <a href="https://www.xda-developers.com/tried-googles-antigravity-limitation-made-close-it-good/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>The Register:</b> Wary of the provider switching models to manage cost. <a href="https://www.theregister.com/ai-and-ml/2026/11/19/google-continues-model-chemistry-experiment-with-neon/5310934" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>XDA (June test):</b> 2.0 is &ldquo;right up there&rdquo; with Claude Code on quality and speed, and the only Claude Code alternative worth paying for. <a href="https://www.xda-developers.com/tried-replacing-claude-code-with-antigravity-codex-cursor-only-one-worth-paying-for/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>XDA (May test):</b> Hit Pro cooldowns of 6&ndash;10 days. <a href="https://www.xda-developers.com/tried-googles-antigravity-limitation-made-close-it-good/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>The Register:</b> Wary of the provider switching models to manage cost. <a href="https://www.theregister.com/ai-and-ml/2026/11/19/google-continues-model-chemistry-experiment-with-neon/5310934" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Security: researchers reported a repository backdoor and prompt injection within weeks of launch, and a strict-mode escape was fixed on Feb 28. <a href="https://en.wikipedia.org/wiki/Google_Antigravity" target="_blank" rel="noopener">wikipedia.org &rarr;</a></li><li>Google tripled Gemini limits twice in May after users hit caps within an hour. There is no Antigravity-only plan: quota comes with Google AI plans. <a href="https://9to5google.com/2026/05/21/google-has-tripled-gemini-usage-limits-for-antigravity-twice/" target="_blank" rel="noopener">9to5google.com &rarr;</a></li><li>The IDE is not supported for enterprise customers and the Orchestrator is not offered on Enterprise plans.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-cline)">
@@ -1873,7 +1743,7 @@
           <th class="co-cell"><div class="co-name">Aider</div><div class="co-line">Git-aware CLI pair programmer · no release since Aug 2025</div></th>
           <td class="ent-models">Model-agnostic, bring-your-own API key.</td>
           <td class="ent-pick">Sonnet 5.5, or DeepSeek V4 Pro on a budget</td>
-          <td class="ent-why"><ul class="reviews"><li><b>jobsbyculture.com:</b> Rated a CLI gold standard alongside Claude Code, strong at git-aware multi-file edits. <a href="https://jobsbyculture.com/blog/ai-coding-agents-compared-2026" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>jobsbyculture.com:</b> Rated a CLI gold standard alongside Claude Code, strong at git-aware multi-file edits. <a href="https://jobsbyculture.com/blog/ai-coding-agents-compared-2026" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>The repository's last push was May 22 and its last release was in Aug 2025. <a href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener">github.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-meta)">
@@ -1881,7 +1751,7 @@
           <th class="co-cell"><div class="co-name">Muse Code</div><div class="co-line">Meta's coding assistant</div></th>
           <td class="ent-models">Meta models only &mdash; Muse Spark and Wonder, with Wonder Full reserved for its two paid tiers: Power at $50 a month (20&times; the everyday allowance) and Maximum at $200 (80&times;).</td>
           <td class="ent-pick">Wonder Full on the $50 or $200 plan</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Subscriptions default to a Contributor mode that allows training on what you submit; the API's standard mode does not check which one applies to your code. <a href="https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api" target="_blank" rel="noopener">venturebeat.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-copilot)">
@@ -1889,7 +1759,7 @@
           <th class="co-cell"><div class="co-name">Microsoft Copilot harness</div><div class="co-line">Microsoft · Oct 28, 2026</div></th>
           <td class="ent-models">The agent runtime that GitHub built for Copilot, now shared across Microsoft: it runs the agent loop and sandbox, while you supply instructions, skills, tools, and the model. Microsoft says it works across 20+ frontier models (OpenAI and Anthropic families) plus bring-your-own-key, and that it will route work to the right model per task. It powers GitHub Copilot's CLI and VS Code, and Copilot Studio.</td>
           <td class="ent-pick">Not a model pick &mdash; a place to run agents<br>Public preview in Microsoft Foundry (Agent Service), or as a downloadable SDK<br>Free in preview through Nov 30, then consumption billing</td>
-          <td class="ent-why"><ul class="reviews"><li><b>Tech Times:</b> Warns that adopting it means accepting Microsoft's session policies, pricing and routing. <a href="https://www.techtimes.com/articles/329667/20261029/microsoft-copilot-harness-opens-enterprise-developers-model-flexibility-platform-lock.htm" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>Tech Times:</b> Warns that adopting it means accepting Microsoft's session policies, pricing and routing. <a href="https://www.techtimes.com/articles/329667/20261029/microsoft-copilot-harness-opens-enterprise-developers-model-flexibility-platform-lock.htm" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Microsoft's own tests: pass rates up 10.8 points with an OpenAI model and 22.1 with an Anthropic model against its Standard harness, with nearly twice as many model calls offset by 15&ndash;21% lower input cost.</li><li>The routing logic is undocumented, and reports conflict on bring-your-own-model. Compute is reported at $0.0994 per vCPU-hour (Tech Times only).</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-amazonq)">
@@ -1897,7 +1767,7 @@
           <th class="co-cell"><div class="co-name">Amazon Q Developer</div><div class="co-line">AWS-native assistant · being replaced by Kiro</div></th>
           <td class="ent-models">AWS-managed model mix, tuned for AWS APIs; not a user-selectable picker.</td>
           <td class="ent-pick">Use as-is — best inside AWS-heavy repos</td>
-          <td class="ent-why"><ul class="reviews"><li><b>jobsbyculture.com:</b> Strong on AWS-specific APIs and infrastructure code; trails the general-purpose leaders elsewhere. <a href="https://jobsbyculture.com/blog/ai-coding-agents-compared-2026" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>jobsbyculture.com:</b> Strong on AWS-specific APIs and infrastructure code; trails the general-purpose leaders elsewhere. <a href="https://jobsbyculture.com/blog/ai-coding-agents-compared-2026" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>New free-tier accounts and subscriptions were blocked on May 15, 2026; IDE plugin and paid-subscription support ends Apr 30, 2027. Kiro replaces it. <a href="https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/" target="_blank" rel="noopener">aws.amazon.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
     </table>
@@ -1926,7 +1796,7 @@
           <th class="co-cell"><div class="co-name">T3 Code</div><div class="co-line">Ping Labs · MIT · ~74K stars</div></th>
           <td class="ent-models">A clean desktop interface for Claude Code, Codex, OpenCode, Cursor, Grok, and Antigravity, with per-thread branches, a strong pull-request workflow, and mobile access through a relay.</td>
           <td class="ent-pick">Desktop, with mobile via its relay<br>Free; bring your own subscriptions</td>
-          <td class="ent-why"><ul class="reviews"><li><b>openalternative.co:</b> Easy to learn, but young and occasionally unstable. <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>openalternative.co:</b> Easy to learn, but young and occasionally unstable. <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>No scheduled automations.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-orch)">
@@ -1934,7 +1804,7 @@
           <th class="co-cell"><div class="co-name">Conductor</div><div class="co-line">Melty Labs · closed source</div></th>
           <td class="ent-models">Runs Claude Code, Codex, and Cursor agents in isolated git worktrees, with checkpoints and rollback and a side-by-side model compare mode.</td>
           <td class="ent-pick">macOS only<br>Free for local workspaces on your own subscriptions; Pro $50/mo for cloud workspaces; Teams $60/user/mo</td>
-          <td class="ent-why"><ul class="reviews"><li><b>openalternative.co:</b> The most polished and most cited of the group; closed source, Mac-only and paid beyond local work. <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>openalternative.co:</b> The most polished and most cited of the group; closed source, Mac-only and paid beyond local work. <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Closed source, Mac-only, paid beyond local work, no self-hosting.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-orch)">
@@ -1942,7 +1812,7 @@
           <th class="co-cell"><div class="co-name">Paradev (formerly Superset)</div><div class="co-line">source-available · ~16.5K GitHub stars</div></th>
           <td class="ent-models">An agentic IDE for running many coding agents in parallel worktrees, with automations you can drive from a CLI, a TypeScript SDK, or an MCP server.</td>
           <td class="ent-pick">macOS-first (Linux experimental, no Windows)<br>Elastic License 2.0; free for one user locally, Pro $20/user/mo (prices from before the rename)</td>
-          <td class="ent-why"><ul class="reviews"><li><b>openalternative.co:</b> The most mature automations in the category, and it handles large fleets. <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>openalternative.co:</b> The most mature automations in the category, and it handles large fleets. <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Source-available, not OSI open source; older coverage lists it as Superset.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-orch)">
@@ -1950,7 +1820,7 @@
           <th class="co-cell"><div class="co-name">Claude Squad</div><div class="co-line">smtg-ai · AGPL-3.0 · ~8.9K stars</div></th>
           <td class="ent-models">A terminal tool that runs several agents in separate tmux sessions and git worktrees. Defaults to Claude Code and also supports Codex, Aider, Gemini, OpenCode, and Amp.</td>
           <td class="ent-pick">Terminal, any platform with tmux<br>Free and open source</td>
-          <td class="ent-why"><ul class="reviews"><li><b>augmentcode.com:</b> Lists it as the solo-developer option among open-source orchestrators. <a href="https://www.augmentcode.com/tools/open-source-agent-orchestrators" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>augmentcode.com:</b> Lists it as the solo-developer option among open-source orchestrators. <a href="https://www.augmentcode.com/tools/open-source-agent-orchestrators" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Last code push Aug 20; AGPL licence if you plan to build on it. <a href="https://github.com/smtg-ai/claude-squad" target="_blank" rel="noopener">github.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-orch)">
@@ -1958,7 +1828,7 @@
           <th class="co-cell"><div class="co-name">Emdash</div><div class="co-line">General Action · Apache 2.0 · ~6.3K stars</div></th>
           <td class="ent-models">Runs 25+ coding agents (Codex, Cursor, Claude Code, Amp, and more), each in its own worktree, with scheduled repeat runs, a built-in preview browser, and SSH to remote machines.</td>
           <td class="ent-pick">macOS, Windows, and Linux<br>Free; no paid tier announced</td>
-          <td class="ent-why"><ul class="reviews"><li><b>openalternative.co:</b> The only one with real builds on all three desktop systems; newer and less battle-tested. <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>openalternative.co:</b> The only one with real builds on all three desktop systems; newer and less battle-tested. <a href="https://openalternative.co/blog/best-ai-coding-agent-orchestrators" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>No mobile app or managed remote access.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-orch)">
@@ -1966,7 +1836,7 @@
           <th class="co-cell"><div class="co-name">Hydra</div><div class="co-line">five unrelated small GitHub projects</div></th>
           <td class="ent-models">Not one product. At least five small open-source projects share the name: a container-isolated orchestrator built on the Claude Agent SDK, a desktop app that runs Claude Code and Codex sessions side by side, a worktree CLI with a review-and-merge step, and a CLI that routes work across Claude, Gemini, and Codex.</td>
           <td class="ent-pick">Open source, mostly MIT<br>0&ndash;18 GitHub stars each</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Five unrelated small GitHub projects; none is established (the busiest has 18 stars). A separate research project, HyDRA, has 20 stars and was last updated in October 2025.</li></ul></td>
         </tr>
       </tbody>
     </table>
@@ -1994,7 +1864,7 @@
           <th class="co-cell"><div class="co-name">ChatGPT Auto</div><div class="co-line">Native, built into GPT-5.x/6</div></th>
           <td class="ent-models">Switches between Instant, Thinking, and Pro tiers inside a single conversation.</td>
           <td class="ent-pick">Real-time complexity, tool-need, and intent detection</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>OpenAI's own default: the router escalates a quick question to the slower thinking model automatically.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-router)">
@@ -2002,7 +1872,7 @@
           <th class="co-cell"><div class="co-name">OpenRouter</div><div class="co-line">Auto Router</div></th>
           <td class="ent-models">Sits in front of 300+ models from every lab in this sheet; set the model to <code>auto</code> and it picks per prompt.</td>
           <td class="ent-pick">Aggregate 7-day usage data per task type, across millions of requests</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Effectively crowd-sources what is working best right now instead of using a fixed benchmark.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-router)">
@@ -2010,7 +1880,7 @@
           <th class="co-cell"><div class="co-name">Perplexity Orchestrator</div><div class="co-line">Perplexity · Nov 17, 2026</div></th>
           <td class="ent-models">One API in front of OpenAI, Anthropic, Google and xAI models plus open-weight ones such as GLM, Kimi and DeepSeek. It speaks the OpenAI Chat Completions, OpenAI Responses and Anthropic Messages formats, so most teams only change the API key and base URL.</td>
           <td class="ent-pick">You pick the model for each workload; Perplexity picks the provider by health, capacity and latency, and retries a failed request on another deployment of the same model<br>In preview: Routes (plain-language rules with Lower cost, Balanced or Higher quality profiles) and Auto effort</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>More gateway than router: you choose the model, and automatic model choice is still in preview. One bill with no platform fee on top of credits.</li><li>Perplexity says Claude and GPT requests through it succeeded more often than at any single provider over a month of its own traffic, but has not published the figures. Catalog size differs by source (85+ across Perplexity's wider layer; 45+ per another outlet).</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-router)">
@@ -2026,7 +1896,7 @@
           <th class="co-cell"><div class="co-name">Not Diamond</div><div class="co-line">Model-selection API</div></th>
           <td class="ent-models">Determines which LLM is best suited to answer a given query before it's sent.</td>
           <td class="ent-pick">Per-query classifier, tunable to your own eval data</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Positioned for developers embedding routing logic in an app rather than end users picking a model.</li></ul></td>
         </tr>
       </tbody>
     </table>
@@ -2055,7 +1925,7 @@
           <th class="co-cell"><div class="co-name">RTK (Rust Token Killer)</div><div class="co-line">rtk-ai · open source</div></th>
           <td class="ent-models">Shell command output only: a hook rewrites <code>git status</code> into <code>rtk git status</code> so test, build, and git output arrives pre-filtered. It does not touch file reads, MCP results, or history.</td>
           <td class="ent-pick">Single Rust binary with a global hook (<code>rtk init -g</code>); works with Claude Code, Cursor, Gemini CLI, and Codex</td>
-          <td class="ent-why"><ul class="reviews"><li><b>codestz.dev experiment:</b> Measured 70&ndash;82% fewer tokens on common dev commands. <a href="https://codestz.dev/experiments/rtk-rust-token-killer" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>codestz.dev experiment:</b> Measured 70&ndash;82% fewer tokens on common dev commands. <a href="https://codestz.dev/experiments/rtk-rust-token-killer" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Claims 60&ndash;90% fewer tokens on common dev commands; its docs say bash-output savings are diluted across your total bill.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-compress)">
@@ -2063,7 +1933,7 @@
           <th class="co-cell"><div class="co-name">Headroom</div><div class="co-line">Tejas Chopra · open source</div></th>
           <td class="ent-models">Tool outputs, logs, files, RAG chunks, and conversation history, routed by content type (JSON, code via its syntax tree, prose). Originals stay in a local cache, so the model can pull the full text back when it needs it.</td>
           <td class="ent-pick">Local library, OpenAI-compatible proxy, MCP server, or <code>headroom wrap</code> for agents like Claude Code and Codex<br>Apache 2.0</td>
-          <td class="ent-why"><ul class="reviews"><li><b>Karve Digital:</b> Savings depend on how repetitive the context is. <a href="https://karvedigital.com/en/insights/context-compression-for-ai-agents" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>Karve Digital:</b> Savings depend on how repetitive the context is. <a href="https://karvedigital.com/en/insights/context-compression-for-ai-agents" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Claims 20% fewer tokens for coding agents and 60&ndash;95% for JSON; its own benchmark shows 21&ndash;57% on agent tasks with GSM8K answers unchanged. Every number is project-published.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-compress)">
@@ -2071,7 +1941,7 @@
           <th class="co-cell"><div class="co-name">LLMLingua-2</div><div class="co-line">Microsoft Research · open source</div></th>
           <td class="ent-models">Prompts and RAG context: a small learned model that drops low-information tokens.</td>
           <td class="ent-pick">Python library, self-hosted</td>
-          <td class="ent-why"><ul class="reviews"><li><b>supercompress.dev (a competitor):</b> Token-by-token pruning can mangle code, IDs and stack traces. <a href="https://www.supercompress.dev/context-compression-tools-compared" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>supercompress.dev (a competitor):</b> Token-by-token pruning can mangle code, IDs and stack traces. <a href="https://www.supercompress.dev/context-compression-tools-compared" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Suits natural-language prompts (Microsoft Research paper).</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-compress)">
@@ -2079,7 +1949,7 @@
           <th class="co-cell"><div class="co-name">The Token Company</div><div class="co-line">Y Combinator W26 · hosted</div></th>
           <td class="ent-models">Prompts: a small classifier (not a generative model) strips low-value tokens; one listing says 100K tokens in under 100ms.</td>
           <td class="ent-pick">Hosted drop-in API<br>about $0.05 per 1M tokens per one review &mdash; check the pricing page</td>
-          <td class="ent-why"><ul class="reviews"><li><b>PointFive guide:</b> Notes that open tools like LLMLingua, or the model labs, could replicate the technique. <a href="https://www.pointfive.co/guides/top-prompt-compression-solutions-2026" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>PointFive guide:</b> Notes that open tools like LLMLingua, or the model labs, could replicate the technique. <a href="https://www.pointfive.co/guides/top-prompt-compression-solutions-2026" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Claims accuracy gains with fewer tokens; the benchmarks are vendor-reported.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-compress)">
@@ -2087,7 +1957,7 @@
           <th class="co-cell"><div class="co-name">Compresr</div><div class="co-line">hosted + open-source proxy</div></th>
           <td class="ent-models">Query-aware compression: keeps only the tokens relevant to the question being asked. Grew out of EPFL prompt-compression research.</td>
           <td class="ent-pick">Python SDK, hosted API, and an open-source proxy for agents like Claude Code and Codex</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Its own comparison page claims 59.6% against The Token Company's 48.2% on a long-document QA test at about 2&times; compression (self-published).</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-compress)">
@@ -2095,7 +1965,7 @@
           <th class="co-cell"><div class="co-name">SuperCompress</div><div class="co-line">hosted</div></th>
           <td class="ent-models">Tool output, files, logs, diffs, and retrieved docs: a hosted model keeps the original lines that answer the current question.</td>
           <td class="ent-pick">Hosted API, MCP tool, or agent hooks (<code>npm install -g supercompress-proxy</code>)</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Gives no savings figures, and publishes the comparison pages that rank it first.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-compress)">
@@ -2103,7 +1973,7 @@
           <th class="co-cell"><div class="co-name">Caveman</div><div class="co-line">open source</div></th>
           <td class="ent-models">Mostly the model's replies: a terse-reply skill, plus local reducers for logs, JSON, and web pages.</td>
           <td class="ent-pick">Local CLI and skill</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Its docs say the reply skill does not reduce input cost; a separate engine and proxy handle input.</li></ul></td>
         </tr>
       </tbody>
     </table>
@@ -2131,7 +2001,7 @@
           <th class="co-cell"><div class="co-name">Fireworks</div><div class="co-line">Fireworks AI · serverless and custom models</div></th>
           <td class="ent-models" data-label="What it is">Serves open-weight models and models customers specialize on their own data, with training and inference on one platform. Fireworks says it serves over 40 trillion tokens a day, that more than 95% come from customer-specialized models, and that its annual run rate tops $1 billion; Cursor and Harvey are named customers. Third-party writeups call it a &ldquo;compound AI&rdquo; platform, but Fireworks has announced no compound-model launch.</td>
           <td class="ent-pick" data-label="Pricing &amp; access">Per-token serverless and batch inference; check Fireworks' pricing page for dedicated capacity<br>No gpt-oss-120B price in the cross-host comparison<br>Nov 3: Ultrafast preview, multi-day prompt caching, background mode</td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Rescana:</b> Reports two security incidents (Aug 3&ndash;Oct 7 and Oct 23&ndash;30); Cursor moved all inference off Fireworks and Notion disconnected. <a href="https://rescana.com/post/fireworks-ai-incident-uber-cursor-notion-prepare-now" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Rescana:</b> Reports two security incidents (Aug 3&ndash;Oct 7 and Oct 23&ndash;30); Cursor moved all inference off Fireworks and Notion disconnected. <a href="https://rescana.com/post/fireworks-ai-incident-uber-cursor-notion-prepare-now" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Two security incidents, which Fireworks dates Aug 3&ndash;Oct 7 and Oct 23&ndash;30 and calls contained and remediated; the second was still under investigation on Nov 17. The first used stolen internal credentials; the second began at a third-party cloud provider that hosts its machines. Account and billing data were reached and, for a limited set of accounts, secrets, datasets and incomplete models. <a href="https://rescana.com/post/fireworks-ai-incident-uber-cursor-notion-prepare-now" target="_blank" rel="noopener">rescana.com &rarr;</a></li><li>Cursor says an attacker used an access key it had issued to Fireworks, which Cursor says Fireworks exposed, and has moved all inference off Fireworks. Notion disconnected, deleted its data there and stopped using Fireworks for open-weight models; it says fewer than 1% of workspaces had AI chat transcripts exposed. <a href="https://www.insurancejournal.com/news/national/2026/11/10/892213.htm" target="_blank" rel="noopener">insurancejournal.com &rarr;</a></li><li>Uber has notified about 149,000 people of driver's-license exposure; per Rescana's summary of TechCrunch an Uber spokesperson named Fireworks, though Fireworks has not publicly linked Uber to either incident. Fireworks says its products are zero-data-retention by default; Notion says data was retained anyway.</li><li>Raised $1.505B at $17.5B on July 15. The Nov 3 speed claim, the caching and cost claims and the usage figures are Fireworks' own. <a href="https://fireworks.ai/blog/series-d-announcement" target="_blank" rel="noopener">fireworks.ai &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-router)">
@@ -2139,7 +2009,7 @@
           <th class="co-cell"><div class="co-name">Together AI</div><div class="co-line">Together AI · open-model cloud</div></th>
           <td class="ent-models" data-label="What it is">Serverless inference for open models, dedicated inference, batch jobs (up to 50% cheaper), and fine-tuning or training on GPU clusters of up to thousands of cards. Its ATLAS engine uses speculative decoding, which Together says speeds some workloads by up to 400%. LG AI Research, Cohere and the Mozilla Foundation are named customers.</td>
           <td class="ent-pick" data-label="Pricing &amp; access">gpt-oss-120B at $0.15 / $0.60 per 1M tokens<br>Raised $800M at $8.3B on Jul 1, led by Aramco Ventures</td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Infrabase comparison:</b> Mid-priced for gpt-oss-120B, with a broad catalogue. <a href="https://infrabase.ai/blog/ai-inference-api-providers-compared" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Infrabase comparison:</b> Mid-priced for gpt-oss-120B, with a broad catalogue. <a href="https://infrabase.ai/blog/ai-inference-api-providers-compared" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Says annual bookings passed $1.15B in Q2 (not recognized revenue); its speed and cost claims are its own, with no independent check.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-router)">
@@ -2147,7 +2017,7 @@
           <th class="co-cell"><div class="co-name">Baseten</div><div class="co-line">Baseten · dedicated model serving</div></th>
           <td class="ent-models" data-label="What it is">Packages your own model on a dedicated, autoscaling endpoint billed by GPU time, plus per-token Model APIs, training and sandboxes.</td>
           <td class="ent-pick" data-label="Pricing &amp; access">Dedicated endpoints billed per GPU time; Model APIs per token<br>gpt-oss-120B Model API at $0.10 / $0.50</td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Raised $300M at $5B in January and names Abridge, Clay, Cursor, OpenEvidence, Mercor and Notion as customers. Aggregator sites report a later $1.5B round at $13B that Baseten has not confirmed. <a href="https://www.baseten.co/blog/announcing-baseten-s-300m-series-e" target="_blank" rel="noopener">baseten.co &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-router)">
@@ -2155,7 +2025,7 @@
           <th class="co-cell"><div class="co-name">Cerebras</div><div class="co-line">Cerebras · wafer-scale chips · Nasdaq: CBRS</div></th>
           <td class="ent-models" data-label="What it is">Serves open-weight models only (Llama, Qwen, DeepSeek distills, gpt-oss) on its wafer-scale chips, with no closed frontier models, and custom weights or fine-tuning only for enterprise customers.</td>
           <td class="ent-pick" data-label="Pricing &amp; access">gpt-oss-120B at $0.35 / $0.75, about 2.3&times; the usual input rate<br>$5 trial credit; developer tier from $10</td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Capital &amp; Compute:</b> The speed leader, at about 1,700 tokens/sec sustained per Artificial Analysis. <a href="https://capitalandcompute.net/ai-inference-providers/cerebras/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Investing.com:</b> Names customer concentration as the main risk after its IPO. <a href="https://www.investing.com/analysis/cerebras-48-billion-ipo-tests-the-markets-inference-bet-200680080" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Capital &amp; Compute:</b> The speed leader, at about 1,700 tokens/sec sustained per Artificial Analysis. <a href="https://capitalandcompute.net/ai-inference-providers/cerebras/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Investing.com:</b> Names customer concentration as the main risk after its IPO. <a href="https://www.investing.com/analysis/cerebras-48-billion-ipo-tests-the-markets-inference-bet-200680080" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Listed on Nasdaq on May 14; its pre-IPO filing showed $510M of 2025 revenue and an OpenAI deal worth over $20B. On Nov 17 it put disaggregated inference into production (GPUs handle the prompt, Cerebras chips generate the output) and claims 5&times; the tokens per megawatt; those figures are its own. <a href="https://www.cerebras.ai/blog/cerebras-launches-disaggregated-inference" target="_blank" rel="noopener">cerebras.ai &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-router)">
@@ -2163,7 +2033,7 @@
           <th class="co-cell"><div class="co-name">Groq</div><div class="co-line">Groq · custom LPU chips</div></th>
           <td class="ent-models" data-label="What it is">GroqCloud serves open models on Groq&rsquo;s own LPU chips, aimed at fast first tokens and interactive chat, with a narrower catalogue than GPU hosts.</td>
           <td class="ent-pick" data-label="Pricing &amp; access">gpt-oss-120B at $0.15 / $0.60, about 478 tokens/sec<br>Nvidia licensed its technology in a December 2025 deal</td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Nvidia took a non-exclusive licence to Groq's inference technology and hired its founder Jonathan Ross and president Sunny Madra; Groq says GroqCloud continues. Press called it a roughly $20B deal; Nvidia's filing reports $13B at closing plus $4B within a year. <a href="https://www.govconwire.com/articles/groq-nvidia-ai-inference-tech-licensing-deal" target="_blank" rel="noopener">govconwire.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-router)">
@@ -2171,7 +2041,7 @@
           <th class="co-cell"><div class="co-name">DeepInfra</div><div class="co-line">DeepInfra · lowest per-token prices</div></th>
           <td class="ent-models" data-label="What it is">A large open-model catalogue (counts quoted range from 50+ to 360+) on pay-as-you-go APIs, plus dedicated GPUs from about $0.89 an hour (A100) to $4.20 (B300).</td>
           <td class="ent-pick" data-label="Pricing &amp; access">gpt-oss-120B at $0.037 / $0.17 per 1M tokens<br>$5 trial credit; no minimums or contracts</td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>CostBench:</b> The price floor in its cross-host table, at about 189 tokens/sec on the Turbo endpoint. <a href="https://costbench.com/software/llm-api-providers/deepinfra/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Infrabase comparison:</b> Also the cheapest host on gpt-oss-120B in its table. <a href="https://infrabase.ai/blog/ai-inference-api-providers-compared" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>CostBench:</b> The price floor in its cross-host table, at about 189 tokens/sec on the Turbo endpoint. <a href="https://costbench.com/software/llm-api-providers/deepinfra/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Infrabase comparison:</b> Also the cheapest host on gpt-oss-120B in its table. <a href="https://infrabase.ai/blog/ai-inference-api-providers-compared" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Its own cost page warns that non-FP8 variants can give unreliable output, so pin FP8 for production. Its claim to the lowest base prices comes from its own blog.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-sarvam)">
@@ -2179,7 +2049,7 @@
           <th class="co-cell"><div class="co-name">Sarvam Token Factory</div><div class="co-line">Sarvam AI · India-hosted · reported Nov 16, 2026</div></th>
           <td class="ent-models" data-label="What it is">Serves Sarvam&rsquo;s own 105B and open models from other labs on GPU clusters in India. AlphaSignal lists eight: Sarvam 105B, GLM 5.3 and GLM 5.3 Flash, DeepSeek V4.1 Flash and V4 Pro, Kimi K3 and K3.1 Pro, and Gemma 4 31B. Coverage describes an OpenAI-compatible API billed in rupees.</td>
           <td class="ent-pick" data-label="Pricing &amp; access">Sarvam-105B-1711: $0.11 in / $0.28 out per 1M tokens<br>Gemma 4 31B: $0.39 / $1.00<br>DeepSeek V4.1 Flash: introductory $0.16 / $0.61, and about $0.09 blended at the standard rate<br>All converted at Sarvam&rsquo;s own &#8377;90 = $1 (the rupee prices are &#8377;10 / &#8377;25, &#8377;35 / &#8377;90 and &#8377;14 / &#8377;55)</td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Speed and uptime figures are Sarvam's own; the DeepSeek price is introductory.</li></ul></td>
         </tr>
       </tbody>
     </table>
@@ -2232,7 +2102,7 @@
           <th class="co-cell"><div class="co-name">Mastra</div><div class="co-line">Mastra · ~30K stars</div></th>
           <td class="ent-models">A full-stack TypeScript toolkit covering agents, typed workflows, memory, storage, a server, and evals.</td>
           <td class="ent-pick">TypeScript<br>Model support not stated in the sources</td>
-          <td class="ent-why"><ul class="reviews"><li><b>Arize guide:</b> The TypeScript counterpart to the Python options; its harness APIs are still changing. <a href="https://arize.com/ai-agents/agent-frameworks/" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>Arize guide:</b> The TypeScript counterpart to the Python options; its harness APIs are still changing. <a href="https://arize.com/ai-agents/agent-frameworks/" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>GitHub does not state a licence; check before adopting.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-frameworks)">
@@ -2248,7 +2118,7 @@
           <th class="co-cell"><div class="co-name">Pydantic AI</div><div class="co-line">Pydantic · MIT · ~21K stars</div></th>
           <td class="ent-models">Typed structured outputs, dependency injection, easy testing, and OpenTelemetry tracing for ordinary Python engineering teams.</td>
           <td class="ent-pick">Python<br>Works with many providers</td>
-          <td class="ent-why"><ul class="reviews"><li><b>Arize guide:</b> Validates the shape of a model's output, not whether it is correct. <a href="https://arize.com/ai-agents/agent-frameworks/" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>Arize guide:</b> Validates the shape of a model's output, not whether it is correct. <a href="https://arize.com/ai-agents/agent-frameworks/" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Durable execution comes from an external system such as Temporal or DBOS, which you then have to run.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-frameworks)">
@@ -2264,7 +2134,7 @@
           <th class="co-cell"><div class="co-name">Microsoft Agent Framework</div><div class="co-line">Microsoft · MIT · successor to AutoGen (archived)</div></th>
           <td class="ent-models">AutoGen's agent abstractions combined with Semantic Kernel's enterprise features: session state, middleware, and telemetry.</td>
           <td class="ent-pick">.NET and Python<br>Leans toward Azure</td>
-          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>AutoGen's repository is archived (last push Nov 12) and Semantic Kernel is in maintenance mode; this is where those users migrate, as a port rather than a configuration change. <a href="https://github.com/microsoft/autogen" target="_blank" rel="noopener">github.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
     </table>
@@ -2358,7 +2228,7 @@
           <th class="co-cell"><div class="co-name">ChatGPT Agent</div><div class="co-line">OpenAI · was Operator / CUA · Atlas browser discontinued Aug 9</div></th>
           <td class="ent-models">The original Computer-Using Agent model that powered the standalone Operator product; Operator was shut down in Aug 2025 and folded into "agent mode" inside ChatGPT.</td>
           <td class="ent-pick">ChatGPT composer, Plus plans and up ($20/mo+)</td>
-          <td class="ent-why"><ul class="reviews"><li><b>PCWorld:</b> Testing ChatGPT's new desktop control, finds the clunky phase of AI computer use largely behind it. <a href="https://www.pcworld.com/article/3190769/chatgpt-can-now-control-your-whole-desktop-i-tested-it-with-chess.html" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Android Authority:</b> Calls the agent imperfect and no faster than a person; it looped endlessly until the reviewer stepped in. <a href="https://www.androidauthority.com/chatgpt-agent-review-3583538/" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>PCWorld:</b> Testing ChatGPT's new desktop control, finds the clunky phase of AI computer use largely behind it. <a href="https://www.pcworld.com/article/3190769/chatgpt-can-now-control-your-whole-desktop-i-tested-it-with-chess.html" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Android Authority:</b> Calls the agent imperfect and no faster than a person; it looped endlessly until the reviewer stepped in. <a href="https://www.androidauthority.com/chatgpt-agent-review-3583538/" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Operator was shut down in Aug 2025 and folded into agent mode; the Atlas browser was discontinued on Aug 9, 2026, and ChatGPT Work is the newer agent surface. <a href="https://9to5mac.com/2026/07/09/openai-is-discontinuing-chatgpt-atlas-its-standalone-desktop-browser/" target="_blank" rel="noopener">9to5mac.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-cua)">
@@ -2366,7 +2236,7 @@
           <th class="co-cell"><div class="co-name">Comet</div><div class="co-line">Perplexity</div></th>
           <td class="ent-models">An AI-native browser, not an API — the assistant sits inside every tab and can navigate, fill forms, compare prices across sites, and book things on its own.</td>
           <td class="ent-pick">Free browser app — Windows, Mac, iOS, Android</td>
-          <td class="ent-why"><ul class="reviews"><li><b>Tom's Guide:</b> After a hands-on trial, &ldquo;I don't think I can go back to Chrome.&rdquo; <a href="https://www.tomsguide.com/ai/i-tried-perplexitys-new-comet-browser-and-now-i-dont-think-i-can-go-back-to-chrome" target="_blank" rel="noopener">read &rarr;</a></li><li><b>G2 users:</b> Average 4.4/5 across 13 reviews; one reports freezing and stalled chats. <a href="https://www.g2.com/products/perplexity-comet/reviews" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Perplexity AI Magazine:</b> Powerful, but not hands-off. <a href="https://perplexityaimagazine.com/perplexity-hub/perplexity-comet-review-2026/" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>Tom's Guide:</b> After a hands-on trial, &ldquo;I don't think I can go back to Chrome.&rdquo; <a href="https://www.tomsguide.com/ai/i-tried-perplexitys-new-comet-browser-and-now-i-dont-think-i-can-go-back-to-chrome" target="_blank" rel="noopener">read &rarr;</a></li><li><b>G2 users:</b> Average 4.4/5 across 13 reviews; one reports freezing and stalled chats. <a href="https://www.g2.com/products/perplexity-comet/reviews" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Perplexity AI Magazine:</b> Powerful, but not hands-off. <a href="https://perplexityaimagazine.com/perplexity-hub/perplexity-comet-review-2026/" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Launched at $200/month in Jul 2025; free to everyone since March 2026. <a href="https://www.switchtools.io/blog/perplexity-comet-ai-agent-browser" target="_blank" rel="noopener">switchtools.io &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-cua)">
@@ -2374,7 +2244,7 @@
           <th class="co-cell"><div class="co-name">Claude Computer Use</div><div class="co-line">Anthropic</div></th>
           <td class="ent-models">Two tools: computer use reads a screenshot and drives the mouse/keyboard; browser use reads the accessibility tree instead of pixels for web-specific tasks.</td>
           <td class="ent-pick">API — GA since Aug 2026, on Sonnet 5.5, Opus 5.5, Fable 5.2 and 5.1, and Opus 4.8</td>
-          <td class="ent-why"><ul class="reviews"><li><b>Anthropic help center:</b> Computer use is in beta; Anthropic advises against using it on apps with health, finance or other sensitive records. <a href="https://support.claude.com/en/articles/14128542" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>Anthropic help center:</b> Computer use is in beta; Anthropic advises against using it on apps with health, finance or other sensitive records. <a href="https://support.claude.com/en/articles/14128542" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Paired with the Skills and Files APIs so an agent can apply a reusable procedure and hand back a finished file. <a href="https://claude.com/blog/computer-use-skills-api-files-api" target="_blank" rel="noopener">claude.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-cua)">
@@ -2382,7 +2252,7 @@
           <th class="co-cell"><div class="co-name">Perplexity Computer</div><div class="co-line">Perplexity · Feb 25, 2026</div></th>
           <td class="ent-models">A cloud agent that takes a goal, splits it into subtasks, and hands each to a different model, running in the background and checking in when it needs input. At launch Claude Opus 4.6 orchestrated and coded, Gemini did deep research, GPT-5.2 handled long-context recall and search, Grok took quick tasks, plus image and video models; Perplexity said 19 models in all (newer reviews say 20+), and you can assign subtasks yourself. Perplexity Teammates, under Always-on agents, is built on it.</td>
           <td class="ent-pick">Hosted SaaS, web, plus Slack and mobile triggers; usage billed in credits<br>Max $200/month with 10,000 credits; Pro and Enterprise tiers followed with smaller allowances</td>
-          <td class="ent-why"><ul class="reviews"><li><b>ComputerTech:</b> Scores it 7.5/10. <a href="https://computertech.co/perplexity-computer-review-19-models/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>DataCamp:</b> Rates accuracy on hard facts &ldquo;Mixed&rdquo;; treat the output as a junior analyst's first draft. <a href="https://www.datacamp.com/tutorial/perplexity-computer" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Elephas:</b> Strong for research; a weak fit for client files without a written data policy. <a href="https://elephas.app/resources/perplexity-computer-review" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>ComputerTech:</b> Scores it 7.5/10. <a href="https://computertech.co/perplexity-computer-review-19-models/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>DataCamp:</b> Rates accuracy on hard facts &ldquo;Mixed&rdquo;; treat the output as a junior analyst's first draft. <a href="https://www.datacamp.com/tutorial/perplexity-computer" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Elephas:</b> Strong for research; a weak fit for client files without a written data policy. <a href="https://elephas.app/resources/perplexity-computer-review" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Perplexity's guide (relayed by a competitor's review) puts light tasks at $1&ndash;$3.50 and heavy ones at $8.75&ndash;$22.75; runs pause when credits or the spending cap run out. Sources disagree on whether Pro gets a recurring allowance or a one-time bonus. <a href="https://elephas.app/resources/perplexity-computer-review" target="_blank" rel="noopener">elephas.app &rarr;</a></li><li>Nov 17: a Multiagent level above Ultra, where a lead agent (Claude Fable 5.2) plans and can assign up to 16 agents that share findings and edit shared files, defaulting to Opus 5.5, GPT-6.1 Sol and Gemini 4 Carbon. Max subscribers on the web; no separate price reported. <a href="https://mlq.ai/news/perplexity-launches-multiagent-for-computer-and-orchestrator-an-api-for-models-from-openai-anthropic-google-and-xai/" target="_blank" rel="noopener">mlq.ai &rarr;</a></li><li>Launch figures came from company executives; no independent benchmark of output quality exists.</li></ul></td>
         </tr>
       </tbody>
     </table>
@@ -2413,7 +2283,7 @@
           <td class="ent-pick" data-label="Audience &amp; deployment">Consumer · hosted SaaS, US at launch<br>iOS, Android, muse.ai, and WhatsApp; free tier plus $20 and $100 plans</td>
           <td class="ent-allow" data-label="Models it allows"><b>Muse Spark today.</b> Meta says Muse Wonder is coming to the app, first for subscribers, and on Nov 6 it rolled out specialized models built from Wonder. No model picker appears in the app. Developers can pick Spark, Wonder or Ember by model ID in the Meta Model API, but that is separate from the app.
             <a href="https://zapier.com/blog/meta-ai-muse-spark/" target="_blank" rel="noopener">zapier.com &rarr;</a></td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Yahoo Finance:</b> Finds it impressively capable despite some hiccups. <a href="https://finance.yahoo.com/technology/article/metas-muse-is-an-impressively-capable-ai-agent-despite-some-hiccups-173310662.html" target="_blank" rel="noopener">read &rarr;</a></li><li><b>CNN:</b> Target blocked its autonomous checkout in CNN's test. <a href="https://www.cnn.com/2026/09/23/tech/meta-muse-ai-agent" target="_blank" rel="noopener">read &rarr;</a></li><li><b>PCWorld:</b> Handled shopping, including ticket purchases, stopping for a final &ldquo;yes&rdquo; before checkout. <a href="https://www.pcworld.com/article/3243549/metas-muse-ai-assistant-was-born-to-shop.html" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Yahoo Finance:</b> Finds it impressively capable despite some hiccups. <a href="https://finance.yahoo.com/technology/article/metas-muse-is-an-impressively-capable-ai-agent-despite-some-hiccups-173310662.html" target="_blank" rel="noopener">read &rarr;</a></li><li><b>CNN:</b> Target blocked its autonomous checkout in CNN's test. <a href="https://www.cnn.com/2026/09/23/tech/meta-muse-ai-agent" target="_blank" rel="noopener">read &rarr;</a></li><li><b>PCWorld:</b> Handled shopping, including ticket purchases, stopping for a final &ldquo;yes&rdquo; before checkout. <a href="https://www.pcworld.com/article/3243549/metas-muse-ai-assistant-was-born-to-shop.html" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Meta says more than 10 million people have set it up (reportedly across the US and Canada), about a quarter use it daily, and shopping is a top use. An outside estimate in late September was about 700K users against 5M downloads. <a href="https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/" target="_blank" rel="noopener">techcrunch.com &rarr;</a></li><li>Zuckerberg says compute costs must fall more than 10&times; before it turns a profit. Android traction is far weaker than iPhone.</li><li>Nov 6: specialized models built from Wonder add Active Memory and Active Focus; Meta claims they are 2.4&times; less likely to forget critical information and 67% better at self-correcting, with no outside test. <a href="https://runtimewire.com/article/meta-gives-muse-and-meta-ai-new-models-that-promise-to-forget-less" target="_blank" rel="noopener">runtimewire.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-agentfw)">
@@ -2423,7 +2293,7 @@
           <td class="ent-pick" data-label="Audience &amp; deployment">Developer · self-hosted<br>model-agnostic — connects to Claude, GPT, and others</td>
           <td class="ent-allow" data-label="Models it allows"><b>Any model; no fixed default.</b> You set the primary model in config; the docs example uses Claude Opus 4.6 but recommends none. Providers include Anthropic, OpenAI, xAI, Mistral, Qwen, Z.AI (GLM), Moonshot (Kimi), OpenRouter, Bedrock and local Ollama, with Gemini through a CLI bridge. Some doc mirrors claim a Gemini default; the official page doesn't.
             <a href="https://docs.openclaw.ai/providers/models" target="_blank" rel="noopener">docs.openclaw.ai &rarr;</a></td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>VelvetShark (50 days):</b> Daily value 9/10, but silent memory loss and browser automation rated 5/10. <a href="https://velvetshark.com/50-days-with-openclaw" target="_blank" rel="noopener">read &rarr;</a></li><li><b>DEV Community ($47 week test):</b> Sorted about 2,000 emails in 20 minutes at ~90% accuracy, but sometimes reported success when nothing had happened. <a href="https://dev.to/likhit/i-spent-47-testing-openclaw-for-a-week-heres-whats-actually-happening-4j2b" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Hive Security:</b> Treats it as a serious security risk. <a href="https://hivesecurity.gitlab.io/blog/openclaw-ai-agent-security-crisis-2026/" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>VelvetShark (50 days):</b> Daily value 9/10, but silent memory loss and browser automation rated 5/10. <a href="https://velvetshark.com/50-days-with-openclaw" target="_blank" rel="noopener">read &rarr;</a></li><li><b>DEV Community ($47 week test):</b> Sorted about 2,000 emails in 20 minutes at ~90% accuracy, but sometimes reported success when nothing had happened. <a href="https://dev.to/likhit/i-spent-47-testing-openclaw-for-a-week-heres-whats-actually-happening-4j2b" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Hive Security:</b> Treats it as a serious security risk. <a href="https://hivesecurity.gitlab.io/blog/openclaw-ai-agent-security-crisis-2026/" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Went from a November 2025 side project to 355K GitHub stars by April 2026 and about 395K now; stewarded by an independent non-profit foundation. Malicious-skill counts in its marketplace conflict between reports (341 vs 1,184). <a href="https://docs.openclaw.ai/providers/models" target="_blank" rel="noopener">openclaw.ai &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-agentfw)">
@@ -2433,7 +2303,7 @@
           <td class="ent-pick" data-label="Audience &amp; deployment">Developer · self-hosted<br>model-neutral — OpenRouter, OpenAI, Anthropic, or your own endpoint</td>
           <td class="ent-allow" data-label="Models it allows"><b>Any model; no built-in default.</b> A fresh install is unset and <i>hermes setup</i> picks one. It supports Nous Portal (300+ models, the recommended route), OpenRouter, Anthropic, xAI, MiniMax, DeepSeek, Ollama and any OpenAI-compatible endpoint. <i>/model</i> switches mid-session, and cheaper models can be assigned to side jobs such as compression and vision.
             <a href="https://hermes-agent.nousresearch.com/docs/user-guide/configuring-models" target="_blank" rel="noopener">hermes-agent docs &rarr;</a></td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Axis Intelligence:</b> Scores it 8.2/10 after three weeks. <a href="https://axis-intelligence.com/hermes-agent-review-tested/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>andrew.ooo:</b> Two weeks of use cost about $1.40 of compute; skill quality was uneven. <a href="https://andrew.ooo/posts/hermes-agent-nous-research-self-improving-review/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Medium (kisztof):</b> Warns that a prompt injection can persist inside a saved skill. <a href="https://kisztof.medium.com/hermes-agent-review-nous-researchs-self-improving-ai-agent-e72bc244435a" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Axis Intelligence:</b> Scores it 8.2/10 after three weeks. <a href="https://axis-intelligence.com/hermes-agent-review-tested/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>andrew.ooo:</b> Two weeks of use cost about $1.40 of compute; skill quality was uneven. <a href="https://andrew.ooo/posts/hermes-agent-nous-research-self-improving-review/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Medium (kisztof):</b> Warns that a prompt injection can persist inside a saved skill. <a href="https://kisztof.medium.com/hermes-agent-review-nous-researchs-self-improving-ai-agent-e72bc244435a" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Claimed the #1 spot on OpenRouter by daily token usage within its first three months of release. <a href="https://hermes-agent.org/" target="_blank" rel="noopener">hermes-agent.org &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-openai)">
@@ -2443,7 +2313,7 @@
           <td class="ent-pick" data-label="Audience &amp; deployment">Consumer + Enterprise · hosted SaaS<br>Pro and Business Premium plans, eligible markets</td>
           <td class="ent-allow" data-label="Models it allows"><b>GPT-6 Astra.</b> No review mentions a model picker.
             <a href="https://cryptobriefing.com/openai-dots-ai-agent-hands-on-review/" target="_blank" rel="noopener">cryptobriefing.com &rarr;</a> <a href="https://www.eesel.ai/blog/openai-dots-review" target="_blank" rel="noopener">eesel.ai &rarr;</a></td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>CryptoBriefing:</b> An evaluator's ten-task business test scored it 8.8/10, third of five agents (Claude Cowork led at 9.3). <a href="https://cryptobriefing.com/openai-dots-ai-agent-hands-on-review/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>eesel:</b> Scores it 3/5: strong safety design, but repeated confirmations and slow. <a href="https://www.eesel.ai/blog/openai-dots-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Fast Company:</b> Useful for a narrow job (turning old articles into PDFs), but not for writing. <a href="https://fastcompany.com/91620082/openai-dots-agent-review" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>CryptoBriefing:</b> An evaluator's ten-task business test scored it 8.8/10, third of five agents (Claude Cowork led at 9.3). <a href="https://cryptobriefing.com/openai-dots-ai-agent-hands-on-review/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>eesel:</b> Scores it 3/5: strong safety design, but repeated confirmations and slow. <a href="https://www.eesel.ai/blog/openai-dots-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Fast Company:</b> Useful for a narrow job (turning old articles into PDFs), but not for writing. <a href="https://fastcompany.com/91620082/openai-dots-agent-review" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Launched to a polarized 750-point Hacker News thread split between utility and privacy alarm. A day later OpenAI said its agents had leaked 53 ChatGPT user images and reached SEC, Commerce and Census sites. <a href="https://www.macrumors.com/2026/09/29/openai-launches-dots/" target="_blank" rel="noopener">macrumors.com &rarr;</a></li><li>OpenAI's own system card puts scope violations at 8.6% on five-task chains and 19.7% on ten-task chains. eesel, which scored it 3/5, sells a competing support product.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-anthropic)">
@@ -2453,7 +2323,7 @@
           <td class="ent-pick" data-label="Audience &amp; deployment">Professional &amp; small business · hosted SaaS, research preview<br>US-only waitlist for Claude Pro and Max subscribers</td>
           <td class="ent-allow" data-label="Models it allows"><b>Claude Opus 5.5 only.</b> There is no model or effort picker; Duet decides how much effort each job needs.
             <a href="https://www.eesel.ai/blog/claude-duet-review" target="_blank" rel="noopener">eesel.ai &rarr;</a></td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Every (two-week review):</b> The first personal agent that feels like a pro tool, though its email drafts trail Dots. <a href="https://every.to/vibe-check/vibe-check-duet-anthropic-s-always-on-agent" target="_blank" rel="noopener">read &rarr;</a></li><li><b>eesel:</b> Scores it 3.5/5. <a href="https://www.eesel.ai/blog/claude-duet-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>ChatPRD (Claire Vo):</b> Worth trying but not her main agent: long jobs went quiet and it has no desktop app. <a href="https://www.chatprd.ai/how-i-ai/claude-duet-review" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Every (two-week review):</b> The first personal agent that feels like a pro tool, though its email drafts trail Dots. <a href="https://every.to/vibe-check/vibe-check-duet-anthropic-s-always-on-agent" target="_blank" rel="noopener">read &rarr;</a></li><li><b>eesel:</b> Scores it 3.5/5. <a href="https://www.eesel.ai/blog/claude-duet-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>ChatPRD (Claire Vo):</b> Worth trying but not her main agent: long jobs went quiet and it has no desktop app. <a href="https://www.chatprd.ai/how-i-ai/claude-duet-review" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Anthropic says Duet is poor at booking tickets; it asks before sending messages or paying, and will not trade securities or move money. <a href="https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/" target="_blank" rel="noopener">techcrunch.com &rarr;</a></li><li>Anthropic says it will reach the $20 Pro plan at general availability (Dots needs OpenAI's $100 Pro tier); background checks count against shared Claude usage limits.</li><li>eesel, which scored it 3.5/5, sells a competing support product.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-cua)">
@@ -2463,7 +2333,7 @@
           <td class="ent-pick" data-label="Audience &amp; deployment">Individual, hosted SaaS, research preview<br>Perplexity Max only ($200/month, or $2,000/year), on the web and iOS per Perplexity's page, with Android and desktop coming; Enterprise excluded by default</td>
           <td class="ent-allow" data-label="Models it allows"><b>Default:</b> Claude Opus 5.5, with a different model selectable per teammate, as reported by Data Studios and i-SCOOP. Perplexity's own product page names no models, so the selectable list isn't published. Underneath, it runs on Perplexity Computer, which routes among 19&ndash;20+ models from several labs; whether teammates can draw on that whole pool is unconfirmed.
             <a href="https://www.datastudios.org/post/perplexity-teammates-always-on-ai-agents-max-200-month-credits" target="_blank" rel="noopener">datastudios.org &rarr;</a> <a href="https://www.i-scoop.eu/perplexity-teammates/" target="_blank" rel="noopener">i-scoop.eu &rarr;</a> <a href="https://www.perplexity.ai/hub/products/teammates" target="_blank" rel="noopener">perplexity.ai &rarr;</a></td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li class="rev-none">No independent review published yet.</li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Perplexity says its own staff run about 10,000 teammates (an internal figure). Free during a launch promotion with no end date, then it draws on Max's monthly credits; a default $200 monthly spending cap (adjustable to $5,000) applies because background agents keep spending without new prompts. One analyst estimates $205&ndash;$385 a month for a single daily research teammate. <a href="https://www.datastudios.org/post/perplexity-teammates-always-on-ai-agents-max-200-month-credits" target="_blank" rel="noopener">datastudios.org &rarr;</a></li><li>The help center does not explain how to pause one. Reports differ on the launch date (Nov 4 or 5).</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-agentfw)">
@@ -2473,7 +2343,7 @@
           <td class="ent-pick" data-label="Audience &amp; deployment">Enterprise · hosted SaaS only<br>runs on xAI's cloud, not self-hostable or model-choosable</td>
           <td class="ent-allow" data-label="Models it allows"><b>xAI's Grok models only; no picker.</b> Reviewers saw Grok 4.6, then 4.7, but xAI's docs name no model. Musk has said Bots will use the best back-end model for each task; one reviewer treats that as announced, not shipped.
             <a href="https://zenaegis.com/grok-bot-review/" target="_blank" rel="noopener">zenaegis.com &rarr;</a> <a href="https://aliakbarfakhri.com/grok-bot-review/" target="_blank" rel="noopener">aliakbarfakhri.com &rarr;</a></td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Zen Aegis:</b> Scores it 3/5 after three weeks: a strong harness that needs a more trustworthy model, with frequent hallucinated completions. <a href="https://zenaegis.com/grok-bot-review/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>aliakbarfakhri.com (seven-day test):</b> A narrow win: it finishes browser work, but connectors failed and a shared-computer outage lasted days. <a href="https://aliakbarfakhri.com/grok-bot-review/" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Zen Aegis:</b> Scores it 3/5 after three weeks: a strong harness that needs a more trustworthy model, with frequent hallucinated completions. <a href="https://zenaegis.com/grok-bot-review/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>aliakbarfakhri.com (seven-day test):</b> A narrow win: it finishes browser work, but connectors failed and a shared-computer outage lasted days. <a href="https://aliakbarfakhri.com/grok-bot-review/" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Access requires a SuperGrok, Cursor Pro or Cursor Teams subscription. All bots share one computer and its logins.</li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-google)">
@@ -2483,7 +2353,7 @@
           <td class="ent-pick" data-label="Audience &amp; deployment">Enterprise · hosted SaaS, private preview<br>inside Gemini Enterprise and Workspace; runs on Gemini but also supports Claude</td>
           <td class="ent-allow" data-label="Models it allows"><b>Gemini and Claude.</b> Admins can restrict which models agents use, and &ldquo;Smart Routing&rdquo; picks among the permitted ones by task and cost. Google hasn't named the Gemini versions, Claude is early access rather than open to every Gemini Enterprise customer, and Google hasn't said where prompts go when Claude handles a job.
             <a href="https://www.implicator.ai/google-launches-gemini-agent-that-gives-ai-coworkers-their-own-workspace-email/" target="_blank" rel="noopener">implicator.ai &rarr;</a></td>
-          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Info-Tech analyst Mahmoud Ramin (via VentureBeat):</b> Says it creates no new category; analyst Carmi Levy questions whether CIOs can trust it with mission-critical work. <a href="https://venturebeat.com/orchestration/google-cloud-unveils-persistent-gemini-agents-for-long-running-tasks-and-they-get-their-own-gmail-calendar-and-drive-storage" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why" data-label="Top reviews"><ul class="reviews"><li><b>Info-Tech analyst Mahmoud Ramin (via VentureBeat):</b> Says it creates no new category; analyst Carmi Levy questions whether CIOs can trust it with mission-critical work. <a href="https://venturebeat.com/orchestration/google-cloud-unveils-persistent-gemini-agents-for-long-running-tasks-and-they-get-their-own-gmail-calendar-and-drive-storage" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Governance built in: attested agent identities, isolated containers, full activity logs and an Agent Gateway that enforces company policy. Included at no extra charge where Gemini Enterprise is available; still in private preview, with no independent benchmarks. <a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work/" target="_blank" rel="noopener">blog.google &rarr;</a></li></ul></td>
         </tr>
       </tbody>
     </table>
@@ -2511,7 +2381,7 @@
           <th class="co-cell"><div class="co-name">ChatGPT</div><div class="co-line">OpenAI · 1.2B weekly users</div></th>
           <td class="ent-models">Standalone app (iOS/Android/web), routing across GPT-6.2 Astra and Sol (from Nov 17 for Plus and above, though one outlet says Plus users did not see them yet) and Luna, depending on plan and query.</td>
           <td class="ent-pick">The default, most mainstream AI app</td>
-          <td class="ent-why"><ul class="reviews"><li><b>G2 users:</b> Average 4.6/5 across 2,736 reviews. <a href="https://www.g2.com/products/chatgpt/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>DIYAI:</b> Scores it 4.3/5: one of the strongest general-purpose tools, but no longer the automatic best choice for every workflow. <a href="https://diyai.io/ai-tools/productivity/reviews/chatgpt-review/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Hack'celeration:</b> Concludes Plus delivers the best return for most users. <a href="https://hackceleration.com/chatgpt-review/" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>G2 users:</b> Average 4.6/5 across 2,736 reviews. <a href="https://www.g2.com/products/chatgpt/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>DIYAI:</b> Scores it 4.3/5: one of the strongest general-purpose tools, but no longer the automatic best choice for every workflow. <a href="https://diyai.io/ai-tools/productivity/reviews/chatgpt-review/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Hack'celeration:</b> Concludes Plus delivers the best return for most users. <a href="https://hackceleration.com/chatgpt-review/" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>GPT-6 with Intelligent UI (Oct 7) answers with inline calculators, comparison tables and games; Free and Go users from Oct 8, on GPT-6 Luna. <a href="https://releasebot.io/updates/openai" target="_blank" rel="noopener">releasebot.io &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-consumer)">
@@ -2519,7 +2389,7 @@
           <th class="co-cell"><div class="co-name">Gemini</div><div class="co-line">Google · over 1B monthly users</div></th>
           <td class="ent-models">Gmail, Docs, Sheets, Slides, Calendar, Android, Search.</td>
           <td class="ent-pick">Google-ecosystem productivity</td>
-          <td class="ent-why"><ul class="reviews"><li><b>Zemith:</b> G2 reviewers praise the 1M-token context and Workspace integration; Trustpilot users report refusals and weak coding accuracy. <a href="https://www.zemith.com/nl/learn/gemini-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>PCWorld:</b> Says the Gemini Windows app fails at basic tasks that ChatGPT handles easily. <a href="https://www.pcworld.com/article/3232453/i-tried-the-gemini-app-for-windows-it-wasted-my-time.html" target="_blank" rel="noopener">read &rarr;</a></li><li><b>G2 Learn:</b> Asks whether it is the best AI chatbot tested in 2026. <a href="https://learn.g2.com/google-gemini-review" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>Zemith:</b> G2 reviewers praise the 1M-token context and Workspace integration; Trustpilot users report refusals and weak coding accuracy. <a href="https://www.zemith.com/nl/learn/gemini-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>PCWorld:</b> Says the Gemini Windows app fails at basic tasks that ChatGPT handles easily. <a href="https://www.pcworld.com/article/3232453/i-tried-the-gemini-app-for-windows-it-wasted-my-time.html" target="_blank" rel="noopener">read &rarr;</a></li><li><b>G2 Learn:</b> Asks whether it is the best AI chatbot tested in 2026. <a href="https://learn.g2.com/google-gemini-review" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Free users get Gemini 4 Hydrogen through automatic model selection (Nov 12); Pro and Ultra subscribers got Gemini 4 Neon on Nov 18, and Gemini 3.1 Pro is being removed from the app. <a href="https://9to5google.com/2026/11/18/gemini-4-neon-announcement/" target="_blank" rel="noopener">9to5google.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-consumer)">
@@ -2527,7 +2397,7 @@
           <th class="co-cell"><div class="co-name">Meta AI</div><div class="co-line">Meta · about 1B monthly users</div></th>
           <td class="ent-models">WhatsApp, Instagram, Messenger.</td>
           <td class="ent-pick">Quick answers inside chat apps you're already in</td>
-          <td class="ent-why"><ul class="reviews"><li><b>PCWorld:</b> Muse handled shopping tasks, including ticket purchases, with a final &ldquo;yes&rdquo; before checkout. <a href="https://www.pcworld.com/article/3243549/metas-muse-ai-assistant-was-born-to-shop.html" target="_blank" rel="noopener">read &rarr;</a></li><li><b>NoCode.MBA:</b> A surprisingly useful personal agent, but it would not connect a primary inbox on day one. <a href="https://www.nocode.mba/articles/meta-muse-ai-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>eesel:</b> The product may well be good; the reservation is about its owner, not the engineering. <a href="https://www.eesel.ai/blog/meta-muse-agent-review" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>PCWorld:</b> Muse handled shopping tasks, including ticket purchases, with a final &ldquo;yes&rdquo; before checkout. <a href="https://www.pcworld.com/article/3243549/metas-muse-ai-assistant-was-born-to-shop.html" target="_blank" rel="noopener">read &rarr;</a></li><li><b>NoCode.MBA:</b> A surprisingly useful personal agent, but it would not connect a primary inbox on day one. <a href="https://www.nocode.mba/articles/meta-muse-ai-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>eesel:</b> The product may well be good; the reservation is about its owner, not the engineering. <a href="https://www.eesel.ai/blog/meta-muse-agent-review" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>The passive-assistant counterpart to Meta's more active Muse agent; the default when the job is "answer this without opening another app." <a href="https://tech-insider.org/ie/meta-ai-vs-gemini-vs-grok-2026/" target="_blank" rel="noopener">tech-insider.org &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-consumer)">
@@ -2535,7 +2405,7 @@
           <th class="co-cell"><div class="co-name">Microsoft Copilot</div><div class="co-line">Microsoft · about 150M monthly users</div></th>
           <td class="ent-models">Word, Excel, Teams, Outlook, Windows.</td>
           <td class="ent-pick">Editing/analyzing inside Microsoft 365</td>
-          <td class="ent-why"><ul class="reviews"><li><b>G2 users (Microsoft 365 Copilot):</b> Average 4.4/5 across 340 reviews. <a href="https://www.g2.com/products/microsoft-365-co-pilot/reviews" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Cocowork:</b> Scores it 8/10 for work inside Word, Excel, Outlook and Teams. <a href="https://cocowork.fr/en/tools/microsoft-copilot/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Trustpilot (consumer Copilot):</b> 1.6/5 across 313 reviews, with 77% giving one star. <a href="https://uk.trustpilot.com/review/copilot.microsoft.com" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>G2 users (Microsoft 365 Copilot):</b> Average 4.4/5 across 340 reviews. <a href="https://www.g2.com/products/microsoft-365-co-pilot/reviews" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Cocowork:</b> Scores it 8/10 for work inside Word, Excel, Outlook and Teams. <a href="https://cocowork.fr/en/tools/microsoft-copilot/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Trustpilot (consumer Copilot):</b> 1.6/5 across 313 reviews, with 77% giving one star. <a href="https://uk.trustpilot.com/review/copilot.microsoft.com" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Built to create, edit and analyze content inside Microsoft 365 apps. Microsoft says it has over 20 million paid Microsoft 365 Copilot seats (Apr 29). <a href="https://techcrunch.com/2026/04/29/microsoft-says-it-has-over-20m-paid-copilot-users-and-they-really-are-using-it/" target="_blank" rel="noopener">techcrunch.com &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-anthropic)">
@@ -2543,7 +2413,7 @@
           <th class="co-cell"><div class="co-name">Claude.ai</div><div class="co-line">Anthropic · fastest-growing</div></th>
           <td class="ent-models">Standalone app and web, with a model picker across Haiku, Sonnet, Opus, and Fable.</td>
           <td class="ent-pick">Choosing your own model tier; strongest reputation among developers</td>
-          <td class="ent-why"><ul class="reviews"><li><b>BGR:</b> Calls it the most comprehensive AI toolset. <a href="https://bgr.com/2213994/claude-ai-review/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Hack'celeration:</b> Scores it 4.2/5. <a href="https://www.hackceleration.com/claude-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>G2 Learn:</b> Describes a shift in 2026 from basic chatbot to agentic assistant. <a href="https://learn.g2.com/claude-ai-review" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>BGR:</b> Calls it the most comprehensive AI toolset. <a href="https://bgr.com/2213994/claude-ai-review/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Hack'celeration:</b> Scores it 4.2/5. <a href="https://www.hackceleration.com/claude-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>G2 Learn:</b> Describes a shift in 2026 from basic chatbot to agentic assistant. <a href="https://learn.g2.com/claude-ai-review" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Holds roughly 17% of the consumer mobile chatbot market, with US mobile daily actives up 1,100% year to date in 2026. Anthropic reportedly added Sheets, Whiteboards, Data and Meetings on Nov 10. <a href="https://www.getpanto.ai/blog/claude-ai-statistics" target="_blank" rel="noopener">getpanto.ai &rarr;</a></li></ul></td>
         </tr>
       </tbody>
       <tbody style="--co:var(--c-consumer)">
@@ -2551,7 +2421,7 @@
           <th class="co-cell"><div class="co-name">Grok (chat)</div><div class="co-line">xAI</div></th>
           <td class="ent-models">X app, grok.com, standalone mobile app.</td>
           <td class="ent-pick">Real-time / social context</td>
-          <td class="ent-why"><ul class="reviews"><li><b>Cybernews:</b> Calls Grok 4.7 mid-tier and more guarded, comparing it with Meta's Muse Spark and Qwen 3.8. <a href="https://cybernews.com/ai-news/grok-4-7-overhyped-more-guardrails/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Bitsminds:</b> Found the cost per completed task roughly doubled against Grok 4.6. <a href="https://www.bitsminds.com/reviews/grok-4-7-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Kompozy:</b> Scores it 4.1/5. <a href="https://kompozy.io/reviews/grok-4-7" target="_blank" rel="noopener">read &rarr;</a></li></ul></td>
+          <td class="ent-why"><ul class="reviews"><li><b>Cybernews:</b> Calls Grok 4.7 mid-tier and more guarded, comparing it with Meta's Muse Spark and Qwen 3.8. <a href="https://cybernews.com/ai-news/grok-4-7-overhyped-more-guardrails/" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Bitsminds:</b> Found the cost per completed task roughly doubled against Grok 4.6. <a href="https://www.bitsminds.com/reviews/grok-4-7-review" target="_blank" rel="noopener">read &rarr;</a></li><li><b>Kompozy:</b> Scores it 4.1/5. <a href="https://kompozy.io/reviews/grok-4-7" target="_blank" rel="noopener">read &rarr;</a></li></ul><div class="facts-h">Also noted</div><ul class="facts"><li>Plugged directly into the X firehose; Aurora Voice adds near real-time spoken conversation. Separate from Grok Bot, xAI's always-on agent. <a href="https://sintra.ai/blog/grok-vs-chatgpt-vs-gemini" target="_blank" rel="noopener">sintra.ai &rarr;</a></li></ul></td>
         </tr>
       </tbody>
     </table>
@@ -2559,7 +2429,7 @@
   </section>
 
   <footer>
-    <p>Snapshot compiled November 23, 2026 — the Note column became Top reviews (at most three per row, from independent reviews, surveys and user ratings), every table was re-ordered by reported usage, and the basis for each order is stated under its heading, following Sarvam's new 105B, Prism and Token Factory, the split of the tier matrix into closed and open weights, Microsoft's Ignite MAI models, and earlier launches from Google, Thinking Machines, NVIDIA, OpenAI and Alibaba. Every model now shows its launch date. The tier matrix ranks companies by a usage-evidence score and shows one older version per model; the other model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
+    <p>Snapshot compiled November 23, 2026 — superseded models and older versions moved to the archive, the important details dropped from the notes were restored under each row's reviews, the Note column became Top reviews (at most three per row, from independent reviews, surveys and user ratings), every table was re-ordered by reported usage, and the basis for each order is stated under its heading, following Sarvam's new 105B, Prism and Token Factory, the split of the tier matrix into closed and open weights, Microsoft's Ignite MAI models, and earlier launches from Google, Thinking Machines, NVIDIA, OpenAI and Alibaba. Every model now shows its launch date. The tier matrix ranks companies by a usage-evidence score and shows one older version per model; the other model tables run newest first. Every model in the tier matrix carries three independent sources plus a practical-usage tier (Leading down to Niche, or "too new to tell"), cited inline in its own cell rather than repeated here — over 100 individual citations in that section alone. The rest of the page still uses a single best source per row. This market re-shuffles every few weeks and usage tiers especially can flip fast — treat all of it as directional, and confirm against the vendor's current docs before committing budget or an integration to a specific model.</p>
     <div class="sources">
       <a href="https://www.secondtalent.com/resources/every-claude-ai-model-explained-compared/">secondtalent.com/claude</a>
       <a href="https://theaicareerlab.com/blog/which-claude-model-should-you-use">theaicareerlab.com</a>
