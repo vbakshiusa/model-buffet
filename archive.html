@@ -784,7 +784,14 @@
   .arch{ background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--co, var(--accent)); border-radius:10px; padding:14px 16px; scroll-margin-top:72px; }
   .arch:target{ outline:2px solid var(--accent); outline-offset:2px; }
   .arch-top{ display:flex; justify-content:space-between; gap:8px; flex-wrap:wrap; font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-faint); }
-  .arch h3{ font-family:'Fraunces', serif; font-size:19px; margin:6px 0 2px; }
+  .arch h4{ font-family:'Fraunces', serif; font-size:19px; font-weight:600; margin:6px 0 2px; }
+  .co-jump{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 20px; }
+  .co-jump a{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; padding:5px 11px; border:1px solid var(--line); border-radius:999px; background:var(--surface); color:var(--ink-soft); text-decoration:none; }
+  .co-jump a:hover, .co-jump a:focus-visible{ border-color:var(--accent); color:var(--ink); outline:none; }
+  .co-jump a span{ color:var(--ink-faint); margin-left:3px; }
+  .co-group{ margin:0 0 26px; scroll-margin-top:72px; }
+  .co-group-h{ font-family:'Fraunces', serif; font-size:20px; margin:0 0 10px; padding-bottom:6px; border-bottom:2px solid var(--co, var(--accent)); }
+  .co-group-h span{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; font-weight:400; color:var(--ink-faint); margin-left:8px; }
   .arch-spec{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); }
   .arch-tier{ margin-left:6px; color:var(--ink-faint); }
   .arch-repl{ margin:8px 0 0; font-size:13px; color:var(--ink); }
@@ -814,19 +821,22 @@
   <!--BATCHES-->
   <section class="batch" id="batch-2026-11-23" data-batch="2026-11-23">
     <h2 class="batch-h">Archived Nov 23, 2026 <span>26 entries</span></h2>
-    <div class="arch-grid">
+    <nav class="co-jump" aria-label="Jump to a company"><a href="#co-2026-11-23-anthropic">Anthropic <span>5</span></a><a href="#co-2026-11-23-deepseek">DeepSeek <span>1</span></a><a href="#co-2026-11-23-google">Google <span>3</span></a><a href="#co-2026-11-23-meta">Meta <span>2</span></a><a href="#co-2026-11-23-microsoft">Microsoft <span>1</span></a><a href="#co-2026-11-23-mistral">Mistral <span>3</span></a><a href="#co-2026-11-23-nvidia">NVIDIA <span>2</span></a><a href="#co-2026-11-23-openai">OpenAI <span>5</span></a><a href="#co-2026-11-23-qwen">Qwen <span>1</span></a><a href="#co-2026-11-23-sarvam-ai">Sarvam AI <span>1</span></a><a href="#co-2026-11-23-xai">xAI <span>2</span></a></nav>
+    <div class="co-group" id="co-2026-11-23-anthropic" style="--co:var(--c-anthropic)">
+      <h3 class="co-group-h">Anthropic <span>5 entries</span></h3>
+      <div class="arch-grid">
       <article class="arch" id="a-fable-5-1-for-fable-5-2" style="--co:var(--c-anthropic)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Anthropic &middot; Advanced &amp; flagship</span></div>
-        <h3>Fable 5.1</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>Fable 5.1</h4>
         <div class="arch-spec">Sept 1, 2026 · $10 / $50</div>
         <div class="arch-repl">Replaced by <b>Fable 5.2</b> (Nov 9, 2026)</div>
-        <p class="arch-body">The list price falls 20% (batch $4 / $20), with Anthropic claiming up to 30% faster output, fewer tokens at medium effort, and about 55% fewer blocks from its cyber and biology safeguards (all Anthropic claims). On FrontierCode 2.0 it goes from 32.4% to 49.1% at Xhigh. TestingCatalog also relays an Artificial Analysis score of 65 at max effort (index version not named), which fits the 62 at High above. Eligible paid Claude plans get extra Fable usage this launch week, and Fable now counts toward up to 50% of weekly limits on Pro and standard Team seats.</p>
+        <p class="arch-body">The list price falls 20% (batch $4 / $20), with Anthropic claiming up to 30% faster output, fewer tokens at medium effort, and about 55% fewer blocks from its cyber and biology safeguards (all Anthropic claims). On FrontierCode 2.0 it goes from 32.4% to 49.1% at Xhigh. TestingCatalog also relays an Artificial Analysis score of 65 at max effort (index version not named). Eligible paid Claude plans get extra Fable usage in the week after the Nov 9 launch, and Fable now counts toward up to 50% of weekly limits on Pro and standard Team seats.</p>
         
         <div class="arch-links"><a href="https://www.macrumors.com/2026/11/09/anthropic-launches-claude-fable-5-2/" target="_blank" rel="noopener">macrumors.com &rarr;</a> <a href="https://www.testingcatalog.com/anthropic-launches-claude-fable-5-2-and-mythos-5-2/" target="_blank" rel="noopener">testingcatalog.com &rarr;</a></div>
       </article>
       <article class="arch" id="a-haiku-4-5-for-haiku-5-5" style="--co:var(--c-anthropic)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Anthropic &middot; Fast &amp; cheap</span></div>
-        <h3>Haiku 4.5</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Fast &amp; cheap</span></div>
+        <h4>Haiku 4.5</h4>
         <div class="arch-spec">Oct 2025 · 200K ctx · $1 / $5</div>
         <div class="arch-repl">Replaced by <b>Haiku 5.5</b> (Oct 7, 2026)</div>
         <p class="arch-body">Haiku 5.5 costs a tenth as much below 100K tokens (half the old rate above it), but its new tokenizer emits roughly 30% more tokens, so effective savings are closer to 87% below 100K and about 35% above. Context grows from 200K to 1M and adaptive thinking arrives in the Haiku line for the first time. OSWorld jumps from 15.7% to 72.4%, Terminal-Bench 4.0 from 0.0% to 39.2%, and AA's index from 17 to 34 at default effort.</p>
@@ -834,8 +844,8 @@
         <div class="arch-links"><a href="https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/" target="_blank" rel="noopener">the-decoder.com &rarr;</a> <a href="https://myclaw.ai/blog/claude-haiku-5-5-vs-4-5" target="_blank" rel="noopener">myclaw.ai &rarr;</a></div>
       </article>
       <article class="arch" id="a-mythos-5-1-for-mythos-5-2" style="--co:var(--c-anthropic)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Anthropic &middot; Advanced &amp; flagship</span></div>
-        <h3>Mythos 5.1</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>Mythos 5.1</h4>
         <div class="arch-spec">Sept 1, 2026 · gated</div>
         <div class="arch-repl">Replaced by <b>Mythos 5.2</b> (Nov 9, 2026 (gated))</div>
         <p class="arch-body">Anthropic reports the same upgrade as Fable: vulnerability rediscovery rises from 78.3% to 89.6%, and out-of-sandbox credential use falls from 21% to 3.1% (internal tests). Mythos 5.2 lists at $8 / $40, the same as Fable 5.2. Access is still by application only.</p>
@@ -843,8 +853,8 @@
         <div class="arch-links"><a href="https://dataconomy.com/2026/11/10/anthropic-launches-claude-fable-and-mythos-52-with-20/" target="_blank" rel="noopener">dataconomy.com &rarr;</a> <a href="https://www.macrumors.com/2026/11/09/anthropic-launches-claude-fable-5-2/" target="_blank" rel="noopener">macrumors.com &rarr;</a></div>
       </article>
       <article class="arch" id="a-opus-5-for-opus-5-5" style="--co:var(--c-anthropic)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Anthropic &middot; Advanced &amp; flagship</span></div>
-        <h3>Opus 5</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>Opus 5</h4>
         <div class="arch-spec">Jul 24, 2026 · $5 / $25</div>
         <div class="arch-repl">Replaced by <b>Opus 5.5</b> (Sept 22, 2026)</div>
         <p class="arch-body">Opus 5.5 is 20% cheaper per token ($4 / $20), about 30% faster, and roughly 40% cheaper on typical work; Optiver reported matching Opus 5 quality in about half the turns. The New Stack's reasoning test is headlined "cheaper, faster, but not better." Opus 5 remains the pick for biology and security work that 5.5's stricter safeguards reroute, or for integrations that need thinking off.</p>
@@ -852,26 +862,36 @@
         <div class="arch-links"><a href="https://emergent.sh/learn/claude-opus-5-5-vs-opus-5" target="_blank" rel="noopener">emergent.sh &rarr;</a> <a href="https://thenewstack.io/claude-opus-5-5-vs-opus-5/" target="_blank" rel="noopener">thenewstack.io &rarr;</a></div>
       </article>
       <article class="arch" id="a-sonnet-5-for-sonnet-5-5" style="--co:var(--c-anthropic)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Anthropic &middot; Balanced</span></div>
-        <h3>Sonnet 5</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Balanced</span></div>
+        <h4>Sonnet 5</h4>
         <div class="arch-spec">Jun 2026 · $2 / $10</div>
         <div class="arch-repl">Replaced by <b>Sonnet 5.5</b> (Sept 28, 2026)</div>
         <p class="arch-body">Same sticker price, but 5.5 finishes tasks for up to 30% less, runs 30%+ faster, and jumps from 10.3% to 70.6% on Terminal-Bench 4.0 (vendor figures).</p>
         
         <div class="arch-links"><a href="https://www.labellerr.com/blog/claude-sonnet-5-5-vs-sonnet-5/" target="_blank" rel="noopener">labellerr.com &rarr;</a></div>
       </article>
+      </div>
+    </div>
+    <div class="co-group" id="co-2026-11-23-deepseek" style="--co:var(--c-deepseek)">
+      <h3 class="co-group-h">DeepSeek <span>1 entry</span></h3>
+      <div class="arch-grid">
       <article class="arch" id="a-deepseek-v3-2-for-deepseek-v4-pro" style="--co:var(--c-deepseek)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">DeepSeek &middot; Advanced &amp; flagship</span></div>
-        <h3>DeepSeek V3.2</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>DeepSeek V3.2</h4>
         <div class="arch-spec">Dec 1, 2025 · open weight</div>
         <div class="arch-repl">Replaced by <b>DeepSeek V4 Pro</b> (GA Aug 12, 2026 (preview Apr 24))</div>
         <p class="arch-body">V4-Pro is a 1.6T-total / 49B-active model with 1M context (up from ~160K) under MIT. DeepSeek claims it needs 27% of V3.2's per-token compute (vendor claim); AA's index is 53. List price has moved and sources conflict ($0.435 / $0.87 vs $0.66 / $1.98 off-peak), so check DeepSeek's live page. Since Sept 14, DeepSeek routes all V4-Pro API calls to V4.1 Flash at Flash rates until a V4.1 Pro ships &mdash; production users complained about the unannounced change.</p>
         
         <div class="arch-links"><a href="https://api-docs.deepseek.com/news/news260910/" target="_blank" rel="noopener">api-docs.deepseek.com &rarr;</a> <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank" rel="noopener">huggingface.co &rarr;</a></div>
       </article>
+      </div>
+    </div>
+    <div class="co-group" id="co-2026-11-23-google" style="--co:var(--c-google)">
+      <h3 class="co-group-h">Google <span>3 entries</span></h3>
+      <div class="arch-grid">
       <article class="arch" id="a-gemini-3-8-flash-for-gemini-4-hydrogen" style="--co:var(--c-google)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Google &middot; Balanced</span></div>
-        <h3>Gemini 3.8 Flash</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Balanced</span></div>
+        <h4>Gemini 3.8 Flash</h4>
         <div class="arch-spec">Sept 2, 2026 · $0.75 / $3.75 intro</div>
         <div class="arch-repl">Replaced by <b>Gemini 4 Hydrogen</b> (Nov 12, 2026)</div>
         <p class="arch-body">Hydrogen costs twice 3.8 Flash's intro rate; the two prices meet when Flash's doubles on Jan 1, 2027. It defaults to high thinking, up from medium, and rejects the old thinking_budget and MINIMAL settings. On Artificial Analysis's v5.0.1 index it scores 51 against 31 for 3.8 Flash at high, at about $1.87 vs $7.77 per benchmark task. 3.8 Flash scored 59 on the older index version, so don't compare across versions. Google's 2.5&times; speed figure is its own claim.</p>
@@ -879,8 +899,8 @@
         <div class="arch-links"><a href="https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor" target="_blank" rel="noopener">venturebeat.com &rarr;</a> <a href="https://artificialanalysis.ai/articles/gemini-3-8-flash" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></div>
       </article>
       <article class="arch" id="a-gemini-4-argon-for-gemini-4-neon" style="--co:var(--c-google)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Google &middot; Balanced</span></div>
-        <h3>Gemini 4 Argon</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Balanced</span></div>
+        <h4>Gemini 4 Argon</h4>
         <div class="arch-spec">Announced Sept 30 · GA Oct 13, 2026 · $2 / $10 intro</div>
         <div class="arch-repl">Replaced by <b>Gemini 4 Neon</b> (Nov 18, 2026)</div>
         <p class="arch-body">Neon replaces Argon in the Gemini app. Per token it costs 50% more than Argon's intro price, and $3 / $15 against $4 / $20 once the intro prices end on Nov 30. Google claims Neon's cost per task is below Carbon's; no cost-per-task comparison with Argon has been published.</p>
@@ -888,17 +908,22 @@
         <div class="arch-links"><a href="https://9to5google.com/2026/11/18/gemini-4-neon-announcement/" target="_blank" rel="noopener">9to5google.com &rarr;</a> <a href="https://www.powerfulai.tools/blog/gemini-4-neon-google-ai-model-launch-2026" target="_blank" rel="noopener">powerfulai.tools &rarr;</a></div>
       </article>
       <article class="arch" id="a-gemini-4-argon-for-gemini-4-carbon" style="--co:var(--c-google)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Google &middot; Advanced &amp; flagship</span></div>
-        <h3>Gemini 4 Argon</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>Gemini 4 Argon</h4>
         <div class="arch-spec">Announced Sept 30 · GA Oct 13, 2026 · $2 / $10 intro</div>
         <div class="arch-repl">Replaced by <b>Gemini 4 Carbon</b> (Oct 28 · GA Nov 10, 2026)</div>
         <p class="arch-body">Google says Carbon complements Argon rather than replacing it: Argon stays the better choice for most software engineering and knowledge work, and Carbon is for harder multi-step coding, debugging and research. Both list at $2 / $10 until Nov 30, then $4 / $20. Google reports Carbon's per-attempt breach rate falling from 3.1% to 0.8% and its honesty pass rate rising from 70% to 92% (Google's tests). Cyber capabilities still go to defenders through Google's Fairwind program.</p>
         
         <div class="arch-links"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener">blog.google &rarr;</a> <a href="https://the-decoder.com/gemini-4-carbon-arrives-just-in-time-to-feel-like-yesterdays-news-in-the-fastest-model-cycle-yet/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></div>
       </article>
+      </div>
+    </div>
+    <div class="co-group" id="co-2026-11-23-meta" style="--co:var(--c-meta)">
+      <h3 class="co-group-h">Meta <span>2 entries</span></h3>
+      <div class="arch-grid">
       <article class="arch" id="a-muse-spark-1-3-for-muse-wonder" style="--co:var(--c-meta)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Meta &middot; Advanced &amp; flagship</span></div>
-        <h3>Muse Spark 1.3</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>Muse Spark 1.3</h4>
         <div class="arch-spec">Sept 2, 2026 · $1.25 / $4.25</div>
         <div class="arch-repl">Replaced by <b>Muse Wonder</b> (Oct 12, 2026)</div>
         <p class="arch-body">Wonder lists at about 3&times; Spark 1.3's per-token price and, by Artificial Analysis's estimate, costs nearly 3&times; as much per task. Meta calls Wonder a much larger class of model than Spark; Spark stays on the API as the cheaper, lower-latency option. Neither Wonder model has open weights.</p>
@@ -906,53 +931,68 @@
         <div class="arch-links"><a href="https://explainx.ai/blog/meta-muse-wonder-full-launch-pricing-benchmarks-muse-code-2026" target="_blank" rel="noopener">explainx.ai &rarr;</a> <a href="https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api" target="_blank" rel="noopener">venturebeat.com &rarr;</a></div>
       </article>
       <article class="arch" id="a-muse-spark-1-3-hosted-for-muse-spark-open" style="--co:var(--c-meta)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Meta &middot; Advanced &amp; flagship</span></div>
-        <h3>Muse Spark 1.3 (hosted)</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>Muse Spark 1.3 (hosted)</h4>
         <div class="arch-spec">Sept 2, 2026 · closed · $1.25 / $4.25</div>
         <div class="arch-repl">Replaced by <b>Muse Spark Open</b> (Weights released Oct 15, 2026)</div>
         <p class="arch-body">Open gives you the weights; hosted 1.3 stays closed and metered. Meta publishes no price for Open &mdash; the only figure is a third-party OpenRouter route at the same $1.25 / $4.25. One commentary says the model sat quietly for about a month before the Oct 15 paperwork, so "release" is partly framing.</p>
         
         <div class="arch-links"><a href="https://www.orcarouter.ai/blog/muse-spark-open-best-us-open-weight-model" target="_blank" rel="noopener">orcarouter.ai &rarr;</a> <a href="https://www.digitalapplied.com/blog/ai-model-releases-october-2026-tracker" target="_blank" rel="noopener">digitalapplied.com &rarr;</a></div>
       </article>
+      </div>
+    </div>
+    <div class="co-group" id="co-2026-11-23-microsoft" style="--co:var(--c-microsoft)">
+      <h3 class="co-group-h">Microsoft <span>1 entry</span></h3>
+      <div class="arch-grid">
       <article class="arch" id="a-mai-1-preview-for-mai-thinking-1" style="--co:var(--c-microsoft)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Microsoft &middot; Advanced &amp; flagship</span></div>
-        <h3>MAI-1-preview</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>MAI-1-preview</h4>
         <div class="arch-spec">Aug 28, 2025 · non-reasoning</div>
         <div class="arch-repl">Replaced by <b>MAI-Thinking-1</b> (Jun 2, 2026)</div>
         <p class="arch-body">No earlier MAI reasoning model exists &mdash; Thinking-1 is Microsoft's first, and a different class from MAI-1-preview (the everyday chat model in the Balanced column): a ~1T-total / 35B-active mixture-of-experts with 256K context, trained from scratch without distilling third-party models, per Microsoft. Every benchmark claim is Microsoft's own, and it's still in Foundry preview with no published price. Simon Willison notes the "commercially licensed data" wording understates what the technical paper shows.</p>
         
         <div class="arch-links"><a href="https://microsoft.ai/news/introducing-mai-thinking-1/" target="_blank" rel="noopener">microsoft.ai &rarr;</a> <a href="https://simonwillison.net/2026/Jun/2/microsofts-new-models/" target="_blank" rel="noopener">simonwillison.net &rarr;</a></div>
       </article>
-      <article class="arch" id="a-medium-3-5" style="--co:var(--c-mistral)">
-        <div class="arch-top"><span class="arch-kind">Older model</span><span class="arch-co">Mistral &middot; Balanced</span></div>
-        <h3>Medium 3.5</h3>
-        <div class="arch-spec">EU compliance focus &middot; Launched Apr 29, 2026 <span class="arch-tier">Niche at removal</span></div>
-        <div class="arch-repl">Older than six months. <b>Mistral Large 4</b> is the current Mistral model.</div>
-        <p class="arch-body">A Reddit commenter said it performs worse than DeepSeek models at a higher API price; ranks 328th of 457 on OpenRouter by cost.</p>
-        <ul class="arch-sources"><li>Users discussed running it locally at Q4 quantization on ~70GB VRAM, near a maxed-out Mac Studio. <a href="https://news.ycombinator.com/item?id=47949642" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li><li>Highlights a built-in coding agent that can open pull requests directly. <a href="https://dev.to/techsifted/mistral-medium-35-review-a-128b-open-weight-model-with-a-coding-agent-that-opens-prs-for-you-5a0i" target="_blank" rel="noopener">dev.to &rarr;</a></li><li>Ranks only 328th of 457 chat models by input cost — a small, premium-priced footprint. <a href="https://openrouter.ai/mistralai/mistral-medium-3-5" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li></ul>
-        
-      </article>
+      </div>
+    </div>
+    <div class="co-group" id="co-2026-11-23-mistral" style="--co:var(--c-mistral)">
+      <h3 class="co-group-h">Mistral <span>3 entries</span></h3>
+      <div class="arch-grid">
       <article class="arch" id="a-mistral-large-3-for-large-4" style="--co:var(--c-mistral)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Mistral &middot; Advanced &amp; flagship</span></div>
-        <h3>Mistral Large 3</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>Mistral Large 3</h4>
         <div class="arch-spec">Dec 2, 2025 · 256K ctx · $0.50 / $1.50</div>
         <div class="arch-repl">Replaced by <b>Large 4</b> (Preview Oct 6 · weights Oct 29, 2026)</div>
         <p class="arch-body">Large 4 grows to roughly 1T total and ~52B active parameters with a 1M-token context (up from 256K) and hybrid reasoning. It is also dearer: even at the promotional rate about 39% more per output token. Large 3 stays Apache 2.0 with no restrictions, while Large 4's license adds the model-as-a-service condition, and the mistral-large-latest alias still points to Large 3. Sources disagree on the active-parameter count (49B or 52B) and on whether the discount ends.</p>
         
         <div class="arch-links"><a href="https://www.orcarouter.ai/blog/mistral-large-4-open-weights-licence" target="_blank" rel="noopener">orcarouter.ai &rarr;</a> <a href="https://www.lindy.ai/blog/mistral-large-4" target="_blank" rel="noopener">lindy.ai &rarr;</a></div>
       </article>
+      <article class="arch" id="a-medium-3-5" style="--co:var(--c-mistral)">
+        <div class="arch-top"><span class="arch-kind">Older model</span><span class="arch-co">Balanced</span></div>
+        <h4>Medium 3.5</h4>
+        <div class="arch-spec">EU compliance focus &middot; Launched Apr 29, 2026 <span class="arch-tier">Niche at removal</span></div>
+        <div class="arch-repl">Older than six months. <b>Mistral Large 4</b> is the current Mistral model.</div>
+        <p class="arch-body">A Reddit commenter said it performs worse than DeepSeek models at a higher API price; ranks 328th of 457 on OpenRouter by cost.</p>
+        <ul class="arch-sources"><li>Users discussed running it locally at Q4 quantization on ~70GB VRAM, near a maxed-out Mac Studio. <a href="https://news.ycombinator.com/item?id=47949642" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li><li>Highlights a built-in coding agent that can open pull requests directly. <a href="https://dev.to/techsifted/mistral-medium-35-review-a-128b-open-weight-model-with-a-coding-agent-that-opens-prs-for-you-5a0i" target="_blank" rel="noopener">dev.to &rarr;</a></li><li>Ranks only 328th of 457 chat models by input cost — a small, premium-priced footprint. <a href="https://openrouter.ai/mistralai/mistral-medium-3-5" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li></ul>
+        
+      </article>
       <article class="arch" id="a-small-4" style="--co:var(--c-mistral)">
-        <div class="arch-top"><span class="arch-kind">Older model</span><span class="arch-co">Mistral &middot; Fast &amp; cheap</span></div>
-        <h3>Small 4</h3>
+        <div class="arch-top"><span class="arch-kind">Older model</span><span class="arch-co">Fast &amp; cheap</span></div>
+        <h4>Small 4</h4>
         <div class="arch-spec">efficient enterprise &middot; Launched Mar 16, 2026 <span class="arch-tier">Growing at removal</span></div>
         <div class="arch-repl">Older than six months. <b>Mistral Large 4</b> is the current Mistral model.</div>
         <p class="arch-body">Active HN testing within days of release, but the same threads say Mistral's small-model line has fallen well behind Qwen and Gemma at similar sizes.</p>
         <ul class="arch-sources"><li>Solid for a few months after each release, but generally trailing the "big 3" labs' offerings. <a href="https://news.ycombinator.com/item?id=47404575" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li><li>Real-world cost and provider positioning listing. <a href="https://openrouter.ai/mistralai/mistral-small-2603" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li><li>Frames its value as unifying three previously separate specialized models into one. <a href="https://dev.to/akaranjkar08/mistral-small-4-one-open-source-model-that-replaces-three-2026-5b96" target="_blank" rel="noopener">dev.to &rarr;</a></li></ul>
         
       </article>
+      </div>
+    </div>
+    <div class="co-group" id="co-2026-11-23-nvidia" style="--co:var(--c-nvidia)">
+      <h3 class="co-group-h">NVIDIA <span>2 entries</span></h3>
+      <div class="arch-grid">
       <article class="arch" id="a-nemotron-3-super-for-nemotron-3-5-super-vl" style="--co:var(--c-nvidia)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">NVIDIA &middot; Balanced</span></div>
-        <h3>Nemotron 3 Super</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Balanced</span></div>
+        <h4>Nemotron 3 Super</h4>
         <div class="arch-spec">Mar 11, 2026 · 120B / 12B active · text only</div>
         <div class="arch-repl">Replaced by <b>Nemotron 3.5 Super VL</b> (Hugging Face Oct 15 · Nemotron for Science Nov 16, 2026)</div>
         <p class="arch-body">The text-only predecessor of the same size. Artificial Analysis scored it 36 (ahead of gpt-oss-120b at 33, behind Qwen3.5 122B at 42), noted it was verbose at about 40% more output tokens than gpt-oss-120b, and measured hosted endpoints up to 484 tokens/sec. Super VL adds image and video input. The index has been revised since, so don't compare those scores with current ones.</p>
@@ -960,26 +1000,22 @@
         <div class="arch-links"><a href="https://artificialanalysis.ai/articles/nvidia-nemotron-3-super-the-new-leader-in-open-efficient-intelligence" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a> <a href="https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents" target="_blank" rel="noopener">nvidia.com &rarr;</a></div>
       </article>
       <article class="arch" id="a-nemotron-3-super-for-nemotron-3-ultra" style="--co:var(--c-nvidia)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">NVIDIA &middot; Advanced &amp; flagship</span></div>
-        <h3>Nemotron 3 Super</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>Nemotron 3 Super</h4>
         <div class="arch-spec">Mar 11, 2026 · 120B / 12B active</div>
         <div class="arch-repl">Replaced by <b>Nemotron 3 Ultra</b> (Jun 4, 2026)</div>
         <p class="arch-body">NVIDIA's top model before Ultra. Artificial Analysis scores Ultra 47.7 against 36 for Super, with Ultra using about 1M fewer output tokens on the same index run, and a GDPval-AA Elo of 1378 against 1027. Those figures come from two AA articles on different dates, so treat the gap as indicative.</p>
         
         <div class="arch-links"><a href="https://artificialanalysis.ai/articles/nvidia-nemotron-3-ultra-released" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a> <a href="https://artificialanalysis.ai/articles/nvidia-nemotron-3-super-the-new-leader-in-open-efficient-intelligence" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></div>
       </article>
-      <article class="arch" id="a-gpt-5-3-codex" style="--co:var(--c-openai)">
-        <div class="arch-top"><span class="arch-kind">Older model</span><span class="arch-co">OpenAI &middot; Balanced</span></div>
-        <h3>GPT-5.3-Codex</h3>
-        <div class="arch-spec">repo-aware coding &middot; Launched Feb 5, 2026 <span class="arch-tier">Strong at removal</span></div>
-        <div class="arch-repl">Older than six months. Codex now runs on <b>GPT-6.2 Sol</b> and <b>Astra</b>.</div>
-        <p class="arch-body">Called "the most capable agentic coding model to date" at launch; can introduce technical debt without close supervision. It is now a legacy Codex model: Codex runs on GPT-6.2 Sol and Astra, and the tier reflects its launch-era usage.</p>
-        <ul class="arch-sources"><li>Walks through Codex-app usage and adoption decisions in practice, not just benchmark scores. <a href="https://smartscope.blog/en/blog/gpt-5-3-codex-complete-guide/" target="_blank" rel="noopener">smartscope.blog &rarr;</a></li><li>Head-to-head "vibe coding" comparison against Claude and Gemini competitors. <a href="https://medium.com/codex/i-tested-gpt-5-3-codex-vs-sonnet-4-6-vs-gemini-3-1-for-vibe-coding-heres-who-winner-7310dcf54a9e" target="_blank" rel="noopener">medium.com &rarr;</a></li><li>Compares it directly against base GPT-5 for agentic coding-agent use cases. <a href="https://www.verdent.ai/guides/gpt-5-3-codex-vs-gpt-5-coding-agents" target="_blank" rel="noopener">verdent.ai &rarr;</a></li></ul>
-        
-      </article>
+      </div>
+    </div>
+    <div class="co-group" id="co-2026-11-23-openai" style="--co:var(--c-openai)">
+      <h3 class="co-group-h">OpenAI <span>5 entries</span></h3>
+      <div class="arch-grid">
       <article class="arch" id="a-gpt-5-6-cyber-for-gpt-6-cyber" style="--co:var(--c-openai)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">OpenAI &middot; Advanced &amp; flagship</span></div>
-        <h3>GPT-5.6 Cyber</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>GPT-5.6 Cyber</h4>
         <div class="arch-spec">Daybreak Red · rated High</div>
         <div class="arch-repl">Replaced by <b>GPT-6 Cyber</b> (Nov 5, 2026 (limited access))</div>
         <p class="arch-body">Both are gated to Daybreak Red and GPT-5.6 Cyber stays available there. OpenAI says GPT-6 Cyber stays in scope more often: it went out of scope in 0.07% of honeypot cases vs 5.51%, and avoided off-limits decoy services 99.93% of the time vs 94.49%. Its $20 / $100 price and 1.05M context come from one secondary report citing OpenAI's docs. GPT-5.6 Cyber's launch date was not stated in the coverage.</p>
@@ -987,8 +1023,8 @@
         <div class="arch-links"><a href="https://www.securityweek.com/openai-says-new-gpt-6-cyber-model-hunts-flaws-without-crossing-the-line/" target="_blank" rel="noopener">securityweek.com &rarr;</a> <a href="https://www.csoonline.com/article/4244911/openais-gpt-6-cyber-ups-the-ante-on-vulnerability-discovery.html" target="_blank" rel="noopener">csoonline.com &rarr;</a> <a href="https://techjournal.org/openai-gpt-6-cyber" target="_blank" rel="noopener">techjournal.org &rarr;</a></div>
       </article>
       <article class="arch" id="a-gpt-5-6-terra-for-gpt-6-1-terra" style="--co:var(--c-openai)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">OpenAI &middot; Balanced</span></div>
-        <h3>GPT-5.6 Terra</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Balanced</span></div>
+        <h4>GPT-5.6 Terra</h4>
         <div class="arch-spec">Jul 2026 · $2 / $12</div>
         <div class="arch-repl">Replaced by <b>GPT-6.1 Terra</b> (Oct 26, 2026)</div>
         <p class="arch-body">Half the price on both sides ($1 / $5), with AA's index up from 42 to 48 and cost per task at max effort down from $1.40 to $0.40. OpenAI's own Terminal-Bench 4.0 figure rises from 21.5% to 50.3% (vendor claim). Tool calls now require the Responses API, so migrate those first. Some r/codex users report it declares tasks finished too early.</p>
@@ -996,8 +1032,8 @@
         <div class="arch-links"><a href="https://www.eesel.ai/blog/gpt-6-1-terra" target="_blank" rel="noopener">eesel.ai &rarr;</a> <a href="https://www.orcarouter.ai/blog/gpt-6-1-terra-release-price-cut" target="_blank" rel="noopener">orcarouter.ai &rarr;</a></div>
       </article>
       <article class="arch" id="a-gpt-6-astra-for-gpt-6-2-astra" style="--co:var(--c-openai)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">OpenAI &middot; Advanced &amp; flagship</span></div>
-        <h3>GPT-6 Astra</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>GPT-6 Astra</h4>
         <div class="arch-spec">Sept 3, 2026 · $10 / $50</div>
         <div class="arch-repl">Replaced by <b>GPT-6.2 Astra</b> (Nov 17, 2026)</div>
         <p class="arch-body">The same line 20% cheaper, with cached input falling from $1 to $0.40. OpenAI claims +9 points on Terminal-Bench-Science, but Artificial Analysis sees no coding gain. In two of OpenAI's alignment tests the new model was more likely than GPT-6 Astra to leave out an obstacle such as a missing file, and OpenAI says added Codex instructions largely fix it. Its tighter cyber safeguards may also block legitimate vulnerability research, and OpenAI scrapped a planned October GPT-6.1 Astra over scope and authorization problems.</p>
@@ -1005,50 +1041,75 @@
         <div class="arch-links"><a href="https://siliconangle.com/2026/11/17/openai-rolls-out-gpt-6-2-astra-for-professional-work-and-gpt-6-2-sol-for-everyday-work/" target="_blank" rel="noopener">siliconangle.com &rarr;</a> <a href="https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/" target="_blank" rel="noopener">the-decoder.com &rarr;</a></div>
       </article>
       <article class="arch" id="a-gpt-6-1-sol-for-gpt-6-2-sol" style="--co:var(--c-openai)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">OpenAI &middot; Advanced &amp; flagship</span></div>
-        <h3>GPT-6.1 Sol</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>GPT-6.1 Sol</h4>
         <div class="arch-spec">Sept 29, 2026 · $2 / $10</div>
         <div class="arch-repl">Replaced by <b>GPT-6.2 Sol</b> (Nov 17, 2026)</div>
         <p class="arch-body">The same price, with OpenAI promising more completed tasks per plan, and Artificial Analysis recording a three-point coding drop. Pro subscribers get an Ultrafast mode, Pro-200 with Sol first. OpenAI's alignment tests show the same tendency as Astra to omit obstacles. Artificial Analysis moved to a newer index version, so don't compare 6.1 Sol's old score with 57 directly.</p>
         
         <div class="arch-links"><a href="https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/" target="_blank" rel="noopener">the-decoder.com &rarr;</a> <a href="https://www.rdworldonline.com/openais-gpt-6-2-astra-trails-claude-fable-5-2-by-three-points-on-an-independent-ai-index-at-a-fraction-of-the-cost-per-task/" target="_blank" rel="noopener">rdworldonline.com &rarr;</a></div>
       </article>
+      <article class="arch" id="a-gpt-5-3-codex" style="--co:var(--c-openai)">
+        <div class="arch-top"><span class="arch-kind">Older model</span><span class="arch-co">Balanced</span></div>
+        <h4>GPT-5.3-Codex</h4>
+        <div class="arch-spec">repo-aware coding &middot; Launched Feb 5, 2026 <span class="arch-tier">Strong at removal</span></div>
+        <div class="arch-repl">Older than six months. Codex now runs on <b>GPT-6.2 Sol</b> and <b>Astra</b>.</div>
+        <p class="arch-body">Called "the most capable agentic coding model to date" at launch; can introduce technical debt without close supervision. It is a legacy Codex model: Codex runs on GPT-6.2 Sol and Astra, and the tier reflects its launch-era usage.</p>
+        <ul class="arch-sources"><li>Walks through Codex-app usage and adoption decisions in practice, not just benchmark scores. <a href="https://smartscope.blog/en/blog/gpt-5-3-codex-complete-guide/" target="_blank" rel="noopener">smartscope.blog &rarr;</a></li><li>Head-to-head "vibe coding" comparison against Claude and Gemini competitors. <a href="https://medium.com/codex/i-tested-gpt-5-3-codex-vs-sonnet-4-6-vs-gemini-3-1-for-vibe-coding-heres-who-winner-7310dcf54a9e" target="_blank" rel="noopener">medium.com &rarr;</a></li><li>Compares it directly against base GPT-5 for agentic coding-agent use cases. <a href="https://www.verdent.ai/guides/gpt-5-3-codex-vs-gpt-5-coding-agents" target="_blank" rel="noopener">verdent.ai &rarr;</a></li></ul>
+        
+      </article>
+      </div>
+    </div>
+    <div class="co-group" id="co-2026-11-23-qwen" style="--co:var(--c-qwen)">
+      <h3 class="co-group-h">Qwen <span>1 entry</span></h3>
+      <div class="arch-grid">
       <article class="arch" id="a-qwen3-8-max-for-qwen4-max" style="--co:var(--c-qwen)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Qwen &middot; Advanced &amp; flagship</span></div>
-        <h3>Qwen3.8-Max</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>Qwen3.8-Max</h4>
         <div class="arch-spec">Aug 3, 2026 · 1M ctx · open weights Aug 12</div>
         <div class="arch-repl">Replaced by <b>Qwen4-Max</b> (Nov 15&ndash;16, 2026 (preview from Nov 11))</div>
         <p class="arch-body">Still the only Qwen flagship with open weights: a 2.4T-parameter MoE (95B active) under a custom license (attribution above 100M monthly users or $20M monthly revenue, and a commercial license for model-as-a-service above $50M), text-only and 262K native context in the open build, needing multi-node hardware. Real usage is small, about 0.1% of OpenRouter tokens (#27). Qwen4-Max is cheaper per token ($1.50 / $4.50 vs $2 / $6) and stronger on terminal tasks by Alibaba's numbers.</p>
         
         <div class="arch-links"><a href="https://www.scmp.com/tech/tech-trends/article/3363927/alibaba-adds-commercial-restrictions-open-weight-qwen38-max-ai-model" target="_blank" rel="noopener">scmp.com &rarr;</a> <a href="https://opencode.ai/data/qwen/qwen3-8-max" target="_blank" rel="noopener">opencode.ai &rarr;</a></div>
       </article>
+      </div>
+    </div>
+    <div class="co-group" id="co-2026-11-23-sarvam-ai" style="--co:var(--c-sarvam)">
+      <h3 class="co-group-h">Sarvam AI <span>1 entry</span></h3>
+      <div class="arch-grid">
       <article class="arch" id="a-sarvam-105b-earlier-checkpoint-for-sarvam-105b-1711" style="--co:var(--c-sarvam)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Sarvam AI &middot; Fast &amp; cheap</span></div>
-        <h3>Sarvam 105B (earlier checkpoint)</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Fast &amp; cheap</span></div>
+        <h4>Sarvam 105B (earlier checkpoint)</h4>
         <div class="arch-spec">Announced Feb 2026 · weights Mar 6 · Apache 2.0</div>
         <div class="arch-repl">Replaced by <b>Sarvam-105B-1711</b> (Nov 22, 2026)</div>
         <p class="arch-body">By Sarvam&rsquo;s own numbers the new checkpoint follows instructions and calls tools far better (IFBench 32.5 to 82.5, Tau2 46.2 to 85.5) and its blended price fell from $0.44 to $0.15 per 1M tokens. The independent score of 18 from Artificial Analysis belongs to this earlier version, so the jump has not been checked by anyone else.</p>
         
         <div class="arch-links"><a href="https://www.sarvam.ai/blogs/sarvam-30b-105b" target="_blank" rel="noopener">sarvam.ai &rarr;</a> <a href="https://artificialanalysis.ai/articles/sarvam-105b-Sarvam-30b-everything-you-need-to-know" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a></div>
       </article>
-      <article class="arch" id="a-grok-4-3" style="--co:var(--c-xai)">
-        <div class="arch-top"><span class="arch-kind">Older model</span><span class="arch-co">xAI &middot; Balanced</span></div>
-        <h3>Grok 4.3</h3>
-        <div class="arch-spec">1M ctx · $1.25 / $2.50 &middot; Launched Apr 30, 2026 <span class="arch-tier">Growing at removal</span></div>
-        <div class="arch-repl">Older than six months. <b>Grok 4.7</b> is the current xAI model.</div>
-        <p class="arch-body">Tracked by independent pricing aggregators and discussed on HN, but no leaderboard-topping data found specifically for it.</p>
-        <ul class="arch-sources"><li>$1.25/$2.50 per M tokens, 1M context, positioned for agentic and instruction-following work. <a href="https://openrouter.ai/x-ai/grok-4.3" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li><li>Treated as an established, multi-provider-hosted model worth comparison-shopping. <a href="https://pricepertoken.com/pricing-page/model/xai-grok-4.3" target="_blank" rel="noopener">pricepertoken.com &rarr;</a></li><li>Dedicated HN thread gives direct developer reaction to the release. <a href="https://news.ycombinator.com/item?id=47972447" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li></ul>
-        
-      </article>
+      </div>
+    </div>
+    <div class="co-group" id="co-2026-11-23-xai" style="--co:var(--c-xai)">
+      <h3 class="co-group-h">xAI <span>2 entries</span></h3>
+      <div class="arch-grid">
       <article class="arch" id="a-grok-4-6-for-grok-4-7" style="--co:var(--c-xai)">
-        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">xAI &middot; Advanced &amp; flagship</span></div>
-        <h3>Grok 4.6</h3>
+        <div class="arch-top"><span class="arch-kind">Prior version</span><span class="arch-co">Advanced &amp; flagship</span></div>
+        <h4>Grok 4.6</h4>
         <div class="arch-spec">Aug 12, 2026 · $2 / $6</div>
         <div class="arch-repl">Replaced by <b>Grok 4.7</b> (Sept 21, 2026)</div>
         <p class="arch-body">Same price and 500K context. AA's index is 46 vs 44 (at different effort levels), but 4.7 burns about 81k output tokens per task vs 36k &mdash; roughly double the cost to run the index, and one Cursor Ultra user reported ~2.5&times; plan usage for the same task. At matched xhigh effort, Terminal-Bench 4.0 is 33% vs 18% and hallucination rate 29% vs 34%. Grok 4.6 remains available.</p>
         
         <div class="arch-links"><a href="https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-grok-4-6" target="_blank" rel="noopener">artificialanalysis.ai &rarr;</a> <a href="https://codersera.com/blog/grok-4-7-vs-grok-4-6-2026/" target="_blank" rel="noopener">codersera.com &rarr;</a></div>
       </article>
+      <article class="arch" id="a-grok-4-3" style="--co:var(--c-xai)">
+        <div class="arch-top"><span class="arch-kind">Older model</span><span class="arch-co">Balanced</span></div>
+        <h4>Grok 4.3</h4>
+        <div class="arch-spec">1M ctx · $1.25 / $2.50 &middot; Launched Apr 30, 2026 <span class="arch-tier">Growing at removal</span></div>
+        <div class="arch-repl">Older than six months. <b>Grok 4.7</b> is the current xAI model.</div>
+        <p class="arch-body">Tracked by independent pricing aggregators and discussed on HN, but no leaderboard-topping data found specifically for it.</p>
+        <ul class="arch-sources"><li>$1.25/$2.50 per M tokens, 1M context, positioned for agentic and instruction-following work. <a href="https://openrouter.ai/x-ai/grok-4.3" target="_blank" rel="noopener">openrouter.ai &rarr;</a></li><li>Treated as an established, multi-provider-hosted model worth comparison-shopping. <a href="https://pricepertoken.com/pricing-page/model/xai-grok-4.3" target="_blank" rel="noopener">pricepertoken.com &rarr;</a></li><li>Dedicated HN thread gives direct developer reaction to the release. <a href="https://news.ycombinator.com/item?id=47972447" target="_blank" rel="noopener">news.ycombinator.com &rarr;</a></li></ul>
+        
+      </article>
+      </div>
     </div>
   </section>
   
